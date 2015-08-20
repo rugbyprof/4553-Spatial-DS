@@ -1,2 +1,2 @@
-# 4553-Spatial-DataStructures-
+# 4553-Spatial-DataStructures
 An overview of spatial data structures.
