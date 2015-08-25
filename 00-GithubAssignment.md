@@ -63,7 +63,7 @@ My Repository name is: your-repository-name
 Every email must have a minimum of two items included:
 
 - The course number and title in the subject:
-    - `4553 - 4553 Spatial DS`
+    - `4553 Spatial DS`
 - Your name
 
 I can't promise an answer if you don't provide those two pieces of information.
