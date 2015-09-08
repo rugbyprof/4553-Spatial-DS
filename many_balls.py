@@ -36,16 +36,6 @@ class MyStuff(pantograph.PantographHandler):
         self.moveBalls()
         self.clear_rect(0, 0, self.width, self.height)
         self.drawBalls()
-        
-            
-    def loadCities():
-        self.citys = []
-        with open('citylist.csv', 'rb') as csvfile:
-            citysCsv = csv.reader(csvfile, delimiter=',', quotechar='"')
-            for city in citysCsv:
-                self.citys.append({"Name":city[0],"Country":city[1],"lat":city[2],"lon":city[3]})
-            #print(self.citys
-
 
         
 if __name__ == '__main__':
