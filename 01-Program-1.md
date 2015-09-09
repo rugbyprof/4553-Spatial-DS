@@ -4,8 +4,8 @@
 ### Overview:
 
 Given the starter code here, utilize the quadtree implementation to perform the following "queries":
-1. Find all cities within this bounding box: [45.011419, -111.071777 , 40.996484, -104.040527]
-2. Find all cities within 500 miles of this point: (23.805450, -78.156738)
+1 Find all cities within this bounding box: [45.011419, -111.071777 , 40.996484, -104.040527]
+2 Find all cities within 500 miles of this point: (23.805450, -78.156738)
 
 ### Helper Functions:
 
