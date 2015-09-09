@@ -166,6 +166,8 @@ CityN
 Program ran in: .03 seconds.
 ```
 
+***Everything needs to be in your repository, named as specified, or it won't be graded.***
+
 #### Timing a program
 
 ```python
