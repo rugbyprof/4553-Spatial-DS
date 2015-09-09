@@ -12,22 +12,33 @@ def loadCities():
     return citys
 
 
-def displace(lat,lng,theta, distance):
+def displace(lat,lng,theta, distance,unit="miles"):
     """
-    Displace a LatLng theta degrees clockwise and some
-    meters in that direction.
+    Displace a LatLng theta degrees clockwise and some feet in that direction.
     Notes:
         http://www.movable-type.co.uk/scripts/latlong.html
         0 DEGREES IS THE VERTICAL Y AXIS! IMPORTANT!
     Args:
-        theta:    A number in degrees.
-        distance: A number in meters.
+        theta:    A number in degrees where:
+                  0   = North
+                  90  = East
+                  180 = South
+                  270 = West
+        distance: A number in specified unit.
+        unit:     enum("miles","kilometers")
     Returns:
         A new LatLng.
     """
     theta = np.float32(theta)
+    radiusInMiles = 3959
+    radiusInKilometers = 6371
+    
+    if unit == "miles":
+        radius = radiusInMiles
+    else:
+        radius = radiusInKilometers
 
-    delta = np.divide(np.float32(distance), np.float32(3959))
+    delta = np.divide(np.float32(distance), np.float32(radius))
 
     theta = deg2rad(theta)
     lat1 = deg2rad(lat)
@@ -49,6 +60,29 @@ def deg2rad(theta):
 def rad2deg(theta):
         return np.divide(np.dot(theta, np.float32(180.0)), np.pi)
 
+def lat2canvas(lat):
+    """
+    Turn a latitude in the form [-90 , 90] to the form [0 , 180]
+    """
+    return float(lat) % 180
+
+def lon2canvas(lon):
+    """
+    Turn a longitude in the form [-180 , 180] to the form [0 , 360]
+    """
+    return float(lon) % 360
+    
+def canvas2lat(lat): 
+    """
+    Turn a latitutude in the form [0 , 180] to the form [-90 , 90]
+    """
+    return ((float(lat)+90) % 180) - 90
+    
+def canvas2lon(lon):
+    """
+    Turn a longitude in the form [0 , 360] to the form [-180 , 180]
+    """
+    return ((float(lon)+180) % 360) - 180
 
 def main():
     spindex = pyqtree.Index(bbox=[0,0,360,180])
