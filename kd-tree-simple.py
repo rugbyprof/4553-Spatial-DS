@@ -136,7 +136,7 @@ class kdtree:
                 print("rec call left")
                 self._recInsert(root.leftChild,newNode)
 
-    
+
     def Traversal(self,traversal_type="in"):
         self._Traversal(self.root,traversal_type)
     
