@@ -56,12 +56,22 @@ Will create the following:
 - Add graphviz to your platform. On a mac simply `brew install graphviz` 
 - Add graphviz as a package for python. On a mac `pip install graphviz`
 
+Add the necessary code to the kd-tree-simple.py starter code so that it prints out the entire tree with the approprate values in each node (including discriminator).
+
+- You must create a class to assist your graph drawing. 
 
 ### Deliverables
 
+1. Create a folder called `Program2` and place it in your repository.
+2. Add the file `kd-tree-simple.py` and place it in your new folder.
+3. Write your graphviz output to a file called `kdtree-out.svg` 
+
 ***Everything needs to be in your repository, named as specified, or it won't be graded.***
 
-#### Timing a program
+
+#### Timing a program 
+
+Left over from last assignment, but it's always good to have.
 
 ```python
 import time
