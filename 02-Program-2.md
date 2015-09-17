@@ -56,7 +56,7 @@ Will create the following:
 - Add graphviz to your platform. On a mac simply `brew install graphviz` 
 - Add graphviz as a package for python. On a mac `pip install graphviz`
 
-Add the necessary code to the kd-tree-simple.py starter code so that it prints out the entire tree with the approprate values in each node (including discriminator).
+Add the necessary code to the `kd-tree-simple.py` starter code so that it prints out the entire tree with the approprate values in each node (including discriminator).
 
 - You must create a class to assist your graph drawing. 
 
