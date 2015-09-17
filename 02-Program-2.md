@@ -59,6 +59,9 @@ Will create the following:
 Add the necessary code to the `kd-tree-simple.py` starter code so that it prints out the entire tree with the approprate values in each node (including discriminator).
 
 - You must create a class to assist your graph drawing. 
+- Your class will have the following methods:
+    - AddNodes() # Receives a list of nodes containing 1 or more nodes (with labels if needed)
+    - AddEdges() # Receives a list of edges containing 1 or more edges (with labels if needed)
 
 ### Deliverables
 
