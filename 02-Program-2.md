@@ -15,8 +15,8 @@ g1.node('A')
 g1.node('B')
 g1.edge('A', 'B')
 ```
-
 Will create the following:
+
 ![](http://f.cl.ly/items/0i071C3T3j0Y2R0j2Y3h/g1.png)
 
 Changing 
