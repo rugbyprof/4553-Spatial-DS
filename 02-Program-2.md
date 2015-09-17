@@ -32,6 +32,8 @@ g1.edge('A', 'B')
 g1.edge('A', 'C')
 g1.edge('B', 'C')
 ```
+Will create the following:
+
 ![](http://f.cl.ly/items/0B0v2j2r0n0L3g2o2H2f/g4.png)
 
 ```python
@@ -44,6 +46,7 @@ g1.edge('A', 'B',{'label': 'Edge 1'})
 g1.edge('A', 'C',{'label': 'Edge 2'})
 g1.edge('B', 'C')
 ```
+Will create the following:
 
 ![](http://f.cl.ly/items/3p0c1h1E252G0i1x3b2K/g5.png)
 
