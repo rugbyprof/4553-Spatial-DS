@@ -1,5 +1,6 @@
 digraph {
-	node [fixedsize=true fontcolor="#FFFFFF" shape=circle style=filled]
+	node [color=red fixedsize=true fontcolor="#000000" fontsize=24 shape=box style=filled]
+	edge [color=Blue style=dashed]
 		0 [label="3,1,4"]
 		1 [label="2,3,7"]
 		2 [label="4,3,4"]
