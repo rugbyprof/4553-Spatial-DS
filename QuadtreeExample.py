@@ -32,7 +32,7 @@ def displace(lat,lng,theta, distance,unit="miles"):
     theta = np.float32(theta)
     radiusInMiles = 3959
     radiusInKilometers = 6371
-    
+
     if unit == "miles":
         radius = radiusInMiles
     else:
@@ -71,13 +71,13 @@ def lon2canvas(lon):
     Turn a longitude in the form [-180 , 180] to the form [0 , 360]
     """
     return float(lon) % 360
-    
-def canvas2lat(lat): 
+
+def canvas2lat(lat):
     """
     Turn a latitutude in the form [0 , 180] to the form [-90 , 90]
     """
     return ((float(lat)+90) % 180) - 90
-    
+
 def canvas2lon(lon):
     """
     Turn a longitude in the form [0 , 360] to the form [-180 , 180]
@@ -91,10 +91,17 @@ def main():
     for c in cities:
         #{'lat': '-18.01274', 'Country': 'Zimbabwe', 'lon': '31.07555', 'Name': 'Chitungwiza'}
         item = c['Name']
-        bbox =[float(c['lat']),float(c['lon']),float(c['lat']),float(c['lon'])]
+
+        minLat = float(c['lat'])-.1
+        minLon = float(c['lon'])-.1
+        maxLat = float(c['lat'])+.1
+        maxLon = float(c['lon'])+.1
+
+        bbox =[minLat,minLon,maxLat,maxLon]
         spindex.insert(item=item, bbox=bbox)
 
     overlapbbox = (51,51,86,86)
+    overlapbbox = (44.9793710,-110.9619141,41.1941565,-104.2822266)
     matches = spindex.intersect(overlapbbox)
     print(matches)
 

@@ -5,11 +5,11 @@ import numpy as np
 
 
 """
-@class node - simple kdtree node 
+@class node - simple kdtree node
 @method - __init__: Sets value,children,discriminator
 @method - getVals: Return list of items in the node
 @method - printNode: Prints items in node for debugging purposes
-""" 
+"""
 class node:
     def __init__(self,dim_items=None,disc=None):
 
@@ -19,20 +19,20 @@ class node:
         else:
             self.dimList = dim_items
             self.dim = len(self.dimList)
-        
+
         self.leftChild = None
         self.rightChild = None
         self.disc = disc
-        
+
     """
     @public
     @method - getVals: Return list of items in the node
     @param void
     @returns list[]: list of items in node
-    """ 
+    """
     def getVals(self):
         return self.dimList
-    
+
     """
     @public
     @method - getDiscValue: Return value based on discriminator
@@ -41,7 +41,7 @@ class node:
     """
     def getDiscValue(self):
         return self.dimList[self.disc]
-    
+
     """
     @public
     @method - setVals: Set values held in node
@@ -53,16 +53,16 @@ class node:
             return False
         for i in range(len(vals)):
             self.dimList[i] = vals[i]
-        
+
         return True
-    
-            
+
+
     """
     @public
     @method - printNode: Prints items in node for debugging purposes
     @param {bool} retConent: Return instead of print
     @returns {string} : maybe
-    """ 
+    """
     def printNode(self,retContent=None):
         pString = ', '.join(map(str, self.dimList))
         pString += "\n"
@@ -73,21 +73,21 @@ class node:
             print(pString)
         else:
             return pString
-        
-        
-    
+
+
+
 class kdtree:
     def __init__(self,dim):
-            
+
         self.root = None
         self.dim = dim
-    
+
     """
     @public
     @method - insert: Insert value into kdtree
     @param val: item of length dim (where dim = dimension) to place into a node
     @returns bool: true if successful
-    """ 
+    """
     def insert(self,val):
         if self._is_iterable(val):
             if self.root == None:
@@ -96,21 +96,21 @@ class kdtree:
             else:
                 newNode = node(val,0)
                 currRoot = self.root
-                
+
                 self._recInsert(currRoot,newNode)
-                
+
         else:
             print(val)
             print("Whoops: Item must be iterable.")
             return False
-            
+
     """
     @private
     @method - _recInsert: Insert value into kdtree
     @param root: a copy of the root of the tree
     @param node: the new node to be inserted
     @returns bool: true if successful
-    """ 
+    """
     def _recInsert(self,root,newNode):
         if newNode.getDiscValue() > root.getDiscValue():
             if root.rightChild == None:
@@ -130,15 +130,15 @@ class kdtree:
     @method - Traverse: Traverse the kdtree by whichever specified means
     @param traversal_type: pre=preorder,in=inorder,post=postorder
     @returns None
-    """ 
+    """
     def Traverse(self,traversal_type="in",fileName=None):
-        
+
         if not fileName == None:
             f = open(fileName,'w')
             self._Traverse2(self.root,traversal_type,f)
         else:
             self._Traverse(self.root,traversal_type)
-    
+
     def _Traverse(self,root,traversal_type):
         if root == None:
             return
@@ -154,7 +154,7 @@ class kdtree:
             if traversal_type == "post":
                 root.printNode()
                 print("=========")
-                
+
     def _Traverse2(self,root,traversal_type,f):
         if root == None:
             return
@@ -170,22 +170,22 @@ class kdtree:
             if traversal_type == "post":
                 f.write(root.printNode(True))
                 f.write("=========")
-            
-    
+
+
     """
     @private
     @method - is_iterable: determines whether the var is iterable (list,etc)
     @param var: variable to be tested
     @returns bool: true if iterable
-    """        
+    """
     def _is_iterable(self,var):
 
         return isinstance(var, (list, tuple))
-    
+
 class MapHelper:
     def __init__(self):
         pass
-    
+
     def displace(self,lat,lng,theta, distance,unit="miles"):
         """
         Displace a LatLng theta degrees clockwise and some feet in that direction.
@@ -227,7 +227,7 @@ class MapHelper:
         lng2 = (lng2 + 3 * np.pi) % (2 * np.pi) - np.pi
 
         return [self.rad2deg(lat2), self.rad2deg(lng2)]
-    
+
     def deg2rad(self,theta):
             return np.divide(np.dot(theta, np.pi), np.float32(180.0))
 
@@ -246,7 +246,7 @@ class MapHelper:
         """
         return float(lon) % 360
 
-    def canvas2lat(self,lat): 
+    def canvas2lat(self,lat):
         """
         Turn a latitutude in the form [0 , 180] to the form [-90 , 90]
         """
@@ -257,7 +257,7 @@ class MapHelper:
         Turn a longitude in the form [0 , 360] to the form [-180 , 180]
         """
         return ((float(lon)+180) % 360) - 180
-    
+
     def poly2canvas(self,poly):
         newPoly = []
         for p in poly:
@@ -266,7 +266,7 @@ class MapHelper:
             x = self.lat2canvas(x)
             newPoly.append((x,y))
         return newPoly
-    
+
     # Determine if a point is inside a given polygon or not
     # Polygon is a list of (x,y) pairs. This function
     # returns True or False.  The algorithm is called
@@ -308,7 +308,7 @@ class BoundingBox(object):
 @param {float}-lon      : longitude
 @param distance         : distance in miles
 @returns {object}       : bounding box
-""" 
+"""
 def get_bounding_box(lat, lon, distance):
     assert distance > 0
     assert lat >= -180.0 and lat  <= 180.0
@@ -334,22 +334,22 @@ def get_bounding_box(lat, lon, distance):
     box.lon_max = rad2deg(lon_max)
 
     return (box)
-    
+
 def loadCities():
     citys = []
-    with open('../citylist.csv', 'rb') as csvfile:
+    with open('./citylist.csv', 'rb') as csvfile:
         citysCsv = csv.reader(csvfile, delimiter=',', quotechar='"')
         for city in citysCsv:
             citys.append({"Name":city[0],"Country":city[1],"lat":city[2],"lon":city[3]})
     return citys
-    
+
 if __name__ == '__main__':
 
     cities = loadCities()
     myMap = MapHelper()
-    
+
     tree = kdtree(2)
-    
+
     for c in cities:
         latlon = [myMap.lat2canvas(c['lat']),myMap.lon2canvas(c['lon'])]
         tree.insert(latlon)
@@ -360,7 +360,7 @@ if __name__ == '__main__':
     print(box.lat_min,box.lon_min,box.lat_max,box.lon_max)
 
     ## Test
-    
+
     polygon = [(34.303197,-102.26727),(34.303197,-95.486634),(28.514283,-102.26727),(28.514283,-95.486634),(34.303197,-102.26727)]
 
     point_x = -101.337891
