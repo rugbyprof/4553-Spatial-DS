@@ -4,11 +4,44 @@ NOT DONE
 
 ### Overview:
 
-Using the code from [here](https://github.com/rugbyprof/4553-Spatial-DS/blob/master/geo.py) create an animated page that displays 
-at least 3 polygons and 3 points where the points will change color when they are "inside" a polygon, and the polygons will change 
-direction when they "collide" with another polygon. 
+Using the code from [here](https://github.com/rugbyprof/4553-Spatial-DS/blob/master/geo.py) create an animated page that displays at least 3 polygons and 3 points where the points will change color when they are "inside" a polygon, and the polygons will change direction when they "collide" with another polygon. 
 
-How you perform the collision is up to you, but one simple way is the calculate the MBR (minimum bounding rectangle) for each polygon
+How you perform the collision is up to you, but one simple way is the calculate the MBR (minimum bounding rectangle) for each polygon and assume collision when they "overlap". This is not the best way, but the easiest to implement. 
+
+The hard part will be making them move and change direction. I won't be to hard on you, but you need to show some effort in making this work. I thought about using a "random walk" algorithm, but that would look un-natural. I would start each obect at some random location and move them like the following:
+
+```python
+    def set_direction(self,direction):
+        assert direction in ['N','NE','E','SE','S','SW','W','NW']
+
+        self.direction = direction
+
+    def update_position(self):
+        if self.direction == "N":
+            self.y -= 1
+        if self.direction == "NE":
+            self.y -= 1
+            self.x += 1
+        if self.direction == "E":
+            self.x += 1
+        if self.direction == "SE":
+            self.x += 1
+            self.y += 1
+        if self.direction == "S":
+            self.y += 1
+        if self.direction == "SW":
+            self.x -= 1
+            self.y += 1
+        if self.direction == "W":
+            self.x -= 1
+        if self.direction == "NW":
+            self.y += 1
+            self.x -= 1
+```
+
+This would move a point in 8 different directions and make it easy to choose a new direction. 
+
+![](http://wfkb-geography.weebly.com/uploads/2/3/9/1/23919616/8543328_orig.gif)
 
 ### Requirements:
 
