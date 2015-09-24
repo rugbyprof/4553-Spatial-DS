@@ -1,6 +1,6 @@
 NOT DONE
 ## Program 3
-#### Due: 28 Sep by Midnight
+#### Due: 30 Sep by Midnight (Wednesday!)
 
 ### Overview:
 
@@ -46,7 +46,11 @@ This would move a point in 8 different directions and make it easy to choose a n
 ### Requirements:
 
 - Your code must be fully commented
-- You must 
+- You must animate points to change color when "inside" a polygon
+- You must animate polygons to change direction when they "collide" with other polygons.
+- Nothing should go off the screen (it should change direction)
+- No textures or anything are required, but would be awesome.
+- You must come visit me in my office at least once before Wednesday (part of your grade).
 
 ### Commenting Code
 Every program should have a comment block at the top similar to the following:
@@ -79,25 +83,13 @@ Found help at http://pythonsnippet.org/blah/blah and used a polygon distance fun
 
 ### Deliverables
 
+1. Everything will be on gitHub
 1. Create a folder called `Program3` and place it in your repository.
 2. Add the file `animate_poly.py` and place it in your new folder.
-3. Ensure your code is fully commented. 
+3. Ensure your code is fully commented, with name block at top.
 
 
 ***Everything needs to be in your repository, named as specified, or it won't be graded.***
 
 
-#### Timing a program 
-
-Left over from last assignment, but it's always good to have.
-
-```python
-import time
-
-start_time = time.time()
-
-# Do all of your processing
-
-print("Program ran in %s seconds." % (time.time() - start_time))
-```
 
