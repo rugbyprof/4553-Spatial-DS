@@ -131,6 +131,34 @@ class Point:
         result.slide(p.x, p.y)
         return result
 
+    def set_direction(self,direction):
+        assert direction in ['N','NE','E','SE','S','SW','W','NW']
+
+        self.direction = direction
+
+    def update_position(self):
+        if self.direction == "N":
+            self.y -= 1
+        if self.direction == "NE":
+            self.y -= 1
+            self.x += 1
+        if self.direction == "E":
+            self.x += 1
+        if self.direction == "SE":
+            self.x += 1
+            self.y += 1
+        if self.direction == "S":
+            self.y += 1
+        if self.direction == "SW":
+            self.x -= 1
+            self.y += 1
+        if self.direction == "W":
+            self.x -= 1
+        if self.direction == "NW":
+            self.y -= 1
+            self.x -= 1
+
+
 
 class Rect:
 
@@ -267,20 +295,20 @@ class Polygon:
     def __repr__(self):
         return "%s %s" % (self.__class__.__name__,''.join(str(self.points)))
 
+
 class Driver(pantograph.PantographHandler):
 
     def setup(self):
         self.poly2 = Polygon([(83, 163),  (90, 74),  (145, 60),  (201, 69),  (265, 46),  (333, 61),  (352, 99),  (370, 129),  (474, 138),  (474, 178),  (396, 225),  (351, 275),  (376, 312),  (382, 356),  (338, 368),  (287, 302),  (224, 304),  (128, 338),  (110, 316),  (129, 270),  (83, 231),  (103, 201),  (126, 162),  (65, 51)])
         self.poly1 = Polygon([(405, 328),(377, 367),(444, 413),(504, 384),(519, 307),(453, 248),(380, 250),(365, 278),(374, 325)])
         self.p1 = Point(494, 138)
-        self.p2 = Point(145, 400)
-        self.p3 = self.p1 + self.p2
-
-        self.decend = True
+        self.p2 = Point(self.width/2, self.height/2)
+        self.p2.set_direction("NE")
 
     def drawShapes(self):
         self.draw_polygon(self.poly2.get_points() , color = "#000")
         self.draw_polygon(self.poly1.get_points() , color = "#000")
+        self.draw_rect(0, 0, self.width, self.height, color= "#000")
 
         if  self.poly2.point_inside_polygon(self.p1):
             color = "#0F0"
@@ -294,27 +322,18 @@ class Driver(pantograph.PantographHandler):
             color = "#F00"
         self.fill_oval(self.p2.x, self.p2.y, 7, 7, color)
 
-        if  self.poly2.point_inside_polygon(self.p3) or self.poly1.point_inside_polygon(self.p3):
-            color = "#0F0"
-        else:
-            color = "#F00"
-        self.fill_oval(self.p3.x, self.p3.y, 7, 7, color)
+    def changeDirection():
+        pass
+
+    def hitWall():
+        pass
 
     def update(self):
         self.clear_rect(0, 0, self.width, self.height)
 
-        if self.p3.y < 50:
-            self.decend = False
+        self.p2.update_position()
 
-        if self.p3.y > 500:
-            self.decend = True
 
-        if self.decend:
-            self.p3.y -= 1
-            self.p3.x -= 1
-        else:
-            self.p3.y += 1
-            self.p3.x += 1        
 
 
         self.drawShapes()
