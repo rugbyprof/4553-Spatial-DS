@@ -322,11 +322,13 @@ class Driver(pantograph.PantographHandler):
             color = "#F00"
         self.fill_oval(self.p2.x, self.p2.y, 7, 7, color)
 
-    def changeDirection():
-        pass
+    def changeDirection(self,direction):
+        if direction == "N":
 
-    def hitWall():
-        pass
+    def hitWall(self,x,y):
+        if x >= self.width or y >= self.width:
+            return True
+        return False
 
     def update(self):
         self.clear_rect(0, 0, self.width, self.height)
