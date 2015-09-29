@@ -1,4 +1,3 @@
-NOT DONE
 ## Program 3
 #### Due: 30 Sep by Midnight (Wednesday!)
 
