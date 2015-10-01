@@ -154,42 +154,42 @@ class QuadTree(object):
 
         return bboxes
 
-
-
-class Driver(pantograph.PantographHandler):
-
-    def setup(self):
-        self.q = QuadTree(BoundingBox(Point(0,0),Point(self.width,self.height)),3)
-        self.points = []
-        self.colors = ["#000","#F00","#0f0","#00f","#ff0","#0ff","#0f0"]
-
-    def on_mouse_down(self,InputEvent):
-        #print InputEvent
-        if InputEvent.shift_key == True:
-            self.q.getSmallestBBox(Point(InputEvent.x,InputEvent.y))
-            print self.q.smallestContainer
-
-        self.q.insert(Point(InputEvent.x,InputEvent.y))
-        self.points.append(Point(InputEvent.x,InputEvent.y))
-        self.bboxs = self.q.getBBoxes()
-        print "click: ",InputEvent.x,InputEvent.y
-
-
-    def drawShapes(self):
-        self.draw_rect(0, 0, self.width, self.height, color= "#000")
-        self.fill_oval(self.width/2, self.height/2, 7, 7, "#F00")
-
-        for p in self.points:
-            self.fill_oval(p.x, p.y, 7, 7, "#F00")
-
-        self.bboxs = self.q.getBBoxes()
-        for b in self.bboxs:
-            self.draw_rect(b.ul.x,b.ul.y,b.w,b.h,"#000")
-
-    def update(self):
-        self.clear_rect(0, 0, self.width, self.height)
-        self.drawShapes()
-
 if __name__ == '__main__':
+
+    class Driver(pantograph.PantographHandler):
+
+        def setup(self):
+            self.q = QuadTree(BoundingBox(Point(0,0),Point(self.width,self.height)),3)
+            self.points = []
+            self.colors = ["#000","#F00","#0f0","#00f","#ff0","#0ff","#0f0"]
+
+        def on_mouse_down(self,InputEvent):
+            #print InputEvent
+            if InputEvent.shift_key == True:
+                self.q.getSmallestBBox(Point(InputEvent.x,InputEvent.y))
+                print self.q.smallestContainer
+
+            self.q.insert(Point(InputEvent.x,InputEvent.y))
+            self.points.append(Point(InputEvent.x,InputEvent.y))
+            self.bboxs = self.q.getBBoxes()
+            print "click: ",InputEvent.x,InputEvent.y
+
+
+        def drawShapes(self):
+            self.draw_rect(0, 0, self.width, self.height, color= "#000")
+            self.fill_oval(self.width/2, self.height/2, 7, 7, "#F00")
+
+            for p in self.points:
+                self.fill_oval(p.x, p.y, 7, 7, "#F00")
+
+            self.bboxs = self.q.getBBoxes()
+            for b in self.bboxs:
+                self.draw_rect(b.ul.x,b.ul.y,b.w,b.h,"#000")
+
+        def update(self):
+            self.clear_rect(0, 0, self.width, self.height)
+            self.drawShapes()
+
+
     app = pantograph.SimplePantographApplication(Driver)
     app.run()

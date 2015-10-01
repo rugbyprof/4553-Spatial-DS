@@ -2,6 +2,7 @@ import pantograph
 import math
 import random
 import numpy as np
+from QuadTree import QuadTree
 
 # Add ShapeModules (which holds Point,Rect,Polygon) folder to the path
 # so we can use those shapes.
@@ -21,7 +22,6 @@ class Rock(object):
         self.size = size
         self.maxX = maxX
         self.maxY = maxY
-
 
     def _calc_vector(self):
         self.distance = [self.start.x - self.dest.x, self.start.y - self.dest.y]
