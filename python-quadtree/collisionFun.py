@@ -52,7 +52,7 @@ class collisionDetection(pantograph.PantographHandler):
     def setup(self):
         self.rockSize = 7
         self.rocks = []
-        self.rockSpeeds = np.arange(.5,5,.5)
+        self.rockSpeeds = np.arange(1,15,1)
         self.numRocks = 100
 
         seqX = [0,self.width]

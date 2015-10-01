@@ -5,40 +5,38 @@ class BoundingBox(object):
 
     """
     Initialize a rectangle from two points.
-    x1,y1 = upper LEFT
-    x2,y2 = lower RIGHT
+    ul = upper LEFT
+    lr = lower RIGHT
     """
-    def __init__(self, pt1=None, pt2=None):
-        if not pt1:
-            pt1 = Point()
-        if not pt2:
-            pt2 = Point()
+    def __init__(self, ul=None, lr=None):
+        if not ul:
+            ul = Point()
+        if not lr:
+            lr = Point()
 
-        self.set_points(pt1, pt2)
+        self.set_points(ul, lr)
         self.parent = None
 
     """
     Reset the bbox coordinates.
     """
-    def set_points(self, pt1, pt2):
-        self.ul = pt1
-        self.lr = pt2
-        (x1, y1) = pt1.as_tuple()
-        (x2, y2) = pt2.as_tuple()
-        self.x1 = x1
-        self.y1 = y1
-        self.x2 = x2
-        self.y2 = y2
-        self.w = math.fabs(pt1.x-pt2.x)
-        self.h = math.fabs(pt1.y-pt2.y)
-        self.center = Point((math.fabs(x1-x2)/2),(math.fabs(y1-y2)/2))
+    def set_points(self, ul, lr):
+        self.ul = ul
+        self.lr = lr
+        self.w = math.fabs(ul.x-lr.x)
+        self.h = math.fabs(ul.y-lr.y)
+        self.center = Point((math.fabs(self.ul.x-self.lr.x)/2),(math.fabs(self.ul.y-self.lr.y)/2))
 
 
     """
     Return true if a point is inside the rectangle.
     """
     def containsPoint(self, p):
-        x,y = p.as_tuple()
+
+        #print "ul: ",self.ul,self.ul.x,",",self.ul.y
+        #print "lr: ",self.lr
+
+        #print p.x," < ",self.ul.x," and ",p.x," < ",self.lr.x," and ",p.y," > ",self.ul.y ," and ",p.y," < ",self.lr.y
 
         return (p.x > self.ul.x and p.x < self.lr.x and p.y > self.ul.y and p.y < self.lr.y)
 

@@ -16,6 +16,7 @@ class QuadTree(object):
         self.points = []
         self.bbox = bbox
         self.maxPoints = maxPoints
+        self.smallestContainer = None
 
     def __str__(self):
         return "\nnorthwest: %s,\nnorthEast: %s,\nsouthWest: %s,\nsouthEast: %s,\npoints: %s,\nbbox: %s,\nmaxPoints: %s\n" % (self.northWest, self.northEast,self.southWest, self.southEast,self.points,self.bbox,self.maxPoints)
@@ -48,7 +49,7 @@ class QuadTree(object):
      Split this QuadTree node into four quadrants for NW/NE/SE/SW
     """
     def subdivide(self):
-        print "self:",self.bbox
+        #print "self:",self.bbox
         l = self.bbox.ul.x
         r = self.bbox.lr.x
         t = self.bbox.ul.y
@@ -59,14 +60,14 @@ class QuadTree(object):
         self.southEast = QuadTree(BoundingBox(Point(mX,mY),Point(r,b)),self.maxPoints)
         self.southWest = QuadTree(BoundingBox(Point(l,mY),Point(mX,b)),self.maxPoints)
         self.northWest = QuadTree(BoundingBox(Point(l,t),Point(mX,mY)),self.maxPoints)
-        print self.northEast,self.southEast,self.southWest,self.northWest
+        #print self.northEast,self.southEast,self.southWest,self.northWest
 
 
     """
      Return an array of all points within this QuadTree and its child nodes that fall
      within the specified bounding box
     """
-    def search(self,bbox):
+    def searchBox(self,bbox):
 
         results = []
 
@@ -75,20 +76,70 @@ class QuadTree(object):
             for p in self.points:
                 # Test each point stored in this QuadTree node in turn, adding to the results array
                 #    if it falls within the bounding box
-                if bbox.containsPoint(p):
+                if self.bbox.containsPoint(p):
                     results.append(p)
 
 
             # If we have child QuadTree nodes....
             if (not self.northWest == None):
                 # ... search each child node in turn, merging with any existing results
-                results = results + self.northWest.search(bbox)
-                results = results + self.northEast.search(bbox)
-                results = results + self.southWest.search(bbox)
-                results = results + self.southEast.search(bbox)
+                results = results + self.northWest.searchBox(self.bbox)
+                results = results + self.northEast.searchBox(self.bbox)
+                results = results + self.southWest.searchBox(self.bbox)
+                results = results + self.southEast.searchBox(self.bbox)
 
         return results
 
+    """
+     Returns the containers points that are in the same container as another point.
+    """
+    def searchNeighbors(self,point):
+
+        #If its not a point (its a bounding rectangle)
+        if not hasattr(point, 'x'):
+            return []
+
+        results = []
+
+        if self.bbox.containsPoint(point):
+            print point," in ",self.bbox
+            # Test each point that falls within the current QuadTree node
+            for p in self.points:
+                print p
+                # Test each point stored in this QuadTree node in turn, adding to the results array
+                #    if it falls within the bounding box
+                if self.bbox.containsPoint(p):
+                    print p," in bbox"
+                    results.append(p)
+
+
+            # If we have child QuadTree nodes....
+            if (not self.northWest == None):
+                # ... search each child node in turn, merging with any existing results
+                results = results + self.northWest.searchNeighbors(point)
+                results = results + self.northEast.searchNeighbors(point)
+                results = results + self.southWest.searchNeighbors(point)
+                results = results + self.southEast.searchNeighbors(point)
+
+        return results
+
+    def getSmallestBBox(self,point):
+
+        if self.bbox.containsPoint(point):
+            print "smallest..."
+            print self.bbox
+
+            if (not self.northWest == None):
+                print "checking others"
+                self.northWest.getSmallestBBox(point)
+                self.northEast.getSmallestBBox(point)
+                self.southWest.getSmallestBBox(point)
+                self.southEast.getSmallestBBox(point)
+
+            self.smallestContainer = self.bbox
+    """
+    Print helper to draw tree
+    """
     def getBBoxes(self):
         bboxes = []
 
@@ -108,15 +159,21 @@ class QuadTree(object):
 class Driver(pantograph.PantographHandler):
 
     def setup(self):
-        self.q = QuadTree(BoundingBox(Point(0,0),Point(self.width,self.height)),5)
+        self.q = QuadTree(BoundingBox(Point(0,0),Point(self.width,self.height)),3)
         self.points = []
         self.colors = ["#000","#F00","#0f0","#00f","#ff0","#0ff","#0f0"]
 
     def on_mouse_down(self,InputEvent):
+        #print InputEvent
+        if InputEvent.shift_key == True:
+            self.q.getSmallestBBox(Point(InputEvent.x,InputEvent.y))
+            print self.q.smallestContainer
+
         self.q.insert(Point(InputEvent.x,InputEvent.y))
         self.points.append(Point(InputEvent.x,InputEvent.y))
         self.bboxs = self.q.getBBoxes()
         print "click: ",InputEvent.x,InputEvent.y
+
 
     def drawShapes(self):
         self.draw_rect(0, 0, self.width, self.height, color= "#000")
