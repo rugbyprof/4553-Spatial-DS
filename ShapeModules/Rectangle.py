@@ -46,10 +46,17 @@ class Rectangle:
     def set_points(self, pt1, pt2):
         (x1, y1) = pt1.as_tuple()
         (x2, y2) = pt2.as_tuple()
+        self.x1 = x1
+        self.y1 = y1
+        self.x2 = x2
+        self.y2 = y2
         self.left = min(x1, x2)
         self.top = min(y1, y2)
         self.right = max(x1, x2)
         self.bottom = max(y1, y2)
+        self.w = math.fabs(pt1.x-pt2.x)
+        self.h = math.fabs(pt1.y-pt2.y)
+        self.center = Point((math.fabs(x1-x2)/2),(math.fabs(y1-y2)/2))
 
     """
     Return true if a point is inside the rectangle.
@@ -58,6 +65,15 @@ class Rectangle:
         x,y = pt.as_tuple()
         return (self.left <= x <= self.right and
                 self.top <= y <= self.bottom)
+
+    """
+    Return true if a rect is inside this rectangle.
+    """
+    def encompasses(self, other):
+        return  (self.left <= other.left and
+                self.right >= other.right and
+                self.top <= other.top and
+                self.bottom >= other.bottom)
 
     """
     Return true if a rectangle overlaps this rectangle.

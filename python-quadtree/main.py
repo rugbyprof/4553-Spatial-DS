@@ -125,8 +125,6 @@ class Size(object):
         self.h = h
 
 
-
-
 if __name__ == '__main__':
     app = pantograph.SimplePantographApplication(DrawTree)
     app.run()

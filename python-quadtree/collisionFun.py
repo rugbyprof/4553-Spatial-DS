@@ -12,13 +12,16 @@ from Rectangle import Rectangle
 from Polygon import Polygon
 
 class Rock(object):
-    def __init__(self,start,speed,dest):
+    def __init__(self,size,start,speed,dest,maxX,maxY):
         self.start = start
         self.current = start
         self.speed = math.sqrt(speed)
         self.dest = dest
         self._calc_vector()
-        self.size = 5
+        self.size = size
+        self.maxX = maxX
+        self.maxY = maxY
+
 
     def _calc_vector(self):
         self.distance = [self.start.x - self.dest.x, self.start.y - self.dest.y]
@@ -34,17 +37,23 @@ class Rock(object):
         self.size = size
 
     def move_rock(self):
+
+        if (self.current.x + self.vector[0]) >= self.maxX or (self.current.x + self.vector[0]) <= 0 :
+            self.vector[0] *= -1
+
+        if (self.current.y + self.vector[1]) >= self.maxY or (self.current.y + self.vector[1]) <= 0:
+            self.vector[1] *= -1
+
         self.current.x += self.vector[0]
         self.current.y += self.vector[1]
 
 
-
 class collisionDetection(pantograph.PantographHandler):
     def setup(self):
-        self.ptSize = 7
+        self.rockSize = 7
         self.rocks = []
         self.rockSpeeds = np.arange(.5,5,.5)
-        self.numRocks = 300
+        self.numRocks = 100
 
         seqX = [0,self.width]
         seqY = [0,self.height]
@@ -57,7 +66,7 @@ class collisionDetection(pantograph.PantographHandler):
             destY = random.choice(seqY)
             speed = random.choice(self.rockSpeeds)
 
-            self.rocks.append(Rock(Point(startX,startY),speed,Point(destX,destY)))
+            self.rocks.append(Rock(self.rockSize,Point(startX,startY),speed,Point(destX,destY),self.width,self.height))
 
         self.drawShapes()
 
