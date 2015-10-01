@@ -5,16 +5,6 @@ from BoundingBox import BoundingBox
 from Polygon import Polygon
 import pantograph
 
-
-"""
- *
- * QuadTree class
- *
- * @package QuadTree
- * @copyright  Copyright (c) 2013 Mark Baker (https:#github.com/MarkBaker/Tries)
- * @license    http:#www.gnu.org/licenses/lgpl-3.0.txt    LGPL
- *
- """
 class QuadTree(object):
 
     def __init__(self,bbox,maxPoints):
