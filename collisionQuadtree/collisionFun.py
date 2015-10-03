@@ -1,4 +1,3 @@
-import pantograph
 import math
 import random
 import numpy as np
@@ -11,17 +10,19 @@ sys.path.append("../ShapeModules")
 from Point import Point
 from Rectangle import Rectangle
 from Polygon import Polygon
+from graphics import *
 
 class Rock(object):
-    def __init__(self,size,start,speed,dest,maxX,maxY):
+    def __init__(self,size,start,speed,dest,wallX,wallY):
         self.start = start
         self.current = start
         self.speed = math.sqrt(speed)
         self.dest = dest
         self._calc_vector()
         self.size = size
-        self.maxX = maxX
-        self.maxY = maxY
+        self.wallX = wallX
+        self.wallY = wallY
+        self.winObj = Circle(Point(self.start.x,self.start.y),self.size)
 
     def _calc_vector(self):
         self.distance = [self.start.x - self.dest.x, self.start.y - self.dest.y]
@@ -38,37 +39,47 @@ class Rock(object):
 
     def move_rock(self):
 
-        if (self.current.x + self.vector[0]) >= self.maxX or (self.current.x + self.vector[0]) <= 0 :
+        if (self.current.x + self.vector[0]) >= self.wallX or (self.current.x + self.vector[0]) <= 0 :
             self.vector[0] *= -1
 
-        if (self.current.y + self.vector[1]) >= self.maxY or (self.current.y + self.vector[1]) <= 0:
+        if (self.current.y + self.vector[1]) >= self.wallY or (self.current.y + self.vector[1]) <= 0:
             self.vector[1] *= -1
 
         self.current.x += self.vector[0]
         self.current.y += self.vector[1]
+        self.winObj()
 
 
-class collisionDetection(pantograph.PantographHandler):
-    def setup(self):
+class driver(object):
+    def __init__(self,win,width,height):
+        self.win = win
+        self.height = height
+        self.width = width
         self.rockSize = 7
         self.rocks = []
         self.rockSpeeds = np.arange(1,15,1)
         self.numRocks = 100
 
-        seqX = [0,self.width]
-        seqY = [0,self.height]
+        xWalls = [0,self.width]
+        yWalls = [0,self.height]
 
         for i in range(self.numRocks):
-            startX = random.randint(int(self.width/4),int(self.width/2))
-            startY = random.randint(int(self.width/4),int(self.height/2))
+            startX = random.randint(0+self.rockSize,int(self.width)-self.rockSize)
+            startY = random.randint(0+self.rockSize,int(self.height)-self.rockSize)
 
-            destX = random.choice(seqX)
-            destY = random.choice(seqY)
+            destX = random.choice(xWalls)
+            destY = random.choice(yWalls)
+
             speed = random.choice(self.rockSpeeds)
 
-            self.rocks.append(Rock(self.rockSize,Point(startX,startY),speed,Point(destX,destY),self.width,self.height))
+            r = Rock(self.rockSize,Point(startX,startY),speed,Point(destX,destY),self.width,self.height)
+            self.rocks.append(r)
+            r.winObj.draw(self.win)
 
-        self.drawShapes()
+
+        self.win.getMouse() # Pause to view result
+        self.win.close()    # Close window when done
+        #self.drawShapes()
 
     def drange(self,start, stop, step):
         r = start
@@ -92,6 +103,9 @@ class collisionDetection(pantograph.PantographHandler):
         self.drawShapes()
         self.moveShapes()
 
+
 if __name__ == '__main__':
-    app = pantograph.SimplePantographApplication(collisionDetection)
-    app.run()
+    width = 1000
+    height = 1000
+    win = GraphWin("Collision Fun", width, height)
+    driver(win,width,height)
