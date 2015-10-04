@@ -2,6 +2,7 @@ import math
 import random
 import numpy as np
 from QuadTree import QuadTree
+import time
 
 # Add ShapeModules (which holds Point,Rect,Polygon) folder to the path
 # so we can use those shapes.
@@ -45,7 +46,7 @@ class BoundingBox(object):
 
         #print p.x," < ",self.ul.x," and ",p.x," < ",self.lr.x," and ",p.y," > ",self.ul.y ," and ",p.y," < ",self.lr.y
 
-        return (p.x > self.ul.x and p.x < self.lr.x and p.y > self.ul.y and p.y < self.lr.y)
+        return ( self.ul.x <= p.x and p.x <= self.lr.x and self.ul.y <= p.y and p.y <= self.lr.y )
 
     """
     Return true if a rect is inside this rectangle.
@@ -99,6 +100,7 @@ class QuadTree(object):
     """
     def insert(self,point):
         if not self.bbox.containsPoint(point):
+            #print "Point %s is not inside bounding box %s" % (point,self.bbox)
             return False
 
         if len(self.points) < self.maxPoints:
@@ -116,7 +118,7 @@ class QuadTree(object):
             return True
 
         # If we couldn't insert the new point, then we have an exception situation
-        raise ValueError('Point is outside bounding box!')
+        raise ValueError("Point %s is outside bounding box %s" % (point,self.bbox))
 
     """
      Split this QuadTree node into four quadrants for NW/NE/SE/SW
@@ -215,91 +217,111 @@ class QuadTree(object):
 
 
 """
-Sketchy way to calculate a movement Vector that can be applied to a point (x,y)
-essentially moving it in the correct direction (with respect to some end point)
-at a specified velocity (aka moving at some speed toward some point)
+A vector can be determined from a single point when basing
+it from the origin (0,0), but I'm going to assume 2 points.
+Example:
+    AB = Vector(Point(3,4),Point(6,7))
+
+or if you want to use the origin
+
+    AB = Vector(Point(0,0),Point(8,4))
+
 """
-class PointVector(object):
-    def __init__(self,start=None,end=None,bearing=0,velocity=1):
-        self.start = start
-        self.end = end
-        self.velocity = velocity
-        self.bearing = math.radians(bearing)
+class Vector(object):
+    def __init__(self,p1,p2):
+        assert not p1 == None
+        assert not p2 == None
+        self.p1 = p1
+        self.p2 = p2
+        self.v = [self.p1.x - self.p2.x, self.p1.y - self.p2.y]
+        self.a,self.b = self.v
 
     def _str__(self):
-        return "[\n start: %s,\n end: %s,\n bearing: %s,\n velocity: %s\n]" % (self.start, self.end, self.bearing,self.velocity)
+        return "[\n p1: %s,\n p2: %s,\n vector: %s,\n a: %s,\nb: %s\n]" % (self.p1, self.p2, self.v,self.a,self.b)
 
     def __repr__(self):
-        return "[\n start: %s,\n end: %s,\n bearing: %s,\n velocity: %s\n]" % (self.start, self.end, self.bearing,self.velocity)
+        return "[\n p1: %s,\n p2: %s,\n vector: %s,\n a: %s,\nb: %s\n]" % (self.p1, self.p2, self.v,self.a,self.b)
+
+class VectorOps(object):
+    def __init__(self,p1=None,p2=None,velocity=1):
+        self.p1 = p1
+        self.p2 = p2
+        self.dx = 0
+        self.dy = 0
+        if not self.p1 == None and not self.p2 == None:
+            self.v = Vector(p1,p2)
+            self.velocity = velocity
+            self.magnitude = self._magnitude()
+            self.bearing = self._bearing()
+            self.step = self._step()
+        else:
+            self.v = None
+            self.velocity = None
+            self.bearing = None
+            self.magnitude = None
 
     """
-    Setters
+    Calculate the bearing (in radians) between p1 and p2
     """
-    def Start(self):
-        self.start = start
+    def _bearing(self):
+        dx = self.p2.x - self.p1.x
+        dy = self.p2.y - self.p1.y
+        rads = math.atan2(-dy,dx)
+        return rads % 2*math.pi         # In radians
+        #degs = degrees(rads)
+    """
+    A vector by itself can have a magnitude when basing it on the origin (0,0),
+    but in this context we want to calculate magnitude (length) based on another
+    point (converted to a vector).
+    """
+    def _magnitude(self):
+        assert not self.v == None
+        return math.sqrt( (self.v.a**2) + (self.v.b**2) )
 
-    def End(self):
-        self.end = end
+    """
+    Create the step factor between p1 and p2 to allow a point to
+    move toward p2 at some interval based on velocity. Greater velocity
+    means bigger steps (less granular).
+    """
+    def _step(self):
+        cosa = math.sin(self.bearing)
+        cosb = math.cos(self.bearing)
+        self.dx = cosa * self.velocity
+        self.dy = cosb * self.velocity
+        return [cosa * self.velocity, cosb * self.velocity]
 
-    def Velocity(self,velocity):
-        self.velocity = velocity
+    def _str__(self):
+        return "[\n vector: %s,\n velocity: %s,\n bearing: %s,\n magnitude: %s\n, step: %s\n]" % (self.v, self.velocity, self.bearing,self.magnitude,self.step)
 
-    def Bearing(self,bearing):
-        bearing = float(bearing)
-        self.bearing = math.radians(bearing)
-        return
+    def __repr__(self):
+        return "[\n vector: %s,\n velocity: %s,\n bearing: %s,\n magnitude: %s\n, step: %s\n]" % (self.v, self.velocity, self.bearing,self.magnitude,self.step)
 
-    def Destination(self,distance,bearing=None):
-        if bearing == None:
-            bearing = self.bearing
+
+class Rock(Circle):
+    def __init__(self,p,radius):
+        p1 = Point(p.x-radius, p.y-radius)
+        p2 = Point(p.x+radius, p.y+radius)
+        Circle.__init__(self, p, radius)
+        self.x = p.x
+        self.y = p.y
+        self.radius = radius
+        self.bearing = math.radians(random.randint(0,360))
+        self.velocity = random.randint(1,10)
+        self.vectorOps = VectorOps(p,self.destination(100,self.bearing),self.velocity)
+
+    def destination(self,distance,bearing):
         cosa = math.sin(bearing)
         cosb = math.cos(bearing)
-        self.end = Point(self.start.x + (distance * cosa), self.start.y + (distance * cosb))
-        return self.end
+        return Point(self.x + (distance * cosa), self.y + (distance * cosb))
 
-    """
-    Calculate a movement vector to be applied to a point to move it on the
-    current bearing at current velocity
-    """
-    def Vector(self,start=None,end=None,bearing=None,velocity=None):
-        if start == None:
-            start = self.start
-        if end == None:
-            end = self.end
-        if bearing == None:
-            bearing = self.bearing
-        if velocity == None:
-            velocity = self.velocity
-        # Calculate the Norm
-        diff = [start.x - end.x, start.y - end.y]
-        norm = math.sqrt(diff[0]**2 + diff[1]**2)
-        bearing = [diff[0]/norm, diff[1]/norm]
-        self.vector = [bearing[0] * velocity, bearing[1] * velocity]
-        return self.vector
+    def dx(self):
+        return self.vectorOps.dx
 
+    def dy(self):
+        return self.vectorOps.dy
 
-
-class Rock(Oval):
-    def __init__(self, center, radius):
-        p1 = Point(center.x-radius, center.y-radius)
-        p2 = Point(center.x+radius, center.y+radius)
-        Oval.__init__(self, p1, p2)
-        self.radius = radius
-        self.move = PointVector(center)
-        self.x = center.x
-        self.y = center.y
-
-    def deltaMove(self):
-        vector = self.move.Vector()
-        print vector
-        self.x += vector[0]
-        self.y += vector[1]
-
-    def _str__(self):
-        return "[\n center: %s,\n radius: %s,\n vector: %s,\n ]" % (self.p1, self.radius, self.move)
-
-    def __repr__(self):
-        return "[\n center: %s,\n radius: %s,\n vector: %s,\n ]" % (self.p1, self.radius, self.move)
+    def __str__(self):
+        return "[\n x: %s,\n y: %s,\n radius: %s,\n vector: %s\n]" % (self.x, self.y, self.radius,self.vectorOps)
 
 
 class Driver(object):
@@ -307,18 +329,15 @@ class Driver(object):
         self.width = width
         self.height = height
         self.rockSpeeds = np.arange(1,15,1)
-        self.numRocks = 15
-        self.q = QuadTree(BoundingBox(Point(5,5),Point(self.width,self.height)),1)
+        self.numRocks = 25
+        self.q = QuadTree(BoundingBox(Point(0,0),Point(self.width,self.height)),1)
         self.rockSize = 5
-        self.win = GraphWin("Testing", self.width, self.height, autoflush=False)
-        self.rocks = []
+        self.win = GraphWin("MoveRocks", self.width, self.height)
         self.boxes = []
+        self.rocks = []
 
         xWalls = [0,self.width]
         yWalls = [0,self.height]
-
-        self.win.addItem(Rectangle(Point(5,5),Point(self.width,self.height)))
-        self.win.redraw()
 
         for i in range(self.numRocks):
             #click = self.win.getMouse() # Pause to view result
@@ -328,23 +347,26 @@ class Driver(object):
 
             speed = random.choice(self.rockSpeeds)
 
-            #r = Rock(Point(click.getX(),click.getY()),self.rockSize)
-            r = Rock(Point(startX,startY),self.rockSize)
-            r.move.Destination(random.randint(self.width/2,self.width),random.randint(0,360))
-            self.rocks.append(r)
-            self.q.insert(r)
-            self.win.addItem(r)
+            self.rocks.append(Rock(Point(startX,startY),self.rockSize))
 
-        self.win.redraw()
+        self.win.flush()
+        self.drawRocks()
 
-        # self.drawBoxes()
-        while True:
+        for i in range(1000):
+
+            #time.sleep(.01)
             self.moveRocks()
-            self.win.getMouse()
-            self.win.redraw()
 
-        self.win.getMouse() # Pause to view result
-        self.win.close()    # Close window when done
+        self.win.promptClose(self.win.getWidth()/2, 20)
+
+    def drawRocks(self):
+        for r in self.rocks:
+            r.draw(self.win)
+
+    def moveRocks(self):
+        for r in self.rocks:
+            r.move(r.dx(),r.dy())
+            self.win.flush()
 
     def drawBoxes(self):
         boxes = self.q.getBBoxes()
@@ -352,16 +374,6 @@ class Driver(object):
             box = Rectangle(box.ul,box.lr)
             box.draw(self.win)
 
-    def drawRocks(self):
-        for r in self.rocks:
-            r.draw(self.win)
-
-
-    def moveRocks(self):
-        for r in self.rocks:
-            print r
-            r.deltaMove()
-            print r
 
 if __name__ == '__main__':
     D = Driver(500,500)

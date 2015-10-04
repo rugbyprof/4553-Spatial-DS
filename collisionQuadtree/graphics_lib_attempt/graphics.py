@@ -60,16 +60,12 @@ Programming: An Introduction to Computer Science" by John Zelle,
 published by Franklin, Beedle & Associates.  Also see
 http://mcsp.wartburg.edu/zelle/python for a quick reference"""
 
-__version__ = "4.3"
-
-# Version 4.3 4/25/2014
-#     * Fixed Image getPixel to work with Python 3.4, TK 8.6 (tuple type handling)
-#     * Added interactive keyboard input (getKey and checkKey) to GraphWin
-#     * Modified setCoords to cause redraw of current objects, thus
-#       changing the view. This supports scrolling around via setCoords.
-#
 # Version 4.2 5/26/2011
 #     * Modified Image to allow multiple undraws like other GraphicsObjects
+
+# Version 1/6/11 by Andrew Harrington
+# added utility GraphWin methods promptMouse, promptClose, yUp.
+
 # Version 4.1 12/29/2009
 #     * Merged Pixmap and Image class. Old Pixmap removed, use Image.
 # Version 4.0.1 10/08/2009
@@ -199,7 +195,6 @@ class GraphWin(tk.Canvas):
         self.mouseX = None
         self.mouseY = None
         self.bind("<Button-1>", self._onClick)
-        self.bind_all("<Key>", self._onKey)
         self.height = height
         self.width = width
         self.autoflush = autoflush
@@ -207,16 +202,11 @@ class GraphWin(tk.Canvas):
         self.trans = None
         self.closed = False
         master.lift()
-        self.lastKey = ""
         if autoflush: _root.update()
 
     def __checkOpen(self):
         if self.closed:
             raise GraphicsError("window is closed")
-
-    def _onKey(self, evnt):
-        self.lastKey = evnt.keysym
-
 
     def setBackground(self, color):
         """Set background color of the window"""
@@ -228,7 +218,12 @@ class GraphWin(tk.Canvas):
         """Set coordinates of window to run from (x1,y1) in the
         lower-left corner to (x2,y2) in the upper-right corner."""
         self.trans = Transform(self.width, self.height, x1, y1, x2, y2)
-        self.redraw()
+
+    def yUp(self):
+        """Set coordinates of window to run from (0,0) in the
+        lower-left corner and the window widthand height
+        in the upper left corner, so y increases upward."""
+        self.setCoords(0, 0, self.width, self.height)
 
     def close(self):
         """Close the window"""
@@ -300,26 +295,28 @@ class GraphWin(tk.Canvas):
         else:
             return None
 
-    def getKey(self):
-        """Wait for user to press a key and return it as a string."""
-        self.lastKey = ""
-        while self.lastKey == "":
-            self.update()
-            if self.isClosed(): raise GraphicsError("getKey in closed window")
-            time.sleep(.1) # give up thread
+    def promptMouse(self, x, y, prompt):
+        '''Temporarily place the prompt text at (x,y),
+        and wait for and then return a mouse click.
+        '''
+        message = Text(Point(x, y), prompt)
+        message.draw(self)
+        pt = self.getMouse()
+        message.undraw()
+        return pt
 
-        key = self.lastKey
-        self.lastKey = ""
-        return key
-
-    def checkKey(self):
-        """Return last key pressed or None if no key pressed since last call"""
-        if self.isClosed():
-            raise GraphicsError("checkKey in closed window")
-        self.update()
-        key = self.lastKey
-        self.lastKey = ""
-        return key
+    def promptClose(self, x, y=None):
+        '''Place a prompt to close the window at (x,y)
+        or if y is None, in existing Text object x,
+        and close after a mouse click.
+        '''
+        prompt = 'Click anywhere to quit.'
+        if isinstance(x, Text):
+            x.setText(prompt)
+            self.getMouse()
+        else:
+            self.promptMouse(x, y, prompt)
+        self.close()
 
     def getHeight(self):
         """Return the height of the window"""
@@ -351,19 +348,6 @@ class GraphWin(tk.Canvas):
         self.mouseY = e.y
         if self._mouseCallback:
             self._mouseCallback(Point(e.x, e.y))
-
-    def addItem(self, item):
-        self.items.append(item)
-
-    def delItem(self, item):
-        self.items.remove(item)
-
-    def redraw(self):
-        for item in self.items[:]:
-            item.undraw()
-            item.draw(self)
-        self.update()
-
 
 class Transform:
 
@@ -448,7 +432,6 @@ class GraphicsObject:
         if graphwin.isClosed(): raise GraphicsError("Can't draw to closed window")
         self.canvas = graphwin
         self.id = self._draw(graphwin, self.config)
-        graphwin.addItem(self)
         if graphwin.autoflush:
             _root.update()
 
@@ -461,7 +444,6 @@ class GraphicsObject:
         if not self.canvas: return
         if not self.canvas.isClosed():
             self.canvas.delete(self.id)
-            self.canvas.delItem(self)
             if self.canvas.autoflush:
                 _root.update()
         self.canvas = None
@@ -500,7 +482,6 @@ class GraphicsObject:
             if self.canvas.autoflush:
                 _root.update()
 
-
     def _draw(self, canvas, options):
         """draws appropriate figure on canvas with options provided
         Returns Tk id of item drawn"""
@@ -518,12 +499,6 @@ class Point(GraphicsObject):
         self.setFill = self.setOutline
         self.x = x
         self.y = y
-        
-    def __str__(self):
-        return "(%s, %s)" % (self.x, self.y)
-
-    def __repr__(self):
-        return "%s(%r, %r)" % (self.__class__.__name__, self.x, self.y)
 
     def _draw(self, canvas, options):
         x,y = canvas.toScreen(self.x,self.y)
@@ -537,6 +512,9 @@ class Point(GraphicsObject):
         other = Point(self.x,self.y)
         other.config = self.config.copy()
         return other
+
+    def __str__(self):
+        return "Point({0}, {1})".format(self.x, self.y)
 
     def getX(self): return self.x
     def getY(self): return self.y
@@ -577,6 +555,9 @@ class Rectangle(_BBox):
         x2,y2 = canvas.toScreen(p2.x,p2.y)
         return canvas.create_rectangle(x1,y1,x2,y2,options)
 
+    def __str__(self):
+        return "Rectangle({0}, {1})".format(self.p1, self.p2)
+
     def clone(self):
         other = Rectangle(self.p1, self.p2)
         other.config = self.config.copy()
@@ -586,6 +567,9 @@ class Oval(_BBox):
 
     def __init__(self, p1, p2):
         _BBox.__init__(self, p1, p2)
+
+    def __str__(self):
+        return "Oval({0}, {1})".format(self.p1, self.p2)
 
     def clone(self):
         other = Oval(self.p1, self.p2)
@@ -615,12 +599,18 @@ class Circle(Oval):
     def getRadius(self):
         return self.radius
 
+    def __str__(self):
+        return "Circle({0}, {1})".format(self.getCenter(), self.radius)
+
 class Line(_BBox):
 
     def __init__(self, p1, p2):
         _BBox.__init__(self, p1, p2, ["arrow","fill","width"])
         self.setFill(DEFAULT_CONFIG['outline'])
         self.setOutline = self.setFill
+
+    def __str__(self):
+        return "Line({0}, {1})".format(self.p1, self.p2)
 
     def clone(self):
         other = Line(self.p1, self.p2)
@@ -656,6 +646,10 @@ class Polygon(GraphicsObject):
 
     def getPoints(self):
         return list(map(Point.clone, self.points))
+
+    def __str__(self):
+        return "Polygon({0})".format(
+               ", ".join([str(pt) for pt in self.points]))
 
     def _move(self, dx, dy):
         for p in self.points:
@@ -724,6 +718,9 @@ class Text(GraphicsObject):
 
     def setTextColor(self, color):
         self.setFill(color)
+
+    def __str__(self):
+        return "Text({0}, {1!r})".format(self.anchor, self.getText())
 
 
 class Entry(GraphicsObject):
@@ -812,6 +809,9 @@ class Entry(GraphicsObject):
         if self.entry:
             self.entry.config(fg=color)
 
+    def __str__(self):
+        return 'Entry({0}, {1})'.format(self.anchor, self.width)
+
 
 class Image(GraphicsObject):
 
@@ -872,8 +872,6 @@ class Image(GraphicsObject):
         value = self.img.get(x,y)
         if type(value) ==  type(0):
             return [value, value, value]
-        elif type(value) == type((0,0,0)):
-            return list(value)
         else:
             return list(map(int, value.split()))
 
