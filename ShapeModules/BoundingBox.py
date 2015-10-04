@@ -37,14 +37,15 @@ class BoundingBox(object):
         #print "lr: ",self.lr
 
         #print p.x," < ",self.ul.x," and ",p.x," < ",self.lr.x," and ",p.y," > ",self.ul.y ," and ",p.y," < ",self.lr.y
-
-        return (p.x > self.ul.x and p.x < self.lr.x and p.y > self.ul.y and p.y < self.lr.y)
+        return (self.ul.x <= p.x <= self.lr.x and self.ul.y <= p.y <= self.lr.y)
+        #return (p.x > self.ul.x and p.x < self.lr.x and p.y > self.ul.y and p.y < self.lr.y)
 
     """
     Return true if a rect is inside this rectangle.
     """
     def containsBox(self, other):
-        return (self.ul.x < other.ul.x and other.ul.y > self.ul.y and other.lr.x < self.lr.x and other.lr.y < self.lr.y)
+        #print other.ul.x ,' > ', self.ul.x ,' and ', other.ul.y ,' > ', self.ul.y ,' and ' ,other.lr.x ,' < ', self.lr.x ,' and ', other.lr.y ,' < ', self.lr.y
+        return (other.ul.x > self.ul.x and other.ul.y > self.ul.y and other.lr.x < self.lr.x and other.lr.y < self.lr.y)
 
 
     """
@@ -66,7 +67,7 @@ class BoundingBox(object):
         return Rect(p1, p2)
 
     def __str__( self ):
-        return "<Rect (%s,%s)-(%s,%s)>" % (self.ul.x,self.ul.y,self.lr.x,self.lr.y)
+        return "<Rect (ul.x:%s,ul.y:%s) , (lr.x:%s, lr.y:%s)>" % (self.ul.x,self.ul.y,self.lr.x,self.lr.y)
 
     def __repr__(self):
         return "%s(%r, %r)" % (self.__class__.__name__,Point(self.ul.x, self.ul.y),Point(self.lr.x, self.lr.y))

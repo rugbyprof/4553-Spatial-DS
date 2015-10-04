@@ -1,9 +1,8 @@
 import math
 import random
 import numpy as np
-from QuadTree import QuadTree
 import time
-
+from pointQuadTree import *
 # Add ShapeModules (which holds Point,Rect,Polygon) folder to the path
 # so we can use those shapes.
 import sys
@@ -12,7 +11,7 @@ from BoundingBox import *
 import pantograph
 
 
-class QuadTree(object):
+class RectQuadTree(object):
 
     def __init__(self,bbox,maxPoints):
         self.northEast = None
@@ -20,10 +19,9 @@ class QuadTree(object):
         self.southWest = None
         self.northWest = None
 
-        self.points = []
+        self.rects = []
         self.bbox = bbox
         self.maxPoints = maxPoints
-        self.smallestContainer = None
 
     def __str__(self):
         return "\nnorthwest: %s,\nnorthEast: %s,\nsouthWest: %s,\nsouthEast: %s,\npoints: %s,\nbbox: %s,\nmaxPoints: %s\n" % (self.northWest, self.northEast,self.southWest, self.southEast,self.points,self.bbox,self.maxPoints)
@@ -31,27 +29,28 @@ class QuadTree(object):
     """
     Insert a new point into this QuadTree node
     """
-    def insert(self,point):
-        if not self.bbox.containsPoint(point):
+    def insert(self,r):
+        if not self.bbox.overlaps(r):
             #print "Point %s is not inside bounding box %s" % (point,self.bbox)
             return False
 
-        if len(self.points) < self.maxPoints:
+        if len(self.rects) < self.maxPoints:
             # If we still have spaces in the bucket array for this QuadTree node,
             #    then the point simply goes here and we're finished
-            self.points.append(point)
+            self.rects.append(r)
             return True
         elif self.northEast == None:
+            print "subdividing"
             # Otherwise we split this node into NW/NE/SE/SW quadrants
             self.subdivide()
 
         # Insert the point into the appropriate quadrant, and finish
-        if ((self.northEast.insert(point)) or (self.southEast.insert(point)) or
-            (self.southWest.insert(point)) or (self.northWest.insert(point))):
+        if ((self.northEast.insert(r)) or (self.southEast.insert(r)) or
+            (self.southWest.insert(r)) or (self.northWest.insert(r))):
             return True
 
         # If we couldn't insert the new point, then we have an exception situation
-        raise ValueError("Point %s is outside bounding box %s" % (point,self.bbox))
+        raise ValueError("Rect %s is outside bounding box %s" % (r,self.bbox))
 
     """
      Split this QuadTree node into four quadrants for NW/NE/SE/SW
@@ -63,14 +62,14 @@ class QuadTree(object):
         b = self.bbox.lr.y
         mX = (l+r) / 2
         mY = (t+b) / 2
-        self.northEast = QuadTree(BoundingBox(Point(mX,t),Point(r,mY)),self.maxPoints)
-        self.southEast = QuadTree(BoundingBox(Point(mX,mY),Point(r,b)),self.maxPoints)
-        self.southWest = QuadTree(BoundingBox(Point(l,mY),Point(mX,b)),self.maxPoints)
-        self.northWest = QuadTree(BoundingBox(Point(l,t),Point(mX,mY)),self.maxPoints)
+        self.northEast = RectQuadTree(BoundingBox(Point(mX,t),Point(r,mY)),self.maxPoints)
+        self.southEast = RectQuadTree(BoundingBox(Point(mX,mY),Point(r,b)),self.maxPoints)
+        self.southWest = RectQuadTree(BoundingBox(Point(l,mY),Point(mX,b)),self.maxPoints)
+        self.northWest = RectQuadTree(BoundingBox(Point(l,t),Point(mX,mY)),self.maxPoints)
 
 
     """
-     Return an array of all points within this QuadTree and its child nodes that fall
+     Return an array of all items within this QuadTree and its child nodes that fall
      within the specified bounding box
     """
     def searchBox(self,bbox):
@@ -79,11 +78,11 @@ class QuadTree(object):
 
         if self.bbox.overlaps(bbox) or self.bbox.containsBox(bbox):
             # Test each point that falls within the current QuadTree node
-            for p in self.points:
+            for r in self.rects:
                 # Test each point stored in this QuadTree node in turn, adding to the results array
                 #    if it falls within the bounding box
-                if self.bbox.containsPoint(p):
-                    results.append(p)
+                if self.bbox.containsBox(r):
+                    results.append(r)
 
 
             # If we have child QuadTree nodes....
@@ -97,32 +96,29 @@ class QuadTree(object):
         return results
 
     """
-     Returns the containers points that are in the same container as another point.
+     Returns the containers items that are in the same container as another point.
     """
-    def searchNeighbors(self,point):
+    def searchNeighbors(self,bbox):
 
-        #If its not a point (its a bounding rectangle)
-        if not hasattr(point, 'x'):
-            return []
 
         results = []
 
-        if self.bbox.containsPoint(point):
+        if self.bbox.containsBox(bbox):
             # Test each point that falls within the current QuadTree node
-            for p in self.points:
+            for r in self.bbox:
                 # Test each point stored in this QuadTree node in turn, adding to the results array
                 #    if it falls within the bounding box
-                if self.bbox.containsPoint(p):
-                    results.append(p)
+                if self.bbox.containsBox(r):
+                    results.append(r)
 
 
             # If we have child QuadTree nodes....
             if (not self.northWest == None):
                 # ... search each child node in turn, merging with any existing results
-                results = results + self.northWest.searchNeighbors(point)
-                results = results + self.northEast.searchNeighbors(point)
-                results = results + self.southWest.searchNeighbors(point)
-                results = results + self.southEast.searchNeighbors(point)
+                results = results + self.northWest.searchNeighbors(bbox)
+                results = results + self.northEast.searchNeighbors(bbox)
+                results = results + self.southWest.searchNeighbors(bbox)
+                results = results + self.southEast.searchNeighbors(bbox)
 
         return results
 
@@ -236,7 +232,6 @@ class Rock():
         self.center = center
         self.dest = self.destination(100,math.radians(random.randint(0,360)))
         self.vectorOps = VectorOps(self.center,self.dest,self.velocity)
-        self.circle = None
         self.color = color
 
     def destination(self,distance,bearing):
@@ -302,8 +297,9 @@ class Driver(pantograph.PantographHandler):
         self.bounds = Bounds(0,0,self.width,self.height)
         self.rockSpeeds = np.arange(1,15,1)
         self.numRocks = 50
-        self.qt = QuadTree(BoundingBox(Point(0,0),Point(self.width,self.height)),1)
+        self.qt = PointQuadTree(BoundingBox(Point(0,0),Point(self.width,self.height)),1)
         self.rockSize = 5
+        self.halfSize = self.rockSize / 2
         self.rocks = []
         self.boxes = []
 
@@ -322,6 +318,14 @@ class Driver(pantograph.PantographHandler):
         self.drawBoxes();
         #time.sleep(.5)
 
+    def checkCollisions(self,r):
+        box = BoundingBox(Point(r.center.x-self.halfSize,r.center.y-self.halfSize),Point(r.center.x+self.halfSize,r.center.y+self.halfSize))
+        boxes  = self.qt.searchBox(box)
+        boxes.sort(key=lambda tup: tup[1],reverse=True)
+        #print boxes
+        #print
+
+
     def getRandomPosition(self):
         x = random.randint(0+self.rockSize,int(self.width)-self.rockSize)
         y = random.randint(0+self.rockSize,int(self.height)-self.rockSize)
@@ -337,8 +341,9 @@ class Driver(pantograph.PantographHandler):
             self.fill_circle(r.x,r.y,r.radius,r.color)
 
     def moveRocks(self):
-        self.qt = QuadTree(BoundingBox(Point(0,0),Point(self.width,self.height)),1)
+        self.qt = PointQuadTree(BoundingBox(Point(0,0),Point(self.width,self.height)),1)
         for r in self.rocks:
+            self.checkCollisions(r)
             r.move(self.bounds)
             self.qt.insert(r)
 
