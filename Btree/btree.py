@@ -21,12 +21,12 @@ class BTreeNode(object):
                 self.children[i].traverse()
             print self.keys[i]
 
-
         # Print the subtree rooted with last child
         if self.leaf == False:
             self.children[-1].traverse()
 
     def search(self,k):
+        # Find key that is next largest or equal to k
         v = self.find_ge(self.keys, k)
         if v:
             i = self.keys.index(v)
@@ -35,7 +35,6 @@ class BTreeNode(object):
 
         # If the found key is equal to k, return this node
         if k in self.keys:
-            print self
             return self
 
         # If key is not found here and this is a leaf node
@@ -44,7 +43,8 @@ class BTreeNode(object):
 
         else:
             # Go to the appropriate child
-            return self.children[i].search(self,k)
+            #print "go chile"
+            return self.children[i].search(k)
 
     # A utility function to insert a new key in this node
     # The assumption is, the node must be non-full when this
@@ -93,7 +93,6 @@ class BTreeNode(object):
     # A utility function to split the child y of this node
     # Note that y must be full when this function is called
     def splitChild(self, i, y):
-
         # Create a new node which is going to store (t-1) keys
         # of y
         z = BTreeNode(y.t, y.leaf)
@@ -151,7 +150,7 @@ class BTree(object):
         if self.root == None:
             return None
         else:
-            self.root.search(k)
+            return self.root.search(k)
 
     # The main function that inserts a new key in this B-Tree
     def insert(self, k):
@@ -208,10 +207,7 @@ if __name__ == '__main__':
     print "================\n\n"
 
     k = 6
-    print "-----"
     print t.search(k)
-    print "+++++"
+
     k = 15
-    print "-----"
     print t.search(k)
-    print "+++++"
