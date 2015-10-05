@@ -1,45 +1,50 @@
 # Based on C++ implementation here:
 # http://www.geeksforgeeks.org/b-tree-set-1-introduction-2/
+# Probably could be much better, but
+from _bisect import *
 
 class BTreeNode(object):
     def __init__(self,t,leaf):
         self.t = t                               # Minimum degree (defines the range for number of keys)
-        self.keys = [None] * (2 * self.t - 1)   # An array of keys
-        self.C = [None] * (2 * self.t)          # An array of child pointers
-        self.n = 0                              # Current number of keys
-        self.leaf = leaf                        # Leaf or not
+        self.keys = []                        # An array of keys and children
+        self.children = []
+        self.n = 0                               # Current number of keys
+        self.leaf = leaf                         # Leaf or not
 
     def traverse(self):
         # There are n keys and n+1 children, travers through n keys
         # and first n children
         for i in range(self.n):
             # If this is not leaf, then before printing key[i],
-            # traverse the subtree rooted with child C[i].
+            # traverse the subtree rooted with child children[i].
             if self.leaf == False:
-                self.C[i].traverse()
+                self.children[i].traverse()
             print self.keys[i]
 
 
         # Print the subtree rooted with last child
         if self.leaf == False:
-            self.C[-1].traverse()
+            self.children[-1].traverse()
 
     def search(self,k):
-        # Find the first key greater than or equal to k
-        i = 0
-        while i < self.n and k > self.keys[i]:
-            i += 1
+        v = self.find_ge(self.keys, k)
+        if v:
+            i = self.keys.index(v)
+        else:
+            i = len(self.keys)-1
 
         # If the found key is equal to k, return this node
-        if self.keys[i] == k:
+        if k in self.keys:
+            print self
             return self
 
         # If key is not found here and this is a leaf node
-        if leaf == True:
+        elif self.leaf == True:
             return None
 
-        # Go to the appropriate child
-        return self.C[i].search(k)
+        else:
+            # Go to the appropriate child
+            return self.children[i].search(self,k)
 
     # A utility function to insert a new key in this node
     # The assumption is, the node must be non-full when this
@@ -49,20 +54,20 @@ class BTreeNode(object):
         # Initialize index as index of rightmost element
         i = self.n-1
 
+        print i
+
         # If this is a leaf node
         if self.leaf == True:
 
             # The following loop does two things
             # a) Finds the location of new key to be inserted
             # b) Moves all greater keys to one place ahead
-            while i >= 0 and self.keys[i] > k:
+            print self.keys
 
-                self.keys[i+1] = self.keys[i]
-                i -= 1
+            self.keys.append(k)
 
+            self.keys = sorted(self.keys)
 
-            # Insert the new key at found location
-            self.keys[i+1] = k
             self.n = self.n+1
 
         else: # If this node is not leaf
@@ -72,18 +77,18 @@ class BTreeNode(object):
                 i -= 1
 
             # See if the found child is full
-            if self.C[i+1].n == 2*self.t-1:
+            if self.children[i+1].n == 2 * self.t - 1:
 
                 # If the child is full, then split it
-                self.splitChild(i+1, self.C[i+1])
+                self.splitChild(i+1, self.children[i+1])
 
-                # After split, the middle key of C[i] goes up and
-                # C[i] is splitted into two.  See which of the two
+                # After split, the middle key of children[i] goes up and
+                # children[i] is splitted into two.  See which of the two
                 # is going to have the new key
                 if self.keys[i+1] < k:
                     i += 1
 
-            self.C[i+1].insertNonFull(k)
+            self.children[i+1].insertNonFull(k)
 
     # A utility function to split the child y of this node
     # Note that y must be full when this function is called
@@ -96,41 +101,41 @@ class BTreeNode(object):
 
         # Copy the last (t-1) keys of y to z
         for j in range(self.t-1):
-            z.keys[j] = y.keys[j+self.t]
+            z.keys.append(y.keys[j+self.t])
 
         # Copy the last t children of y to z
         if y.leaf == False:
 
             for j in range(self.t):
-                z.C[j] = y.C[j+self.t]
+                z.children[j].append(y.children[j+self.t])
 
 
         # Reduce the number of keys in y
         y.n = self.t - 1
 
-        # Since this node is going to have a new child,
-        # create space of new child
-        for j in range(self.n,i+1,-1):
-            self.C[j+1] = self.C[j]
-
         # Link the new child to this node
-        self.C[i+1] = z
-
-        # A key of y will move to this node. Find location of
-        # new key and move all greater keys one space ahead
-        for j in range(self.n-1,i,-1):
-            self.keys[j+1] = self.keys[j]
+        self.children.insert(i+1,z)
 
         # Copy the middle key of y to this node
-        self.keys[i] = y.keys[self.t-1]
+        self.keys.append(y.keys[self.t-1])
+
+        self.keys = sorted(self.keys)
 
         # Increment count of keys in this node
         self.n = self.n + 1
 
+    def find_ge(self,a, x):
+        'Find leftmost item greater than or equal to x'
+        i = bisect_left(a, x)
+        if i != len(a):
+            return a[i]
+
+        return None
+
     def __str__(self):
-        return "%s, %s, %s, %s, %s" % (self.t,self.keys,self.C,self.n,self.leaf)
+        return "%s, %s, %s, %s, %s" % (self.t,self.keys,self.children,self.n,self.leaf)
     def __repr__(self):
-        return "%s, %s, %s, %s, %s" % (self.t,self.keys,self.C,self.n,self.leaf)
+        return "%s, %s, %s, %s, %s" % (self.t,self.keys,self.children,self.n,self.leaf)
 
 
 class BTree(object):
@@ -155,7 +160,7 @@ class BTree(object):
             # Create instance for root
             self.root = BTreeNode(self.t, True)
             self.root.keys.append(k)         # Insert key
-            self.root.n = 1                 # Update number of keys in root
+            self.root.n = 1                  # Update number of keys in root
 
         else: # If tree is not empty
 
@@ -164,10 +169,9 @@ class BTree(object):
 
                 # Allocate memory for new root
                 s = BTreeNode(self.t, False)
-                print s
 
                 # Make old root as child of new root
-                s.C[0] = self.root
+                s.children.append(self.root)
 
                 # Split the old root and move 1 key to the new root
                 s.splitChild(0, self.root)
@@ -177,7 +181,7 @@ class BTree(object):
                 i = 0
                 if s.keys[0] < k:
                     i += 1
-                s.C[i].insertNonFull(k)
+                s.children[i].insertNonFull(k)
 
                 # Change root
                 self.root = s
@@ -201,8 +205,13 @@ if __name__ == '__main__':
     print"Traversal of the constucted tree is ";
     t.traverse()
 
-    # k = 6
-    # (t.search(k) != NULL)? cout << "\nPresent" : cout << "\nNot Present";
-    #
-    # k = 15;
-    # (t.search(k) != NULL)? cout << "\nPresent" : cout << "\nNot Present";
+    print "================\n\n"
+
+    k = 6
+    print "-----"
+    print t.search(k)
+    print "+++++"
+    k = 15
+    print "-----"
+    print t.search(k)
+    print "+++++"
