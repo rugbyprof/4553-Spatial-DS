@@ -2,7 +2,7 @@
 | #   | Item                                           | Value   | Earned   |                |
 |:----|:-----------------------------------------------|:--------|:---------|:---------------|
 | -   |**---General---**                                  |         |          | ![Alt text][1] |
-| 1   | Program1 folder exists and contains both files | 10      |          | ![Alt text][1] |
+| 1   | `Program1` folder exists and contains both files | 10      |          | ![Alt text][1] |
 | 2   | Folder and files named correctly               | 10      |          | ![Alt text][1] |
 | -   | **---Output---**                                   |         |          | ![Alt text][1] |
 | 3   | Program creates output.dat                     | 10      |          | ![Alt text][1] |
