@@ -1,16 +1,16 @@
 ### Program 1:
 | #   | Item                                             | Value   | Earned   |                |
 |:----|:-------------------------------------------------|:--------|:---------|:---------------|
-| -   | ***General***                                    |         |          | ![Alt text][1] |
-| 1   | `Program1` folder exists and contains both files | 10      |          | ![Alt text][1] |
-| 2   | Folder and files named correctly                 | 10      |          | ![Alt text][1] |
-| -   | ***Output***                                     |         |          | ![Alt text][1] |
-| 3   | Program creates output.dat                       | 10      |          | ![Alt text][1] |
-| 4   | Output formatted correctly (or at least close)   | 10      |          | ![Alt text][1] |
-|     | Both bounding box and 500 mile radius ran.       | 10      |          | ![Alt text][1] |
-| -   | ***Correctness***                                |         |          | ![Alt text][1] |
-| 5   | Program was timed.                               | 10      |          | ![Alt text][1] |
-| 6   | Program generates correct results.               | 50      |          | ![Alt text][1] |
+| 1   | ***General***                                    |         |          | ![Alt text][1] |
+| -   | `Program1` folder exists and contains both files | 10      |          | ![Alt text][1] |
+| -   | Folder and files named correctly                 | 10      |          | ![Alt text][1] |
+| 2   | ***Output***                                     |         |          | ![Alt text][1] |
+| -   | Program creates output.dat                       | 10      |          | ![Alt text][1] |
+| -   | Output formatted correctly (or at least close)   | 10      |          | ![Alt text][1] |
+| -   | Both bounding box and 500 mile radius ran.       | 10      |          | ![Alt text][1] |
+| 3   | ***Correctness***                                |         |          | ![Alt text][1] |
+| -   | Program was timed.                               | 10      |          | ![Alt text][1] |
+| -   | Program generates correct results.               | 50      |          | ![Alt text][1] |
 |     | Totals:                                          | **100** |          | ![Alt text][1] |
 ### Comments:
 ```
