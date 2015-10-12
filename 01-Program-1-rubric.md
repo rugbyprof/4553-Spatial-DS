@@ -7,6 +7,7 @@
 | -   | ***Output***                                     |         |          | ![Alt text][1] |
 | 3   | Program creates output.dat                       | 10      |          | ![Alt text][1] |
 | 4   | Output formatted correctly (or at least close)   | 10      |          | ![Alt text][1] |
+|     | Both bounding box and 500 mile radius ran.       | 10      |          | ![Alt text][1] |
 | -   | ***Correctness***                                |         |          | ![Alt text][1] |
 | 5   | Program was timed.                               | 10      |          | ![Alt text][1] |
 | 6   | Program generates correct results.               | 50      |          | ![Alt text][1] |
