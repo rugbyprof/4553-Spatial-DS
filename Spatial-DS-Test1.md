@@ -93,7 +93,7 @@ Note:
 |        | Average   | Worst case   |
 |:-------|:----------|:-------------|
 | Space  |           |             |
-| Search | O(log<sub>M</sub><sup>n</sup>)  |       |
+| Search | O(log<sub>M</sub>n)  |       |
 | Insert |           |     O(n)   |
 | Delete |           |            |	
 
