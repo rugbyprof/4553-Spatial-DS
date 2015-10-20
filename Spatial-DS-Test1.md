@@ -89,21 +89,23 @@ Note:
 
 ### R-Tree
 
-- Q1. Briefly describe how to insert a node into an R-tree.
+#### Complexity
+|        | Average   | Worst case   |
+|:-------|:----------|:-------------|
+| Space  |           |             |
+| Search | O(log<sub>M</sub><sup>n</sup>)  |       |
+| Insert |           |     O(n)   |
+| Delete |           |            |	
 
-- Q2. Describe the Quadratic Method to split a node in an R-tree. Why is the complexity of this method O(M<sup>2</sup>), where M is the order of the R-tree.
+- Q2. Discuss the usefulness of R-trees.
 
-- Q3. Discuss the usefulness of R-trees.
+- Q3a. Why does one say that an R-tree search is not bounded in the sense that a B-tree search is bounded.
 
-- Q4. Discuss how the R-tree search is conducted.
+- Q3b. In B-trees, a lookup for a key never needs to explore more than one path from root to child. In R-trees, this is not true. Why?
 
-- Q5. Why does one say that an R-tree search is not bounded in the sense that a B-tree search is bounded.
+- Q4. When splitting a node in an R-tree, the rule for redistributing the entries is to minimize the resulting area of the two new nodes. What is the motivation for this rule? Give examples of how you might do this.
 
-- Q6. Given some spatial data (a set of rectangles) construct an R-tree for the  data. (Be sure to satisfy the property of minimizing the dimensions of the internal nodes).
-
-- Q7. In B-trees, a lookup for a key never needs to explore more than one path from root to child. In R-trees, this is not true. Why?
-
-- Q8. When splitting a node in an R-tree, the rule for redistributing the entries is to minimize the resulting area of the two new nodes. What is the motivation for this rule? Give examples of how you might do this.
+- Q4a. Describe the Linear and Quadratic Methods to split a node in an R-tree. What is the complexity of each method where M is the order of the R-tree.
 
 -  Q9. Consider the following dataset S of 16 objects in a 2-dimensional space: 
 ```
