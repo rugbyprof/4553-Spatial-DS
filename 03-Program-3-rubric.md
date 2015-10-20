@@ -2,17 +2,17 @@
 | #       | Item                                                       | Value   | Earned   |                |
 |:--------|:-----------------------------------------------------------|:--------|:---------|:---------------|
 | ***1*** | ***General***                                              | 30      |          | ![Alt text][1] |
-| -       | `Program3` folder exists and contains `animate_poly.py`    |         |          | ![Alt text][1] |
-| -       | Code was commented as directed                             |         |          | ![Alt text][1] |
+| -       | `Program3` folder exists and contains `animate_poly.py`    |         |    15    | ![Alt text][1] |
+| -       | Code was commented as directed                             |         |    15    | ![Alt text][1] |
 | ***2*** | ***Animation***                                            | 30      |          | ![Alt text][1] |
-| -       | Point changed color when `inside` a polygon                |         |          | ![Alt text][1] |
-| -       | Polygons changed direction when `collision` occured        |         |          | ![Alt text][1] |
-| -       | Some oundary's were adhered to                             |         |          | ![Alt text][1] |
+| -       | Point changed color when `inside` a polygon                |         |    10    | ![Alt text][1] |
+| -       | Polygons changed direction when `collision` occured        |         |    10    | ![Alt text][1] |
+| -       | Some oundary's were adhered to                             |         |    10    | ![Alt text][1] |
 | ***2*** | ***Output***                                               | 10      |          | ![Alt text][1] |
-| -       | A screen with moving items fulfilling requirements         |         |          | ![Alt text][1] |
-| ***3*** | ***Correctness***                                          | 30      |          | ![Alt text][1] |
-| -       | Program generates correct results (it ran)                 |         |          | ![Alt text][1] |
-|         | Totals:                                                    | **100** |          | ![Alt text][1] |
+| -       | A screen with moving items fulfilling requirements         |         |    10    | ![Alt text][1] |
+| ***3*** | ***Correctness***                                          | 30      |    15    | ![Alt text][1] |
+| -       | Program generates correct results (it ran)                 |         |    15    | ![Alt text][1] |
+|         | Totals:                                                    | **100** |  **100** | ![Alt text][1] |
 ### Comments:
 ```
 
