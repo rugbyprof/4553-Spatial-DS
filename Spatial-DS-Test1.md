@@ -88,15 +88,11 @@ R7 = [(1,3), (6,8)].
 
 See the resulting R-Tree below
 
-
-- Perform a Nearest Neighbor search for point Q1 = (3, 2.5).
-- Perform a range search with Minimum Bounding Rectangle: Q2 = [(3.5, 2),(5, 4)].
-
 ![](https://s3.amazonaws.com/f.cl.ly/items/340X0t031f073J3j1f1K/rtree-S.png)
 
-Give the sequence of pages searched and the results for the following queries:
-
-
+Using your newly built R-Tree, give the sequence of pages searched and the results for the following queries:
+- Perform a Nearest Neighbor search for point Q1 = (3, 2.5).
+- Perform a range search with Minimum Bounding Rectangle: Q2 = [(3.5, 2),(5, 4)].
 
 ### B-Tree
 
