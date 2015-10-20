@@ -4,7 +4,7 @@
 | ***1*** | ***General***                                              | 30      |          | ![Alt text][1] |
 | -       | `Program3` folder exists and contains `animate_poly.py`    |         |          | ![Alt text][1] |
 | -       | Code was commented as directed                             |         |          | ![Alt text][1] |
-| ***2*** | ***Animation     ***                                       | 30      |          | ![Alt text][1] |
+| ***2*** | ***Animation***                                            | 30      |          | ![Alt text][1] |
 | -       | Point changed color when `inside` a polygon                |         |          | ![Alt text][1] |
 | -       | Polygons changed direction when `collision` occured        |         |          | ![Alt text][1] |
 | -       | Some oundary's were adhered to                             |         |          | ![Alt text][1] |
