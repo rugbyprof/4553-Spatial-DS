@@ -25,16 +25,16 @@ I'll organize in the next day or two.
 
 --
 
-- What is the purpose of k-D trees?
-- Explain how a 2-D tree extends a binary search tree.
-- What is the time required to construct a k-D tree for n objects?
-- Insert the following pairs (in the order shown) into an initially empty 2-D tree.
+- Q1. What is the purpose of k-D trees?
+- Q2. Explain how a 2-D tree extends a binary search tree.
+- Q3. What is the time required to construct a k-D tree for n objects?
+- Q4. Insert the following pairs (in the order shown) into an initially empty 2-D tree.
 
 |  (53, 14)  |  (27, 28)  |  (30, 11)  |  (67, 51)  |  (70, 3)  |
 |:----------:|:----------:|:----------:|:----------:|:---------:|
 |     0      |     1      |     2      |     3      |     4     |
     
-- Insert the following triples (in the order shown) into an initially empty 3-D tree.
+- Q5. Insert the following triples (in the order shown) into an initially empty 3-D tree.
 
 
 |  (16, 8, 12)  |  (18, 7, 15)  |  (10, 9, 3)  |  (13, 8, 9)  |  (20, 10, 6)  |  (3, 10, 7)  |  (12, 14, 6)  |
@@ -43,32 +43,25 @@ I'll organize in the next day or two.
     
 
 
-- Build a balanced kd-tree (nodes and edges) for the points in the figure below.
-- Draw the separating planes in the figure below.
-- Highlight the tree edges traversed when looking for the point with minimum x-coordinate.
-- Make another copy of the tree and highlight the edges traversed when looking for points within 3 units of
-(16, 6) 
+- Q6. Build a balanced kd-tree (nodes and edges) for the points in the figure below.
+- Q7. Draw the separating planes in the figure below.
+- Q8. Highlight the tree edges traversed when looking for the point with minimum x-coordinate.
+- Q9. Make another copy of the tree and highlight the edges traversed when looking for points within 3 units of (16, 6) 
 
 ![](https://s3.amazonaws.com/f.cl.ly/items/2P101P0X2Y0m0l1Q1U1Z/Screen%20Shot%202015-10-06%20at%204.19.58%20PM.png)
 
 ### R-Tree
 
-- Briefly describe how to insert a node into an R-tree.
-- Describe the Quadratic Method to split a node in an R-tree. Why is the complexity of this
-method O(M<sup>2</sup>), where M is the order of the R-tree.
+- Q1. Briefly describe how to insert a node into an R-tree.
+- Q2. Describe the Quadratic Method to split a node in an R-tree. Why is the complexity of this method O(M<sup>2</sup>), where M is the order of the R-tree.
+- Q3. Discuss the usefulness of R-trees.
+- Q4. Discuss how the R-tree search is conducted.
+- Q5. Why does one say that an R-tree search is not bounded in the sense that a B-tree search is bounded.
+- Q6. Given some spatial data (a set of rectangles) construct an R-tree for the  data. (Be sure to satisfy the property of minimizing the dimensions of the internal nodes).
+- Q7. In B-trees, a lookup for a key never needs to explore more than one path from root to child. In R-trees, this is not true. Why?
+- Q8. When splitting a node in an R-tree, the rule for redistributing the entries is to minimize the resulting area of the two new nodes. What is the motivation for this rule? Give examples of how you might do this.
 
-- Discuss the usefulness of R-trees.
-
-- Discuss how the R-tree search is conducted.
-
-- Why does one say that an R-tree search is not bounded in the sense that a B-tree search is bounded.
-
-- Given some spatial data (a set of rectangles) construct an R-tree for the  data. (Be sure to satisfy the property of minimizing the dimensions of the internal nodes).
-
--  In B-trees, a lookup for a key never needs to explore more than one path from root to child. In R-trees, this is not true. Why?
--  When splitting a node in an R-tree, the rule for redistributing the entries is to minimize the resulting area of the two new nodes. What is the motivation for this rule? Give examples of how you might do this.
-
--  Consider the following dataset S of 16 objects in a 2-dimensional space: 
+-  Q9. Consider the following dataset S of 16 objects in a 2-dimensional space: 
 ```
 a=(1,3), b=(1,4), c=(2,0),  d=(1,7), 
 e=(2,5), f=(2,8), g=(3,4.5),h=(3,1), 
@@ -91,8 +84,8 @@ See the resulting R-Tree below
 ![](https://s3.amazonaws.com/f.cl.ly/items/340X0t031f073J3j1f1K/rtree-S.png)
 
 Using your newly built R-Tree, give the sequence of pages searched and the results for the following queries:
-- Perform a Nearest Neighbor search for point Q1 = (3, 2.5).
-- Perform a range search with Minimum Bounding Rectangle: Q2 = [(3.5, 2),(5, 4)].
+- Q9a. Perform a Nearest Neighbor search for point Q1 = (3, 2.5).
+- Q9b. Perform a range search with Minimum Bounding Rectangle: Q2 = [(3.5, 2),(5, 4)].
 
 ### B-Tree
 
