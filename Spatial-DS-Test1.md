@@ -1,8 +1,3 @@
-# Not Done
-In fact some questions may be chopped. I'm just gathering right now.<br>
-I'll organize in the next day or two.
-
-
 # Test 1 Study Guide
 
 ## Topics
@@ -13,7 +8,7 @@ I'll organize in the next day or two.
 
 ### Quad-Trees
 
-
+???
 
 ### KD-Trees
 
@@ -32,7 +27,7 @@ I'll organize in the next day or two.
 
 - Q2. Explain how a 2-D tree extends a binary search tree.
 
-- Q3. What is the time required to construct a k-D tree for n objects?
+- Q3. What is the time required to construct a k-D tree for N objects?
 
 - Q4. Insert the following pairs (in the order shown) into an initially empty 2-D tree.
 
