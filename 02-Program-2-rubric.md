@@ -1,17 +1,17 @@
 ### Program 2:
 | #       | Item                                             | Value   | Earned   |                |
 |:--------|:-------------------------------------------------|:--------|:---------|:---------------|
-| ***1*** | ***General***                                    | 20      |          | ![Alt text][1] |
+| ***1*** | ***General***                                    | 20      |          | ![Alt text][2] |
 | -       | `Program2` folder exists and contains both files |         |          | ![Alt text][1] |
 | -       | Folder and files named correctly                 |         |          | ![Alt text][1] |
 | ***2*** | ***Graphviz Class***                             | 20      |          | ![Alt text][1] |
-| -       | Used class as directed                           |         |          | ![Alt text][1] |
+| -       | Used class as directed                           |         |          | ![Alt text][3] |
 | -       | Methods `AddNodes` and `AddEdges` used           |         |          | ![Alt text][1] |
 | ***2*** | ***Output***                                     | 10      |          | ![Alt text][1] |
-| -       | Wrote to `kdtree-out.svg`                        |         |          | ![Alt text][1] |
+| -       | Wrote to `kdtree-out.svg`                        |         |          | ![Alt text][3] |
 | ***3*** | ***Correctness***                                | 50      |          | ![Alt text][1] |
 | -       | Program was timed.                               |         |          | ![Alt text][1] |
-| -       | Program generates correct results.               |         |          | ![Alt text][1] |
+| -       | Program generates correct results.               |         |          | ![Alt text][2] |
 |         | Totals:                                          | **100** |          | ![Alt text][1] |
 ### Comments:
 ```
