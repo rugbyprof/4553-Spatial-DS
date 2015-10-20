@@ -120,3 +120,5 @@ Using your newly built R-Tree, give the sequence of pages searched and the resul
 |  1  |  15  |   10  |   4  |   8  |   9  |   5  |   2  |   7  |
 |:---:|:----:|:-----:|:----:|:----:|:----:|:----:|:----:|:----:|
 |  0  |  1   |   2   |  3   |  4   |  5   |  6   |  7   |  8   |
+
+- Q3. By adding the same values to a B-Tree in a different order, do we get the same B-Tree? Draw two B-trees of order 3 where M=3 and L=3 (this just means that internal nodes have 3 pointers (M) and leafs hold 3 values (L)) Draw one for the input sequence {11, 12, 13, 14, 15, 16}, and another for the sequence {14, 11, 13, 15, 12, 16}.  Decide whether it is better to construct B-trees with ordered data or with data in some random order.
