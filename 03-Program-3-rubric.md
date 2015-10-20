@@ -10,8 +10,8 @@
 | -       | Some oundary's were adhered to                             |         |    10    | ![Alt text][1] |
 | ***2*** | ***Output***                                               | 10      |          | ![Alt text][1] |
 | -       | A screen with moving items fulfilling requirements         |         |    10    | ![Alt text][1] |
-| ***3*** | ***Correctness***                                          | 30      |    15    | ![Alt text][1] |
-| -       | Program generates correct results (it ran)                 |         |    15    | ![Alt text][1] |
+| ***3*** | ***Correctness***                                          | 30      |          | ![Alt text][1] |
+| -       | Program generates correct results (it ran)                 |         |    30    | ![Alt text][1] |
 |         | Totals:                                                    | **100** |  **100** | ![Alt text][1] |
 ### Comments:
 ```
