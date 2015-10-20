@@ -7,7 +7,7 @@
 | ***2*** | ***Animation***                                            | 30      |          | ![Alt text][1] |
 | -       | Point changed color when `inside` a polygon                |         |    10    | ![Alt text][1] |
 | -       | Polygons changed direction when `collision` occured        |         |    10    | ![Alt text][1] |
-| -       | Some oundary's were adhered to                             |         |    10    | ![Alt text][1] |
+| -       | Some boundary's were adhered to                             |         |    10    | ![Alt text][1] |
 | ***2*** | ***Output***                                               | 10      |          | ![Alt text][1] |
 | -       | A screen with moving items fulfilling requirements         |         |    10    | ![Alt text][1] |
 | ***3*** | ***Correctness***                                          | 30      |          | ![Alt text][1] |
