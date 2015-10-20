@@ -11,6 +11,9 @@ I'll organize in the next day or two.
 - **KD-Trees**
 - **R-Trees**
 
+### Quad-Trees
+
+
 
 ### KD-Trees
 
@@ -56,6 +59,39 @@ I'll organize in the next day or two.
 
 ![](https://s3.amazonaws.com/f.cl.ly/items/2P101P0X2Y0m0l1Q1U1Z/Screen%20Shot%202015-10-06%20at%204.19.58%20PM.png)
 
+
+
+### B-Tree
+
+Note: 
+- M = number of pointers from an internal node.
+- L = number of values held by a leaf.
+
+#### Complexity
+|        | Average   | Worst case   |
+|:-------|:----------|:-------------|
+| Space  | O(n)      | O(n)         |
+| Search | O(log n)  | O(log n)     |
+| Insert | O(log n)  | O(log n)     |
+| Delete | O(log n)  | O(log n)     |
+
+--
+
+- Q1. What is the maximum search time in a B-Tree?
+
+
+- Q2. Grow a B-tree of order 4 (M=4, L=4), with the following sequence of key values:
+
+|  1  |  15  |   10  |   4  |   8  |   9  |   5  |   2  |   7  |
+|:---:|:----:|:-----:|:----:|:----:|:----:|:----:|:----:|:----:|
+|  0  |  1   |   2   |  3   |  4   |  5   |  6   |  7   |  8   |
+
+- Q3. By adding the same values to a B-Tree in a different order, do we get the same B-Tree? Draw two B-trees of order 3 where M=3 and L=3.  Draw one for the input sequence {11, 12, 13, 14, 15, 16}, and another for the sequence {14, 11, 13, 15, 12, 16}.  Decide whether it is better to construct B-trees with ordered data or with data in some random order.
+
+- Q4.  What is the minimum and maximum number of leaves in a B-Tree of height h = 2 when M = 3?
+
+- Q5. B-Trees find their greatest utility when data are stored externally (on disk rather than in memory). Why is this so?
+
 ### R-Tree
 
 - Q1. Briefly describe how to insert a node into an R-tree.
@@ -99,26 +135,3 @@ See the resulting R-Tree below
 Using your newly built R-Tree, give the sequence of pages searched and the results for the following queries:
 - Q9a. Perform a Nearest Neighbor search for point Q1 = (3, 2.5).
 - Q9b. Perform a range search with Minimum Bounding Rectangle: Q2 = [(3.5, 2),(5, 4)].
-
-### B-Tree
-
-#### Complexity
-|        | Average   | Worst case   |
-|:-------|:----------|:-------------|
-| Space  | O(n)      | O(n)         |
-| Search | O(log n)  | O(log n)     |
-| Insert | O(log n)  | O(log n)     |
-| Delete | O(log n)  | O(log n)     |
-
---
-
-- Q1. What is the maximum search time in a B-Tree?
-
-
-- Q2. Grow a B-tree of order 4 (i.e., a 2-3-4 tree), with the following sequence of key values:
-
-|  1  |  15  |   10  |   4  |   8  |   9  |   5  |   2  |   7  |
-|:---:|:----:|:-----:|:----:|:----:|:----:|:----:|:----:|:----:|
-|  0  |  1   |   2   |  3   |  4   |  5   |  6   |  7   |  8   |
-
-- Q3. By adding the same values to a B-Tree in a different order, do we get the same B-Tree? Draw two B-trees of order 3 where M=3 and L=3 (this just means that internal nodes have 3 pointers (M) and leafs hold 3 values (L)) Draw one for the input sequence {11, 12, 13, 14, 15, 16}, and another for the sequence {14, 11, 13, 15, 12, 16}.  Decide whether it is better to construct B-trees with ordered data or with data in some random order.
