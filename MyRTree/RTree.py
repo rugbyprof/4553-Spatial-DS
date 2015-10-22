@@ -487,6 +487,25 @@ def randRect(lb,ub,divisor,max_area=None):
 
     return R
 
+def randPoint(lb,ub):
+
+    x = []
+    y = []
+
+    for i in range(30):
+
+        rx = random.randrange(lb,ub)
+        ry = random.randrange(lb,ub)
+
+        while rx in x:
+            rx = random.randrange(lb,ub)
+        while ry in y:
+            ry = random.randrange(lb,ub)
+
+        x.append(rx)
+        y.append(ry)
+
+    return zip(x,y)
 
 if __name__=='__main__':
     #random.seed(91283764)
@@ -496,9 +515,11 @@ if __name__=='__main__':
 
     R = RTree(M)
 
-    for i in range(11):
-        R.insert(randRect(1,100,5,200))
+    #for i in range(11):
+    #    R.insert(randRect(1,100,5,200))
 
-    R.traverseTree()
+    #R.traverseTree()
 
     #print len(R.root.I)
+
+    print randPoint(1,100)
