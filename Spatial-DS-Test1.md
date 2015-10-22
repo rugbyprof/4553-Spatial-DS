@@ -68,7 +68,7 @@ Heres a list of 30 points that will be used for later questions.
 
 #### Q6
 
-- Place the first 11 values (from question 1) into an initially empty 2-D tree.
+- Place the first 11 points (as chosen from question 1) into an initially empty 2-D tree.
 - Drawings:
     - Show the tree state after 3 points entered
     - Show the tree state after 5 points entered
@@ -88,15 +88,12 @@ Heres a list of 30 points that will be used for later questions.
 
 ## B-Tree
 
-
-
 Note: According to Knuth's definition, a B-tree of order m is a tree which satisfies the following properties:
 - Every node has at most m children.
 - Every non-leaf node (except root) has at least ⌈m⁄2⌉ children.
 - The root has at least two children if it is not a leaf node.
 - A non-leaf node with k children contains k−1 keys.
 - All leaves appear in the same level
-
 
 #### Q8
 
