@@ -36,7 +36,7 @@ Heres a list of 30 points that will be used for later questions.
 
 - Pick 21 points from the above list to load into an initially empty point Quad-tree. 
 - Pick points in an order that would create a full balanced tree. 
-- If there is no set of points that will do so state as such.
+- If there is not a set of points that will do so, state as such.
 - Drawings:
     - Show the tree state after 3 points entered
     - Show the tree state after it hits a height of 3
@@ -46,7 +46,7 @@ Heres a list of 30 points that will be used for later questions.
 
 #### Q2
 
-- Besides spatial indexing, give 3 descriptive examples of interesting uses for Quad-trees (any type of Quad-tree, not just point Quad-trees),
+- Besides spatial indexing, give 3 ***descriptive*** examples of interesting uses for Quad-trees (any type of Quad-tree, not just point Quad-trees),
 
 #### Q3
 
