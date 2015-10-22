@@ -1,134 +1,142 @@
-# Test 1 Study Guide
+# Test 1 
+### Due: Monday 26 October by 10:00 am
 
-## Topics
-- **B-Trees**
-- **Quad-Trees**
-- **KD-Trees**
-- **R-Trees**
+### Topics
+- B-Trees
+- Quad-Trees
+- KD-Trees
+- R-Trees
 
-### Quad-Trees
+### Guidelines:
 
-???
+- You must work by yourself
+- You must turn in a single printed copy of your exam, and a digital copy via email.
+- Use of external resources is ok, but we will see this material again on the final.
 
-### KD-Trees
+### Example Points
 
-#### Complexity
+Heres a list of 30 points that will be used for later questions. 
 
-|        | Average   | Worst case   |
-|:-------|:----------|:-------------|
-| Space  | O(n)      | O(n)         |
-| Search | O(log n)  | O(n)         |
-| Insert | O(log n)  | O(n)         |
-| Delete | O(log n)  | O(n)         |
+```
+[(39, 21), (86, 19), (65, 5), (76, 28), (3, 9), 
+ (31, 59), (43, 99), (60, 50), (42, 48), (15, 73), 
+ (67, 98), (16, 34), (27, 80), (51, 77), (30, 67), 
+ (82, 68), (85, 46), (89, 44), (21, 30), (5, 66), 
+ (75, 29), (17, 14), (40, 90), (18, 33), (52, 64), 
+ (1, 71), (88, 10), (64, 26), (96, 2), (25, 40)]
+```
 
 --
 
-- Q1. What is the purpose of k-D trees?
+## Quad-Trees
 
-- Q2. Explain how a 2-D tree extends a binary search tree.
+![](https://s3.amazonaws.com/f.cl.ly/items/2r3V2g3R1L1M2p1E2025/quadex.png)
 
-- Q3. What is the time required to construct a k-D tree for N objects?
+#### Q1 
 
-- Q4. Insert the following pairs (in the order shown) into an initially empty 2-D tree.
-
-|  (53, 14)  |  (27, 28)  |  (30, 11)  |  (67, 51)  |  (70, 3)  |
-|:----------:|:----------:|:----------:|:----------:|:---------:|
-|     0      |     1      |     2      |     3      |     4     |
-    
-- Q5. Insert the following triples (in the order shown) into an initially empty 3-D tree.
-
-
-|  (16, 8, 12)  |  (18, 7, 15)  |  (10, 9, 3)  |  (13, 8, 9)  |  (20, 10, 6)  |  (3, 10, 7)  |  (12, 14, 6)  |
-|:-------------:|:-------------:|:------------:|:------------:|:-------------:|:------------:|:-------------:|
-|       0       |       1       |      2       |      3       |       4       |      5       |       6       |
-    
+- Pick 21 values from the above list to load into an initially empty point Quad-tree. 
+- Pick values that would create a full balanced tree. 
+- If there is no set of points that will do so state as such.
+- Drawings:
+    - Show the tree state after 3 points entered
+    - Show the tree state after it hits a height of 3
+    - Show the final state of the tree.
+- The images you turn in should resemble the example above showing both representations of the tree.
 
 
-- Q6. Build a balanced kd-tree (nodes and edges) for the points in the figure below.
+#### Q2
 
-- Q7. Draw the separating planes in the figure below.
+- Besides spatial indexing, give 3 descriptive examples of interesting uses for Quad-trees (any type of Quad-tree, not just point Quad-trees),
 
-- Q8. Highlight the tree edges traversed when looking for the point with minimum x-coordinate.
+#### Q3
 
-- Q9. Make another copy of the tree and highlight the edges traversed when looking for points within 3 units of (16, 6) 
+- Pick a list of values that would cause the Quad-tree to grow beyond a height of 3.
+- List those values here
+- If it's not possible, state why.
 
-![](https://s3.amazonaws.com/f.cl.ly/items/2P101P0X2Y0m0l1Q1U1Z/Screen%20Shot%202015-10-06%20at%204.19.58%20PM.png)
+#### Q4
 
-
-
-### B-Tree
-
-Note: 
-- M = number of pointers from an internal node.
-- L = number of values held by a leaf.
-
-#### Complexity
-|        | Average   | Worst case   |
-|:-------|:----------|:-------------|
-| Space  | O(n)      | O(n)         |
-| Search | O(log n)  | O(log n)     |
-| Insert | O(log n)  | O(log n)     |
-| Delete | O(log n)  | O(log n)     |
-
---
-
-- Q1. What is the maximum search time in a B-Tree?
+- What is the maximum height achievable given the values from above?
 
 
-- Q2. Grow a B-tree of order 4 (M=4, L=4), with the following sequence of key values:
+## KD-Trees
 
-|  1  |  15  |   10  |   4  |   8  |   9  |   5  |   2  |   7  |
-|:---:|:----:|:-----:|:----:|:----:|:----:|:----:|:----:|:----:|
-|  0  |  1   |   2   |  3   |  4   |  5   |  6   |  7   |  8   |
 
-- Q3. By adding the same values to a B-Tree in a different order, do we get the same B-Tree? Draw two B-trees of order 3 where M=3 and L=3.  Draw one for the input sequence {11, 12, 13, 14, 15, 16}, and another for the sequence {14, 11, 13, 15, 12, 16}.  Decide whether it is better to construct B-trees with ordered data or with data in some random order.
+#### Q5 
 
-- Q4.  What is the minimum and maximum number of leaves in a B-Tree of height h = 2 when M = 3?
+- What is the purpose of k-D trees? How does it differ from Quad-Trees? 
 
-- Q5. B-Trees find their greatest utility when data are stored externally (on disk rather than in memory). Why is this so?
+#### Q6
 
-### R-Tree
+- Place the first 11 values (from question 1) into an initially empty 2-D tree.
+- Drawings:
+    - Show the tree state after 3 points entered
+    - Show the tree state after 5 points entered
+    - Show the final state of the tree.
+- You should know what the structure of the tree should look like.
 
-#### Complexity
-|        | Average   | Worst case   |
-|:-------|:----------|:-------------|
-| Space  |           |             |
-| Search | O(log<sub>M</sub>n)  |       |
-| Insert |           |     O(n)   |
-| Delete |           |            |	
+#### Q7
 
-- Q2. Discuss the usefulness of R-trees.
+- Combine the points from the above list into groups of 2 (4D data). Then insert those 15 values into a 4-D Tree.   
+- Drawings:
+    - Show the tree state after 3 points entered
+    - Show the tree state after 5 points entered
+    - Show the final state of the tree.
+- You should know what the structure of the tree should look like.
 
-- Q3a. Why does one say that an R-tree search is not bounded in the sense that a B-tree search is bounded.
 
-- Q3b. In B-trees, a lookup for a key never needs to explore more than one path from root to child. In R-trees, this is not true. Why?
 
-- Q4. When splitting a node in an R-tree, the rule for redistributing the entries is to minimize the resulting area of the two new nodes. What is the motivation for this rule? Give examples of how you might do this.
+## B-Tree
 
-- Q4a. Describe the Linear and Quadratic Methods to split a node in an R-tree. What is the complexity of each method where M is the order of the R-tree.
 
--  Q9. Consider the following dataset S of 16 objects in a 2-dimensional space: 
-```
-a=(1,3), b=(1,4), c=(2,0),  d=(1,7), 
-e=(2,5), f=(2,8), g=(3,4.5),h=(3,1), 
-i=(4,2), j=(4,3), k=(5,1),  l=(5,3), 
-m=(6,1), n=(6,7), o=(7,0),  p=(7,1)
-```
-- Also, assume that you have an R-tree built on dataset ***S***, with the following nodes: 
-    - The root node contains R6 and R7, 
-    - R6 contains R1, R2, R3 and 
-    - R7 contains R4 and R5. 
-- The MBRs for each node from R1-R7 are: 
-```
-R1 = [(2,0), (3,1)], R2 = [(5,0), (7,1)], R3 = [(4,2), (5,3)],
-R4 = [(1,3), (3,5)], R5 = [(1,7), (6,8)], R6 = [(2,0), (7,3)], 
-R7 = [(1,3), (6,8)]. 
-```
 
-See the resulting R-Tree below
+Note: According to Knuth's definition, a B-tree of order m is a tree which satisfies the following properties:
+- Every node has at most m children.
+- Every non-leaf node (except root) has at least ⌈m⁄2⌉ children.
+- The root has at least two children if it is not a leaf node.
+- A non-leaf node with k children contains k−1 keys.
+- All leaves appear in the same level
 
-![](https://s3.amazonaws.com/f.cl.ly/items/340X0t031f073J3j1f1K/rtree-S.png)
 
-Using your newly built R-Tree, give the sequence of pages searched and the results for the following queries:
-- Q9a. Perform a Nearest Neighbor search for point Q1 = (3, 2.5).
-- Q9b. Perform a range search with Minimum Bounding Rectangle: Q2 = [(3.5, 2),(5, 4)].
+#### Q8
+
+- Describe to me the history of B-trees, and what influence they've had on other data structures. Are B-Tree's still in use today? 
+
+#### Q9
+
+- The list above has 30 pairs of data, or 60 values. Take the first 30 values and put it into a B-tree where ***m = 5***     
+- Drawings:
+    - Show the tree state after 6 points entered
+    - Show the tree state after 15 points entered
+    - Show the final state of the tree.
+- You should know what the structure of the tree should look like.
+
+
+#### Q10
+
+- What would a contemporary size of ***m*** be? Lets say I wanted to create an index on 1 billion items. What would a good size of ***m*** be and what would the height of my B-Tree be?
+
+
+## R-Tree
+
+#### Q11
+
+Assume: ***M = 3***
+
+- Combine the points from the above list into groups of 2 (rectangles). Then insert those 15 rectangles into the R-Tree.   
+- Drawings:
+    - Show the tree state after 3 points entered
+    - Show the tree state after 5 points entered
+    - Show the final state of the tree.
+- Your drawing should be similar to the one below:
+
+![](https://docs.oracle.com/html/A88805_01/sdo_i11a.gif)
+
+#### Q12
+
+- Depending on the order in which you enter the data, can the height of our R-Tree change? 
+
+#### Q13
+
+- Describe each of the splitting algorithms for the traditional R-Tree and what the trade offs are for each. Which would you use and when.
+
