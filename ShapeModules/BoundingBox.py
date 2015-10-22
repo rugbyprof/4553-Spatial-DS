@@ -33,18 +33,12 @@ class BoundingBox(object):
     """
     def containsPoint(self, p):
 
-        #print "ul: ",self.ul,self.ul.x,",",self.ul.y
-        #print "lr: ",self.lr
-
-        #print p.x," < ",self.ul.x," and ",p.x," < ",self.lr.x," and ",p.y," > ",self.ul.y ," and ",p.y," < ",self.lr.y
         return (self.ul.x <= p.x <= self.lr.x and self.ul.y <= p.y <= self.lr.y)
-        #return (p.x > self.ul.x and p.x < self.lr.x and p.y > self.ul.y and p.y < self.lr.y)
 
     """
     Return true if a rect is inside this rectangle.
     """
     def containsBox(self, other):
-        #print other.ul.x ,' > ', self.ul.x ,' and ', other.ul.y ,' > ', self.ul.y ,' and ' ,other.lr.x ,' < ', self.lr.x ,' and ', other.lr.y ,' < ', self.lr.y
         return (other.ul.x > self.ul.x and other.ul.y > self.ul.y and other.lr.x < self.lr.x and other.lr.y < self.lr.y)
 
 
@@ -74,5 +68,5 @@ class BoundingBox(object):
 
 
 if __name__ == '__main__':
-    rect = Rectangle()
-    print rect
+    bbox = BoundingBox()
+    print bbox
