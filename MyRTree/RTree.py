@@ -133,17 +133,15 @@ class Point:
 
 class Rect:
 
-    """A rectangle identified by two points.
-
-    The rectangle stores left, top, right, and bottom values.
-
+    """A rectangle identified by two points. The rectangle stores left, top, right, and bottom values.
     Coordinates are based on screen coordinates.
 
-    origin                               top
-       +-----> x increases                |
-       |                           left  -+-  right
-       v                                  |
-    y increases                         bottom
+    y increases                                top
+       /\                                       |
+       |                                 left  -+-  right
+       |                                        |
+       +-----> x increases                    bottom
+    origin
 
     set_points  -- reset rectangle coordinates
     contains  -- is a point inside?
@@ -172,6 +170,7 @@ class Rect:
         return ( math.fabs(left-right) * math.fabs(top-bottom) )
 
     def merge(self,other):
+        print other
         if self.area() == 0:
             self.left = other.left
             self.right = other.right
@@ -303,6 +302,12 @@ class Node(object):
         d = 0
         l = len(self.I)
 
+        if l == 2:
+            return (self.I[0],self.I[1])
+
+        if l == 3:
+            return (self.I[0],self.I[2])
+
         for i in range(l):
             for j in range(l):
                 if i == j:
@@ -313,6 +318,7 @@ class Node(object):
                     E1 = self.I[i]
                     E2 = self.I[j]
                     d = temp
+                print E1,E2
         return (E1,E2)
 
     """
@@ -405,26 +411,6 @@ class RTree(object):
                     NN = None
             self.adjustTree(N.P,NN)
 
-
-    def condenseTree(self):
-        pass
-
-    def chooseLeaf(self,N,E):
-        if N.isLeaf():
-            return N
-        else:
-            minimum = sys.maxint
-            F = None
-            for n in N.I:
-                if n.bbox.potential_area(E) < minimum:
-                    minimum = n.bbox.potential_area(E)
-                    F = n
-            return F
-
-
-    def findLeaf(self):
-        pass
-
     def insert(self,E):
         assert isinstance(E, Rect), "RTree insert requires a Rect type."
 
@@ -463,6 +449,27 @@ class RTree(object):
                 print "%s%s" % (tabs,root.bbox)
                 self._traverse(n,level+1)
 
+    def condenseTree(self):
+        pass
+
+    def chooseLeaf(self,N,E):
+        if N.isLeaf():
+            return N
+        else:
+            minimum = sys.maxint
+            F = None
+            for n in N.I:
+                if n.bbox.potential_area(E) < minimum:
+                    minimum = n.bbox.potential_area(E)
+                    F = n
+            return F
+
+
+    def findLeaf(self):
+        pass
+
+
+
 """
 Generate a random rectangle with coordinates divisible by "divisor" (e.g. 5 or 10)
 for easy debugging
@@ -492,7 +499,7 @@ def randPoint(lb,ub):
     x = []
     y = []
 
-    for i in range(30):
+    for i in range(30,5):
 
         rx = random.randrange(lb,ub)
         ry = random.randrange(lb,ub)
@@ -509,17 +516,24 @@ def randPoint(lb,ub):
 
 if __name__=='__main__':
     #random.seed(91283764)
-    random.seed(8768)
+    random.seed(87689)
 
-    M = 5
+    M = 2
 
     R = RTree(M)
 
-    #for i in range(11):
-    #    R.insert(randRect(1,100,5,200))
+    rects = []
 
-    #R.traverseTree()
+    for i in range(5):
+       r = randRect(1,30,5,50)
+       while r in rects:
+           r = randRect(1,30,5,50)
+       rects.append(r)
+       print r
+       R.insert(r)
 
-    #print len(R.root.I)
+    R.traverseTree()
 
-    print randPoint(1,100)
+    print len(R.root.I)
+
+    #print randPoint(1,100,5)
