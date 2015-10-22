@@ -381,7 +381,7 @@ class RTree(object):
         N = L
         NN = LL
 
-        split = isinstance(LL, Node)
+        split = isinstance(NN, Node)    # otherwise it would be NONE
         done = (N == self.root)
 
         """ If at the root """
@@ -389,16 +389,21 @@ class RTree(object):
             """ If there was a split """
             if split:
                 """ Grow tree up """
-                self.root = Node(self.M)
+                self.root = Node(self.M,False)
                 self.root.install(N)
                 self.root.install(NN)
                 N.P = self.root
                 NN.P = self.root
         else:
             N.P.bbox.merge(N.bbox)
+            if split:
+                N.P.install(NN)
+                N.P.bbox.merge(NN.bbox)
+                if N.P.splitMe():
+                    NN = N.P.splitNode()
+                else:
+                    NN = None
             self.adjustTree(N.P,NN)
-
-        #print self
 
 
     def condenseTree(self):
@@ -427,6 +432,7 @@ class RTree(object):
 
         L = self.chooseLeaf(self.root,E)
 
+        """ if L is root we create a leaf node and attach """
         if L == self.root:
             N = Node(self.M)
             N.install(E)
@@ -441,17 +447,21 @@ class RTree(object):
         self.adjustTree(L,LL)
 
     def traverseTree(self):
-        self._traverse(self.root)
+        self._traverse(self.root,0)
 
-    def _traverse(self,root):
+    def _traverse(self,root,level):
+        tabs = ""
+        for i in range(level):
+            tabs = tabs + "\t"
+
         if root.isLeaf():
-            print "leaf"
-            for n in root.I:
-                print n
+            print "%sLeaf @ level: %s" % (tabs,level)
+            print "%s%s" % (tabs,root.I)
         else:
             for n in root.I:
-                print "calling"
-                self._traverse(n)
+                print "%sInnernode @ level: %s" % (tabs,level)
+                print "%s%s" % (tabs,root.bbox)
+                self._traverse(n,level+1)
 
 """
 Generate a random rectangle with coordinates divisible by "divisor" (e.g. 5 or 10)
@@ -479,30 +489,16 @@ def randRect(lb,ub,divisor,max_area=None):
 
 
 if __name__=='__main__':
-    # N = Node()
-    # print N
-    # B = Rect()
-    # print B
-    #
-    # print isinstance(N, Node)
-    # print isinstance(B, Rect)
-    #
-    # A = Rect(Point(0,0),Point(0,0))
-    # B = Rect(Point(10,10),Point(50,50))
-    #
-    # A.merge(B)
-    #
-    # print A
-    #
-    # print B.contains(A)
-
-    random.seed(91283764)
+    #random.seed(91283764)
+    random.seed(8768)
 
     M = 5
 
     R = RTree(M)
 
-    for i in range(6):
+    for i in range(11):
         R.insert(randRect(1,100,5,200))
 
     R.traverseTree()
+
+    #print len(R.root.I)
