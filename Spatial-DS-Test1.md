@@ -34,8 +34,8 @@ Heres a list of 30 points that will be used for later questions.
 
 #### Q1 
 
-- Pick 21 values from the above list to load into an initially empty point Quad-tree. 
-- Pick values that would create a full balanced tree. 
+- Pick 21 points from the above list to load into an initially empty point Quad-tree. 
+- Pick points in an order that would create a full balanced tree. 
 - If there is no set of points that will do so state as such.
 - Drawings:
     - Show the tree state after 3 points entered
