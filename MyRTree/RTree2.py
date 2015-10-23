@@ -1,6 +1,7 @@
 import math
 import random
 import sys
+import pantograph
 
 """Point and Rectangle classes.
 
@@ -180,6 +181,8 @@ class Rect:
             self.top = max(self.top,other.top)
             self.right = max(self.right,other.right)
             self.bottom = min(self.bottom,other.bottom)
+        self.width = math.fabs(self.left-self.right)
+        self.height = math.fabs(self.top-self.bottom)
 
     def set_points(self, pt1, pt2):
         """Reset the rectangle coordinates."""
@@ -189,6 +192,8 @@ class Rect:
         self.top = max(y1, y2)
         self.right = max(x1, x2)
         self.bottom = min(y1, y2)
+        self.width = math.fabs(self.left-self.right)
+        self.height = math.fabs(self.top-self.bottom)
 
     """Return true if other is inside the rectangle."""
     def contains(self, other):
@@ -240,89 +245,136 @@ class Rect:
                                Point(self.right, self.bottom))
 
 
+class RandomData(object):
+    def __init__(self,lb,ub,divisor=1,max_area=None):
+        self.Points = []
+        self.lowerBound = lb
+        self.upperBound = ub
+        self.divisor = divisor
+        self.maxArea = max_area
+
+
+    """
+
+    """
+    def randRect(self):
+
+        return Rect(self.randPoint(),self.randPoint())
+
+    """
+
+    """
+    def randPoint(self):
+
+        rx = self.randInt()
+        ry = self.randInt()
+
+        return Point(rx,ry)
+
+    """
+
+    """
+    def randInt(self):
+        attempts = 0
+
+        ub = self.upperBound // self.divisor
+
+        temp = random.randrange(self.lowerBound,ub) * self.divisor
+
+        while temp in self.Points:
+            temp = random.randrange(self.lowerBound,ub) * self.divisor
+            attempts += 1
+            if attempts > 1000:
+                temp = self.divisor
+                for i in range(self.upperBound,self.divisor):
+                    if not i in self.Points:
+                        self.Points.append(i)
+                        break
+
+        self.Points.append(temp)
+
+        return temp
+
 class Node(object):
     def __init__(self,M,leaf=True):
         self.M = M
-        self.P = None               # Parent pointer
-        self.I = []                 # Container of boxes or node pointers
-        self.bbox = Rect()          # Bounding box that holds all children
+        self.m = M // 2
+        self.Children = []
+        self.Parent = None
+        self.Bbox = Rect()
         self.Leaf = leaf
+        self.color = self.randomColor()
 
     def __repr__(self):
-        if "bbox" in dir(self.P):
-            parent = self.P.bbox
+        if "bbox" in dir(self.Parent):
+            parent = self.Parent.bbox
         else:
             parent = None
-        return "\nM: %s\tP: %s\tI: %s\tbbox: %s\n" % (self.M,parent,len(self.I),self.bbox)
+        return "\nM: %s\tP: %s\tI: %s\tbbox: %s\n" % (self.M,self.Parent,self.Children,self.Bbox)
 
-    def __str__(self):
-        return str(self.__dict__)
-
-    def __eq__(self, other):
-        return self.__dict__ == other.__dict__
-
-    def splitMe(self):
-        return len(self.I) > self.M
+    def randomColor(self):
+        r = lambda: random.randint(0,255)
+        return ('#%02X%02X%02X' % (r(),r(),r()))
 
     """
     Add rectangle item to Node
     Resize bounding rectangle
     """
-    def install(self,E):
-        self.I.append(E)
-        if isinstance(E, Rect):
-            self.bbox.merge(E)
+    def insert(self,R):
+        self.Children.append(R)
+        if isinstance(R, Rect):
+            self.Bbox.merge(R)
         else:
-            self.bbox.merge(E.bbox)
+            self.Bbox.merge(R.Bbox)
+
+        if len(self.Children) > self.M:
+            return self.splitNode()
+
+        return None
 
     """
     Remove rectangle item from Node
     Resize bounding rectangle
     """
-    def uninstall(self,E):
-        self.I.remove(E)
-        self.bbox = Rect()
-        for i in self.I:
-            self.bbox.merge(i)
-
-    # If the items in "I" are Nodes, then it has children and is NOT a leaf
-    def isLeaf(self):
-        for i in self.I:
-            if isinstance(i, Node):
-                return False
-        return True
-
-    def length(self):
-        return len(self.I)
+    def remove(self,R):
+        self.Children.remove(R)
+        self.Bbox = Rect()
+        for i in self.Children:
+            self.Bbox.merge(i)
 
 
-    """
-    Select two entries to be the first elements of the groups.
-    Choose the most wasteful pair.
-    """
-    def pickSeeds(self):
+    def splitNode(self):
+        L = Node(self.M)
+        LL = Node(self.M)
 
-        d = 0
-        l = len(self.I)
+        R1,R2 = self.pickSeeds()    # Pick two rectangles
 
-        if l == 2:
-            return (self.I[0],self.I[1])
+        L.insert(R1)
+        LL.insert(R2)
+        self.remove(R1)
+        self.remove(R2)
 
-        if l == 3:
-            return (self.I[0],self.I[2])
+        while self.Children:
+            R = self.pickNext(L,LL)
 
-        for i in range(l):
-            for j in range(l):
-                if i == j:
-                    continue
-                J = self.I[i].potential_area(self.I[j])
-                temp = J - self.I[i].area() - self.I[j].area()
-                if temp > d:
-                    E1 = self.I[i]
-                    E2 = self.I[j]
-                    d = temp
-                print E1,E2
-        return (E1,E2)
+            d1 = math.fabs(L.Bbox.potential_area(R) - L.Bbox.area())
+            d2 = math.fabs(LL.Bbox.potential_area(R) - LL.Bbox.area())
+
+            """ Add it to the group whose covering rectangle will have to be enlarged least to accommodate it. """
+            if d1 < d2:
+                L.insert(R)
+            else:
+                LL.insert(R)
+
+            self.remove(R)
+
+        # I wanted to just do self = L , but obviously that wont work with a local var
+        # Little wasteful
+
+        for R in L.Children:
+            self.insert(R)
+
+        return LL
 
     """
     Select one remaining entry for classification in a group.
@@ -332,221 +384,79 @@ class Node(object):
     def pickNext(self,L,LL):
 
         maxDiff = 0
-        for e in self.I:
-            diff = math.fabs(L.bbox.potential_area(e) - LL.bbox.potential_area(e))
+        for c in self.Children:
+            diff = math.fabs(L.Bbox.potential_area(c) - LL.Bbox.potential_area(c))
 
             if diff > maxDiff:
                 maxDiff = diff
-                E = e
+                C = c
 
-        return E
+        return C
 
+    """
+    Select two entries to be the first elements of the groups.
+    Choose the most wasteful pair.
+    """
+    def pickSeeds(self):
 
-    def splitNode(self):
-        L = Node(self.M)
-        LL = Node(self.M)
+        d = 0
+        l = len(self.Children)
 
-        E1,E2 = self.pickSeeds()
+        if l == 2:
+            return (self.Children[0],self.Children[1])
 
-        L.install(E1)
-        LL.install(E2)
-        self.uninstall(E1)
-        self.uninstall(E2)
+        if l == 3:
+            return (self.Children[0],self.Children[2])
 
-        while self.I:
-            E = self.pickNext(L,LL)
+        for i in range(l):
+            for j in range(l):
+                if i == j:
+                    continue
+                J = self.Children[i].potential_area(self.Children[j])
+                temp = J - self.Children[i].area() - self.Children[j].area()
+                if temp > d:
+                    R1 = self.Children[i]
+                    R2 = self.Children[j]
+                    d = temp
+        return (R1,R2)
 
-            d1 = math.fabs(L.bbox.potential_area(E) - L.bbox.area())
-            d2 = math.fabs(LL.bbox.potential_area(E) - LL.bbox.area())
+class Driver(pantograph.PantographHandler):
 
-            """ Add it to the group whose covering rectangle will have to be enlarged least to accommodate it. """
-            if d1 < d2:
-                L.install(E)
-            else:
-                LL.install(E)
+    def setup(self):
 
-            self.uninstall(E)
+        self.N = []
 
-        # I wanted to just do self = L , but obviously that wont work with a local var
-        # Little wasteful
+        self.Rd = RandomData(5,500,5)
 
-        for E in L.I:
-            self.install(E)
-
-
-        GlobalRects.append(LL)
-        return LL
-
-
-class RTree(object):
-    def __init__(self,M):
-        self.M = M
-        self.m = M // 2
-        self.root = None
+        self.N.append(Node(4))
 
 
-    def __repr__(self):
-        return "\nM: %s\nm: %s\nroot: %s\n" % (self.M,self.m,self.root)
+        for i in range(8):
+            r = self.Rd.randRect()
+            T = self.N[0].insert(r)
+            if T:
+                self.N.append(T)
 
-    def adjustTree(self,L,LL):
-        N = L
-        NN = LL
+        for n in self.N:
+            print n
 
-        split = isinstance(NN, Node)    # otherwise it would be NONE
-        done = (N == self.root)
+    def randomColor(self):
+        r = lambda: random.randint(0,255)
+        return ('#%02X%02X%02X' % (r(),r(),r()))
 
-        """ If at the root """
-        if done:
-            """ If there was a split """
-            if split:
-                """ Grow tree up """
-                self.root = Node(self.M,False)
-                self.root.install(N)
-                self.root.install(NN)
-                N.P = self.root
-                NN.P = self.root
-        else:
-            N.P.bbox.merge(N.bbox)
-            if split:
-                N.P.install(NN)
-                N.P.bbox.merge(NN.bbox)
-                if N.P.splitMe():
-                    NN = N.P.splitNode()
-                else:
-                    NN = None
-            self.adjustTree(N.P,NN)
-
-    def insert(self,E):
-        assert isinstance(E, Rect), "RTree insert requires a Rect type."
-
-        LL = None   # LL is only needed if we split
-
-        if not isinstance(self.root, Node):
-            self.root = Node(self.M,False)  # Create a new root node
-            N = Node(self.M,True)           # Create a new leaf node
-            N.install(E)                    # Add bbox to leaf
-            N.P = self.root                 # Set parent = root
-            self.root.install(N)            # Install Node into root
-            L = N                           # Point to the new Leaf node
-            GlobalRects.append(self.root)
-            GlobalRects.append(L)
-        else:
-            L = self.chooseLeaf(self.root,E)
-
-            L.install(E)
-
-            if L.splitMe():
-                LL = L.splitNode()
-
-        self.adjustTree(L,LL)
-
-    def traverseTree(self):
-        self._traverse(self.root,0)
-
-    def _traverse(self,root,level):
-        tabs = ""
-        for i in range(level):
-            tabs = tabs + "\t"
-
-        if root.Leaf:
-            print "%sLeaf @ level: %s" % (tabs,level)
-            print "%s%s" % (tabs,root.I)
-        else:
-            for n in root.I:
-                print "%sInnernode @ level: %s" % (tabs,level)
-                print "%s%s" % (tabs,root.bbox)
-                self._traverse(n,level+1)
-
-    def condenseTree(self):
-        pass
-
-    def chooseLeaf(self,N,E):
-        if N.Leaf:
-            return N
-        else:
-            minimum = sys.maxint
-            F = None
-            for n in N.I:
-                if n.bbox.potential_area(E) < minimum:
-                    minimum = n.bbox.potential_area(E)
-                    F = n
-            return self.chooseLeaf(F,E)
+    def drawRectangles(self):
+        for n in self.N:
+            print n.Bbox.left, n.Bbox.top, n.Bbox.width, n.Bbox.height
+            self.fill_rect(n.Bbox.left, n.Bbox.top, n.Bbox.width, n.Bbox.height,"#c0c0c0")
+            for c in n.Children:
+                self.draw_rect(c.left, c.top, c.width, c.height,n.color)
 
 
-    def findLeaf(self):
-        pass
+    def update(self):
+        self.clear_rect(0, 0, self.width, self.height)
+        # draw the circle for the "rim" of the wheel
+        self.drawRectangles()
 
-
-
-
-"""
-Generate a random rectangle with coordinates divisible by "divisor" (e.g. 5 or 10)
-for easy debugging
-"""
-def randRect(lb,ub,divisor,max_area=None):
-
-    ub = ub // divisor
-    p = []
-    if max_area == None:
-        max_area = sys.maxint
-
-    for i in range(4):
-        p.append(random.randrange(lb,ub) * divisor)
-
-    R = Rect(Point(p[0],p[1]),Point(p[2],p[3]))
-
-    while R.area() > max_area or p[0] == p[2] or p[1] == p[3]:
-        for i in range(4):
-            p[i] = random.randrange(lb,ub) * divisor
-
-        R = Rect(Point(p[0],p[1]),Point(p[2],p[3]))
-
-    return R
-
-def randPoint(lb,ub):
-
-    x = []
-    y = []
-
-    for i in range(30,5):
-
-        rx = random.randrange(lb,ub)
-        ry = random.randrange(lb,ub)
-
-        while rx in x:
-            rx = random.randrange(lb,ub)
-        while ry in y:
-            ry = random.randrange(lb,ub)
-
-        x.append(rx)
-        y.append(ry)
-
-    return zip(x,y)
-
-GlobalRects = []
-
-if __name__=='__main__':
-    #random.seed(91283764)
-    random.seed(87689)
-
-    M = 2
-
-    R = RTree(M)
-
-    rects = []
-
-    for i in range(3):
-       r = randRect(1,30,5,50)
-       while r in rects:
-           r = randRect(1,30,5,50)
-       rects.append(r)
-       print r
-       R.insert(r)
-
-    #R.traverseTree()
-
-    #print len(R.root.I)
-
-    #print randPoint(1,100,5)
-
-    print GlobalRects
+if __name__ == '__main__':
+    app = pantograph.SimplePantographApplication(Driver)
+    app.run()
