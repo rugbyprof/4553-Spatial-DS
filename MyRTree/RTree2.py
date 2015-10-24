@@ -165,9 +165,9 @@ class Rect:
 
     def potential_area(self,other):
         left = min(self.left,other.left)
-        top = max(self.top,other.top)
+        top = min(self.top,other.top)
         right = max(self.right,other.right)
-        bottom = min(self.bottom,other.bottom)
+        bottom = max(self.bottom,other.bottom)
         return ( math.fabs(left-right) * math.fabs(top-bottom) )
 
     def merge(self,other):
@@ -178,9 +178,9 @@ class Rect:
             self.bottom = other.bottom
         else:
             self.left = min(self.left,other.left)
-            self.top = max(self.top,other.top)
+            self.top = min(self.top,other.top)
             self.right = max(self.right,other.right)
-            self.bottom = min(self.bottom,other.bottom)
+            self.bottom = max(self.bottom,other.bottom)
         self.width = math.fabs(self.left-self.right)
         self.height = math.fabs(self.top-self.bottom)
 
@@ -189,9 +189,9 @@ class Rect:
         (x1, y1) = pt1.as_tuple()
         (x2, y2) = pt2.as_tuple()
         self.left = min(x1, x2)
-        self.top = max(y1, y2)
+        self.top = min(y1, y2)
         self.right = max(x1, x2)
-        self.bottom = min(y1, y2)
+        self.bottom = max(y1, y2)
         self.width = math.fabs(self.left-self.right)
         self.height = math.fabs(self.top-self.bottom)
 
@@ -208,14 +208,15 @@ class Rect:
         if isinstance(other,Rect):
             return (self.left <= other.left and
                     self.right >= other.right and
-                    self.top >= other.top and
-                    self.bottom <= other.bottom)
+                    self.top <= other.top and
+                    self.bottom >= other.bottom)
 
 
     def overlaps(self, other):
         """Return true if a rectangle overlaps this rectangle."""
         return (self.right > other.left and self.left < other.right and
                 self.top > other.bottom and self.bottom < other.top)
+
 
     def top_left(self):
         """Return the top-left corner as a Point."""
@@ -252,15 +253,22 @@ class RandomData(object):
         self.upperBound = ub
         self.divisor = divisor
         self.maxArea = max_area
-
-
     """
 
     """
     def randRect(self):
 
-        return Rect(self.randPoint(),self.randPoint())
+        r = Rect(self.randPoint(),self.randPoint())
 
+        while r.area() > self.maxArea:
+            self.Points.remove(r.top)
+            self.Points.remove(r.bottom)
+            self.Points.remove(r.left)
+            self.Points.remove(r.right)
+            r = Rect(self.randPoint(),self.randPoint())
+
+
+        return r
     """
 
     """
@@ -420,42 +428,91 @@ class Node(object):
                     d = temp
         return (R1,R2)
 
+
+
 class Driver(pantograph.PantographHandler):
 
     def setup(self):
 
         self.N = []
-
-        self.Rd = RandomData(5,500,5)
-
         self.N.append(Node(4))
+        self.Rd = RandomData(5,self.width,10,1000)
 
+    def addRectangle(self):
 
-        for i in range(8):
-            r = self.Rd.randRect()
-            T = self.N[0].insert(r)
-            if T:
-                self.N.append(T)
+        r = self.Rd.randRect()
 
+        L = self.chooseLeaf(r)
+
+        LL = L.insert(r)
+
+        if LL:
+            self.N.append(LL)
+
+        print "=============="
         for n in self.N:
             print n
 
-    def randomColor(self):
-        r = lambda: random.randint(0,255)
-        return ('#%02X%02X%02X' % (r(),r(),r()))
-
     def drawRectangles(self):
         for n in self.N:
-            print n.Bbox.left, n.Bbox.top, n.Bbox.width, n.Bbox.height
-            self.fill_rect(n.Bbox.left, n.Bbox.top, n.Bbox.width, n.Bbox.height,"#c0c0c0")
+            self.dashedRect(n.Bbox.top_left(),n.Bbox.bottom_right(),10)
+            #self.draw_rect(n.Bbox.left, n.Bbox.top, n.Bbox.width, n.Bbox.height,"#000")
             for c in n.Children:
                 self.draw_rect(c.left, c.top, c.width, c.height,n.color)
 
-
     def update(self):
         self.clear_rect(0, 0, self.width, self.height)
-        # draw the circle for the "rim" of the wheel
         self.drawRectangles()
+
+    def chooseLeaf(self,R):
+
+        if len(self.N) == 1:
+            return self.N[0]
+
+        minimum = sys.maxint
+        F = None
+        for n in self.N:
+            if n.Bbox.potential_area(R) < minimum:
+                minimum = n.Bbox.potential_area(R)
+                F = n
+        return F
+
+    def on_mouse_down(self,InputEvent):
+        self.addRectangle()
+        print InputEvent.x
+
+    def randomColor(self):
+        r = lambda: random.randint(200,255)
+        return ('#%02X%02X%02X' % (r(),r(),r()))
+
+    def dashedRect(self,start,stop,step):
+        startX = start.x
+        startY = start.y
+        stopX = stop.x
+        stopY = stop.y
+
+        for sx in range(startX,stopX,step*2):
+            if sx + step > stopX:
+                break
+            self.draw_line(sx, startY, sx+step, startY, "#c0c0c0")
+
+
+        for sx in range(startX,stopX,step*2):
+            if sx + step > stopX:
+                break
+            self.draw_line(sx, stopY, sx+step, stopY, "#c0c0c0")
+
+        for sy in range(startY,stopY,step*2):
+            if sy + step > stopY:
+                break
+            self.draw_line(startX, sy, startX, sy+step, "#c0c0c0")
+
+        for sy in range(startY,stopY,step*2):
+            if sy + step > stopY:
+                break
+            self.draw_line(stopX, sy, stopX, sy+step, "#c0c0c0")
+
+
 
 if __name__ == '__main__':
     app = pantograph.SimplePantographApplication(Driver)
