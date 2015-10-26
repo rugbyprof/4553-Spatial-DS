@@ -267,8 +267,42 @@ class RandomData(object):
             self.Points.remove(r.right)
             r = Rect(self.randPoint(),self.randPoint())
 
+        return r
+
+    """
+
+    """
+    def randSquare(self,minw=0,maxw=0):
+
+        lb = math.floor(math.sqrt(self.maxArea)*.20)
+        ub = math.floor(math.sqrt(self.maxArea)*.90)
+
+        if minw > 0 and maxw > 0:
+            w = random.randrange(minw,maxw)
+        else:
+            w = random.randrange(lb,ub)
+
+        x = self.randInt() - w
+        y = self.randInt() - w
+
+        p1 = Point(x,y)
+        p2 = Point(x+w,y+w)
+        r = Rect(p1,p2)
+
+        # while w*w > self.maxArea:
+        #     x = self.randInt()
+        #     y = self.randInt()
+        #     if minw > 0 and maxw > 0:
+        #         w = random.randrange(minw,maxw)
+        #     else:
+        #         w = random.randrange(lb,ub)
+        #     p1 = Point(x,y)
+        #     p2 = Point(x+w,y+w)
+        #     r = Rect(p1,p2)
+        #     print r
 
         return r
+
     """
 
     """
@@ -287,16 +321,16 @@ class RandomData(object):
 
         ub = self.upperBound // self.divisor
 
-        temp = random.randrange(self.lowerBound,ub) * self.divisor
+        temp = (random.randrange(self.lowerBound,ub) * self.divisor)
 
         while temp in self.Points:
-            temp = random.randrange(self.lowerBound,ub) * self.divisor
+            temp = (random.randrange(self.lowerBound,ub) * self.divisor)
             attempts += 1
             if attempts > 1000:
                 temp = self.divisor
                 for i in range(self.upperBound,self.divisor):
                     if not i in self.Points:
-                        self.Points.append(i)
+                        temp = i
                         break
 
         self.Points.append(temp)
@@ -318,7 +352,7 @@ class Node(object):
             parent = self.Parent.bbox
         else:
             parent = None
-        return "\nM: %s\tP: %s\tI: %s\tbbox: %s\n" % (self.M,self.Parent,self.Children,self.Bbox)
+        return "\nM: %s\tParent: %s\tChildren: %s\tBbox: %s\n" % (self.M,self.Parent,self.Children,self.Bbox)
 
     def randomColor(self):
         r = lambda: random.randint(0,255)
@@ -430,17 +464,19 @@ class Node(object):
 
 
 
-class Driver(pantograph.PantographHandler):
+class printRtree(pantograph.PantographHandler):
 
     def setup(self):
 
         self.N = []
-        self.N.append(Node(4))
-        self.Rd = RandomData(5,self.width,10,1000)
+        self.N.append(Node(7))
+        self.Rd = RandomData(5,self.width,10,2000)
 
     def addRectangle(self):
 
-        r = self.Rd.randRect()
+        #r = self.Rd.randRect()
+        r = self.Rd.randSquare(50,150)
+        print r
 
         L = self.chooseLeaf(r)
 
@@ -463,6 +499,7 @@ class Driver(pantograph.PantographHandler):
     def update(self):
         self.clear_rect(0, 0, self.width, self.height)
         self.drawRectangles()
+        self.draw_image("A.png", 5, 5)
 
     def chooseLeaf(self,R):
 
@@ -496,7 +533,6 @@ class Driver(pantograph.PantographHandler):
                 break
             self.draw_line(sx, startY, sx+step, startY, "#c0c0c0")
 
-
         for sx in range(startX,stopX,step*2):
             if sx + step > stopX:
                 break
@@ -515,5 +551,5 @@ class Driver(pantograph.PantographHandler):
 
 
 if __name__ == '__main__':
-    app = pantograph.SimplePantographApplication(Driver)
+    app = pantograph.SimplePantographApplication(printRtree)
     app.run()
