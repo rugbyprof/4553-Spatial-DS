@@ -143,16 +143,16 @@ Note: According to Knuth's definition, a B-tree of order m is a tree which satis
     - Show the final state of the tree.
 - You should know what the structure of the tree should look like.
 
-6 Items:
-
-![](https://s3.amazonaws.com/f.cl.ly/items/161H270P2A3V100d0G3N/Screen%20Shot%202015-11-03%20at%201.38.48%20PM.png)
-
-15 Items:
-
-![](https://s3.amazonaws.com/f.cl.ly/items/2t0r0S472A233C2i2w31/Screen%20Shot%202015-11-03%20at%201.36.54%20PM.png)
-
-30 Items: 
-![](https://s3.amazonaws.com/f.cl.ly/items/1R301K0i210D3d01360r/test1-btree.png)
+>6 Items:
+>
+>![](https://s3.amazonaws.com/f.cl.ly/items/161H270P2A3V100d0G3N/Screen%20Shot%202015-11-03%20at%201.38.48%20PM.png)
+>
+>15 Items:
+>
+>![](https://s3.amazonaws.com/f.cl.ly/items/2t0r0S472A233C2i2w31/Screen%20Shot%202015-11-03%20at%201.36.54%20PM.png)
+>
+>30 Items: 
+>![](https://s3.amazonaws.com/f.cl.ly/items/1R301K0i210D3d01360r/test1-btree.png)
 
 #### Q10
 
