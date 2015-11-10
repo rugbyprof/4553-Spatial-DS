@@ -399,6 +399,8 @@ class Node(object):
         while self.Children:
             R = self.pickNext(L,LL)
 
+            if R == 0:
+                return
             d1 = math.fabs(L.Bbox.potential_area(R) - L.Bbox.area())
             d2 = math.fabs(LL.Bbox.potential_area(R) - LL.Bbox.area())
 
@@ -426,6 +428,7 @@ class Node(object):
     def pickNext(self,L,LL):
 
         maxDiff = 0
+        C = 0
         for c in self.Children:
             diff = math.fabs(L.Bbox.potential_area(c) - LL.Bbox.potential_area(c))
 
@@ -440,6 +443,9 @@ class Node(object):
     Choose the most wasteful pair.
     """
     def pickSeeds(self):
+
+        R1 = None
+        R2 = None
 
         d = 0
         l = len(self.Children)
@@ -460,6 +466,10 @@ class Node(object):
                     R1 = self.Children[i]
                     R2 = self.Children[j]
                     d = temp
+                if R1 == None:
+                    R1 = self.Children[i]
+                if R2 == None:
+                    R2 = self.Children[j]
         return (R1,R2)
 
 
@@ -469,8 +479,8 @@ class printRtree(pantograph.PantographHandler):
     def setup(self):
 
         self.N = []
-        self.N.append(Node(7))
-        self.Rd = RandomData(5,self.width,10,2000)
+        self.N.append(Node(3))
+        #self.Rd = RandomData(5,self.width,10,2000)
 
     def addRectangle(self):
 
@@ -489,6 +499,29 @@ class printRtree(pantograph.PantographHandler):
         for n in self.N:
             print n
 
+    def showTestRects(self):
+        test = [Point(39,21),Point(86,19),Point(65,5),Point(76,28),Point(3,9),Point(31,59),Point(43,99),Point(60,50),Point(42,48),Point(15,73),Point(67,98),Point(16,34),Point(27,80),Point(51,77),Point(30,67),Point(82,68),Point(85,46),Point(89,44),Point(21,30),Point(5,66),Point(75,29),Point(17,14),Point(40,90),Point(18,33),Point(52,64),Point(1,71),Point(88,10),Point(64,26),Point(96,2),Point(25,40)]
+
+        s = 0
+        while len(test) > 0:
+            p1 = test.pop(0)
+            p2 = test.pop(0)
+            p1.x *= 5
+            p1.y *= 5
+            p2.x *= 5
+            p2.y *= 5
+            r = Rect(p1,p2)
+            print r
+            L = self.chooseLeaf(r)
+
+            LL = L.insert(r)
+
+            if LL:
+                self.N.append(LL)
+            s += 1
+            if s == 3:
+                break
+
     def drawRectangles(self):
         for n in self.N:
             self.dashedRect(n.Bbox.top_left(),n.Bbox.bottom_right(),10)
@@ -498,8 +531,9 @@ class printRtree(pantograph.PantographHandler):
 
     def update(self):
         self.clear_rect(0, 0, self.width, self.height)
+        self.showTestRects()
         self.drawRectangles()
-        self.draw_image("A.png", 5, 5)
+        #self.draw_image("A.png", 5, 5)
 
     def chooseLeaf(self,R):
 
@@ -515,8 +549,9 @@ class printRtree(pantograph.PantographHandler):
         return F
 
     def on_mouse_down(self,InputEvent):
-        self.addRectangle()
+        #self.addRectangle()
         print InputEvent.x
+        printRTree(self.N)
 
     def randomColor(self):
         r = lambda: random.randint(200,255)
@@ -548,6 +583,11 @@ class printRtree(pantograph.PantographHandler):
                 break
             self.draw_line(stopX, sy, stopX, sy+step, "#c0c0c0")
 
+def printRTree(root):
+    for i in root:
+        if isinstance(i, Node):
+            print i
+            printRTree(i.Children)
 
 
 if __name__ == '__main__':
