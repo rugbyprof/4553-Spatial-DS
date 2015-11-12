@@ -145,7 +145,7 @@ Note: According to Knuth's definition, a B-tree of order m is a tree which satis
 
 >6 Items:
 >
->![](https://s3.amazonaws.com/f.cl.ly/items/161H270P2A3V100d0G3N/Screen%20Shot%202015-11-03%20at%201.38.48%20PM.png)
+>![](https://s3.amazonaws.com/f.cl.ly/items/2I1P243w290d3z1b0x3y/btree-6items.png)
 >
 >15 Items:
 >
