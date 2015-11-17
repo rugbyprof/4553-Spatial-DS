@@ -1,9 +1,10 @@
-## Program 5
+## Program 5 
+#### Part 1
 #### Due: Dec 1st 
 
 ### Overview:
 
-We are going to implement the A* pathfinding algorithm as the basis of a route planning program. The program should find the shortest path from a given start node to an end node. Basically, from city A to city B. We won't get extremely specific since our underlying road network is made up of primary and secondary roads (basically highways).
+We are going to implement the A* pathfinding algorithm as the basis of a route planning program. The program should find the shortest path from a given start node to an end node. Basically, from city A to city B. We won't get extremely specific since our underlying road network is made up of primary and secondary roads (basically highways). In this first part, we will simply read the files in utilzing `json` and `csv` libraries.
 
 The road network will be represented as a weighted directed graph stored in 3 files.
 
@@ -32,9 +33,27 @@ A comma seperated file with the following format:
 
 
 ### Requirements:
-- Create a graph structure using the nodes and edges files. 
-- Apply the A* algorithm to the graph structure to find a shortest path between 2 nodes. 
-- Show your chosen path by drawing it on a map. 
+- Read the nodes and edges files in. 
+- Be able to retreive a geometry for a node based on the id. 
+- As an example, print the geometry of a node in your output. 
+- Your output should look like:
+
+```
+Your Name
+Program 5 - Part 1
+
+nodes.csv read containing x nodes.
+edges.csv read containging x edges.
+
+Node x contains x points. The geometry follows:
+
+-96.391037 , 35.839709 , 
+-96.390997 , 35.84016 ,
+-96.39087699999999 , 35.840621 ,
+-96.390855 , 35.840685 
+
+
+```
 
 Notes:
 - With the given data there might not be a path between each and every node.
@@ -44,9 +63,10 @@ Notes:
 
 ### Deliverables
 
-- A folder called `ProjAstar` should contain all your files
-- In `ProjAstar` create a file called `driver.py` to run your path finding algorithm. 
+- A folder called `ProjAstar-1` should contain all your files
+- In `ProjAstar-1` create a file called `load_files.py` to run your path finding algorithm. 
 - Any other files used should be in your folder.
+
 
 
 ***Everything needs to be in your repository, named as specified, or it won't be graded.***
