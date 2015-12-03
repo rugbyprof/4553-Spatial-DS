@@ -1,4 +1,3 @@
-#FAIL FAIL FAIL FAIL FAIL FAIL FAIL FAIL FAIL FAIL
 ## Program 5 
 #### Part 1
 #### Due: Nov 20th by 5pm
@@ -6,7 +5,6 @@
 ### Overview:
 
 We are going to implement the A* pathfinding algorithm as the basis of a route planning program. The program should find the shortest path from a given start node to an end node. Basically, from city A to city B. We won't get extremely specific since our underlying road network is made up of primary and secondary roads (basically highways). In this first part, we will simply read the files in utilzing `json` and `csv` libraries.
-
 
 The road network will be represented as a weighted directed graph stored in 3 files.
 
@@ -68,6 +66,8 @@ Notes:
 - A folder called `ProjAstar-1` should contain all your files
 - In `ProjAstar-1` create a file called `load_files.py` to run your path finding algorithm. 
 - Any other files used should be in your folder.
+
+
 
 ***Everything needs to be in your repository, named as specified, or it won't be graded.***
 
