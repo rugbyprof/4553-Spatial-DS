@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+    <title>{{title}}</title>
+    <style>
+      body {
+        width: 100%;
+        height: 100%;
+        padding: 0px;
+        margin: 0px;
+      }
+      #pantograph-canvas {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    </style>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+</head>
+<body>
+    <canvas id="pantograph-canvas"></canvas>
+    <script type="text/javascript">
+        var canvas = document.getElementById("pantograph-canvas")
+        var trimBy = 10;
+        var fullWidth = document.documentElement.clientWidth - trimBy;
+        var fullHeight = document.documentElement.clientHeight - trimBy;
+        canvas.width = {{width}};
+        canvas.height = {{height}};
+        var url = "{{url}}";
+        var ws_url = "ws://" + window.location.host + "{{ws_url}}";
+    </script>
+    <script type="text/javascript" src="/js/pantograph.js"></script>
+</body>
+</html>
