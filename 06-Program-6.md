@@ -13,7 +13,12 @@ I put a working version of an Astar implementation that I got from [here](https:
 Sadly I couldn't create a clean viable graph with enough connections, and big enough to make it interesting, for you to run Astar on. I did learn that shape files have zero guarantee on the direction of a road segment. I'm confident in stating this based on: https://plugins.qgis.org/plugins/lineswitch/ (A whole QGis plugin written to change their direction) and a decent article on how to visualize segments better  ... all for the purpose of detecting wrong direction http://woostuff.wordpress.com/2012/07/22/qgis-style-tricks-using-styles-to-help-fix-kerb-line-directions/ . Anyway, here's the runner up program. Booo.
 
 ### Requirements:
-IN CLASS
+- Remove diagonal movement. Cardinal directions only.
+- Draw path as it's being discovered (or pass back all moves and render them so you can follow the path.
+- Draw line between two specified points.
+- Terrain cost
+    - Add at least 1 type of tile that costs more to move through 
+- At least one pre-loaded option to test your implemention. 
 
 
 ### Deliverables
