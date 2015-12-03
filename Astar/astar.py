@@ -1,24 +1,27 @@
+from math import sqrt
+
 class AStar(object):
     def __init__(self, graph):
         self.graph = graph
-        
+
     def heuristic(self, node, start, end):
         raise NotImplementedError
-        
+
     def search(self, start, end):
         openset = set()
         closedset = set()
         current = start
-        openset.add(current)
-        while openset:
-            current = min(openset, key=lambda o:o.g + o.h)
+        openset.add(current)  #lets add the start coordinate
+        while openset:  #openset still has items in it
+            current = min(openset, key=lambda o:o.g + o.h)  #
             if current == end:
                 path = []
                 while current.parent:
                     path.append(current)
                     current = current.parent
+                    print current
                 path.append(current)
-                return path[::-1]
+                return path[::-1]   #reverse the path
             openset.remove(current)
             closedset.add(current)
             for node in self.graph[current]:
@@ -35,12 +38,3 @@ class AStar(object):
                     node.parent = current
                     openset.add(node)
         return None
-
-class AStarNode(object):
-    def __init__(self):
-        self.g = 0
-        self.h = 0
-        self.parent = None
-        
-    def move_cost(self, other):
-        raise NotImplementedError
