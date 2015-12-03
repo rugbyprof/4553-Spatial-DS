@@ -317,8 +317,9 @@ class DrawAstar(pantograph.PantographHandler):
         x = (x / self.block) * self.block
         y = (y / self.block) * self.block
         return (x,y)
-
-
+"""
+Main Driver!!!
+"""
 if __name__ == '__main__':
     app = pantograph.SimplePantographApplication(DrawAstar)
     app.run()
