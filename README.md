@@ -19,6 +19,8 @@
 - Quadtree
 - R-Tree (R+-Tree, R\*-Tree)
 - KD-Tree
+- Graphs
+- Shortest Path
 - A-Star
 
    
