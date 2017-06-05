@@ -1,12 +1,6 @@
 ## Assignment 1 - Getting Started
 #### Due: Tuesday June 6th by 2:30pm
 
-## Getting Setup
-
-Setting up your dev environment is going to be mostly up to you. We will discuss this more the first week of this course, 
-but for now try and get `python` and `pygame` installed and working on your home machine.
-
-
 ### Intructors Note:
 >
 >This is an important step to getting your semester off on the right foot. **It's so important that:**
@@ -15,6 +9,24 @@ but for now try and get `python` and `pygame` installed and working on your home
 >- If you complete it wrong, you will lose 1/2 of one letter grade off of your final grade.
 >- Having said that, feel free to ask for help from me at anytime.
 
+## Getting Setup
+
+Setting up your dev environment is going to be mostly up to you. We will discuss this more the first week of this course, 
+but for now try and get `python` and `pygame` installed and working on your home machine.
+
+### Editor
+
+You can use whatever editor you like, but if your looking for some direction, I would recommend `Visual Studio Code`. This is NOT
+the regular visual studio that is installed in the labs, it is an ascii editor that provides some project management, integration 
+with Git and github, syntax highlighting, and will let you run your code within the environment. When I put it like that, it does 
+sound a lot like the regular visual studio, but its not. 
+
+![](https://pbs.twimg.com/profile_images/839220246690975744/zlVaaEoG_normal.jpg)
+Get it [here](https://code.visualstudio.com/?utm_medium=paid&utm_content=9&utm_campaign=SEM-Branded&wt.mc_id=dx_880722&utm_source=google&WT.srch=1&gclid=CjwKEAjwgtTJBRDRmd6ZtLrGyxwSJAA7Fy-hcWuvGscXTffhilKBJYFUv1hGXNPW__8nDZfuvp0CEhoCqqPw_wcB#alt-downloads).
+
+You may also want to install the following extensions:
+- [Python](https://marketplace.visualstudio.com/items?itemName=donjayamanne.python)
+- [Code Runner](https://marketplace.visualstudio.com/items?itemName=formulahendry.code-runner)
 
 ### Team Chat
 ---
