@@ -183,4 +183,22 @@ p1.shift(-1,2)
 # show our point has 'shifted'
 print(p1)
 
+L = []
 
+for i in range(7):
+    L.append([x for x in range(10)])
+
+
+print(L)
+
+for i in range(len(L)):
+  for j in range(len(L[i])):
+    print(L[i][j],end=',')
+  print()
+
+print()
+
+for i in L:
+  for j in i:
+    print(j,end=',')
+  print()
