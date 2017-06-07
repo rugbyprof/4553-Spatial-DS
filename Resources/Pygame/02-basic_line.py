@@ -19,14 +19,11 @@ points = [(0,0),(random.randrange(0,width),random.randrange(0,height)),(width,he
   - show event loop 
   - refresh rate
 """
-
-def drawLine(screen, color, points):
-    lineThickness = 2
-    pygame.draw.lines(screen, color, False, points, lineThickness)
+    
 
 running = True
 while running:
-  drawLine(screen,black,points)
+  pygame.draw.lines(screen, black, False, points, 2)
   for event in pygame.event.get():
     if event.type == pygame.QUIT:
       running = False
