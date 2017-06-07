@@ -27,6 +27,8 @@ printString(x)
 # prove the data type has changed for 'x'
 print(type(x))
 
+##########################################
+
 # lists in python are very important and
 # can hold many different types at once
 L = ["hello",'88',"Fred",3.14159]
@@ -74,6 +76,8 @@ print(str1.split(":"))
 for i in range(0,100,5):
   print(i)
 
+##########################################
+  
 # creates a 'tuple' of 4 and 8
 # tuples are 'immutable' 
 p = (4,8)
@@ -84,6 +88,8 @@ x,y = p
 # prove above statment
 print(x)
 print(y)
+
+##########################################
 
 # creates a dictionary 
 inventory = {}
@@ -111,6 +117,8 @@ for k,v in inventory.items():
 for v in inventory.values():
   print(v)
 
+##########################################
+  
 # function showing use of 'kwargs' or keyword arguments
 def my_function(**kwargs):
     print(kwargs)
@@ -142,6 +150,8 @@ def foo(p1, p2, p3, n1=None, n2=None):
 # calling above function
 foo(1, 2, 3, n2=99)
 foo(1, 2, n1=42, p3=3)
+
+##########################################
 
 # basic class syntax 
 class Point(object):
