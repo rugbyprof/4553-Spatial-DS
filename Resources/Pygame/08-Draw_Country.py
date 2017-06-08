@@ -1,15 +1,18 @@
-import pantograph
-import math
 import json
-import numpy as np
-import random
+import os 
+import pygame
+import random 
+
+
 
 class MapHelper:
-    def __init__(self):
+    def __init__(self,width=800,height=600):
         self.minX = 1000
         self.minY = 1000
         self.maxX = 0
         self.maxY = 0
+        self.width = width
+        self.height = height
 
     def displace(self,lat,lng,theta, distance,unit="miles"):
         """
@@ -132,6 +135,25 @@ class MapHelper:
 
         return inside
 
+
+    def shiftPoints(self,points):
+        shiftedPoints = []
+        for p in points:
+            x,y = p
+            x = x-self.minX
+            y = y-self.minY
+            shiftedPoints.append([x,y])
+        return shiftedPoints
+
+    def projectPoint(self,points):
+        projectedPoints = []
+        for p in points:
+            x,y = p
+            x = (x / self.maxX) * self.width
+            y = (y / self.maxY) * self.height
+            projectedPoints.append([x,y])
+        return projectedPoints
+
 class BoundingBox(object):
     def __init__(self, *args, **kwargs):
         self.lat_min = None
@@ -140,70 +162,73 @@ class BoundingBox(object):
         self.lon_max = None
 
 
-class DrawStates(pantograph.PantographHandler):
-    def setup(self):
-        mh = MapHelper()
-        self.zoom = 10
-        self.states = []
-        self.minX = 0
-        self.minY = 0
-        self.maxX = 0
-        self.maxY = 0
-        self.width = 2500
-        self.height = 2500
-
-        with open('state_borders.json', 'r') as content_file:
+class colors(object):
+    def __init__(self,file_name):
+        with open(file_name, 'r') as content_file:
             content = content_file.read()
 
-        content = json.loads(content)
+        self.content = json.loads(content)
 
-        for state in content:
-            print(state['name'])
-            #MapHelper.poly2canvas(state['borders'])
-            for poly in state['borders']:
-                print(mh.poly2canvas(poly))
-                self.states.append(mh.poly2canvas(poly))
-        self.minX,self.minY,self.maxX,self.maxY = mh.getExtremes()
+    def get_rgb(self,name):
+        for c in self.content:
+            if c['name'] == name:
+                return (c['rgb'][0],c['rgb'][1],c['rgb'][2])
+        return None
 
-        self.adjustStates()
-        self.drawStates()
+class countries(object):
+    def __init__(self,file_name,screen_width,screen_height):
+        self.mh = MapHelper(screen_width,screen_height)
+        with open(file_name, 'r') as content_file:
+            content = content_file.read()
 
+        self.countries_json = json.loads(content)
 
-    def adjustStates(self):
-        for i in range(len(self.states)):
-            self.states[i] = self.shiftState(self.states[i])
-            self.states[i] = self.projectState(self.states[i])
+    def get_country_object(self,id):
+        for c in self.countries_json['features']:
+            if id == c['id']:
+                new_points = []
+                for sub_poly in c['geometry']['coordinates']:
+                    new_points.append(self.mh.poly2canvas(sub_poly))
+                for i in range(len(new_points)):
+                    new_points[i] = self.mh.projectPoint(new_points[i])
 
-    def drawStates(self):
-        for state in self.states:
-            self.fill_polygon(state, color = "#%06x" % random.randint(0, 0xFFFFFF))
+                return new_points
+        return None
 
-        for state in self.states:
-            self.draw_polygon(state, color = "#000")
+if __name__=='__main__':
 
-    def shiftState(self,state):
-        shiftedState = []
-        for p in state:
-            x,y = p
-            x = x-self.minX
-            y = y-self.minY
-            shiftedState.append([x,y])
-        return shiftedState
+    screen_width = 800
+    screen_height = 600
 
-    def projectState(self,state):
-        projectedState = []
-        for p in state:
-            x,y = p
-            x = (x / self.maxX) * self.width
-            y = (y / self.maxY) * self.height
-            projectedState.append([x,y])
-        return projectedState
+    dir_path = os.path.dirname(os.path.realpath(__file__))
+    file_name = dir_path + '/../Json_Files/colors.json'
+    c = colors(file_name)
 
-    def update(self):
-        self.clear_rect(0, 0, self.width, self.height)
-        # draw the circle for the "rim" of the wheel
-        self.drawStates()
+    file_name = dir_path + '/../Json_Files/countries.geo.json'
+    country_helper = countries(file_name,screen_width,screen_height)
 
-if __name__ == '__main__':
-    app = pantograph.SimplePantographApplication(DrawStates)
-    app.run()
+    #########################################
+    background_colour = (255,255,255)
+    black = (0,0,0)
+    (width, height) = (screen_width, screen_height)
+
+    screen = pygame.display.set_mode((width, height))
+    pygame.display.set_caption('Draw Country')
+    screen.fill(background_colour)
+
+    pygame.display.flip()
+
+    coords = country_helper.get_country_object('ISL')
+
+    print(coords)
+
+    running = True
+    while running:
+        for p in coords:
+            pygame.draw.lines(screen, black, False, p, 2)
+
+        for event in pygame.event.get():
+            #print(event)
+            if event.type == pygame.QUIT:
+                running = False
+            pygame.display.flip()
