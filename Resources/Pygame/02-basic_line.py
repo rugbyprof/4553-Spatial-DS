@@ -25,6 +25,7 @@ running = True
 while running:
   pygame.draw.lines(screen, black, False, points, 2)
   for event in pygame.event.get():
+    print(event)
     if event.type == pygame.QUIT:
       running = False
   pygame.display.flip()
