@@ -1,7 +1,7 @@
 Program 1 - Drawing Countries
 =========
 
-### Due: Tuesday Jun 13th by Classtime
+### Due: Teusday Jun 13th by Classtime
 
 
 ### Overview
@@ -29,6 +29,7 @@ Your job is to add the following functionality to this program:
 2. Determine which polygon contains the click (if any).
 3. Border that polygon with a thick black border.
 4. Print the countries name or states name somewhere on the screen (preferrably on the polygon).
+5. Draw bounding box rectangle around the country or state you clicked.
 
 ### Deliverables
 
