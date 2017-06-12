@@ -441,8 +441,9 @@ if __name__ == '__main__':
     df = DrawingFacade(width,height)
 
     # Add countries and states to our drawing facade.
-    df.add_polygons(['FRA','TX','ESP','AFG','NY'])
-    df.add_polygons(['TX','NY','ME','Kenya'])
+    # df.add_polygons(['FRA','TX','ESP','AFG','NY'])
+    # df.add_polygons(['TX','NY','ME','Kenya'])
+    df.add_polygons(['Spain','France','Belgium','Italy','Morrocco'])
 
     # Main loop
     running = True
