@@ -415,14 +415,15 @@ def mercator_projection(latlng,zoom=0,tile_size=256):
 
 if __name__ == '__main__':
 
+    # if there are no command line args
     if len(sys.argv) == 1:
         width = 1024    # define width and height of screen
         height = 512
     else:
+        # use size passed in by user
         width = int(sys.argv[1])
         height = int(sys.argv[2])
     
-
     # create an instance of pygame
     # "screen" is what will be used as a reference so we can
     # pass it to functions and draw to it.
