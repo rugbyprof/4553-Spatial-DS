@@ -341,6 +341,8 @@ class DrawingFacade(object):
         self.wc = WorldCountries(DIRPATH + '/../Json_Files/countries.geo.json')
         self.gd = DrawGeoJson(screen,width,height)
 
+        self.gd.funkychicken = 45
+
     def add_polygons(self,ids):
         """
         Adds polygons to the 'DrawGeoJson' class using country names or id's, state names or code's. It
@@ -440,18 +442,21 @@ if __name__ == '__main__':
     gd = DrawGeoJson(screen,width,height)
     df = DrawingFacade(width,height)
 
+    print(gd.__dict__)    
+
     # Add countries and states to our drawing facade.
     # df.add_polygons(['FRA','TX','ESP','AFG','NY'])
     # df.add_polygons(['TX','NY','ME','Kenya'])
-    df.add_polygons(['Spain','France','Belgium','Italy','Ireland','Scotland','Greece','Germany','Egypt','Morocco','India'])
+    df.add_polygons(['TX','Spain','France','Belgium','Italy','Ireland','Scotland','Greece','Germany','Egypt','Morocco','India'])
 
 
     # Main loop
     running = True
     while running:
         gd.draw_polygons()
-        
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 running = False
+            if event.type == pygame.MOUSEBUTTONDOWN:
+                print(event.pos)
             pygame.display.flip()
