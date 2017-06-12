@@ -303,7 +303,7 @@ class DrawGeoJson(object):
             for p in poly:
                 x,y = p
                 adjusted.append(self.convertGeoToPixel(x,y))
-            pygame.draw.lines(self.screen, self.colors.get_random_color(), False, adjusted, 1)
+            pygame.draw.polygon(self.screen, self.colors.get_random_color(), adjusted, 0)
 
     def __update_bounds(self):
         """
@@ -373,18 +373,16 @@ class DrawingFacade(object):
         for poly in state:
             self.gd.add_polygon(poly)
 
-def point_in_poly(self,x,y,poly):
+
+
+def point_inside_polygon(x,y,poly):
     """
-    Determine if a point is inside a given polygon or not
-    Polygon is a list of (x,y) pairs. This function
-    returns True or False.  The algorithm is called
-    the "Ray Casting Method".
+    determine if a point is inside a given polygon or not
+    Polygon is a list of (x,y) pairs.
+    http://www.ariel.com.au/a/python-point-int-poly.html
     """
-    x = self.lon2canvas(x)
-    y = self.lat2canvas(y)
-    poly = self.poly2canvas(poly)
     n = len(poly)
-    inside = False
+    inside =False
 
     p1x,p1y = poly[0]
     for i in range(n+1):
@@ -393,8 +391,8 @@ def point_in_poly(self,x,y,poly):
             if y <= max(p1y,p2y):
                 if x <= max(p1x,p2x):
                     if p1y != p2y:
-                        xints = (y-p1y)*(p2x-p1x)/(p2y-p1y)+p1x
-                    if p1x == p2x or x <= xints:
+                        xinters = (y-p1y)*(p2x-p1x)/(p2y-p1y)+p1x
+                    if p1x == p2x or x <= xinters:
                         inside = not inside
         p1x,p1y = p2x,p2y
 
