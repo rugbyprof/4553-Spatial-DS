@@ -37,6 +37,19 @@ class us_states(object):
                 
         return None
 
+    def get_continental_states(self):
+        states = []
+        for s in self.content:
+            t = []
+            if s['name'] not in ['Alaska','Hawaii']:
+                for poly in s['borders']:
+                    np = []
+                    for p in poly:
+                        np.append((p[0],p[1]))
+                    t.append(np)
+                states.append(t)
+        return(states)
+
 class mini_map_helper(object):
     def __init__(self,width,height):
         self.width = width
@@ -118,22 +131,31 @@ class map_tiles(object):
 
   # The mapping between latitude, longitude and pixels is defined by the web
   # mercator projection.
-  def project(self,latLng,zoom=8):
-    siny = math.sin(latLng.lat * math.pi / 180.0)
+  def project(self,latlng,zoom=8):
+    # siny = math.sin(latLng.lat * math.pi / 180.0)
   
-    # Truncating to 0.9999 effectively limits latitude to 89.189. This is
-    # about a third of a tile past the edge of the world tile.
-    siny = min(max(siny, -0.9999), 0.9999)
+    # # Truncating to 0.9999 effectively limits latitude to 89.189. This is
+    # # about a third of a tile past the edge of the world tile.
+    # siny = min(max(siny, -0.9999), 0.9999)
   
-    print((0.5 - math.log((1 + siny) / (1 - siny)) / (4 * math.pi)) * 256)
+    # print(siny)
+    # print((math.log(1 + siny)))
+    # print((1 - siny)) 
+    # print((4 * math.pi))
 
-    return Point(self.tile_size * (0.5 + latLng.lng / 360.0), 
-                 self.tile_size * (0.5 - math.log((1 + siny) / (1 - siny)) / (4 * math.pi)))
+    x = (latlng.lng + 180) / 360 * self.tile_size
+    y = ((1 - math.log(math.tan(latlng.lat * math.pi / 180) + 1 / math.cos(latlng.lat * math.pi / 180)) / math.pi) / 2 * pow(2, 0)) * self.tile_size
+   
+    return Point(x,y)
+
+    # return Point(self.tile_size * (0.5 + latLng.lng / 360.0), 
+    #              self.tile_size * (0.5 - math.log((1 + siny) / (1 - siny)) / (4 * math.pi)))
   
 
+zoom_level = 2
 
-screen_width = 1024
-screen_height = 768
+screen_width = 512
+screen_height = 512
 
 dir_path = os.path.dirname(os.path.realpath(__file__))
 file_name = dir_path + '/../Json_Files/colors.json'
@@ -142,12 +164,10 @@ c = colors(file_name)
 file_name = dir_path + '/../Json_Files/state_borders.json'
 s = us_states(file_name)
 
-mh = mini_map_helper(screen_width,screen_height)
 mt = map_tiles()
 
 background_colour = (255,255,255)
 black = (0,0,0)
-(width, height) = (screen_width, screen_height)
 
 screen = pygame.display.set_mode((screen_width, screen_height))
 pygame.display.set_caption('Simple Line')
@@ -156,40 +176,32 @@ screen.fill(background_colour)
 pygame.display.flip()
 
 states = []
-ll = LatLng(lat=-90,lng=0)
-print(mt.project(ll,1))
-sys.exit()
-# print(mt.project(LatLng(lat=90,lng=180),1))
-# print(mt.project(LatLng(lat=-90,lng=180),1))
-# print(mt.project(LatLng(lat=-90,lng=-180),1))
-# print(mt.project(LatLng(lng=-95.690918,lat=40.513798),1))
 
 poly = s.get_state_polygon('Nebraska')
-#poly = mh.poly2canvas(poly)
-poly = mt.project_points(poly, 8)
-print(poly)
-for i in range(len(poly)):
-    poly[i] = poly[i]
+poly = mt.project_points(poly, zoom_level)
 states.append(poly)
 
-# poly = s.get_state_polygon('Florida')
-# poly = mh.poly2canvas(poly)
-# states.append(poly)
+poly = s.get_state_polygon('Florida')
+poly = mt.project_points(poly, zoom_level)
+states.append(poly)
 
-# poly = s.get_state_polygon('Texas')
-# poly = mh.poly2canvas(poly)
-# states.append(poly)
+poly = s.get_state_polygon('Texas')
+poly = mt.project_points(poly, zoom_level)
+states.append(poly)
 
-print(states)
+states = []
+
+raw_states = s.get_continental_states()
+for s in raw_states:
+    states.append(mt.project_points(s, zoom_level))
 
 running = True
 while running:
     for s in states:
-        for p in poly:
-            pygame.draw.lines(screen, black, False, p, 2)
+        for poly in s:
+            pygame.draw.lines(screen, black, False, poly, 2)
 
     for event in pygame.event.get():
-        #print(event)
         if event.type == pygame.QUIT:
             running = False
         pygame.display.flip()
