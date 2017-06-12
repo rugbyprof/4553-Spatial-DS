@@ -1,7 +1,7 @@
 Program 1 - Drawing Countries
 =========
 
-### Due: Teusday Jun 13th by Classtime
+### Due: Wednesday Jun 14th by Classtime
 
 
 ### Overview
