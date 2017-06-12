@@ -16,6 +16,16 @@ There is a starter code package [HERE](https://github.com/rugbyprof/4553-Spatial
 | DrawGeoJson     | Converts lat/lon to x,y and scales it (kind of) to a printable flat space. |
 | DrawingFacade   | A helper class that makes interacting with the above classes easier . |
 
-If you run it, it will draw a few polygons to a pygame window. 
+- If you run it, it will draw a few polygons to a pygame window. 
 
-![](https://d3vv6lp55qjaqc.cloudfront.net/items/3n0e09001d2f2Y1y3d0k/Screenshot%202017-06-12%2014.17.16.png?X-CloudApp-Visitor-Id=1094421 | width=400)
+<img src="https://d3vv6lp55qjaqc.cloudfront.net/items/3n0e09001d2f2Y1y3d0k/Screenshot%202017-06-12%2014.17.16.png" width="500">
+
+- Running your mouse over the window will continuously change the country colors (annoying, but shows use of color class and random colors). 
+
+### Requirements
+
+Your job is to add the following functionality to this program:
+1. Capture mouse click.
+2. Determine which polygon contains the click (if any).
+3. Border that polygon with a thick black border.
+4. Print the countries name or states name somewhere on the screen (preferrably on the polygon).
