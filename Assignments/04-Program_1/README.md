@@ -29,3 +29,11 @@ Your job is to add the following functionality to this program:
 2. Determine which polygon contains the click (if any).
 3. Border that polygon with a thick black border.
 4. Print the countries name or states name somewhere on the screen (preferrably on the polygon).
+
+### Deliverables
+
+1. Create a folder called `Program_1` in your `Assignments` folder.
+2. Copy the [Starter Code](https://github.com/rugbyprof/4553-Spatial-DS/blob/master/Resources/Pygame/10-basic_geo_draw.py) into `main.py`
+3. Add the proper functionality based on the requirements. 
+4. Bring a printout of `main.py` to class on day due.
+5. Print out a screen shot of output showing requirements met. 
