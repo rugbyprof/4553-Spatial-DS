@@ -443,13 +443,14 @@ if __name__ == '__main__':
     # Add countries and states to our drawing facade.
     # df.add_polygons(['FRA','TX','ESP','AFG','NY'])
     # df.add_polygons(['TX','NY','ME','Kenya'])
-    df.add_polygons(['Spain','France','Belgium','Italy','Morrocco'])
+    df.add_polygons(['Spain','France','Belgium','Italy','Ireland','Scotland','Greece','Germany','Egypt','Morocco','India'])
+
 
     # Main loop
     running = True
     while running:
         gd.draw_polygons()
-
+        
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 running = False
