@@ -1,1 +1,504 @@
-3NLT4dfok8_W4dN-3NLT4dfok9TWntjt5m_M39Xj5dmD4t7b1NLIfM7h49TV5oXm1NPH4dKUfc7Q4tTm54XQ09ncfc7Q4tTm54XT4tfd4dmD09iU49VtfIiUusrXksjp5dfI4NmU6tTV3c7i2oXT09ncfamsxLW1x62Dr4Xj5pPT09ncocnM5NPV4MqL4dii48bX2pPm2MbP4sbo243C0cvd38rC0Y6dfW-GlYiXloiGlYiXloiGlYiXloiGlYiXloiGlYiXloiGlYiXloiGlYiXloiGlYiXloiGlYiXloiGlYiXloiGlYiXloiGlYiXloiGlYiXloiGlYiXloiGfIiXloiGlYiXloiGlYiXloiGlYiXloiGlYiXloiGlYiXloiGlYiXloiGlYiXloiGlYiXloiGlYiXloiGlYiXloiGlYiXloiGlYiXloiGlYiXloiGlYh-fcjP09jnk6jS3tTm5o3S1M_Z1tmMrG-Uk4WDlIeWfYWDkoXD48rR5YXVk8_W4dOU2c7P14Xj2YXa18eU1tTP4dfnoW-DkoWUlYeFfIWUk4XH18uU0sTM4M7o0sSL5crg2ZHJ29HZ0tPE38qdrW-DkoWUk4WDkm-Uk4WDkoWUk9zM5s2U4tXI4I3a3NHI0dPV4MqPkozmmo6D09iU1tTR5sri58TJ29HZrW-DkoWUk4WDkoWUk4XG4dPo2NPXkqKU1tTR5sri58TJ29HZodfI08mcnG9tkoWUk4WDkoXn2NHJoMjj4dnI4NmUsIXN5dTiodHS08nnm8jS4NnZ4dmMfG-Uk4WD1srak8zI5sTm1NPH4dLT1tTP4dec5srP2I6ufYWDkoWUk4WDlIeWfYWDkoWUk4WDxMro6NfR5YXVk9fE4Mnj4IXV2ceU59rT3sqU2dfS34Xo28qD1dTg4teD1s7X587S4Mbm7G-DkoWUk4WDkqbm2tidfIWUk4WDkoWUk4WDkrPj4cptkoWUk4WDkoXG2NnY5NPnrW-DkoWUk4WDkoWUk4XG4dHj5YWL5trk38qMkp-Um9eP2ZHWnG-DkoWUk4WDkrrn1MzIrG-Uk4WDkoWUk4WDkoXXk6KDtdTg4tfWmo5-k4WDkoWUk4WDkoWU5tTQ18TX4tHS5IWxk8iR2cro0tfE4Mnj4MTG4dHj5Y2MfIWUk4WDkoWUk4WDkoiU5tTQ18TX4tHS5IXd5oXR4dyU1IXX59Xg2IWL5JHbn8eMktfZ49fI5cri587R2YXn4tLIktHp1tDcksjj39TVfIWUk4WDkoWUlYeFfIWUk4WDkoWU5YWgktfV4cnS35Pm1NPH29Pom5WP3srim9jI3sui1tTR5sri546Qo45-k4WDkoWUk4XGkqKU5srP2JPX4tPX19PoztfAfIWUk4WDkoWU5crX59fik43GzYzm2seKz8Ck0JHGzYzm2seKz8Cl0JHGzYzm2seKz8Cm0I5tfIWUk4XH18uU2srX0dfb1Y3W19Han9PE38qdrW-DkoWUk4WDkoeWlW-DkoWUk4WDkrfZ59rV4NiU1IXR09LZ14XV2ceU59rT3sqU2dfS34Xo28qD1dTg4teD1s7X587S4Mbm7G-DkoWUk4WDkqbm2tidfIWUk4WDkoWUk4WDktPV4MqDmtjo5c7R2Y6UrYXR09LZk9TJksjj39TVktnjk9fI5trm4W-DkoWUk4WDkrfZ59rV4NiufYWDkoWUk4WDkoWUk8jS3tTmk43X59Xg2I6DrIWc5ZHKnsedfYWDkoWUk4WDx9jV2sqdfIWUk4WDkoWUk4WDksiUsIWm4dHj5diLm2-Uk4WDkoWUk4WDkoXg1NvI4MnZ5YWgksii2srX0dfb1Y2K3sbq2NPH19ebnG-DkoWUk4WDkoWUk4WGktHV6crR1srmk87WktPj6oXEktnp49HIko2mppWPpJikn5eYoo6U5crT5Mrn2NPX29Pbk9nL09mU1tTP4dd-k4WDkoWUk4WFlId-k4WDkoWUk4XJ4deU1oXM4IXn2NHJoMjj4dnI4NmufYWDkoWUk4WDkoWUk87JksjPmtPE38qb0IWgr4Xi1NLIrG-Uk4WDkoWUk4WDkoWUk4WD5Mro6NfRko3XzozV2ceb0MCTz5HXzozV2ceb0MCUz5HXzozV2ceb0MCVz45-k4WDkoWUk4XV19np5dODwNTi2G9tkoWUk8nI2IXT0szI5s7o2NLC0Y3n2NHJnsjj39TV0dPV4MqMrG-Uk4WDkoWUk4eFlG-Uk4WDkoWUk7TZ19fg4sbH5YWWzsKFksfm1MjO19nnk8vS5IXo287Wksjg1NjWktjjk9zIksjV4YXX5MrV54XM5oXg3NDIksaU187G5pN-k4WDkoWUk4W45cbb2J9tkoWUk4WDkoWUk4WD1YWxk6jS3tTm5o2MfIWUk4WDkoWUk4WDksjp5dfI4NnT1tTP4deUsIXGzYzq3NTP19mb0G-DkoWUk4WDkoWUk4WGksjp5dfI4NnT1tTP4deU1tTR5sbd4didko2mpp2Po5ikn5eWqo5-k4WDkoWUk4WFlId-k4WDkoWUk4XV19np5dOD5crg2ZPK19nT5czFmsjj39TV0dPV4MqMfG-XloiGlYiXloiGlYiXloiGlYiXloiGlYiXloiGlYiXloiGlYiXloiGlYiXloiGlYiXloiGlYiXloiGlYiXloiGlYiXloiGlYiXloiGlYiXloiGlYiXfYiGlYiXloiGlYiXloiGlYiXloiGlYiXloiGlYiXloiGlYiXloiGlYiXloiGlYiXloiGlYiXloiGlYiXloiGlYiXloiGlYiXloiGlYiXloiGlYiXlohtfMjg1NjWkrjo1NnItNTm18rV5Y3j1c_I1dmdrW-DkoWUlYeFfIWUk4Wy4sri5oXEks_n4tOD2M7g2IXS2IXo28qD59Pd58rHktjo1NnI5YXW4tfH19fnk8vS5IXZ1MjLktjo1NnIoG-Uk4WDlIeWfYWDkoXY2MuD0cTd4c7X0cSc5srP2JHa3NHI0dPV4MqMrG-Uk4WDkoWUk4eFlG-Uk4WDkoWUk6bV2diufYWDkoWUk4WDkoWUk8vM3sri1NLIko3n59fM4Mydk5-Dxs3Zk9XE5s2U1NPHksvd38rR09LZk9nSktTk2NNtkoWUk4WDkoXG2NnY5NPnrW-DkoWUk4WDkoWUk4Wx4dPZfYWDkoWUk4WDlIeWfYWDkoWUk4WD6c7o24XS4srim8vM3srT4cbQ15GUmteKm4XV5oXG4dPo2NPX0cvd38qdfIWUk4WDkoWUk4WDksjj4dnI4NmUsIXG4dPo2NPX0cvd38qR5MrV142MfG-Uk4WDkoWUk9jI3sui1tTR5sri54Wgks_n4tOR3tTV19iL1dTi58rR5o5-fYWDkoXY2MuD2cro0tjX09nZm9jI3sug4cbQ146ufYWDkoWUk4WDlIeWfYWDkoWUk4WDxMro6NfR5YXVk9XS3t7b4tOD4cuU1IXW29Pb38qD5dnV58qD2Nfj4IXX2sqUyLiRfIWUk4WDkoWUtNfK5Z9-k4WDkoWUk4WDkoWU4cbQ14Wc5tnV29PbnJ-DwMbh2IXS2IXVk9jM4Mzg2IXW5sbo2JODfG-Uk4WDkoWUk7fI5trm4didfIWUk4WDkoWUk4WDks_n4tODmtjo5c7R2YXj1c_I1dmdrYWt5dTik9fI4tfZ5srR5sbo3NTRktTak8aD5dnV58ptfIWUk4WDkoWUyNjE2cqufYWDkoWUk4WDkoWUk9jFkqKUxtnE5sq24tfH19fnm45tkoWUk4WDkoWUk4WD5srs1NiDr4Xn1ZPK19nT5tnE5srT49TP68zj4Y2K5srs1NiKm2-Uk4WDkoWUk4WDkoWXk9nI6sbnk87WktPj6oXEktHd5tmD4cfe2MjXksjj4dnE29Pd4cyD4tTg7MzS4Nh-k4WDkoWUk4WFlId-k4WDkoWUk4XJ4deU5oXM4IXn2NHJoMjj4dnI4NmufYWDkoWUk4WDkoWUk87JktjPmtPE38qb0JPP4dzZ5Y2MkqKxk9PE38qi39Ta19ecnIXS5IXnzozG4cnZmsKR3tTr2NeLm4WxsIXR09LZodHS6crmm46dfIWUk4WDkoWUk4WDkoWUk4XXkqKUzsJtkoWUk4WDkoWUk4WDkoWUk8vS5IXk4tHcks7ik9i-mcfj5cnI5Nib0J9tkoWUk4WDkoWUk4WDkoWUk4WDkoXi44WgksDRfYWDkoWUk4WDkoWUk4WDkoWUk4WD2NTmk9WD29OU49TP659-k4WDkoWUk4WDkoWUk4WDkoWUk4WDkoWU4dWR09Xk2NPHmo3kzpXAntXPpMKMm2-Uk4WDkoWUk4WDkoWUk4WDkoWUk9mR09Xk2NPHmtPknG-DkoWUk4WDkoWUk4WDkoWU5crX59fim9mMfIWUk4WDkoWUk4WDkoWUk4VtkoWUk4WDkoXm2NnY5NOUwdTR129-k4WDksnZ2YXK19nT1tTR5s7i2NPX09HT5tnE5srnm9jI3sudrW-DkoWUk4WDkoeWlW-DkoWUk4WDkrfZ59rV4NiU1IXP29jok9TJksbg34XX2sqU1tTR5s7i2NPX09GU6NiD5dnV58rWksbnk9XS3t7b4tPWoG-Uk4WDkoWUk6bV2diufYWDkoWUk4WDkoWUk7PS4Mp-fYWDkoWUk4WDxMro6NfR5Z9-k4WDkoWUk4WDkoWU387W5oWc387W5oXj1c_I1dmdrYXP29jok9TJkq_n4tOD4cfe2MjX5YXm2NXV19jZ4dnM4MyU2MbG2oXX4tPX29PZ4dnE3oXn58bX15N-fYWDkoWUk4WDx9jV2sqdfIWUk4WDkoWUk4WDktjWk6KDxdnV58ql4dfY2NfWmo5-k4WDkoWUk4WDkoWU5tnE5srnk6KD5cei2srX0cjj4dnM4Mri58bP0djo1NnI5Y2dfYWDkoWUk4WDkoWUk4iD5dnV58rWks7nk9PS6YXVk9HM5dmU4sfN18jok8jS4NnV3NPM4MyU49TP68zj4diD2NTmk8bP3oXo28qD1dTi587R19Po1NGD5dnV58rWfIWUk4WDkoWUlYeFfIWUk4WDkoWU5tnE5srnk6KDzcJ-k4WDkoWUk4XJ4deU5oXM4IXn2NHJoMjj4dnI4NmufYWDkoWUk4WDkoWUk9mDr4XP0G-DkoWUk4WDkoWUk4XM2IXnzozR09LZmsKD4NTok87RksCbtNHE5dDVmpGKusbr1M7MmcKufYWDkoWUk4WDkoWUk4WDkoXa4teD4tTg7IXM4IXnzozF4dfY2NfWmcKufYWDkoWUk4WDkoWUk4WDkoWUk4WD4NWUsIW-z2-Uk4WDkoWUk4WDkoWUk4WDkoWUk8vS5IXkk87RktXj396dfIWUk4WDkoWUk4WDkoWUk4WDkoWUk4WDktPkocbT4sri142L4sCk0JHTzZbRnI5tkoWUk4WDkoWUk4WDkoWUk4WDkoXoocbT4sri143R4o5-k4WDkoWUk4WDkoWUk4WDktjo1NnI5ZPV49XI4Mmc545tkoWUk4WDkoXm2NnY5NOc5tnE5srnnG9tkoWUk8nI2IXf2N7C193d5tnWmtjZ38uP3crtnJ9tkoWUk4WDkoWWlYdtkoWUk4WDkoXG2NnY5NPnk8fS4dHZ1NOD28uU3srcksrs3NjX5YXd4YXN5dTifYWDkoWUk4WDs9fb5p9tkoWUk4WDkoWUk4WD3crtk43W5tfd4cyMkp-U5tTQ14Xd18rR5s7a3MrVkm9-k4WDkoWUk4W119np5dPWrG-Uk4WDkoWUk4WDkoXIoquDmsfj4tGMkp-Ux9fY14Wxk7DI64XZ687W5th-k4WDkoWUk4WFlId-k4WDkoWUk4XJ4deU5oXM4IXn2NHJoMjj4dnI4NmufYWDkoWUk4WDkoWUk87JktjPmtPE38qb0JPP4dzZ5Y2MkqKxk9DI65Pg4tzI5I2drW-DkoWUk4WDkoWUk4WDkoWU5crX59fik7nV58p-k4WDkoWUk4WDkoWU2NHM2IXnzozG4cnZmsKR3tTr2NeLm4WxsIXO196i39Ta19ecnJ9tkoWUk4WDkoWUk4WDkoWUk9fI5trm4YW35NrZfYWDkoWUk4WD5Mro6NfRkqvV39jIfG-XloiGlYiXloiGlYiXloiGlYiXloiGlYiXloiGlYiXloiGlYiXloiGlYiXloiGlYiXloiGlYiXloiGlYiXloiGlYiXloiGlYiXloiGlYiXloiGlYiXfYiGlYiXloiGlYiXloiGlYiXloiGlYiXloiGlYiXloiGlYiXloiGlYiXloiGlYiXloiGlYiXloiGlYiXloiGlYiXloiGlYiXloiGlYiXloiGlYiXlohtfMjg1NjWkrzj5dHHtdTp4dnV28rnm9TF3MrX546dfIWUk4WFlId-k4WDkrTk2NPWksaU3djS4IXa3NHIktTak9nL14Xp4c7X18mU5tnE5srnk8fS5MnZ5diD2NTmk8rE1c2U5tnE5sqifYWDkoWWlYdtkoWUk8nI2IXT0s7R29nT0o3W19Han8vM3srT4cbQ146ufYWDkoWUk4WD6c7o24XS4srim8vM3srT4cbQ15GUmteKm4XV5oXG4dPo2NPX0cvd38qdfIWUk4WDkoWUk4WDksjj4dnI4NmUsIXG4dPo2NPX0cvd38qR5MrV142MfG-Uk4WDkoWUk9jI3sui1tTR5sri54Wgks_n4tOR3tTV19iL1dTi58rR5o5-k4WDkm-Uk4WD1srak8zI5sTV39HC1dTp4dnV28rnm9jI3sudrW-DkoWUk4WDkoeWlW-DkoWUk4WDkrfZ59rV4NiU1IXP29jok9TJksbg34XX2sqU1tTY4Nnm3MrWktrnk9jX09nZ5pNtkoWUk4WDkoW15czWrG-Uk4WDkoWUk4WDkoXC4tPIfG-Uk4WDkoWUk7fI5trm4didfIWUk4WDkoWUk4WDktHd5tmDmtHd5tmD4cfe2MjXm5-Uv87W5oXj2YWt5dTik9TF3MrX59iD5Mrk5crW19Po3NPKksrV1s2D1dTp4dnV64V-fYWDkoWUk4WDx9jV2sqdfIWUk4WDkoWUk4WDktzXk6KDydTm38mm4dri59fM19icnG-DkoWUk4WDkoWUk4XG4dri59fM19iUsIXa1ZPb2NnC09Hg0sjS59Po5c7I5Y2dfYWDkoWUk4WDkoWUk4iD1dTp4dnV28rnk87WktPj6oXEktHd5tmD4cfe2MjXksjj4dnE29Pd4cyD4tTg7MzS4NiU2dTVksbg34XX2sqU1tTY4Nnm3MrWfIWUk4WDkoWUlYeFfIWUk4WDkoWU1NHP0cjj6NPX5M7Z5oWgksDRfYWDkoWUk4WD2NTmk8iD29OU5srP2JPX4tPX19PozozJ18bo6NfI5YzRrW-DkoWUk4WDkoWUk4XM2IXXzozM1ozRk87RksCWtLmklMKufYWDkoWUk4WDkoWUk4WDkoXX4tPX29Pp2G-DkoWUk4WDkoWUk4XE3tHT1tTY4Nnm3MrWoMbk48rR1o3XzozK19Th2NnV64zRzozG4dTm187R09nZ5ozAm2-Uk4WDkoWUk9fI5trm4YXE3tHT1tTY4Nnm3MrWfG-Uk4WD1srak8zI5sTX4trR5tftm9jI3sug3MmMrG-Uk4WDkoWUk4eFlG-Uk4WDkoWUk7fI5trm4diD04Xg3NjXktTak9TR14XX4trR5tftoW-DkoWUk4WDkqbm2tidfIWUk4WDkoWUk4WDkrPj4cptfIWUk4WDkoWUxcrX59fi5p9tkoWUk4WDkoWUk4WD3s7n54WL3s7n54XS1M_Z1tmMrIXA3NjXktTak6_W4dOU4sfN18jok9fI4tfZ5srR5s7i2oXEksjj6NPX5N6UfW-DkoWUk4WDkrrn1MzIrG-Uk4WDkoWUk4WDkoXr1oWgkrzj5dHHtdTp4dnV28rnm45tkoWUk4WDkoWUk4WD1dTp4dnV64Wxk9zGoMzZ58TG4dri59fcmoy1uayKm2-Uk4WDkoWUk4WDkoWXk8jS59Po5d6D29iU4dTaksaU387W5oXj1c_I1dmU1tTR5sbd4c7R2YXk4tHc2dTi5oXJ4deUmqbJ2c3V4c7W5sbimm-DkoWUk4WDkoeWlW-DkoWUk4WDksjj6NPX5N6UsIW-z2-Uk4WDkoWUk8vS5IXXk87RktjZ38uR1dTi58rR5sCb2crE5trm2NiKz59-k4WDkoWUk4WDkoWU3MuD1cCb3MmKz5Pg4tzI5I2dk6Kgks7YodHS6crmm46D4deU1sCK4tfj48rV5s7Z5ozAzYzi1NLImcKi39Ta19ecnIWgr4Xd15PP4dzZ5Y2MrG-Uk4WDkoWUk4WDkoWUk4WD1dTp4dnV65PV49XI4Mmc1sCK2crj4MrX5N6b0MCK1dTj5cnM4Mbo2NiKz45-k4WDkoWUk4XV19np5dOD1dTp4dnV64WUfW-DkoWU18rJktDZ7MTI6s7n59iL5crg2ZHO196drW-DkoWUk4WDkoeWlW-DkoWUk4WDkrfZ59rV4NiU1dTS3srV4YXM2IXf2N6D193d5tnWks7ik8_W4dN-k4WDkoWUk4Wk5MznrW-DkoWUk4WDkoWUk4XO196Um9jX5M7i2o6DrIXn4tLIks7Y2NPX28vd2NeDfG-Uk4WDkoWUk7fI5trm4didfIWUk4WDkoWUk4WDkrmjuYWL1NTj346DrIXI5drIkqKUvsrcksrs3NjX5W-Uk4WDkoWUk4eFlG-Uk4WDkoWUk8vS5IXXk87RktjZ38uR1dTi58rR5sCb2crE5trm2NiKz59-k4WDkoWUk4WDkoWU3MuD1cCb3MmKz5Pg4tzI5I2dk6KgktDZ7JPP4dzZ5Y2MrG-Uk4WDkoWUk4WDkoWUk4WD5Mro6NfRkrnm6MptkoWUk4WDkoWUk4WD19Hd2YXGzYzk5dTT19fo3MrWmcLPmtPE38qb0JPP4dzZ5Y2MkqKxk9DI65Pg4tzI5I2drW-DkoWUk4WDkoWUk4WDkoWU5crX59fik7nV58p-k4WDkoWUk4XV19np5dODuMbg5sptkoWUk4WDkoWUk4WDfG-XloiGlYiXloiGlYiXloiGlYiXloiGlYiXloiGlYiXloiGlYiXloiGlYiXloiGlYiXloiGlYiXloiGlYiXloiGlYiXloiGlYiXloiGlYiXloiGlYiXfYiGlYiXloiGlYiXloiGlYiXloiGlYiXloiGlYiXloiGlYiXloiGlYiXloiGlYiXloiGlYiXloiGlYiXloiGlYiXloiGlYiXloiGlYiXloiGlYiXlohtfMjg1NjWkqnm1Nyq19S-5tTRmtTW3crG5o6ufYWDkoXT0tjL09fZ18TW5sbo2IWgkuDxk4WDkoWUk4VtkoWUk8nI2IXT0s7R29nT0o3W19Han9jG5MrZ4ZHa28no25HL187b29mMrG-Uk4WDkoWUk4eFlG-Uk4WDkoWUk6jS4NvZ5dnWktHd5tnWko3k4tHc2dTi5o6D4cuU38bXodHj4YXT087m5oXM4Nnjk9XM6srgk8jS4dfY3NPE5srnk87RktTm18rVktnjk8nSktjj4MqDfIWUk4WDkoWU5s7Q4tHZk8nV09zd4cyD59jd4cyD4t7b1NLIoIV-k4WDkoWUk4WFlId-k4WDkoWUk4XW19HaocTC1s7X58TCkqKU5srP2JPT0tjL09fZ18TW5sbo2G9tkoWUk4WDkoXn2NHJoNjX5crI4IWxk9jG5MrZ4YWDkoWXk9zM4Mnj6oXL09PY38qD2NTmk9Xc2cbh2IXH5Mbr3NPKfG-Uk4WDkoWUk9jI3sui49TP68zj4diDr4XP0IWDkoWUk4iD3s7n54XS2IXg3NjX5YWc49TP68zj4diMktnjk8fIksnm1NzRfG9-k4WDkoWUk4XW19HaocbP3sTg1NnWkqKUzsKDkoWUk4WGktHd5tmD2NTmk8bP3oXg1NnWktjjk9zIksjV4YXJ29PYk9LM4NiU1NPHktLV64zWfIWUk4WDkoWU5srP2JPV39HC3tTi5oWgksDRfW-DkoWUk4WDkoiUwcraksbY18rHkq_p4cqDo5h-k4WDkoWUk4XW19HaocbH3Nrn58rH0dXj397WkqKUzsJtkoWUk4WDkoWXk7PI6YXV18nI1oW-6NPIkpanfYWDkoWUk4WD5crg2ZPE1s_p5tnI1sTk4tHc0cnd1tmDr4Xv8G9tkoWUk4WDkoXn2NHJoNLV47zM1tnck6KD6c7Y582DkoWUk4WDlYXr3MnX2oXj2YXX2sqU4MbTks7ik9XM6srg5m-DkoWUk4WDktjZ38uR38bku8rM2c3ok6KD2srd2s3XkoWUk4WGks3Z3MzL5oXj2YXX2sqU4MbTks7ik9XM6srg5m-DkoWUk4WDktjZ38uR38bkv9TRvsra54WgkpKlq5WRooWUk4WGksrs59fI38qU38rJ5oXg4tPK29np18ptkoWUk4WDkoXn2NHJoNLV47HS4Lfd2s3XkqKUpJ2ToJWUk4WDlYXZ69nV19LZk9fM2c3ok9HS4Mzd59rH12-Uk4WDkoWUk9jI3sui4MbTvtTit8rP5saUsIXW19HaodLE4rHj4bfM2c3ok5KD5crg2ZPQ09XA4tOv18vok4iD1s7a2crV19PX2IXM4IXg4tPK29np18rWfIWUk4WDkoWU5srP2JPh1NWv09m24tnX4dKUsIWToJWUk4WDkoiU2N3X5Mrh2IXF4dno4tKD3sbo3NnY1sp-k4WDkoWUk4XW19HaodLE4rHV56fS5tnj4KnI2dfZ2IWgktjZ38uR38bkv8bXtNTo59TQko-U4MbX2pPk3IWSkpaso5OTkoiU1dTX5tThk87RksnZ2tfI19h-fYWDkoWUk4WD5crg2ZPG4dHj5diDr4W34tHS5Nict661wqbIu4WOkoyjvdjS4MS63NHI5ZTX4tHS5Nii3djS4IydfW-DkoWU18rJksjj4dvI5Nm72NS34bXd68rPmtjZ38uP3tTin4XP09mdrW-DkoWUk4WDkoeWlW-DkoWUk4WDkqjj4dvI5Nnnk9HE5pTg4tOD5tSU487b19GU6s7X2s7ik8aD5crok8fS59PY3NPKksfj62-DkoWUk4WDkqbm2tidfIWUk4WDkoWUk4WDktHj4YWL2NHj1NmMrIXg4tPK29np18ptkoWUk4WDkoWUk4WD3sbok43J3tTV546dktHV587X58nZfW-DkoWUk4WDkrfZ59rV4NiufYWDkoWUk4WDkoWUk9XS29Pok43X59Xg2I6dkt2g7IXG4dTm19iD08ne6NjX18mU59SD2M7ok9TRktXm3NPXktzd4cnS6W-Uk4WDkoWUk4eFlG-Uk4WDkoWUk92Dr4Wc39TRkpKU5srP2JPh1NWv4dPA2MvXm4Wek43W19HaodLE4rzd19nLkpSU5srP2JPh1NWv4dO42NHX045-fYWDkoWUk4WD3sbok6KD3sbok4-D38bo25PT24Wjk5abopOkfYWDkoWUk4WD5crg2ZPa4dfg17LE4rzd19nLkqKUm43W19HaodLE4rzd19nLkpSU5srP2JPh1NWv4dO42NHX046UnYWWqJWdk5SDmpeUnYXQ09ncodXMm2-Uk4WDkoWUk9jI3sui4MbTwcva5srXy4Wxk43W19HaodzS5NHYwMbTyc7Y582DoYWmk4-D38bo25PP4cycm5aDnYXh1NnLoNjd4Y3W19HaodLE4rHV56fS5tnj4KnI2dfZ2I6MkpSUm5aDn4Xh1NnLoNjd4Y3W19HaodLE4rHV56fS5tnj4KnI2dfZ2I6Mm45-k4WDkoWUk4XckqKU5srP2JPh1NWr187b29mDn4Wcm9jI3sui6tTV3snB1NW628no24WSkpeUnYXQ09ncodHS2Y2cpIWOktLV582R5c7im9HE5o6dk5SDmpaUoIXQ09ncodjM4I3g1NmMm46dk5KD5crg2ZPQ09XD2cvW19nNnG9tkoWUk4WDkoXm2NnY5NOUm92Pkt6dfW9tkoWUk8nI2IXV18nC4tTg7MzS4I3n2NHJntXj396P28mxwdTR146ufYWDkoWUk4WDlIeWfYWDkoWUk4WDs8nYk8aD4tTg7MzS4IXo4oXP4cjV34XG4dHg2MjX29Tik9nSksfZk8nV09zik9HE5srmfYWDkoWUk4WDs9fb5p9tkoWUk4WDkoWUk4WD4tTg7IWL3s7n546dktHd5tmD4cuU38bXodHj4dhtfIWUk4WDkoWUxcrX59fi5p9tkoWUk4WDkoWUk4WDwNTi2G-DkoWUk4WDkoeWlW-DkoWUk4WDktjZ38uR4tTg7MzS4Nii1NXT19PYm9XS3t6dfYWDkoWUk4WDlYXC2NyD08nY2MmDvNri2IWUpW-Uk4WDkoWUk87Jks7Yk87WktPj54Wx4dPZrW-DkoWUk4WDkoWUk4WGks7ak8jS59Po5d6D4NTok87Rksnd1tmPktLV3sqD04Xg3NjXksvj5YXM5tiU49TP68zj4dhtkoWUk4WDkoWUk4WDlYXo4oXF14XV49XI4MnZ14XX4ZN-k4WDkoWUk4WDkoWU3MuD28mU4dTXks7ik9jI3sui1MnN59jo2MnC4tTg7MTH28jorW-DkoWUk4WDkoWUk4WDkoWU5srP2JPV18_Y5dnZ18TT4dHt0snM1dnP3MnAkqKUzsJtkoWUk4WDkoWUk4WDlYXV49XI4MmU49TP64Xo4oXH28jo3NTR09ftk9zM5s2U1tTY4Nnm7IXE5YXf2N6Dms7YnJNtkoWUk4WDkoWUk4WD5crg2ZPE1s_p5tnI1sTk4tHc0cnd1tm-28nRocbT4sri143T4dHtnIWDkm-Uk4WDkoWUk8vS5IXkk87RktXj396dfIWUk4WDkoWUk4WDkt2g7IWgktV-k4WDkoWUk4WDkoWU5srP2JPV39HC3tTi5pPE4tXZ4cmL6o5-k4WDkoWUk4WDkoWU5srP2JPV39HC3sbo5pPE4tXZ4cmL645-k4WDkoWUk4XW19HaocTC59XY1NnI0cfj6NPH5Y2dfW-DkoWUloW614Xn29TY3smU6NjIktfZ1trV5c7j4YXS4IXo28rW14XX4tPX087i2NfWktzd582D09fW3NnV09ftk8nI4tncn4XF59mU4s2D6crg35NtkoWUk8nI2IXV18_Y5dnT49TP68TY3MjX29Ti1NfcmtjZ38uMrG-Uk4WDkoWUk4jT4pPk49fM4Nmc5srP2JPV18_Y5dnZ18TT4dHt0snM1dmdfYWDkoWUk4WD2NTmk8jS59Po5d6P4tTg7NiD29OU5srP2JPV18_Y5dnZ18TT4dHt0snM1dmi3NnI39icnJ9tkoWUk4WDkoWUk4WD4Mrr0tXS3t7nk6KDzcJ-k4WDkoWUk4WDkoWU49fM4Nmc1tTY4Nnm7I5tkoWUk4WDkoWUk4WD2NTmk9XS3t6U3NOD4tTg7NidfIWUk4WDkoWUk4WDkoWUk4XR19zT49TP64Wxk8DAfIWUk4WDkoWUk4WDkoWUk4XJ4deU44XM4IXk4tHcrG-Uk4WDkoWUk4WDkoWUk4WDkoWUk92P64Wxk9VtkoWUk4WDkoWUk4WDkoWUk4WDkoXi2NzC4tTg7JPE4tXZ4cmL5crg2ZPG4dPq2NfXucrjx9Sz293Z343bnt6dnG-DkoWUk4WDkoWUk4WDkoWU4cra0dXj397WoMbk48rR1o3i2NzC4tTg7I5tkoWUk4WDkoWUk4WD5crg2ZPE1s_p5tnI1sTk4tHc0cnd1tm-1dTp4dnV68KUsIXR19zT49TP69h-k4WDkoWUk4XT4pPk49fM4Nmc5srP2JPV18_Y5dnZ18TT4dHt0snM1dmdfW9tkoWUk8nI2IXY5cba0dXj397K4dPnm9jI3sudrW-DkoWUk4WDkoeWlW-DkoWUk4WDkqnm1NyD4drmk9XS3t7b4tPWktnjk9nL14Xn1tfI19N-k4WDkoWUk4Wk5MznrW-DkoWUk4WDkoWUk4Wx4dPZfW-DkoWUk4WDkrfZ59rV4NiufYWDkoWUk4WDkoWUk7PS4Mp-k4WDkoWUk4WFlIeUfW-DkoWUk4WDksvj5YXT4dHtk87RktjZ38uR4tTg7MzS4NiufYWDkoWUk4WDkoWUk8bH3Nrn58rHkqKUzsJtkoWUk4WDkoWUk4WD2NTmk9WD29OU49TP659-k4WDkoWUk4WDkoWUk4WDkt2g7IWgktV-k4WDkoWUk4WDkoWUk4WDksbY3drW5srYocbT4sri143W19HaocjS4NvZ5dmq19TI4rXM6srgm92P646dfYWDkoWUk4WDkoWUk4iDwMrrk8bH1srYk6_Y4MqUpJhtkoWUk4WDkoWUk4WD5crg2ZPE1s_p5tnI1sTk4tHc5ZPV49XI4Mmc1MnN59jo2MmMfIWUk4WDkoWUk4WDktXt2sbQ15PY5cbaoNXj397K4dOc5srP2JPn1tfI19Ogk9jI3sui1tTP4dfnoczI5sTm1NPH4dLT1tTP4decnJGD08ne6NjX18mgk5WMfG-Uk4WD1srak8TC59XY1NnI0cfj6NPH5Y3n2NHJm59-k4WDkoWUk4WFlId-k4WDkoWUk4W44snV58rWktnc2IWF193o5crQ19iWk9TJksbg34XX2sqU49TM4Nnnk8bH1srYk9nSksfZk8nV09zik9jSfIWUk4WDkoWU583Iksjj4dvI5Njd4tOD5tSU65Hcksjj4tfH5YXr3NHPksfZk8bH3Nrn58rHksjj5dfI1dng7IXX4YXa3NltkoWUk4WDkoXo28qDlMfj6NPH29Pbk8fS6oeU5trV5NTp4cnM4MyU1NHPktnc2IXT4c7i59iRkrPj54XT19fa2MjXoG-Uk4WDkoWUk6bV2diufYWDkoWUk4WDkoWUk7PS4Mp-fYWDkoWUk4WDxMro6NfR5Z9-k4WDkoWUk4WDkoWUwdTR12-Uk4WDkoWUk4eFlIWUfYWDkoWUk4WD5crg2ZPQ09XA4tOv18vok6KD387im9jI3sui1NHP0dHj4diMfIWUk4WDkoWU5srP2JPh1NWv4dPG3MzL5oWxk9LE6o3n2NHJoMbg38TP4dPnnG-DkoWUk4WDktjZ38uR38bkv9TRtsrg58aDr4Xn2NHJoNLV47HS4Lfd2s3XkpKU5srP2JPh1NWv4dPA2MvXkoV-k4WDkoWUk4XW19HaodLE4rHV56fS5tnj4IWgktLd4Y3W19HaocbP3sTg1NnWm2-Uk4WDkoWUk9jI3sui4MbTvsbotdTX5tTht8rK5MrZk6KD5crg2ZPQ09XA1Nml4dno4tKDnIXh1NnLoNXdk5SDo52koZVtfG-Uk4WD1srak8TC5dnm0sSL5crg2Y6dfIWUk4WDkoWU5crX59fik4e-l8mgmMmPl8mgmMmPl8mgmMmPl8nRlYWIko3n2NHJoNLV47zM1tncn9jI3sui4MbTusrd2s3XntjZ38uR38bkv9TRvsra55HW19HaodLE4rHj4bfM2c3on9jI3sui4MbTvtTit8rP5sag5srP2JPh1NWv09m24tnX4dKg5srP2JPh1NWv09m24tnX4dK42MzV18qdfW9tlYiXloiGlYiXloiGlYiXloiGlYiXloiGlYiXloiGlYiXloiGlYiXloiGlYiXloiGlYiXloiGlYiXloiGlYiXloiGlYiXloiGlYiXloiGlYiXloiGlW-XloiGlYiXloiGlYiXloiGlYiXloiGlYiXloiGlYiXloiGlYiXloiGlYiXloiGlYiXloiGlYiXloiGlYiXloiGlYiXloiGlYiXloiGlYiXloiGlYiXfW_G3sbn5oWn5Mbr3NPKuMbX1MnImtTW3crG5o6ufYWDkoXY2MuD0cTd4c7X0cSc5srP2JHr3MnX2pHc2M7K2tmdrW-DkoWUk4WDkoeWlW-DkoWUk4WDkqaU2cbG08nZk9XE5tnZ5dOD29iU6NjI1oXV5oXEktnt48qD4cuUmtzV09Xk2NeKktnjk9jM39Xg3Mvcks7i58rV2MbX3NPKktzd582D4dPZk9TVfIWUk4WDkoWU4NTV14Xj583I5IXX38bW5crnoYW32s7nk4zJ08jV18qKktHZ59iD59iU3NPX19fa1MjIktzd582D5s3Zk5iD1dHV5tjI5YXd4djX09Po3MbX18l-k4WDkoWUk4XF19Hj6pNtkoWUk4WDkoWWlYdtkoWUk4WDkoXn2NHJoNjWk6KDxdnV58ql4dfY2NfWmqm9xbWkxq2UnoWKoa_n4tPCuM7g2NiS5dnV58rC1NTm18rV5ZPe5tTRmY5-k4WDkoWUk4XW19HaodzGkqKUytTV3sm34trR5tfd2NiLtq7Gw6a3uoWfk4ySvNjj4cSp29HZ5pTG4dri59fM19ii2srSoM_n4tOKm2-Uk4WDkoWUk9jI3sui2smDr4W45cbaucrjvdjS4I3n1tfI19Og6s7H5s2g28rM2c3onG9tkoWUk8nI2IXV18nC4tTg7MzS4Nic5srP2JHd19iMrG-Uk4WDkoWUk4eFlG-Uk4WDkoWUk6bH1tiU49TP68zj4diD5tSU583Ikoy45cbaucrjvdjS4IyU1tHE5diU6NjM4MyU1tTY4Nnm7IXR09LZ5oXS5IXd14zWnoXn58bX14Xi1NLI5YXj5YXG4cnZmtiRkq7ofYWDkoWUk4WD193k2MjX5YXVk9HM5dmU4suD6Mbg6MrWoG-Uk4WDkoWUk6bV2diufYWDkoWUk4WDkoWUk87H5YWc387W5o6UrYWkktHd5tmD4cuU1NPcktjo1NnIktTmk8jS59Po5d6D28nZ4dnM2M7Z5dhtfIWUk4WDkoWUxcrX59fi5p9tkoWUk4WDkoWUk4WDwNTi2G9tkoWUk4WDkoXJ5sbK159-k4WDkoWUk4WDkoWU18uR08nY0tXS3t7b4tPWmsCbubekmZGbx72Knoy5xrWKnoy1uayKnozCzIyPmbK5mpGKvcri7MaKz45-k4WDkoWUk4WFlIeUfYWDkoWUk4WD2NTmk87Hks7ik87H5Z9-k4WDkoWUk4WDkoWU3MuD5crg2ZPa1ZPf2N7C193d5tnWms7YnJ9tkoWUk4WDkoWUk4WDkoWUk9jI3sui0sTE1snT1tTY4Nnm7I3W19HaodzGoMzZ58TG4dri59fcms7YnJHM1o5-k4WDkoWUk4WDkoWU2NHM2IXn2NHJoNjWodDI68TZ687W5tic3MmMrG-Uk4WDkoWUk4WDkoWUk4WD5crg2ZPC0cbY18TW5sbo2I3W19HaodjFoMzZ58TW5sbo2I3M1o6g3MmMkoWUk4WDkoWUfW-DkoWU18rJksTT1MnH0cjj6NPX5N6c5srP2JHX4trR5tftn87Hr7Pj4cqMrG-Uk4WDkoWUk8vS5IXk4tHc5YXd4YXG4dri59fcrG-Uk4WDkoWUk4WDkoXa4teD4tTg7IXM4IXk4tHc5Z9-k4WDkoWUk4WDkoWUk4WDks7ak9nc4sqc49TP68Ck0MCTz46U3NiD2NHj1NmdfIWUk4WDkoWUk4WDkoWUk4WDkoWU2smR08nY0tXS3t7b4tOL4tTg7JHM1o5-k4WDkoWUk4WDkoWUk4WDksrg5sqdfIWUk4WDkoWUk4WDkoWUk4WDkoWU2dTVktjp1cTT4dHtk87RktXj396dfIWUk4WDkoWUk4WDkoWUk4WDkoWUk4WDktjZ38uR2cmi1MnH0dXj397K4dOc5trF0dXj396P28mdfW-DkoWU18rJksTT1MnH0djo1NnImtjZ38uP5dnV58qP28mxwdTR146ufYWDkoWUk4WD2NTmk9XS3t6U3NOD5dnV58qdfIWUk4WDkoWUk4WDktjZ38uR2cmi1MnH0dXj397K4dOc49TP65Hd145tfG9-18rJktXj3NPX0c7i5s7H18Tk4tHc2dTim92P65Hk4tHcm59-k4WDkoeWlW-DkoWU18rX19fh3NPIks7ak8aD4tTd4dmD29iU3NPW28nZk8aD2c7q2NOD4tTg7MzS4IXj5YXR4dl-k4WDkrXj397K4dOU3NiD04Xg3NjXktTak43bnt6dk9XE29fnoW-DkoWU29nX4p-jotza6ZPV5c7I3pPX4tKR09qj1JTT69nc4tOQ4tTd4dmQ29PooNXS3t6i29nQ3m-Uk4WDlIeWfYWDkoXik6KD3srim9XS3t6dfYWDkoXd4djM1sqUsKvE3tjZfW-DkoWU45bbntWl7IWgktXj396-osJ-k4WDksvj5YXMks7ik9fE4MzZm9OOo46ufYWDkoWUk4WD4pfsn9WV64Wxk9XS3t7P3IWIktPRfYWDkoWUk4WD28uU7IWhktLd4Y3To96g45fcm59-k4WDkoWUk4WDkoWU3MuD64WwsIXQ092c45bcntWm7I6dfIWUk4WDkoWUk4WDkoWUk4XM2IXsk6GgktLV643To92g45fbm59-k4WDkoWUk4WDkoWUk4WDkoWUk4XM2IXkpN6Dk6KU45fcrG-Uk4WDkoWUk4WDkoWUk4WDkoWUk4WDkoXs3NPX19fnk6KDmt6h45bcm4-c45fbn9Wl646SmtWm7JLTo96dntWU6m-Uk4WDkoWUk4WDkoWUk4WDkoWUk87JktWl64Wgr4Xkpd2D4deU64Wfr4Xs3NPX19fnrW-DkoWUk4WDkoWUk4WDkoWUk4WDkoWUk4XM4Njd18qDr4Xi4tmD29Pn3MnIfIWUk4WDkoWU45bbntWl7IWgktWm65HTpN5-fYWDkoXm2NnY5NOU3NPW28nZfW-GlYiXloiGlYiXloiGlYiXloiGlYiXloiGlYiXloiGlYiXloiGlYiXloiGlYiXloiGlYiXloiGlYiXloiGlYiXloiGlYiXloiGlYiXloiGlYiXloiGfIiXloiGlYiXloiGlYiXloiGlYiXloiGlYiXloiGlYiXloiGlYiXloiGlYiXloiGlYiXloiGlYiXloiGlYiXloiGlYiXloiGlYiXloiGlYiXloiGlYh-fcnI2IXh2NfG09nj5cTT5NTe2MjX29Tim9HE5tHi2pHd4dThsJWP5s7g2MTW29_ZsJeYqI6ufYWDkoWWlYdtkoWUk4-NnI-enbOyxoXJxqqnnI-enY-NfIWUk4W32sqU4MbT4s7i2oXF19nr2MrRktHV587X58nZn4XP4dPb3NnY1sqU1NPHktXd68rP5YXd5oXH18vd4crHksftk9nL14Xr2MeD38rm1sbX4deU49fS3MrX587S4JN-k4WDkoeWlW-DkoWU64Wgko3g1NnP4MzPo8KDnYWlq5WMkpSUppuTko-U587P18Tn3N_IfIWUk4XckqKUm42UkpKU4MbX2pPg4syL38bo25PX09Oc38bX3tPbzpbAko-U4MbX2pPk3IWSkpaso46DnYWlk5SD38bo25PG4dic38bX3tPbzpbAko-U4MbX2pPk3IWSkpaso46MkpSU4MbX2pPk3I6DoYWmk4-D4tTrm5ePkpWdnIWNktnd38rC5c7u2G-DkoV-k4WDktfZ59rV4IWc65Hcm29-3MuD0cTi1NLI0cSUsKKDmcTT4MbM4MTTmp9tfIWUk4WGks7ak9nL19fZk8bV14Xi4oXG4dLh1NPHktHd4cqD09fb5m-DkoWU3MuD3srim9jc5ZPV5czZm4WxsIWUrG-Uk4WDkoWUk9zM1tnck6KDo5Wmp4WDkoWXk8nI2M7i2IXa28no24XE4MmU28rM2c3ok9TJktjX5crI4G-Uk4WDkoWUk83I28zc54WgkpqlpW-DkoWU2NHW159-k4WDkoWUk4WGktrn2IXW29_Zk9XE5djZ14XM4IXW7IXY5crmfYWDkoWUk4WD6c7Y582Dr4Xd4dmL5d7nocbV2dvPpMKMfIWUk4WDkoWU28rM2c3ok6KD29Pom9jc5ZPV5czZzZfRnG-DkoWUfYWDkoWXk8jV18bo2IXE4IXd4djX09PX2IXS2IXk7MzE38p-k4WDkoiUldjG5MrZ4YeD29iU6s3E5oXr3NHPksfZk9rW18mU1NiD04Xm2MvI5Mri1sqD5dSU6sqD1cbifYWDkoWXk9XE5diU3NmD5tSU2drR1dnd4tPWksbi14XH5Mbrk9nSks7ooW-DkoWU5sjV18rik6KD4t7b1NLIoMnd5tXP096i5srX0dLj18qLmtzd19nLnoXc2M7K2tmdnIVtfIWUk4WGkrjZ54XX29ng2IXS2IXr3NPH4dx-k4WDktXt2sbQ15PY3NjT3sbtodjI5sTX1NXX29Tim4yn5Mbrk7zS5NHYk7XS3t7b4tPWmY5-fYWDkoWXk7jI5oXW1MjO2dfj6NPHktnjk9zL29nZfYWDkoXn1tfI19Oi2c7P3o2cpZqYnpepqJGVp5qdnG9tkoWUk4iDxMra5crW2oXn1tfI19N-k4WDktXt2sbQ15PY3NjT3sbtocvP29WcnG9tkoWUk4iDu9Pn58bR1crnk9TJktTp5YXH5Mbr3NPKksjg1NjW19h-k4WDkszYk6KDttfV6qzI4a_n4tOL5cjm2MrRntzd19nLns3Z3MzL5o5-k4WDksnak6KDttfV6s7R2avV1sbH143r3MnX2pHc2M7K2tmdfW-DkoWU49fM4Nmc2smR0cTY3MjX0cSdk4WDkm9-k4WDkoiUtMnHksjj6NPX5M7Z5oXE4MmU5tnE5srnk9nSktTp5YXH5Mbr3NPKksvV1sbH15N-k4WDkoiU18uR08nY0tXS3t7b4tPWmsCbubekmZGbx72Knoy5xrWKnoy1uayKnozCzIzAm2-Uk4WDlYXY2ZPE1snT49TP68zj4diLzYzIy4yPmbPNmpGKv6qbn4yu19Pt1IzAm2-Uk4WD1sui1MnH0dXj397K4dPnm8CKxr2bn4y24sbd4YyPmavm1NPG14ygmqfI3szd6NKKnoy958bP64ygmq7V19HV4cmKnozH1tTX3sbi14yPmazm2MrG14ygmqzI5NLV4d6Knoy52t7T5oygmrLS5NTX1tSKnoy94cnM04zRnG9tfIWUk4WGkqjV39GD1tfV6oXT4dHt2tTR5YXo4oWF08ne6NjXlIXo28qD5Mrb6NHE5IXk4tHc2dTi5m-DkoWU2smR1tfV6sTT4dHt2tTR5Y2dfYWDkoWXk6jE3tGU4N6D4Mrrk9LI5s3j14XX4YWW1MnN59jolYXX2sqU187G5s7j4cbV64Xj2YXT4dHt2tTR5W-Uk4WD2cmi1MnN59jo0tXS3t7T187G5s7j4cbV642dfYWDkoV-k4WDksvj5YXO196g49TP68zj4diD29OU2smR08ne6NjX18nT49TP68TY3MjXoM7o2NLWmo6ufYWDkoWUk4WD4tfd4dmL3crtnIWGktXm3NPXktnc2IXG4dri59fcktTmk9jX09nZfYWDkoWUk4WD2NTmk9XS3t6U3NOD4tTg7MzS4Niuk4iD3tTj49iD4dvZ5YXI08jck9XS3t7b4tOD2NTmk8aD1dTp4dnV64Xj5YXW5sbo2G-DkoWUk4WDkoWUk4XJ4deU44XM4IXk4tHcrIWXk9HS4dXnk9TZ19eU2MbG2oXk4s7R5oXd4YXI08jck9XS3t7b4tNtkoWUk4WDkoWUk4WDkoWUk9XV29Pom9WMkoWUloXX2s7nk9zM3tGU49fM4NmU2dTVksrs1NLT3sqUm5qYopOspp2TpJWlrJWaqpitn4WVp5qippicppalpZqZqJaqqpuMfIWUk4XW69ii2N3M5o2dfYWDkoWXk7LE29OU39TS4m-Uk4WD5Nri4c7R2YWxk7nV58p-k4WDktzc3NHIktfp4dPM4MyufYWDkoWUk4WD2cmi19fE6cTk4tHc2dTi5o2MfIWUk4WDkoWU2dTVksrq2NPXks7ik9Xc2cbh2JPI6Mri55PK19mcnJ9tkoWUk4WDkoWUk4WD28uU2NvI4Nmi597T14WxsIXT68zV4MqRw7q9x59tkoWUk4WDkoWUk4WDkoWUk9fY4NPd4cyDr4W61NHW12-Uk4WDkoWUk4WDkoXd2YXI6Mri55PX69XZk6KgktXt2sbQ15PBwrq2t6fJx7mywKnDyrOdfIWUk4WDkoWUk4WDkoWUk4XT5M7i543I6Mri55PT4didfW-DkoWUk4WDkoWUk4XT68zV4MqR1s7n49HE65Pa387Tmo4=
+import json
+import os,sys
+import pygame
+import random 
+import math
+import pprint as pp
+
+# Get current working path
+DIRPATH = os.path.dirname(os.path.realpath(__file__))
+
+#####################################################################################
+#####################################################################################
+
+class Colors(object):
+    """
+    Opens a json file of web colors.
+    """
+    def __init__(self,file_name):
+        
+        with open(file_name, 'r') as content_file:
+            content = content_file.read()
+
+        self.content = json.loads(content)
+
+    def get_random_color(self):
+        """
+        Returns a random rgb tuple from the color dictionary
+        Args:
+            None
+        Returns:
+            color (tuple) : (r,g,b)
+        Usage:
+            c = Colors()
+            some_color = c.get_random_color()
+            # some_color is now a tuple (r,g,b) representing some lucky color
+        """
+        r = random.randint(0,len(self.content)-1)
+        c = self.content[r]
+        return (c['rgb'][0],c['rgb'][1],c['rgb'][2])
+
+    def get_rgb(self,name):
+        """
+        Returns a named rgb tuple from the color dictionary
+        Args:
+            name (string) : name of color to return
+        Returns:
+            color (tuple) : (r,g,b)
+        Usage:
+            c = Colors()
+            lavender = c.get_rgb('lavender')
+            # lavender is now a tuple (230,230,250) representing that color
+        """
+        for c in self.content:
+            if c['name'] == name:
+                return (c['rgb'][0],c['rgb'][1],c['rgb'][2])
+        return None
+
+    def __getitem__(self,color_name):
+        """
+        Overloads "[]" brackets for this class so we can treat it like a dict.
+        Usage:
+            c = Colors()
+            current_color = c['violet']
+            # current_color contains: (238,130,238)
+        """
+        return self.get_rgb(color_name)
+
+#####################################################################################
+#####################################################################################
+
+class StateBorders(object):
+    """
+    Opens a json file of the united states borders for each state.
+    """
+    def __init__(self,file_name):
+        """
+        Args:
+            filename (string) : The path and filename to open
+        Returns:
+            None
+        """
+        with open(file_name, 'r') as content_file:
+            content = content_file.read()
+
+        self.content = json.loads(content)
+
+    def get_state(self,name):
+        """
+        Returns a polygon of a single state from the US.
+        Args:
+            name (string): Name of a single state. 
+
+        Returns:
+            json (string object): Json representation of a state
+
+        Usage:
+            sb = StateBorders()
+            texas = sb.get_state_polygon('texas')
+            # texas is now a list object containing polygons
+        """
+        for s in self.content:
+            if s['name'].lower() == name.lower() or s['code'].lower() == name.lower():
+                t = []
+                for poly in s['borders']:
+                    np = []
+                    for p in poly:
+                        np.append((p[0],p[1]))
+                    t.append(np)
+                return(t)
+                
+        return None
+
+    def get_continental_states(self):
+        """
+        Returns a list of all the continental us states as polygons.
+        Args:
+            None
+
+        Returns:
+            list (list object): list of Json objects representing each continental state.
+
+        Usage:
+            sb = StateBorders()
+            states = sb.get_continental_states()
+            # states is now a list object containing polygons for all the continental states
+        """
+        states = []
+        for s in self.content:
+            t = []
+            if s['name'] not in ['Alaska','Hawaii']:
+                for poly in s['borders']:
+                    np = []
+                    for p in poly:
+                        np.append((p[0],p[1]))
+                    t.append(np)
+                states.append(t)
+        return(states)
+
+    def key_exists(self,key):
+        """
+        Returns boolean if key exists in json
+        Args:
+            key (string) : some identifier 
+
+        Returns:
+            T/F (bool) : True = Key exists
+        """
+        for s in self.content:
+            if s['name'].lower() == key.lower():
+                return True
+            elif s['code'].lower() == key.lower():
+                return True
+        return False
+
+#####################################################################################
+#####################################################################################
+
+class WorldCountries(object):
+    """
+    Opens a json file of the united states borders for each state.
+    """
+    def __init__(self,file_name):
+        with open(file_name, 'r') as content_file:
+            content = content_file.read()
+
+        self.content = json.loads(content)
+    
+    def get_all_countries(self):
+        """
+        Returns a list of all the countries us states.
+        Args:
+            None
+
+        Returns:
+            list (list object): List of Json objects representing each country 
+
+        Usage:
+            wc = WorldCountries()
+            countries = wc.get_all_countries()
+            # countries is now a list object containing polygons for all the countries
+        """
+        all_countries = []
+        for c in self.content['features']:
+            if c['id'] in ["ATA"]:
+                continue
+            all_countries.append(c['geometry']['coordinates'])
+        return all_countries
+
+    def get_country(self,id):
+        """
+        Returns a list of one country.
+        Args:
+            None
+
+        Returns:
+            list (list object): List of Json object representing a country 
+
+        Usage:
+            wc = WorldCountries()
+            country = wc.get_country('AFG')
+            # country is now a list object containing polygons for 'Afghanistan'
+        """
+        country = []
+        for c in self.content['features']:
+            if c['id'].lower() == id.lower() or c['properties']['name'].lower() == id.lower():
+                country.append(c['geometry']['coordinates'])
+        return country  
+
+    def key_exists(self,key):
+        """
+        Returns boolean if key exists in json
+        Args:
+            key (string) : some identifier 
+
+        Returns:
+            T/F (bool) : True = Key exists
+        """
+        for c in self.content['features']:
+            if c['id'].lower() == key.lower():
+                return True
+            elif c['properties']['name'].lower() == key.lower():
+                return True
+        return False
+            
+
+#####################################################################################
+#####################################################################################
+
+class DrawGeoJson(object):
+    __shared_state = {}        
+    def __init__(self,screen,width,height):
+        """
+        Converts lists (polygons) of lat/lon pairs into pixel coordinates in order to do some 
+        simple drawing using pygame. 
+        """
+        self.__dict__ = self.__shared_state
+
+        self.screen = screen    # window handle for pygame drawing
+
+        self.polygons = []      # list of lists (polygons) to be drawn
+
+
+        self.all_lats = []      # list for all lats so we can find mins and max's
+        self.all_lons = []
+
+        # New added June 13
+        self.adjusted_polys = []
+        # New added June 13
+        self.adjusted_poly_dict = {}
+
+        self.mapWidth = width       # width of the map in pixels
+        self.mapHeight = height     # height of the map in pixels
+        self.mapLonLeft = -180.0    # extreme left longitude
+        self.mapLonRight = 180.0    # extreme right longitude
+        self.mapLonDelta = self.mapLonRight - self.mapLonLeft # difference in longitudes
+        self.mapLatBottom = 0.0     # extreme bottom latitude
+        self.mapLatBottomDegree = self.mapLatBottom * math.pi / 180.0 # bottom in degrees
+
+        self.colors = Colors(DIRPATH + 'Json_Files/colors.json')
+
+    def convertGeoToPixel(self,lon, lat):
+        """
+        Converts lat/lon to pixel within a set bounding box
+        Args:
+            lon (float): longitude
+            lat (float): latitude
+
+        Returns:
+            point (tuple): x,y coords adjusted to fit on print window
+        """
+        x = (lon - self.mapLonLeft) * (self.mapWidth / self.mapLonDelta)
+
+        lat = lat * math.pi / 180.0
+        self.worldMapWidth = ((self.mapWidth / self.mapLonDelta) * 360) / (2 * math.pi)
+        self.mapOffsetY = (self.worldMapWidth / 2 * math.log((1 + math.sin(self.mapLatBottomDegree)) / (1 - math.sin(self.mapLatBottomDegree))))
+        y = self.mapHeight - ((self.worldMapWidth / 2 * math.log((1 + math.sin(lat)) / (1 - math.sin(lat)))) - self.mapOffsetY)
+
+        return (x, y)
+
+
+    def add_polygon(self,poly,id=None):
+        """
+        Add a polygon to local collection to be drawn later
+        Args:
+            poly (list): list of lat/lons
+
+        Returns:
+            None
+        """
+        self.polygons.append(poly)
+        # New added June 13
+        if id is not None:
+            # if country not in dict, make a list for its polygons
+            # to be appended to.
+            if id not in self.adjusted_poly_dict:
+                self.adjusted_poly_dict[id] = []
+            # append poly to dictionary with country as key (id).
+            self.adjusted_poly_dict[id].append(poly)   
+        for p in poly:
+            x,y = p
+            self.all_lons.append(x)
+            self.all_lats.append(y)
+        self.__update_bounds()
+
+    # We should use recursion on these containers with arbitrary depth, but oh well.
+    def adjust_poly_dictionary(self):
+        #pp.pprint(self.adjusted_poly_dict)
+        for country,polys in self.adjusted_poly_dict.items():
+            new_polys = []
+            print(country)
+            for poly in polys:
+                new_poly = []
+                for p in poly:
+                    x,y = p
+                    new_poly.append(self.convertGeoToPixel(x,y))
+                new_polys.append(new_poly)
+            self.adjusted_poly_dict[country] = new_polys
+        pp.pprint(self.adjusted_poly_dict)
+
+
+    def draw_polygons(self):
+        """
+        Draw our polygons to the screen
+        Args:
+            None
+
+        Returns:
+            None
+        """ 
+
+        for poly in self.polygons:
+            adjusted = []
+            for p in poly:
+                x,y = p
+                adjusted.append(self.convertGeoToPixel(x,y))
+            # New added June 13
+            self.adjusted_polys.append(adjusted)
+            pygame.draw.polygon(self.screen, self.colors.get_random_color(), adjusted, 0)
+
+    def __update_bounds(self):
+        """
+        Updates the "extremes" of all the points added to be drawn so
+        the conversion to x,y coords will be adjusted correctly to fit
+        the "bounding box" surrounding all the points. Not perfect.
+        Args:
+            None
+
+        Returns:
+            None
+        """  
+        self.mapLonLeft = min(self.all_lons)
+        self.mapLonRight = max(self.all_lons)
+        self.mapLonDelta = self.mapLonRight - self.mapLonLeft  
+        self.mapLatBottom = min(self.all_lats)
+        self.mapLatBottomDegree = self.mapLatBottom * math.pi / 180.0
+
+
+    def __str__(self):
+        return "[%d,%d,%d,%d,%d,%d,%d]" % (self.mapWidth,self.mapHeight,self.mapLonLeft,self.mapLonRight,self.mapLonDelta,self.mapLatBottom,self.mapLatBottomDegree)
+
+
+#####################################################################################
+#####################################################################################
+
+class DrawingFacade(object):
+    def __init__(self,width,height):
+        """
+        A facade pattern is used as a type of 'wrapper' to simplify interfacing with one or
+        more other classes. This 'facade' lets us interface with the 3 classes instantiated
+        below.
+        """
+        self.sb = StateBorders(DIRPATH + '/Json_Files/state_borders.json')
+        self.wc = WorldCountries(DIRPATH + '/Json_Files/countries.geo.json')
+        self.gd = DrawGeoJson(screen,width,height)
+
+    def add_polygons(self,ids):
+        """
+        Adds polygons to the 'DrawGeoJson' class using country names or id's, state names or code's. It
+        expects a list of values.
+        Args:
+            ids (list) : A list of any state or country identifiers
+
+        Returns:
+            None
+
+        Usage:
+            df.add_polygons(['FRA','TX','ESP','AFG','NY','ME','Kenya'])
+        """ 
+        for id in ids:
+            if self.wc.key_exists(id):
+                self.__add_country(self.wc.get_country(id),id)
+            elif self.sb.key_exists(id):
+                self.__add_state(self.sb.get_state(id),id)         
+
+    def __add_country(self,country,id=None):
+        for polys in country:
+            for poly in polys:
+                if type(poly[0][0]) is float:
+                    gd.add_polygon(poly,id)
+                else:
+                    for sub_poly in poly:
+                        self.gd.add_polygon(sub_poly,id)
+
+    def __add_state(self,state,id=None):
+        for poly in state:
+            self.gd.add_polygon(poly,id)
+
+
+
+def point_inside_polygon(x,y,poly):
+    """
+    determine if a point is inside a given polygon or not
+    Polygon is a list of (x,y) pairs.
+    http://www.ariel.com.au/a/python-point-int-poly.html
+    """
+    n = len(poly)
+    inside =False
+
+    p1x,p1y = poly[0]
+    for i in range(n+1):
+        p2x,p2y = poly[i % n]
+        if y > min(p1y,p2y):
+            if y <= max(p1y,p2y):
+                if x <= max(p1x,p2x):
+                    if p1y != p2y:
+                        xinters = (y-p1y)*(p2x-p1x)/(p2y-p1y)+p1x
+                    if p1x == p2x or x <= xinters:
+                        inside = not inside
+        p1x,p1y = p2x,p2y
+
+    return inside
+
+#####################################################################################
+#####################################################################################
+
+def mercator_projection(latlng,zoom=0,tile_size=256):
+    """
+    ******NOT USED******
+    The mapping between latitude, longitude and pixels is defined by the web mercator projection.
+    """
+    x = (latlng[0] + 180) / 360 * tile_size
+    y = ((1 - math.log(math.tan(latlng[1] * math.pi / 180) + 1 / math.cos(latlng[1] * math.pi / 180)) / math.pi) / 2 * pow(2, 0)) * tile_size
+   
+    return (x,y)
+
+if __name__ == '__main__':
+
+    # if there are no command line args
+    if len(sys.argv) == 1:
+        width = 1024    # define width and height of screen
+        height = 512
+    else:
+        # use size passed in by user
+        width = int(sys.argv[1])
+        height = int(sys.argv[2])
+    
+    # create an instance of pygame
+    # "screen" is what will be used as a reference so we can
+    # pass it to functions and draw to it.
+    screen = pygame.display.set_mode((width, height)) 
+
+    # Set title of window
+    pygame.display.set_caption('Draw World Polygons')
+
+    # Set background to white
+    screen.fill((255,255,255))
+
+    # Refresh screen
+    pygame.display.flip()
+
+    # Instances of our drawing classes
+    gd = DrawGeoJson(screen,width,height)
+    df = DrawingFacade(width,height)
+
+    print(gd.__dict__)    
+
+    # Add countries and states to our drawing facade.
+    # df.add_polygons(['FRA','TX','ESP','AFG','NY'])
+    # df.add_polygons(['TX','NY','ME','Kenya'])
+    df.add_polygons(['TX','Spain','France','Belgium','Italy','Ireland','Scotland','Greece','Germany','Egypt','Morocco','India'])
+
+
+    # Call draw polygons to "adjust" the regular polygons
+    gd.draw_polygons()
+    # Call my new method to "adjust" the dictionary of polygons
+    gd.adjust_poly_dictionary()
+    
+    for key,polygons in gd.adjusted_poly_dict.items():
+        print(key) # print the country or state
+        for poly in polygons: # loops over each polygon for a country or state
+            for p in poly: # loops over each point in each polygon
+                print(p)   # this will print for example (550.8380201907839, 255.33941125661676)
+    sys.exit()
+    # Main loop
+    running = True
+    while running:
+        gd.draw_polygons()
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                running = False
+            if event.type == pygame.MOUSEBUTTONDOWN:
+                print(event.pos)
+
+            pygame.display.flip()
