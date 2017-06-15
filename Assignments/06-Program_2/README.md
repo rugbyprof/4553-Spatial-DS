@@ -1,2 +1,16 @@
-- Chicago bike data: https://query.data.world/s/cj7k3r4opj9bxabl9hbft50kb
-- Ny crime data: https://query.data.world/s/1m9mvcgtcuat4bpkjhaisdfkm
+Program 2 - DBScan
+=========
+
+### Due: Monday Jun 19th by Classtime
+
+
+### Overview
+
+There is a starter code package [HERE](https://github.com/rugbyprof/4553-Spatial-DS/tree/master/Resources/Dbscan_Ex) that contains the following files:
+
+- dbscan.py (DBscan implementation)
+- main.py (driver file to show basic usage)
+
+
+There is another folder [HERE](https://github.com/rugbyprof/4553-Spatial-DS/tree/master/Resources/NYPD_CrimeData} that holds a bunch of NY City crime data. 
+
