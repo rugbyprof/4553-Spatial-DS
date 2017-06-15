@@ -1,4 +1,4 @@
-Program 2 - DBScan
+Program 2 - DBscan
 =========
 
 ### Due: Monday Jun 19th by Classtime
