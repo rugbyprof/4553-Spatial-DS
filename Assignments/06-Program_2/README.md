@@ -1,6 +1,8 @@
 Program 2 - DBscan
 =========
 
+*** NOT DONE ! ***
+
 ### Due: Monday Jun 19th by Classtime
 
 
