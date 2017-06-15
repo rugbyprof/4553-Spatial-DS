@@ -300,7 +300,10 @@ class DrawGeoJson(object):
             if id not in self.poly_dict:
                 self.poly_dict[id] = {'latlon':[],'xy':[],'color':self.colors.get_random_pastel((128,128,128))}
             # append poly to dictionary with country as key (id).
-            self.poly_dict[id]['latlon'].append(poly)   
+            self.poly_dict[id]['latlon'].append(poly)
+        else:
+            pass
+            # better handle this! 
         for p in poly:
             x,y = p
             self.all_lons.append(x)
@@ -539,6 +542,7 @@ if __name__ == '__main__':
 
     # Call my new method to "adjust" the dictionary of polygons
     gd.adjust_poly_dictionary()
+    pp.pprint(gd.poly_dict)
 
     # Main loop
     running = True

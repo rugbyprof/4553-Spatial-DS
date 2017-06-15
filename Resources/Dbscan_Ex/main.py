@@ -2,15 +2,30 @@ import pygame
 import random
 from dbscan import *
 import sys,os
+import pprint as pp
 
 
 def calculate_mbrs(points, epsilon, min_pts):
     mbrs = []
     clusters =  dbscan(points, epsilon, min_pts)
-    for id,cpoints in clusters.items():
+
+    # for id,cpoints in clusters.items():
+    #     xs = []
+    #     ys = []
+    #     for p in cpoints:
+    #         xs.append(p[0])
+    #         ys.append(p[1])
+    #     max_x = max(xs) 
+    #     max_y = max(ys)
+    #     min_x = min(xs)
+    #     min_y = min(ys)
+    #     mbrs.append([(min_x,min_y),(max_x,min_y),(max_x,max_y),(min_x,max_y),(min_x,min_y)])
+    # return mbrs
+
+    for id in range(len(clusters)-1):
         xs = []
         ys = []
-        for p in cpoints:
+        for p in clusters[id]:
             xs.append(p[0])
             ys.append(p[1])
         max_x = max(xs) 
@@ -40,7 +55,9 @@ min_pts = 5.0
 
 points = []
 
-for i in range(500):
+num_points = 500
+
+for i in range(num_points):
     x = random.randint(10,width-10)
     y = random.randint(10,height-10)
     points.append((x,y))

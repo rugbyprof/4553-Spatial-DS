@@ -78,7 +78,7 @@ def euclidean(x,y):
     # sqrt((x0-y0)^2 + ... (xN-yN)^2)
     assert len(x) == len(y)
     sum = 0.0
-    for i in xrange(len(x)):
+    for i in range(len(x)):
         sum += pow(x[i] - y[i],2)
     return sqrt(sum)
 
@@ -119,7 +119,7 @@ def add_connected(points, all_points, epsilon, min_pts, current_cluster, distanc
             cluster_points.append(point)
             point.cluster = current_cluster
     if debug: 
-        print 'Added points %s' % print_points(cluster_points)
+        print ('Added points %s' % print_points(cluster_points))
     return cluster_points
 
 def dbscan(points, epsilon, min_pts, distance=euclidean, debug=False):
@@ -141,8 +141,8 @@ def dbscan(points, epsilon, min_pts, distance=euclidean, debug=False):
         points = _as_points(points)
 
     if debug:
-        print '\nEpsilon: %.2f' % epsilon
-        print 'Min_Pts: %d' % min_pts
+        print ('\nEpsilon: %.2f' % epsilon )
+        print ('Min_Pts: %d' % min_pts )
     
     clusters = {}     # each cluster is a list of points
     clusters[-1] = [] # store all the points deemed noise here. 
@@ -154,8 +154,8 @@ def dbscan(points, epsilon, min_pts, distance=euclidean, debug=False):
             if len(neighbours) >= min_pts:
                 current_cluster += 1
                 if debug: 
-                    print '\nCreating new cluster %d' % (current_cluster)
-                    print '%s' % str(point)
+                    print ('\nCreating new cluster %d' % (current_cluster))
+                    print ('%s' % str(point))
                 point.cluster = current_cluster                
                 cluster = [point,]
                 cluster.extend(add_connected(neighbours, points, epsilon, min_pts, 
@@ -164,7 +164,7 @@ def dbscan(points, epsilon, min_pts, distance=euclidean, debug=False):
             else:
                 clusters[-1].append(point)
                 if debug: 
-                    print '\nPoint %s has no density-connected neighbours.' % str(point.feature_vector)
+                    print('\nPoint %s has no density-connected neighbours.' % str(point.feature_vector))
 
     # return the dictionary of clusters, converting the Point objects
     # in the clusters back to regular lists
@@ -174,8 +174,8 @@ if __name__ == '__main__':
 
     import random
 
-    epsilon = 1.5
-    min_pts = 3.0
+    epsilon = 4
+    min_pts = 4
 
     points = [(3,16),(3,14),(4,15),(5,14),(5,17),(6,17),(6,16),(6,15),(6,13),
               (10,6),(10,4),(10,3),(11,4),(12,5),(12,4),(12,3),
@@ -184,8 +184,8 @@ if __name__ == '__main__':
               (10,11),(14,11),(13,16),(19,5),(25,13)]
 
     clusters = dbscan(points, epsilon, min_pts, debug=True)
-    print '\n========== Results of Clustering ============='
+    print ('\n========== Results of Clustering =============')
     for cluster, members in clusters.iteritems():
-        print '\n--------Cluster %d---------' % cluster
+        print ('\n--------Cluster %d---------' % cluster)
         for point in members:
-            print point
+            print (point)
