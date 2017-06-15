@@ -1,1 +1,73 @@
-3NLT4dfok9Xc2cbh2G_M39Xj5dmD5Mbi19TQfMvm4tKD1sfn1sbRks7h49TV5oWefc7Q4tTm54XW69ig4thtfG_Y2MuD1cbg1trP09nZ0tLF5Nic49TM4Nnnn4XI4tjd39TRnoXh3NPC4tnnnJ9tkoWUk9LF5NiUsIW-z2-Uk4WD1dHp5tnI5NiUsIWD1sfn1sbRmtXj3NPX5ZGU2NXW29Hj4ZGD387i0tXX5Y5-k4WDksvj5YXM1pHX49TM4Nnnk87Rksjg6NjX19fnoc7X19Lnm46dfIWUk4WDkoWU69iDr4XP0G-DkoWUk4WDkt7nk6KDzcJ-k4WDkoWUk4XJ4deU44XM4IXX49TM4NnnrW-DkoWUk4WDkoWUk4Xb5ZPV49XI4Mmc48CTz45-k4WDkoWUk4WDkoWU7NiR09Xk2NPHmtXPpMKMfIWUk4WDkoWU4Mbb0d2UsIXQ092c69iMkm-Uk4WDkoWUk9LE6sTtk6KD38bsm97Wm2-Uk4WDkoWUk9LM4MTsk6KD387im93Wm2-Uk4WDkoWUk9LM4MTtk6KD387im97Wm2-Uk4WDkoWUk9LF5Nii1NXT19PYm8CL387i0t2P387i0t6Mno3h1N3C6pHh3NPC646gm9LE6sTsn9LE6sTtnJGL387i0t2P38bs0t6Mno3h3NPC6pHh3NPC647RnG-DkoWU5crX59fik9LF5Nh-fcnI2IXX38rE4MTV5crEmtjX5crI4JHj5c7K29Og6s7H5s2g28rM2c3on8jS3tTmnJ9tkoWUk9TbntTtk6KD4dfd2s7RfIWUk4XT4c7i59iDr4XPm9TbntTtnJGL4d2f6s7H5s2g4t6Mno3j65Da28no25HS65Dc2M7K2tmdn43S6pHj7JDL187b29mMno3j65HS647RfYWDkoXk7MzE38qi19fE6ZPk4tHc2dTim9jG5MrZ4ZGD1dTg4tePktXj3NPX5ZGUo45tfMfV1tDK5NTp4cnC1dTg4trVkqKUm5eYp5GmqJqPpJqpnG_F3sbX3oWgko2kn5WPoo5-m9zM1tncn4XL187b29mMkqKUm5uTopGUp5WTm29-5sjV18rik6KD4t7b1NLIoMnd5tXP096i5srX0dLj18qLmtzd19nLnoXc2M7K2tmdnG_T68zV4MqR1s7n49HE65Pn2NnC1cbk587S4I2bxs7Q4tHZk7HM4MqbnG_W1dfZ2NOR2M7g343F08jf2tfS59PY0sjS3tTp5Y5tfNXt2sbQ15PY3NjT3sbtocvP29WcnG9t19Xn3NHS4IWxk5eTfNLd4cTT5tiUsIWYoJV-fYiD4tTd4dnWkqKUzo2WnpaqnJGLpZGlp46PmpmgpJqMno2pn5aXm5GcqJGUqY6gm5uPo5ydn42ZnpaqnJGLqJGlqI6PmpugpJiMnm-Xk4WDkoWUk4WDkoWUk42UopGqnJGLo5Wgp46Pmpakn5iMno2lpJGXm5GcpJePp46gm5aVnpmdn42UpJGnnJFtlYWUk4WDkoWUk4WDkoWcpJ2Po5idn42Uq5Glp46Pmpatn5aWm5GcpJ6PpI6gm5eTnpaonJGLpJWgpJiMno2mo5GUpI6gm5eTnpalnJGLpJagpJiMnm-Xk4WDkoWUk4WDkoWUk42VpZGqnJGLpJigqI6Pmpenn5mMno2mppGWm5GcpZiPpI6gm5eXnpqdn42VppGonJGLpJmgpo6Pmpeon5eMnm-Xk4WDkoWUk4WDkoWUk42UopGlpI6Pmpaon5aUm5GcpJiPo5udn42Uq5GpnJGLpJqgpJiMz29-ltXS29Po5oWgksCco5GTm5Gc5cbR1tThodfE4Mnm1NPK142kn9zM1tncnJHV09PY4tKR5Mbi19fE4MzZm5WP2srd2s3Xm46gm9zM1tncn83I28zc547AfG_k4s7R5tiUsIW-z29-2dTVks6U3NOD5Mbi2sqLp5WknJ9tkoWUk92Dr4Xm1NPH4dKi5cbR1s7i542UopHr3MnX2pKlo45tkoWUk96Dr4Xm1NPH4dKi5cbR1s7i542UopHc2M7K2tmhpJWMfIWUk4XT4c7i59iR09Xk2NPHmo3sn96Mm29-4MfV5YWxk8jE3sjp38bX18Th1dfWmtXj3NPX5ZGU2NXW29Hj4ZGD387i0tXX5Y5-fdfY4NPd4cyDr4XI5drIfNzc3NHIktfp4dPM4MyufYWDkoWX497K09LZocnV09yi387R19ic5sjV18rin4XF3sbX3pGDuMbg5sqPktXj3NPX5ZGUpY5tfIWUk4XJ4deU44XM4IXk4s7R5tiufYWDkoWUk4WD4t7b1NLIoMnm1NyR1c7m1tHImtjX5crI4JGU1dHE1dCgk9WPkpigk5WMfIWUk4XJ4deU4MfVks7ik9LF5NiufYWDkoWUk4WD4t7b1NLIoMnm1NyR4tTg7MzS4I3n1tfI19Ogk8fP08jfn4XQ1Negk5eMfIWUk4XJ4deU2NvI4NmU3NOD4t7b1NLIoMrq2NPXoMzZ542MrG-Uk4WDkoWUk87Jksrq2NPXoNnt48qDr6KU497K09LZoba4u7mufYWDkoWUk4WDkoWUk9fY4NPd4cyDr4W61NHW12-Uk4WDkoWUk87Jksrq2NPXoNnt48qDr6KU497K09LZobKyx7i5tbq3xrTCt7S6wJ9-k4WDkoWUk4WDkoWU1tHI09PT1NfI043n1tfI19Ogm5WPoo6g6s7H5s2g28rM2c3on42Vp5qgpZqYnpepqI6MfIWUk4WDkoWUk4WDktXj3NPX5ZPV49XI4Mmc2NvI4Nmi49TWm2-Uk4WDkoWUk4WDkoXh1dfWkqKU1sbP1drg1NnI0dLW5diL4tTd4dnWnoXZ49jM3tTin4XQ29PT49nWm2-Uk4WD4t7b1NLIoMnd5tXP096i2dHM4o2d
+import pygame
+import random
+from dbscan import *
+import sys,os
+
+
+def calculate_mbrs(points, epsilon, min_pts):
+    mbrs = []
+    clusters =  dbscan(points, epsilon, min_pts)
+    for id,cpoints in clusters.items():
+        xs = []
+        ys = []
+        for p in cpoints:
+            xs.append(p[0])
+            ys.append(p[1])
+        max_x = max(xs) 
+        max_y = max(ys)
+        min_x = min(xs)
+        min_y = min(ys)
+        mbrs.append([(min_x,min_y),(max_x,min_y),(max_x,max_y),(min_x,max_y),(min_x,min_y)])
+    return mbrs
+
+def clean_area(screen,origin,width,height,color):
+    ox,oy = origin
+    points = [(ox,oy),(ox+width,oy),(ox+width,oy+height),(ox,oy+height),(ox,oy)]
+    pygame.draw.polygon(screen, color, points, 0)
+
+background_colour = (255,255,255)
+black = (0,0,0)
+(width, height) = (600, 400)
+
+screen = pygame.display.set_mode((width, height))
+pygame.display.set_caption('Simple Line')
+screen.fill(background_colour)
+
+pygame.display.flip()
+
+epsilon = 20
+min_pts = 5.0
+
+# points = [(3,16),(3,14),(4,15),(5,14),(5,17),(6,17),(6,16),(6,15),(6,13),
+#             (10,6),(10,4),(10,3),(11,4),(12,5),(12,4),(12,3),
+#             (18,13),(19,14),(19,13),(19,2),(20,14),(20,13),(20,12),(20,11),(21,13),
+#             (23,6),(23,5),(23,4),(23,3),(23,2),(24,5),(24,4),(24,3),(24,2),
+#             (10,11),(14,11),(13,16),(19,5),(25,13)]
+
+#points = [(0,0),(random.randrange(0,width),random.randrange(0,height)),(width,height)]
+
+points = []
+
+for i in range(500):
+    x = random.randint(10,width-10)
+    y = random.randint(10,height-10)
+    points.append((x,y))
+
+mbrs = calculate_mbrs(points, epsilon, min_pts)
+
+running = True
+while running:
+    #pygame.draw.lines(screen, black, False, points, 2)
+
+    for p in points:
+        pygame.draw.circle(screen, black, p, 3, 0)
+    for mbr in mbrs:
+        pygame.draw.polygon(screen, black, mbr, 2)
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            running = False
+        if event.type == pygame.MOUSEBUTTONDOWN:
+            clean_area(screen,(0,0),width,height,(255,255,255))
+            points.append(event.pos)
+            mbrs = calculate_mbrs(points, epsilon, min_pts)
+    pygame.display.flip()
