@@ -30,3 +30,8 @@ There is a starter code package [HERE](https://github.com/rugbyprof/4553-Spatial
 
 There is another folder [HERE](https://github.com/rugbyprof/4553-Spatial-DS/tree/master/Resources/NYPD_CrimeData)  that holds a bunch of NY City crime data. 
 
+### Requirements
+
+- Plot each point from all four files. ( I may redact this based on pygames ability to handle so many points)
+- Scale points so they are easily viewable on a 1024 by 768 screen size.
+- colors to come later based on key words and crimes.
