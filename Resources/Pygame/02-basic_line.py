@@ -20,12 +20,10 @@ points = [(0,0),(random.randrange(0,width),random.randrange(0,height)),(width,he
   - refresh rate
 """
     
-
 running = True
 while running:
   pygame.draw.lines(screen, black, False, points, 2)
   for event in pygame.event.get():
-    print(event)
     if event.type == pygame.QUIT:
       running = False
   pygame.display.flip()

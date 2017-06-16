@@ -6,9 +6,17 @@ import pprint as pp
 
 
 def calculate_mbrs(points, epsilon, min_pts):
+    """
+    Find clusters using DBscan and then create a list of bounding rectangles
+    to return.
+    """
     mbrs = []
     clusters =  dbscan(points, epsilon, min_pts)
 
+    """
+    Traditional dictionary iteration to populate mbr list
+    Does same as below
+    """
     # for id,cpoints in clusters.items():
     #     xs = []
     #     ys = []
@@ -22,6 +30,10 @@ def calculate_mbrs(points, epsilon, min_pts):
     #     mbrs.append([(min_x,min_y),(max_x,min_y),(max_x,max_y),(min_x,max_y),(min_x,min_y)])
     # return mbrs
 
+    """
+    Using list index value to iterate over the clusters dictionary
+    Does same as above
+    """
     for id in range(len(clusters)-1):
         xs = []
         ys = []
@@ -35,7 +47,12 @@ def calculate_mbrs(points, epsilon, min_pts):
         mbrs.append([(min_x,min_y),(max_x,min_y),(max_x,max_y),(min_x,max_y),(min_x,min_y)])
     return mbrs
 
+
 def clean_area(screen,origin,width,height,color):
+    """
+    Prints a color rectangle (typically white) to "erase" an area on the screen.
+    Could be used to erase a small area, or the entire screen.
+    """
     ox,oy = origin
     points = [(ox,oy),(ox+width,oy),(ox+width,oy+height),(ox,oy+height),(ox,oy)]
     pygame.draw.polygon(screen, color, points, 0)
