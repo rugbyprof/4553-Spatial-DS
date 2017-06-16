@@ -15,6 +15,13 @@ Use Pygame to create a 2D scatterplot of locations of crimes. Each point should 
 | ![](https://d3vv6lp55qjaqc.cloudfront.net/items/0b111F2h3k0f3i1T2x2l/%5Baf6c80974353cb65e2d1a0d7c9578d8a%5D_Screenshot%25202017-06-15%252017.47.11.png?X-CloudApp-Visitor-Id=1094421) |
 | Example output w/out scaling points to screen |
 
+The points ***must*** be scaled so that visualization of unique clusters will not be a chore. 
+
+|       |
+|:------:|
+| ![](https://d3vv6lp55qjaqc.cloudfront.net/items/28462H2A361E0r3F0K14/Screenshot%202017-06-15%2019.23.55.png?X-CloudApp-Visitor-Id=1094421|
+| Example output with scaling points to screen |
+
 There is a starter code package [HERE](https://github.com/rugbyprof/4553-Spatial-DS/tree/master/Resources/Dbscan_Ex) that contains the following files:
 
 - dbscan.py (DBscan implementation)
