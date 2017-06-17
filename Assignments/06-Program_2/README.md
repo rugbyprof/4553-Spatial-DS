@@ -49,12 +49,14 @@ Each of these files contains crimes dealing with:
  - DRUGS
  - VEHICLE FRAUD
 
+So we will plot the above crimes for each burough in NYC. This will help keep your program resource requirements down. 
+
 ### Requirements
 
 - Plot the points from all five buroughs on seperate screens.
-- Use `pygame.image.save(screen , path_to_image)` to save your screen to a 'png' formatted image named `crimes_burough_name.png`. 
+- Use `pygame.image.save(screen , path_to_image)` to save your screen to a 'png' formatted image named `burough_name_screen_shot.png` (e.g. `bronx_screen_shot.png` or `manhattan_screen_shot.png`).
 - Make the screen size 2000x2000. This may look poor on your individual machines, but by saving the screen to an image will make it easily viewable.
-- Use the minimum and maximum coordinate values from all 5 files. If you simply process one file at a time, it will spread the points out within the entire 2000x2000 screen, and we want to see each burough in relation to the others. Here are the extreme coords:
+- Use the minimum and maximum coordinate values from all 5 files as a whole. If you simply process one file at a time, it will spread the points out within the entire 2000x2000 screen, and we want to see each burough in relation to the others. Here are the extremes from all files for you to use:
 
 ```json
 {
