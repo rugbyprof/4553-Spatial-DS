@@ -1,14 +1,13 @@
 Program 2 - DBscan
 =========
 
-*** NOT DONE ! ***
+# Part 1
 
 ### Due: Monday Jun 19th by Classtime
 
-
 ### Overview
 
-Use Pygame to create a 2D scatterplot of locations of crimes. Each point should be color coded to match the actual crime committed. Run DBscan on your data to find high crime areas. You can either read in the Lat/Lon data and use our projection code to convert to x/y, or you can use the existing x,y that is included in the data set. Either way, your going to have to scale the points so that they don't cluster (no pun inteaded) in one portion of the screen. Below is an example dividing each x/y from the dataset by 1000:
+Use Pygame to create a 2D scatterplot of locations of crimes. Each point should be color coded to match the actual crime committed. ~~Run DBscan on your data to find high crime areas.~~ You can either read in the Lat/Lon data and use our projection code to convert to x/y, or you can use the existing x,y that is included in the data set. Either way, your going to have to scale the points so that they don't cluster (no pun inteaded) in one portion of the screen. Below is an example dividing each x/y from the dataset by 1000:
 
 |       |
 |:------:|
@@ -53,7 +52,7 @@ So we will plot the above crimes for each burough in NYC. This will help keep yo
 
 ### Requirements
 
-- Plot the points from all five buroughs on seperate screens.
+- Plot the points from all five buroughs on the same screen.
 - Use `pygame.image.save(screen , path_to_image)` to save your screen to a 'png' formatted image named `burough_name_screen_shot.png` (e.g. `bronx_screen_shot.png` or `manhattan_screen_shot.png`).
 - Make the screen size 2000x2000. This may look poor on your individual machines, but by saving the screen to an image will make it easily viewable.
 - Use the minimum and maximum coordinate values from all 5 files as a whole. If you simply process one file at a time, it will spread the points out within the entire 2000x2000 screen, and we want to see each burough in relation to the others. Here are the extremes from all files for you to use:
