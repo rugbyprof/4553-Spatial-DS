@@ -76,12 +76,12 @@ So we will plot the above crimes for each burough in NYC. This will help keep yo
    
 - ~~At the top right of your screen write the `burough` name~~
 - ~~Set your `eps` and `min` pts to values that create many small clusters. If I can, I will post an example of my output.~~
-- ~~Color the points so that:
-     - LARCENY       = BLUE (0,0,255)
-     - ASSAULT       = RED (255,0,0)
-     - HARRASSMENT   = GREEN (0,255,0)
-     - DRUGS         = YELLOW (255,255,0)
-     - VEHICLE FRAUD = PURPLE (128,0,128)~~
+- ~~Color the points so that:~~
+     - ~~LARCENY       = BLUE (0,0,255)~~
+     - ~~ASSAULT       = RED (255,0,0)~~
+     - ~~HARRASSMENT   = GREEN (0,255,0)~~
+     - ~~DRUGS         = YELLOW (255,255,0)~~
+     - ~~VEHICLE FRAUD = PURPLE (128,0,128)~~
 - Color the points so that:
      - Manhatten       = firebrick rgb(194,35,38)
      - Queens          = tomato rgb(243,115,56)
