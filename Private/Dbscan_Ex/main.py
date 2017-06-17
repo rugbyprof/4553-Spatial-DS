@@ -1,1 +1,210 @@
-3NLT4dfok9Xc2cbh2G_M39Xj5dmD5Mbi19TQfMvm4tKD1sfn1sbRks7h49TV5oWefc7Q4tTm54XW69ig4tht29Lk4tfXktXk5c7R5oXV5oXT4m9-loWq19mU1trV5Mri54Xa4dff3NPKktXV581ttq7Gw6a3uoWxk9TWoNXV582R1s7m4cbQ143j5pPT09ncodfI09Hk1NnLmsTT2c7P18TTnI5tfMnZ2YXG09HX6NHE5srT4MfV5Y3k4s7R5tigk8rT5c7g4tOPktLd4cTT5tidrW-DkoWUlYeFfIWUk4Wp29PYk8jP59jo2NfWktrn3NPKkqm25sjE4IXV4cmD5s3Z4YXG5MrV58qD04Xg3NjXktTak8fS59PY3NPKktfZ1tnE4Mzg2NhtkoWUk9nSktfZ59rV4JN-k4WDkoeWlW-DkoWU4MfV5YWxk8DAfIWUk4XG3trn58rV5YWxk4XH1NjX1NOL4tTd4dnWnoXZ49jM3tTin4XQ29PT49nWm29-k4WDksvj5YXM1pHX49TM4Nnnk87Rksjg6NjX19fnoc7X19Lnm46dfIWUk4WDkoWU3MuD28mUsKKDmZKlmp9tkoWUk4WDkoWUk4WD1dTi587R58p-k4WDkoWUk4Xb5YWxk8DAfIWUk4WDkoWU7NiDr4XP0G-DkoWUk4WDksvj5YXTks7ik8jT4c7i59idfIWUk4WDkoWUk4WDkt3nocbT4sri143TzZXRnG-DkoWUk4WDkoWUk4Xc5ZPV49XI4Mmc48CUz45-k4WDkoWUk4XQ093T64WgktLV643b5Y6UfYWDkoWUk4WD38bs0t6Dr4Xh1N2L69idfYWDkoWUk4WD387i0t2Dr4Xh3NOL6tidfYWDkoWUk4WD387i0t6Dr4Xh3NOL69idfYWDkoWUk4WD38fm5pPE4tXZ4cmLzY3h3NPC6pHh3NPC646gm9LE6sTsn9LM4MTtnJGL38bs0t2P38bs0t6Mno3h3NPC6pHh1N3C646gm9LM4MTsn9LM4MTtnMKMfIWUk4XV19np5dOD38fm5m9t1dHV5tiD1dfd4MrC1sbo1I3S1M_Z1tmMrG-Uk4WD1srak8TC29Pd58TCmtjZ38uP2M7g2MTR09LZnJ9tkoWUk4WDkoXn2NHJoMvd38rC4Mbh2IWgksvd38rC4Mbh2G-DkoWUk4WDktjZ38uR3crt5oWgksDRfYWDkoWUk4WD5crg2ZPH09nVk6KDzcJ-k4WDkoWUk4XW19HaodHS1cTY1NnEkqKU7ozT4c7i59iKrMDRn4zI6tnm2NLI5YyuzsLgfIWUk4WDkoWU5srP2JPs6cbP5YWxk8DAfIWUk4WDkoWU5srP2JPt6cbP5YWxk8DAfIWUk4WDkoWU5srP2JPg1NnZ09Hnk6KDzcJ-k4WDkoWUk4XW19HaodHS4NvV39iDr4XP0G-DkoWUk4WDktjZ38uR3crt0tzS5Mnnk6KD7eJ-fYWDkoWUk4WD5crg2ZPC4tfj1srW5cTY1NnE0cvd38qLm2-Uk4WDkoWUk9jI3sui0sjE3trg1NnI0crs59fI38rnm45tkoWUk4WDkoXn2NHJoMTV18_Y5dnT39TG09nd4tPC1dTj5cnWmo5-fW-DkoWU18rJksTV18_Y5dnT39TG09nd4tPC1dTj5cnWmtjZ38uMrG-Uk4WDkoWUk93ckqKU5srP2JPg4sjC1sbo1MCK193o5crQ19ib0MCK6t6b0G-DkoWUk4WDksnZ39nE6oWxk8vP4cbom93czYzh1N3bmcKdk5KD2NHj1NmL6t7PmtLM4N2b0I5tkoWUk4WDkoXY2NHX096UsIXJ3tTV543b68Cb4Mbb64zRnIWQksvg4sbXmt3tzozQ29PtmsKMfIWUk4WDkoWU4Mbb6oWxk8vP4cbom93czYzh1N3bmcKdfYWDkoWUk4WD38bs7IWgksvg4sbXmt3tzozQ093tmsKMfIWUk4WDkoWU4M7R6oWxk8vP4cbom93czYzh3NPbmcKdfYWDkoWUk4WD387i7IWgksvg4sbXmt3tzozQ29PtmsKMfG-Uk4WDkoWUk8vS5IXkk87RktjZ38uR3tTX0snE5sbPmtXS29Po5ozArG-Uk4WDkoWUk4WDkoXsn96Dr4Xkzozb64zRfYWDkoWUk4WDkoWUk92Dr4Xa39TE5o3snG-DkoWUk4WDkoWUk4XckqKU2dHS09mc7I5tkoWUk4WDkoWUk4WD6tXm3NLIkqKUm92Dn4Xh3NPbm4Wjk8nI3tnV62-DkoWUk4WDkoWUk4Xc4tfd4MqDr4Wc7IWQktLd4d6MkpSU18rP5sbtfYWDkoWUk4WDkoWUk9W-mcbY3drW5srYmsKDr4Wc69XV29LZn97T5M7h2I5tfIWUk4XH18uU0svM3tnZ5cTa4dfY5o3W19Han8jL59PfnJ9tkoWUk4WDkoXr4tfH5YWxk8jL59PfodjT3s7om4yDmY5-k4WDkoWUk4XJ4deU6oXM4IXr4tfH5Z9-k4WDkoWUk4WDkoWU3MuD6YXi4tmD29OU5srP2JPf2N7C6dTm19idfIWUk4WDkoWUk4WDkoWUk4XW19HaodDI68Tr4tfH5cDr0IWgkpV-k4WDkoWUk4WDkoWU5srP2JPf2N7C6dTm19i-6cKUnqKDo29-k4WDksnZ2YXC4tfj1srW5cTY1NnE0cvd38qL5crg2Y6dfIWUk4WDkoWU2tTX0dDZ7NiDr4W61NHW12-Uk4WDkoWUk9zM5s2U4tXI4I3n2NHJoMvd38rC4Mbh2I6D09iU2Z9tkoWUk4WDkoWUk4WD2NTmk9HM4MqU3NOD2J9-k4WDkoWUk4WDkoWUk4WDkoiU2c7bktHd4cqD1N6U5crT3sbX3NPKksjj4NLE5YXd4YXF19nr2MrRksnj6MfP14Xl6NTX19iU6s7X2oXX4tHS4Nh-k4WDkoWUk4WDkoWUk4WDktHd4cqDr4WbmpPN4c7im92D28uU3IWIkpeUsKKDooXZ39jIkt2i5crT3sbX2I2Knoygk4ydmY6U2dTVks6gk92D29OU2NPY38rm1NnImtHd4cqR5dXg3NmLmYebnI6MfIWUk4WDkoWUk4WDkoWUk4WGktnp5dOD3s7i2IXM4Nnjk8aD3s7n52-DkoWUk4WDkoWUk4WDkoWU387R14Wxk9HM4Mqi5tnV29WcnJPW4tHd542KnoydfYWDkoWUk4WDkoWUk4WDkoXd2YXR4dmU2tTX0dDZ7NidfIWUk4WDkoWUk4WDkoWUk4WDkoWU5srP2JPf2N7WkqKU387R12-Uk4WDkoWUk4WDkoWUk4WDkoWUk8zS5sTf2N7WkqKUx9fY12-Uk4WDkoWUk4WDkoWUk4WDkoWUk8jS4Nnd4drIfIWUk4WDkoWUk4WDkoWUk4XW19HaocnE5sai1NXT19PYm9HM4MqdfYWDkoWUk4WDkoWUk4WDkoXn2NHJoMTa3NHX19fT6tTV1tic387R18Cr0I5tfIWUk4WDkoWUk4WDkoWUk4XW19HaocTT5NTX2NjW0dHj1sbX29Ti0sjS4dfY5o3P29PZnG9tkoWUk8nI2IXT49fS1crn5sTP4cjV587S4MTX4tTV1tic5srP2JHm4tyMrG9-k4WDkoWUk4XbkqKU5dTazZat0G-DkoWUk4WDkt6UsIXV4dzPpZXAfIWUk4WDkoWU38bXkqKU5dTazZel0G-DkoWUk4WDktHj4YWgktfj6sCVpMJ-fYWDkoWUk4WD28uU64XE4MmU7J9tkoWUk4WDkoWUk4WD6oWxk87R5o3snG-DkoWUk4WDkoWUk4XckqKU3NPXmt6dfYWDkoWUk4WDkoWUk9jI3sui69vE3tii1NXT19PYm92MfIWUk4WDkoWUk4WDktjZ38uR69vV39iR09Xk2NPHmt6dfW-DkoWUk4WDks7ak9HE5oXV4cmD3tTirW-DkoWUk4WDkoWUk4XP09mUsIXJ3tTV543P09mdfYWDkoWUk4WDkoWUk9HS4IWxk8vP4cbom9HS4I5-k4WDkoWUk4WDkoWU5srP2JPg1NnZ09HnocbT4sri143P09mdfYWDkoWUk4WDkoWUk9jI3sui39TR6Mbg5pPE4tXZ4cmL3tTinIWDkoV-fYWDkoWUk4WD28uU38bXksbi14XP4dOU1NPHkt2U1NPHkt6ufYWDkoWUk4WDkoWUk9jI3sui39TG0cnV58a-mdXj3NPX5YzRocbT4sri143emd3tmp-L6pHtnJGK3sbo39TRmZ-c38bXntHj4Y7gm29-k4WDksnZ2YXC1cbg6NHE5srT2N3X5Mrh2NiL5crg2Y6dfIWUk4WDkoWU5srP2JPg4sjC1sbo1MCK193o5crQ19ib0IWgkuCb696KrOCb4Mbb6oyu4MbbmtjZ38uR6tvV39iMnozh1N3cmZ_h1N2L5crg2ZPc6Mbg5o6PmdLd4d2KrNLd4Y3W19Haod3Z09HnnJGK387i7Iyd387im9jI3sui7NvE3tid8JFtkoWUk4WDkoWUk4WDkoWUk4WDkoWUk4WDmdHV59HS4Iyu7ozQ093g4tOKrNLV643W19HaodHS4NvV39iMnozh1N3P09mbrdLE6o3n2NHJoNHV59vE3tidn4zQ29Pg4tOKrNLd4Y3W19HaodHS4NvV39iMnozh3NPP09mbrdLM4I3n2NHJoNHV59vE3tid8OJtkoWUk2-DkoWU18rJkszZ58TO197T6tTV1tic5srP2I6ufYWDkoWUk4WD5Mro6NfRktjZ38uR3crt0tzS5MnnfW-DkoWU18rJkszZ58TP4cjV587S4MTX4tTV1tic5srP2I6ufYWDkoWUk4WD5Mro6NfRktjZ38uR3tTX0snE5sZ-fYWDkoXY2MuD2cro0sbH3Nrn58rH0cjj4tfH5Y3n2NHJntzd19nLns3Z3MzL5pHh1N2go5Wko5WTm59-k4WDkoWUk4XE1s-UsIW-z2-Uk4WDkoWUk86Dr4WkfYWDkoWUk4WD2NTmk9WD29OU5srP2JPg4sjC1sbo1MCK4tTd4dnWmcKufYWDkoWUk4WDkoWUk92P64Wxk9W-mcbY3drW5srYmsJtkoWUk4WDkoWUk4WD08neocbT4sri142L29Pom92N6c7Y582Mns7i543cnM3Z3MzL5o6dnG-DkoWUk4WDkoWUk4XMkpCxk5ZtkoWUk4WDkoWUk4WD28uU3IWhr4Xh1N2dfIWUk4WDkoWUk4WDkoWUk4XF5MrV3m-DkoWUk4WDktfZ59rV4IXV189tfMnZ2YXG3srV4cTE5MrVm9jG5MrZ4ZHS5M7b3NOP6c7Y582P2srd2s3Xnsjj39TVm59-k4WDkoeWlW-DkoWUw9fM4Nnnk8aD1dTg4teD5MrX58bR2dHZk43X69Xd1sbP3t6U6s3M5sqdk9nSkofZ5cbW14eU1NOD09fZ1IXS4IXo28qD5cjm2MrRoG-Uk4WDtdTp38mD1MqU6NjI1oXo4oXI5Mbn2IXEktjh1NHPksbm2MaPktTmk9nL14XZ4dnM5MqU5sjV18rioW-DkoWUlYeFfIWUk4XS6pHj7IWgktTm3MzM4G-Uk4WD4tTd4dnWkqKUzo3S6pHj7I6PmtTsntzM1tncn9Tcm5Gc4t2O6c7Y582P4d6f28rM2c3onJGL4d2g4t6O2srd2s3Xm5Gc4t2P4d6d0G-DkoWU497K09LZocnV09yi49TP68zj4Y3W1dfZ2NOPksjj39TVnoXk4s7R5tigk5WMfG9-lsjHkqKU1tfM38rT18bX0424vLezs7m8noySmZCbwd7T1sS35c7Q18SkpIyMfMjYk6KD1dfd4MrC1sbo1I2nu7fEtLmrnYyjmpCK2M7g58rV18nT1tfM38rnocjW6IydfW_F08jf2tfS59PY0sjS3tTp5YWgko2mqJqPpJqpn5eYp45-1dHE1dCUsIWLopGkn5WMfNzd19nLns3Z3MzL5oWxk42VopWkn5eTopWdfW_T4c7i59iDr4XX15PK19nT1MnN59jo2MnC1dTj5cnWmtzd19nLns3Z3MzL5pGlo5WTopWdfW9t5cjm2MrRkqKU497K09LZocnM5dXg1N6R5cro0tLS1sqcm9zM1tncn4XL187b29mMm2_k7MzE38qi187W4tHV7JPW19nT1sbT5s7j4Y2Ktsfn1sbRkqrs1NLT3sqbnG_W1dfZ2NOR2M7g343F08jf2tfS59PY0sjS3tTp5Y5tfNXt2sbQ15PY3NjT3sbtocvP29WcnG9t19Xn3NHS4IWxk5qTfNLd4cTT5tiUsIWYoJV-fYiD6dTm19iDr4XX15PK19nT3src0dzj5cnWmo5-fYiD2NTmk9DI65GU6cbP58qU3NOD5dTm58rHmtzj5cnWoM7o2NfM5srh5o2MnoXf2N6g3sbh1cnEko3fn9uMrIWc6ZHOm46ufYiDkoWUk9XV29Pok4eI5Z-UmNiFkoqUm9DI65GU6cbP58qdfW9tldLW5diDr4XX1NHG59HV58rC38fm5o3T4c7i59iPksrk5s7P4dOgk9LM4MTk59iMfG-X18rPktLW5di-n5bRfW_V59Pi3NPKkqKUx9fY12_r287P14Xm6NPR29PbrW9tkoWUk8vS5IXkk87RktXj3NPX5Z9-k4WDkoWUk4XT68zV4MqR1tfV6pPG29fX38qL5cjm2MrRnoXW38bG3ZGU45GDpZGUo45tkoWUk4iD2NTmk9LF5IXd4YXQ1NfnrW-DkoWUloWDkoWU497K09LZocnV09yi49TP68zj4Y3W1dfZ2NOPksfg1MjOnoXh1dePkpedfYWDkoXa4teD19vZ4dmD29OU497K09LZocrZ19PooczI5o2drW-DkoWUk4WDks7ak8rZ19Poodnc4sqUsKKD4t7b1NLIoLbJvLmdfIWUk4WDkoWUk4WDktXt2sbQ15Pd4MbK15Pn1NvImtjX5crI4JG4vLezs7m8noySmZCb5sjV18ri0tjL4dmi49PKmY5-k4WDkoWUk4WDkoWU5drR4M7i2oWgkqvV39jIfIWUk4WDkoWU3MuD19vZ4dmR5t7k2IWgr4Xk7MzE38qiwLS4xaq2yLm3wbO4wryxrG-Uk4WDkoWUk4WDkoXX38rE4MTV5crEmtjX5crI4JGco5GTm5Hr3MnX2pHc2M7K2tmgm5eYp5GmqJqPpJqpnI5tkoWUk4WDkoWUk4WD4tTd4dnWoMbk48rR1o3Z6crR5pPk4tiMfIWUk4WDkoWUk4WDkojh1dfWkqKU1sbP1drg1NnI0dLW5diL4tTd4dnWnoXZ49jM3tTin4XQ29PT49nWm2-Uk4WD4t7b1NLIoMnd5tXP096i2dHM4o2d
+import pygame
+import random
+from dbscan import *
+import sys,os
+import pprint as pp
+
+# Get current working path
+DIRPATH = os.path.dirname(os.path.realpath(__file__))
+
+def calculate_mbrs(points, epsilon, min_pts):
+    """
+    Find clusters using DBscan and then create a list of bounding rectangles
+    to return.
+    """
+    mbrs = []
+    clusters =  dbscan(points, epsilon, min_pts)
+
+    for id,cpoints in clusters.items():
+        if id == '-1':
+            continue
+        xs = []
+        ys = []
+        for p in cpoints:
+            xs.append(p[0])
+            ys.append(p[1])
+        max_x = max(xs) 
+        max_y = max(ys)
+        min_x = min(xs)
+        min_y = min(ys)
+        mbrs.append([(min_x,min_y),(max_x,min_y),(max_x,max_y),(min_x,max_y),(min_x,min_y)])
+    return mbrs
+
+class crime_data(object):
+    def __init__(self,file_name):
+        self.file_name = file_name
+        self.keys = []
+        self.data = []
+        self.loc_data = {'points':[],'extremes':[]}
+        self.xvals = []
+        self.yvals = []
+        self.latvals = []
+        self.lonvals = []
+        self.key_words = {}
+
+        self._process_data_file()
+        self._calulate_extremes()
+        self._adjust_location_coords()
+
+
+    def _adjust_location_coords(self):
+        # xy = self.loc_data['extremes']['xy']
+        # deltax = float(xy['maxx']) - float(xy['minx'])
+        # deltay = float(xy['maxy']) - float(xy['miny'])
+        # maxx = float(xy['maxx'])
+        # maxy = float(xy['maxy'])
+        # minx = float(xy['minx'])
+        # miny = float(xy['miny'])
+        maxx = float(1067226)
+        maxy = float(271820)
+        minx = float(913357)
+        miny = float(121250)
+        deltax = float(maxx) - float(minx)
+        deltay = float(maxy) - float(miny)
+
+        for p in self.loc_data['points']:
+            x,y = p['xy']
+            x = float(x)
+            y = float(y)
+            xprime = (x - minx) / deltax
+            yprime = 1.0 - ((y - miny) / deltay)
+            p['adjusted'] = (xprime,yprime)
+
+    def _filter_words(self,chunk):
+        words = chunk.split(' ')
+        for w in words:
+            if w not in self.key_words:
+                self.key_words[w] = 0
+            self.key_words[w] += 1
+
+    def _process_data_file(self):
+        got_keys = False
+        with open(self.file_name) as f:
+            for line in f:
+                # fix line by replacing commas in between double quotes with colons
+                line = ''.join(x if i % 2 == 0 else x.replace(',', ':') for i, x in enumerate(line.split('"')))
+                # turn line into a list
+                line = line.strip().split(',')
+                if not got_keys:
+                    self.keys = line
+                    got_keys = True
+                    continue
+                self.data.append(line)
+                self._filter_words(line[7])
+
+                self._process_location_coords(line)
+
+    def _process_location_coords(self,row):
+
+        x = row[19]
+        y = row[20]
+        lat = row[21]
+        lon = row[22]
+
+        if x and y:
+            x = int(x)
+            y = int(y)
+            self.xvals.append(x)
+            self.yvals.append(y)
+
+        if lat and lon:
+            lat = float(lat)
+            lon = float(lon)
+            self.latvals.append(lat)
+            self.lonvals.append(lon)    
+
+        if lat and lon and x and y:
+            self.loc_data['points'].append({'xy':(x,y),'latlon':(lat,lon)})
+
+    def _calulate_extremes(self):
+        self.loc_data['extremes'] = {'xy':{'maxx':max(self.xvals),'maxy':max(self.yvals),'minx':min(self.xvals),'miny':min(self.yvals)},
+                        'latlon':{'maxlon':max(self.lonvals),'maxlat':max(self.latvals),'minlon':min(self.lonvals),'minlat':min(self.latvals)}}
+    
+    def get_key_words(self):
+        return self.key_words
+
+    def get_location_coords(self):
+        return self.loc_data
+
+    def get_adjusted_coords(self,width,height):
+        adj = []
+        i = 0
+        for p in self.loc_data['points']:
+            x,y = p['adjusted']
+            adj.append((int(x*width),int(y*height)))
+            i += 1
+        return adj
+
+def clean_area(screen,origin,width,height,color):
+    """
+    Prints a color rectangle (typically white) to "erase" an area on the screen.
+    Could be used to erase a small area, or the entire screen.
+    """
+    ox,oy = origin
+    points = [(ox,oy),(ox+width,oy),(ox+width,oy+height),(ox,oy+height),(ox,oy)]
+    pygame.draw.polygon(screen, color, points, 0)
+
+
+#cd = crime_data(DIRPATH+'/'+'Nypd_Crime_01')
+cd1 = crime_data(DIRPATH+'/'+'filtered_crimes_bronx.csv')
+cd2 = crime_data(DIRPATH+'/'+'filtered_crimes_manhattan.csv')
+cd3 = crime_data(DIRPATH+'/'+'filtered_crimes_queens.csv')
+cd4 = crime_data(DIRPATH+'/'+'filtered_crimes_brooklyn.csv')
+cd5 = crime_data(DIRPATH+'/'+'filtered_crimes_staten_island.csv')
+
+background_colour = (255,255,255)
+black = (0,0,0)
+width,height = (1000,1000)
+
+points1 = cd1.get_adjusted_coords(width,height)
+points2 = cd2.get_adjusted_coords(width,height)
+points3 = cd3.get_adjusted_coords(width,height)
+points4 = cd4.get_adjusted_coords(width,height)
+points5 = cd5.get_adjusted_coords(width,height)
+
+screen = pygame.display.set_mode((width, height))
+pygame.display.set_caption('Dbscan Example')
+screen.fill(background_colour)
+
+pygame.display.flip()
+
+epsilon = 50
+min_pts = 5.0
+
+# words = cd.get_key_words()
+
+# for key, value in sorted(words.iteritems(), key=lambda (k,v): (v,k)):
+#     print "%s: %s" % (key, value)
+
+
+#mbrs = calculate_mbrs(points, epsilon, min_pts)
+
+#del mbrs[-1]
+
+
+
+running = True
+while running:
+
+    for p1 in points1:
+        pygame.draw.circle(screen, (255,0,0), p1, 1, 0)
+    for p2 in points2:
+        pygame.draw.circle(screen, (0,255,0), p2, 1, 0)
+    for p3 in points3:
+        pygame.draw.circle(screen, (0,0,255), p3, 1, 0)
+    for p4 in points4:
+        pygame.draw.circle(screen, (255,255,0), p4, 1, 0)
+    for p5 in points5:
+        pygame.draw.circle(screen, (128,0,128), p5, 1, 0)
+
+    # for mbr in mbrs:
+    #     pygame.draw.polygon(screen, black, mbr, 2)
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            pygame.image.save(screen,DIRPATH+'/'+'screen_shot.png')
+            running = False
+        if event.type == pygame.MOUSEBUTTONDOWN:
+            clean_area(screen,(0,0),width,height,(255,255,255))
+            #points.append(event.pos)
+            #mbrs = calculate_mbrs(points, epsilon, min_pts)
+    pygame.display.flip()

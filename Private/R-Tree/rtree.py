@@ -1,1 +1,2 @@
-fcjP09jnk7fE4Mnj4G8=
+
+class Random
