@@ -55,13 +55,16 @@ Each of these files contains crimes dealing with:
 - Use `pygame.image.save(screen , path_to_image)` to save your screen to a 'png' formatted image named `crimes_burough_name.png`. 
 - Make the screen size 2000x2000. This may look poor on your individual machines, but by saving the screen to an image will make it easily viewable.
 - Use the minimum and maximum coordinate values from all 5 files. If you simply process one file at a time, it will spread the points out within the entire 2000x2000 screen, and we want to see each burough in relation to the others. Here are the extreme coords:
-    - MaxX: 1067226
-    - MaxY: 271820
-    - MinX: 913357
-    - MinY: 121250
-    
 
-    
+```json
+{
+ "MaxX": 1067226,
+ "MaxY": 271820,
+ "MinX": 913357,
+ "MinY": 121250
+ }
+```
+   
 - At the top right of your screen write the `burough` name 
 - Set your `eps` and `min` pts to values that create many small clusters. If I can, I will post an example of my output.
 - Color the points so that:
