@@ -22,16 +22,52 @@ The points ***must*** be scaled so that visualization of unique clusters will no
 | ![](https://d3vv6lp55qjaqc.cloudfront.net/items/28462H2A361E0r3F0K14/Screenshot%202017-06-15%2019.23.55.png?X-CloudApp-Visitor-Id=1094421) |
 | Example output with scaling points to screen |
 
+|       |
+|:------:|
+| ![] https://d3vv6lp55qjaqc.cloudfront.net/items/20121R0e3Y3T2u2P2Q45/screen_shot_400x.png) |
+| Example output showing all 5 buroughs in different colors |
+
 There is a starter code package [HERE](https://github.com/rugbyprof/4553-Spatial-DS/tree/master/Resources/Dbscan_Ex) that contains the following files:
 
 - dbscan.py (DBscan implementation)
 - main.py (driver file to show basic usage)
 
 
-There is another folder [HERE](https://github.com/rugbyprof/4553-Spatial-DS/tree/master/Resources/NYPD_CrimeData)  that holds a bunch of NY City crime data. 
+There is another folder [HERE](https://github.com/rugbyprof/4553-Spatial-DS/tree/master/Resources/NYPD_CrimeData)  that holds files dealing with NYC crime data. You will need to open and process the following files:
+
+- filtered_crimes_bronx.csv
+- filtered_crimes_brooklyn.csv
+- filtered_crimes_manhattan.csv
+- filtered_crimes_queens.csv
+- filtered_crimes_staten_island.csv
+
+Each of these files contains crimes dealing with:
+
+ - LARCENY
+ - ASSAULT
+ - HARRASSMENT
+ - DRUGS
+ - VEHICLE FRAUD
 
 ### Requirements
 
-- Plot each point from all four files. ( I may redact this based on pygames ability to handle so many points)
-- Scale points so they are easily viewable on a 1024 by 768 screen size.
-- colors to come later based on key words and crimes.
+- Plot the points from all five buroughs on seperate screens.
+- Use `pygame.image.save(screen , path_to_image)` to save your screen to a 'png' formatted image named `crimes_burough_name.png`. 
+- Make the screen size 2000x2000. This may look poor on your individual machines, but by saving the screen to an image will make it easily viewable.
+- Use the minimum and maximum coordinate values from all 5 files. If you simply process one file at a time, it will spread the points out within the entire 2000x2000 screen, and we want to see each burough in relation to the others. Here are the extreme coords:
+    - MaxX: 1067226
+    - MaxY: 271820
+    - MinX: 913357
+    - MinY: 121250
+    
+
+    
+- At the top right of your screen write the `burough` name 
+- Set your `eps` and `min` pts to values that create many small clusters. If I can, I will post an example of my output.
+- Color the points so that:
+     - LARCENY       = BLUE (0,0,255)
+     - ASSAULT       = RED (255,0,0)
+     - HARRASSMENT   = GREEN (0,255,0)
+     - DRUGS         = YELLOW (255,255,0)
+     - VEHICLE FRAUD = PURPLE (128,0,128)
+- Extra credit if you color the 
