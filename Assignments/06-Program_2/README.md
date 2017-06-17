@@ -19,7 +19,7 @@ The points ***must*** be scaled so that visualization of unique clusters will no
 
 |       |
 |:------:|
-| ![](https://d3vv6lp55qjaqc.cloudfront.net/items/28462H2A361E0r3F0K14/Screenshot%202017-06-15%2019.23.55.png?X-CloudApp-Visitor-Id=1094421) |
+| ![](https://d3vv6lp55qjaqc.cloudfront.net/items/461T0v0q272z3k0M1f2c/screen_shot_400x-bw.png) |
 | Example output with scaling points to screen |
 
 |       |
