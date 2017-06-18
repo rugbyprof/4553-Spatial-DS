@@ -3,6 +3,7 @@ import random
 from dbscan import *
 import sys,os
 import pprint as pp
+import math
 
 # Get current working path
 DIRPATH = os.path.dirname(os.path.realpath(__file__))
@@ -70,13 +71,6 @@ class crime_data(object):
             yprime = 1.0 - ((y - miny) / deltay)
             p['adjusted'] = (xprime,yprime)
 
-    def _filter_words(self,chunk):
-        words = chunk.split(' ')
-        for w in words:
-            if w not in self.key_words:
-                self.key_words[w] = 0
-            self.key_words[w] += 1
-
     def _process_data_file(self):
         got_keys = False
         with open(self.file_name) as f:
@@ -90,15 +84,13 @@ class crime_data(object):
                     got_keys = True
                     continue
                 self.data.append(line)
-                self._filter_words(line[7])
-
                 self._process_location_coords(line)
 
     def _process_location_coords(self,row):
 
-        x = row[19]
-        y = row[20]
-        lat = row[21]
+        x = row[19]                 # get x val from list
+        y = row[20]                 # get y val from list
+        lat = row[21]               # get lat / lon from list
         lon = row[22]
 
         if x and y:
@@ -120,8 +112,6 @@ class crime_data(object):
         self.loc_data['extremes'] = {'xy':{'maxx':max(self.xvals),'maxy':max(self.yvals),'minx':min(self.xvals),'miny':min(self.yvals)},
                         'latlon':{'maxlon':max(self.lonvals),'maxlat':max(self.latvals),'minlon':min(self.lonvals),'minlat':min(self.latvals)}}
     
-    def get_key_words(self):
-        return self.key_words
 
     def get_location_coords(self):
         return self.loc_data
@@ -131,9 +121,26 @@ class crime_data(object):
         i = 0
         for p in self.loc_data['points']:
             x,y = p['adjusted']
+            y = 1 - y
             adj.append((int(x*width),int(y*height)))
             i += 1
         return adj
+
+def count_neighbors(points,eps):
+    avg_nbrs = {}
+    for i in range(len(points)):
+        print(i)
+        avg_nbrs[i] = 0
+        for j in range(len(points)):
+            d = distance(points[i],points[j])
+            if d == 0:
+                continue
+            if d < eps:
+                avg_nbrs[i] += 1
+    return avg_nbrs 
+
+def distance(p0, p1):
+    return math.sqrt((p0[0] - p1[0])**2 + (p0[1] - p1[1])**2)
 
 def clean_area(screen,origin,width,height,color):
     """
@@ -144,6 +151,7 @@ def clean_area(screen,origin,width,height,color):
     points = [(ox,oy),(ox+width,oy),(ox+width,oy+height),(ox,oy+height),(ox,oy)]
     pygame.draw.polygon(screen, color, points, 0)
 
+data_folder = "/code/repos/4553-Spatial-DS/Resources/NYPD_CrimeData/"
 
 #cd = crime_data(DIRPATH+'/'+'Nypd_Crime_01')
 cd1 = crime_data(DIRPATH+'/'+'filtered_crimes_bronx.csv')
@@ -151,6 +159,11 @@ cd2 = crime_data(DIRPATH+'/'+'filtered_crimes_manhattan.csv')
 cd3 = crime_data(DIRPATH+'/'+'filtered_crimes_queens.csv')
 cd4 = crime_data(DIRPATH+'/'+'filtered_crimes_brooklyn.csv')
 cd5 = crime_data(DIRPATH+'/'+'filtered_crimes_staten_island.csv')
+# cd1 = crime_data('/code/repos/4553-Spatial-DS/Resources/NYPD_CrimeData/data_by_crime/Assault_Bronx.csv')
+# cd2 = crime_data('/code/repos/4553-Spatial-DS/Resources/NYPD_CrimeData/data_by_crime/Assault_Brooklyn.csv')
+# cd3 = crime_data('/code/repos/4553-Spatial-DS/Resources/NYPD_CrimeData/data_by_crime/Assault_Manhattan.csv')
+# cd4 = crime_data('/code/repos/4553-Spatial-DS/Resources/NYPD_CrimeData/data_by_crime/Assault_Queens.csv')
+# cd5 = crime_data('/code/repos/4553-Spatial-DS/Resources/NYPD_CrimeData/data_by_crime/Assault_Staten_Island.csv')
 
 background_colour = (255,255,255)
 black = (0,0,0)
@@ -168,34 +181,30 @@ screen.fill(background_colour)
 
 pygame.display.flip()
 
-epsilon = 50
-min_pts = 5.0
+# epsilon = 5
+# min_pts = 5.0
 
-# words = cd.get_key_words()
-
-# for key, value in sorted(words.iteritems(), key=lambda (k,v): (v,k)):
-#     print "%s: %s" % (key, value)
+# avgnbs = count_neighbors(points1,5)
+# print(avgnbs)
 
 
-#mbrs = calculate_mbrs(points, epsilon, min_pts)
+#mbrs1 = calculate_mbrs(points1, epsilon, min_pts)
 
 #del mbrs[-1]
-
-
 
 running = True
 while running:
 
     for p1 in points1:
-        pygame.draw.circle(screen, (255,0,0), p1, 1, 0)
+        pygame.draw.circle(screen, (2,120,120), p1, 1, 0)
     for p2 in points2:
-        pygame.draw.circle(screen, (0,255,0), p2, 1, 0)
+        pygame.draw.circle(screen, (194,35,38), p2, 1, 0)
     for p3 in points3:
-        pygame.draw.circle(screen, (0,0,255), p3, 1, 0)
+        pygame.draw.circle(screen, (243,115,56), p3, 1, 0)
     for p4 in points4:
-        pygame.draw.circle(screen, (255,255,0), p4, 1, 0)
+        pygame.draw.circle(screen, (128,22,56), p4, 1, 0)
     for p5 in points5:
-        pygame.draw.circle(screen, (128,0,128), p5, 1, 0)
+        pygame.draw.circle(screen, (253,182,50), p5, 1, 0)
 
     # for mbr in mbrs:
     #     pygame.draw.polygon(screen, black, mbr, 2)
@@ -205,6 +214,6 @@ while running:
             running = False
         if event.type == pygame.MOUSEBUTTONDOWN:
             clean_area(screen,(0,0),width,height,(255,255,255))
-            #points.append(event.pos)
-            #mbrs = calculate_mbrs(points, epsilon, min_pts)
+            # points.append(event.pos)
+            # mbrs = calculate_mbrs(points, epsilon, min_pts)
     pygame.display.flip()
