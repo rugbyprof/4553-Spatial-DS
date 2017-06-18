@@ -21,15 +21,10 @@ The points ***must*** be scaled so that visualization of unique clusters will no
 | ![](https://d3vv6lp55qjaqc.cloudfront.net/items/2P150Z2E3y0l1u0H1v17/Screenshot%202017-06-15%2019.20.16.png) |
 | Formula to scale values to some range.|
 
-|       |
-|:------:|
-| ![](https://d3vv6lp55qjaqc.cloudfront.net/items/461T0v0q272z3k0M1f2c/screen_shot_400x-bw.png) |
-| Example output with scaling points to screen |
-
-|       |
-|:------:|
-| ![](https://d3vv6lp55qjaqc.cloudfront.net/items/20121R0e3Y3T2u2P2Q45/screen_shot_400x.png) |
-| Example output showing all 5 buroughs in different colors |
+|       |       |
+|:------:|:------:|
+| ![](https://d3vv6lp55qjaqc.cloudfront.net/items/461T0v0q272z3k0M1f2c/screen_shot_400x-bw.png) | ![](https://d3vv6lp55qjaqc.cloudfront.net/items/20121R0e3Y3T2u2P2Q45/screen_shot_400x.png) |
+| Example output with scaling points to screen |Example output showing all 5 buroughs in different colors |
 
 There is a starter code package [HERE](https://github.com/rugbyprof/4553-Spatial-DS/tree/master/Resources/Dbscan_Ex) that contains the following files:
 
