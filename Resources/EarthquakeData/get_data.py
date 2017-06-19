@@ -31,11 +31,13 @@ def get_earth_quake_data(month,year,minmag=None,maxmag=None,query=True):
         return r
 
 
-years = [x for x in range(1990,2017)]
-months = [x for x in range(1,12)]
+years = [x for x in range(1960,2017)]
+months = [x for x in range(0,12)]
 
 for y in years:
+    print("Year:%s" % (y))
     for m in months:
-        r = get_earth_quake_data(m,y,1,4,False)
+        print("Month:%s" % (m))
+        r = get_earth_quake_data(m,y,6,None,False)
         print(r)
 
