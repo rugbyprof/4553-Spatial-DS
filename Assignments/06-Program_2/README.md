@@ -23,7 +23,7 @@ The points ***must*** be scaled so that visualization of unique clusters will no
 
 |       |       |
 |:------:|:------:|
-| ![](https://d3vv6lp55qjaqc.cloudfront.net/items/461T0v0q272z3k0M1f2c/screen_shot_400x-bw.png) | ![](https://d3vv6lp55qjaqc.cloudfront.net/items/20121R0e3Y3T2u2P2Q45/screen_shot_400x.png) |
+| ![](https://d3vv6lp55qjaqc.cloudfront.net/items/461T0v0q272z3k0M1f2c/screen_shot_400x-bw.png) | ![](https://d3vv6lp55qjaqc.cloudfront.net/items/1j3R3y2n1c1Q3c0A2R0p/screen_shot_400.png) |
 | Example output with scaling points to screen |Example output showing all 5 buroughs in different colors |
 
 There is a starter code package [HERE](https://github.com/rugbyprof/4553-Spatial-DS/tree/master/Resources/Dbscan_Ex) that contains the following files:
