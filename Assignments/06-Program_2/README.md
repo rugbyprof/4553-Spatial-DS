@@ -86,8 +86,9 @@ So we will plot the above crimes for each burough in NYC. This will help keep yo
 
 #### Deliverables
 
-- Turn the following in at the beginning of class Monday:
+- Make sure github has all your files by 5pm Monday.
   - Create a folder called `program_2` and put this into your `Assignments` folder making sure all of your files are in this folder.
+- Turn the following in at the beginning of class Monday:
   - Top page is a screen shot, with your name and printout formatted like this: [example](https://github.com/rugbyprof/4553-Spatial-DS/blob/master/Assignments/06-Program_2/example_screenshot.md)
   - Print out of `main.py` (comment your code based on [this](https://github.com/rugbyprof/4553-Spatial-DS/blob/master/Resources/example_commenting.md))
 
