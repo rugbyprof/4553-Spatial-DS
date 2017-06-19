@@ -84,6 +84,12 @@ So we will plot the above crimes for each burough in NYC. This will help keep yo
      - Bronx           = teal rgb(2,120,120)
      - Brooklyn        = brown rgb(128,22,56)
 
+#### Deliverables
+
+- Top page is a screen shot, with your name and printout formatted like this: [example](https://github.com/rugbyprof/4553-Spatial-DS/blob/master/Assignments/06-Program_2/example_screenshot.md)
+- Print out of `main.py` (comment your code based on [this](https://github.com/rugbyprof/4553-Spatial-DS/blob/master/Resources/example_commenting.md))
+
+
 # Part 2
 
 Coming soon ...
