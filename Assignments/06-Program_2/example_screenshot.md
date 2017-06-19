@@ -1,3 +1,5 @@
-- Student Name
-- Program 2a - Plotting Points
+## Program 2A
+### First Lastname
+
+![](screen_shot.png)
 
