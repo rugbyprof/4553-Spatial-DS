@@ -10,6 +10,7 @@ Program 3 Starter Files
     - You can adjust how much data by creating a list of years:
         - `years = [2017] ` gives data for 2017
         - `years = [2000,2001,2002,2003,2004,2005] ` gives data for years 2000-3005
+        - Right now its hard coded for magnitudes greater than 5.0, but that can be changed easily.
     - It saves a file for each year: `quake-xxxx.json` where `xxxx` is  the year
     - It also saves a condensed version, with a small subset of the original quake data:
         - `quake-xxxx-condensed.json`
