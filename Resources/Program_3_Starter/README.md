@@ -22,7 +22,7 @@ Program 3 Starter Files
 
 ### File Explanations
 
-- First, any file with a `.pyc` extension on it, delete it. Python creates a `python cache` file, and its usually based on your local path, so delete any if they are left. After you run some of the files, more `.pyc` files will appear. It's ok.
+- First, any file that has a `.pyc` extension, delete it. Python creates a `python cache` file, and its usually based on your local path, so delete any if they are left. After you run some of the files, more `.pyc` files will appear. It's ok.
 
 #### dbscan.py
 - Implementation of dbscan we are using. No nead to edit anything here.
