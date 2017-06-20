@@ -40,6 +40,7 @@
 #             append point to cluster
 
 from math import pow, sqrt
+import math 
 import pprint as pp
 
 class Point(object):
@@ -74,14 +75,17 @@ def print_points(points):
         s += str(p) + '\n'
     return s[:-2]
 
-def euclidean(x,y):
-    ''' calculate the euclidean distance between x and y.'''
-    # sqrt((x0-y0)^2 + ... (xN-yN)^2)
-    assert len(x) == len(y)
-    sum = 0.0
-    for i in range(len(x)):
-        sum += pow(x[i] - y[i],2)
-    return sqrt(sum)
+# def euclidean(x,y):
+#     ''' calculate the euclidean distance between x and y.'''
+#     # sqrt((x0-y0)^2 + ... (xN-yN)^2)
+#     assert len(x) == len(y)
+#     sum = 0.0
+#     for i in range(len(x)):
+#         sum += pow(x[i] - y[i],2)
+#     return sqrt(sum)
+
+def euclidean(p0, p1):
+    return math.sqrt((p0[0] - p1[0])**2 + (p0[1] - p1[1])**2)
 
 def immediate_neighbours(point, all_points, epsilon, distance, debug):
     ''' find the immediate neighbours of point.'''
@@ -148,6 +152,7 @@ def dbscan(points, epsilon, min_pts, distance=euclidean, debug=False):
     clusters = {}     # each cluster is a list of points
     clusters[-1] = [] # store all the points deemed noise here. 
     current_cluster = -1
+
     for point in points:
         if not point.visited:
             point.visited = True

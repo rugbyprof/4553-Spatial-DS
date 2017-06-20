@@ -1,15 +1,25 @@
-import pprint as pp
 import os,sys
 import glob
 
-
 class FileHelper(object):
+    """
+    This class helps read the NYC crime data.
+    Usage:
+        fh = FileHelper('.')  # declare instance of class with path to the NYC data folder
+
+        data = fh.get_data(borough='manhattan',crime='larceny') # returns all larcenys from manhattan
+        data = fh.get_data(borough='manhattan') # returns all crimes from manhattan
+        data = fh.get_data(crime='larceny') # returns all larcenys from all boroughs
+    """
     def __init__(self,directory):
         self.directory = directory
         self.data_by_borough = glob.glob(self.directory+'data_by_borough/*.csv')
         self.data_by_crime = glob.glob(self.directory+'data_by_crime/*.csv')
 
     def get_data(self,borough=None,crime=None):
+        """
+        Grabs data from directory of files based on params 
+        """
         data = []
 
         assert borough is not None or crime is not None
@@ -45,7 +55,10 @@ class FileHelper(object):
         return data
 
 if __name__=='__main__':
-
-    fh = FileHelper('/code/repos/4553-Spatial-DS/Resources/NYPD_CrimeData/')
+    path = '/code/repos/4553-Spatial-DS/Resources/NYPD_CrimeData/'
+    while not os.path.isdir(path):
+        path = raw_input("Please enter a path to your NYC data (with trailing slash): ")
+        
+    fh = FileHelper(path)
     data = fh.get_data(borough='manhattan',crime='larceny')
     print(data)

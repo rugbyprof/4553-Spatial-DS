@@ -2,7 +2,6 @@ import pprint as pp
 import os,sys
 import glob
 
-
 class FileHelper(object):
     def __init__(self,directory):
         self.directory = directory
@@ -45,7 +44,5 @@ class FileHelper(object):
         return data
 
 if __name__=='__main__':
-
     fh = FileHelper('/code/repos/4553-Spatial-DS/Resources/NYPD_CrimeData/')
     data = fh.get_data(borough='manhattan',crime='larceny')
-    print(data)
