@@ -29,3 +29,18 @@ Program 3 Starter
 ### *.json
 - Any file ending with a `json` is a data file created previously. 
 - Most likely not needed if you create your own. 
+
+## Usage of Files
+
+1. run `find_clusters.py` 
+    - `python find_clusters.py` 
+    - You can change the output file or data retreived by changing the following two lines:
+        - `output_file = 'mbrs_manhatten_drugs.json'`
+        - `data = fh.get_data(borough='manhattan',crime='drugs')`
+2. run `display_clusters.py`
+    - `python display_clusters.py`
+    - You will need to change this line `f = open('mbrs_manhatten_drugs.json','r')` if you created a different `json` file using `find_clusters.py`
+    - You will also need to experiment with `eps` and `min_pts`. I used:
+        - `eps = 400`
+        - `min_pts = 5`
+    - for `mbrs_manhatten_drugs.json` because of the large x,y values before adjusting.
