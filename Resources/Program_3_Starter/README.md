@@ -9,7 +9,7 @@ Program 3 Starter Files
 
 1. run `find_clusters.py` 
     - `python find_clusters.py` 
-    - You can change the output file or data retreived by changing the following two lines:
+    - You can change the output file or data retrieved by changing the following two lines:
         - `output_file = 'mbrs_manhatten_drugs.json'`
         - `data = fh.get_data(borough='manhattan',crime='drugs')`
 2. run `display_clusters.py`
