@@ -24,6 +24,7 @@ screen.blit(bg, (0, 0))
 
 - Make sure you do a screen shot of your output: `pygame.image.save(screen,DIRPATH+'/'+'screen_shot.png')`
 - Extra credit if anyone can make the earthquakes appear a year at a time in an additive manner.
+- Extra credit if you want to show clusters. 
 
 ### Deliverables
 
