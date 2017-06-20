@@ -5,6 +5,7 @@ Program 3 Starter Files
 
 ### Usage of Files
 
+1. run `pip install requests` to install correct library for getting files.
 1. run `get_quake_points.py` 
     - `python get_quake_points.py` 
     - You can adjust how much data by creating a list of years:
