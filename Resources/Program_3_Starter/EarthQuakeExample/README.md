@@ -7,7 +7,7 @@ Program 3 Starter Files
 
 1. run `get_quake_points.py` 
     - `python get_quake_points.py` 
-    - You can adjust how data by creating a list of years:
+    - You can adjust how much data by creating a list of years:
         - `years = [2017] ` gives data for 2017
         - `years = [2000,2001,2002,2003,2004,2005] ` gives data for years 2000-3005
     - It saves a file for each year: `quake-xxxx.json` where `xxxx` is  the year
