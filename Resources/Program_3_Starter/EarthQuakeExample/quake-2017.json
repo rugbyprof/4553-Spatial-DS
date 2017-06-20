@@ -11,6 +11,246 @@
         {
             "geometry": {
                 "coordinates": [
+                    102.0433,
+                    -4.2092,
+                    74.84
+                ],
+                "type": "Point"
+            },
+            "id": "us20009nrs",
+            "properties": {
+                "alert": null,
+                "cdi": null,
+                "code": "20009nrs",
+                "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=us20009nrs&format=geojson",
+                "dmin": 0.922,
+                "felt": null,
+                "gap": 54,
+                "ids": ",us20009nrs,",
+                "mag": 5.1,
+                "magType": "mb",
+                "mmi": null,
+                "net": "us",
+                "nst": null,
+                "place": "51km SSW of Bengkulu, Indonesia",
+                "rms": 1.05,
+                "sig": 400,
+                "sources": ",us,",
+                "status": "reviewed",
+                "time": 1497982902090,
+                "title": "M 5.1 - 51km SSW of Bengkulu, Indonesia",
+                "tsunami": 1,
+                "type": "earthquake",
+                "types": ",geoserve,origin,phase-data,",
+                "tz": 420,
+                "updated": 1497983865040,
+                "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us20009nrs"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    128.5733,
+                    2.3178,
+                    35
+                ],
+                "type": "Point"
+            },
+            "id": "us20009nr6",
+            "properties": {
+                "alert": null,
+                "cdi": null,
+                "code": "20009nr6",
+                "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=us20009nr6&format=geojson",
+                "dmin": 1.952,
+                "felt": null,
+                "gap": 67,
+                "ids": ",us20009nr6,",
+                "mag": 5,
+                "magType": "mb",
+                "mmi": null,
+                "net": "us",
+                "nst": null,
+                "place": "90km NE of Tobelo, Indonesia",
+                "rms": 0.72,
+                "sig": 385,
+                "sources": ",us,",
+                "status": "reviewed",
+                "time": 1497970066950,
+                "title": "M 5.0 - 90km NE of Tobelo, Indonesia",
+                "tsunami": 1,
+                "type": "earthquake",
+                "types": ",geoserve,origin,phase-data,",
+                "tz": 540,
+                "updated": 1497976145040,
+                "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us20009nr6"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    132.028,
+                    32.8813,
+                    45.31
+                ],
+                "type": "Point"
+            },
+            "id": "us20009npy",
+            "properties": {
+                "alert": null,
+                "cdi": 3.8,
+                "code": "20009npy",
+                "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=us20009npy&format=geojson",
+                "dmin": 0.997,
+                "felt": 21,
+                "gap": 101,
+                "ids": ",us20009npy,",
+                "mag": 5,
+                "magType": "mww",
+                "mmi": null,
+                "net": "us",
+                "nst": null,
+                "place": "14km ESE of Saiki, Japan",
+                "rms": 0.74,
+                "sig": 393,
+                "sources": ",us,",
+                "status": "reviewed",
+                "time": 1497968861520,
+                "title": "M 5.0 - 14km ESE of Saiki, Japan",
+                "tsunami": 0,
+                "type": "earthquake",
+                "types": ",dyfi,geoserve,moment-tensor,origin,phase-data,",
+                "tz": 540,
+                "updated": 1497983071341,
+                "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us20009npy"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    -27.439,
+                    -56.0508,
+                    84.29
+                ],
+                "type": "Point"
+            },
+            "id": "us20009npr",
+            "properties": {
+                "alert": null,
+                "cdi": null,
+                "code": "20009npr",
+                "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=us20009npr&format=geojson",
+                "dmin": 5.481,
+                "felt": null,
+                "gap": 59,
+                "ids": ",us20009npr,",
+                "mag": 5.2,
+                "magType": "mb",
+                "mmi": null,
+                "net": "us",
+                "nst": null,
+                "place": "73km NNW of Visokoi Island, South Georgia and the South Sandwich Islands",
+                "rms": 0.54,
+                "sig": 416,
+                "sources": ",us,",
+                "status": "reviewed",
+                "time": 1497963749310,
+                "title": "M 5.2 - 73km NNW of Visokoi Island, South Georgia and the South Sandwich Islands",
+                "tsunami": 0,
+                "type": "earthquake",
+                "types": ",geoserve,origin,phase-data,",
+                "tz": -120,
+                "updated": 1497977586040,
+                "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us20009npr"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    -27.0808,
+                    -56.2634,
+                    60.56
+                ],
+                "type": "Point"
+            },
+            "id": "us20009npn",
+            "properties": {
+                "alert": null,
+                "cdi": null,
+                "code": "20009npn",
+                "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=us20009npn&format=geojson",
+                "dmin": 5.731,
+                "felt": null,
+                "gap": 43,
+                "ids": ",us20009npn,",
+                "mag": 5.3,
+                "magType": "mb",
+                "mmi": null,
+                "net": "us",
+                "nst": null,
+                "place": "49km N of Visokoi Island, South Georgia and the South Sandwich Islands",
+                "rms": 0.8,
+                "sig": 432,
+                "sources": ",us,",
+                "status": "reviewed",
+                "time": 1497963276480,
+                "title": "M 5.3 - 49km N of Visokoi Island, South Georgia and the South Sandwich Islands",
+                "tsunami": 0,
+                "type": "earthquake",
+                "types": ",geoserve,origin,phase-data,",
+                "tz": -120,
+                "updated": 1497964545040,
+                "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us20009npn"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    130.5303,
+                    -6.0636,
+                    142.97
+                ],
+                "type": "Point"
+            },
+            "id": "us20009npc",
+            "properties": {
+                "alert": null,
+                "cdi": null,
+                "code": "20009npc",
+                "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=us20009npc&format=geojson",
+                "dmin": 2.053,
+                "felt": null,
+                "gap": 52,
+                "ids": ",us20009npc,",
+                "mag": 5,
+                "magType": "mb",
+                "mmi": null,
+                "net": "us",
+                "nst": null,
+                "place": "225km NNW of Saumlaki, Indonesia",
+                "rms": 0.98,
+                "sig": 385,
+                "sources": ",us,",
+                "status": "reviewed",
+                "time": 1497958884380,
+                "title": "M 5.0 - 225km NNW of Saumlaki, Indonesia",
+                "tsunami": 0,
+                "type": "earthquake",
+                "types": ",geoserve,origin,phase-data,",
+                "tz": 540,
+                "updated": 1497960122040,
+                "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us20009npc"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
                     -176.4767,
                     -20.7303,
                     263.52
@@ -243,7 +483,7 @@
                 "type": "earthquake",
                 "types": ",geoserve,losspager,moment-tensor,origin,phase-data,shakemap,",
                 "tz": 720,
-                "updated": 1497883351040,
+                "updated": 1497980359040,
                 "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us20009nc2"
             },
             "type": "Feature"
@@ -363,7 +603,7 @@
                 "type": "earthquake",
                 "types": ",dyfi,geoserve,moment-tensor,origin,phase-data,",
                 "tz": -360,
-                "updated": 1497739626836,
+                "updated": 1497979938040,
                 "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us20009n9r"
             },
             "type": "Feature"
@@ -441,9 +681,9 @@
                 "title": "M 5.4 - 82km SE of Atka, Alaska",
                 "tsunami": 0,
                 "type": "earthquake",
-                "types": ",dyfi,geoserve,losspager,origin,phase-data,shakemap,",
+                "types": ",dyfi,geoserve,losspager,moment-tensor,origin,phase-data,shakemap,",
                 "tz": -720,
-                "updated": 1497666008110,
+                "updated": 1497975228040,
                 "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us20009n7f"
             },
             "type": "Feature"
@@ -984,7 +1224,7 @@
                 "code": "20009ly0",
                 "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=us20009ly0&format=geojson",
                 "dmin": 1.772,
-                "felt": 267,
+                "felt": 268,
                 "gap": 49,
                 "ids": ",us20009ly0,",
                 "mag": 6.3,
@@ -994,7 +1234,7 @@
                 "nst": null,
                 "place": "4km S of Plomarion, Greece",
                 "rms": 0.79,
-                "sig": 893,
+                "sig": 894,
                 "sources": ",us,",
                 "status": "reviewed",
                 "time": 1497270518920,
@@ -1003,7 +1243,7 @@
                 "type": "earthquake",
                 "types": ",dyfi,general-text,geoserve,losspager,moment-tensor,origin,phase-data,shakemap,",
                 "tz": 120,
-                "updated": 1497865263834,
+                "updated": 1497971778327,
                 "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us20009ly0"
             },
             "type": "Feature"
@@ -7051,9 +7291,9 @@
         {
             "geometry": {
                 "coordinates": [
-                    -76.6482,
-                    -8.066,
-                    10.26
+                    -76.659,
+                    -8.087,
+                    9.86
                 ],
                 "type": "Point"
             },
@@ -7063,7 +7303,7 @@
                 "cdi": 4.3,
                 "code": "10008qfh",
                 "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=us10008qfh&format=geojson",
-                "dmin": 3.901,
+                "dmin": 3.88,
                 "felt": 4,
                 "gap": 58,
                 "ids": ",us10008qfh,",
@@ -7073,17 +7313,17 @@
                 "net": "us",
                 "nst": null,
                 "place": "19km NW of Tocache Nuevo, Peru",
-                "rms": 0.99,
+                "rms": 0.97,
                 "sig": 418,
                 "sources": ",us,",
                 "status": "reviewed",
-                "time": 1494230897020,
+                "time": 1494230896890,
                 "title": "M 5.2 - 19km NW of Tocache Nuevo, Peru",
                 "tsunami": 0,
                 "type": "earthquake",
                 "types": ",dyfi,geoserve,origin,phase-data,",
                 "tz": -300,
-                "updated": 1497453540040,
+                "updated": 1497940986040,
                 "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us10008qfh"
             },
             "type": "Feature"
@@ -29811,8 +30051,8 @@
     ],
     "metadata": {
         "api": "1.5.8",
-        "count": 745,
-        "generated": 1497928115000,
+        "count": 751,
+        "generated": 1497984309000,
         "status": 200,
         "title": "USGS Earthquakes",
         "url": "https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&starttime=2017-1-01&endtime=2017-12-01&minmagnitude=5"

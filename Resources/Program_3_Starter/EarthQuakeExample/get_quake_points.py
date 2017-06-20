@@ -79,4 +79,3 @@ for y in years:
     f.write(json.dumps(rc, sort_keys=True,indent=4, separators=(',', ': ')))
     f.close()
 
-

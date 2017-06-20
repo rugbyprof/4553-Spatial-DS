@@ -47,7 +47,7 @@ def adjust_location_coords(extremes,points,width,height):
         x = float(x)
         y = float(y)
         xprime = (x - minx) / deltax         # val (0,1)
-        yprime = 1.0 - ((y - miny) / deltay) # val (0,1)
+        yprime = ((y - miny) / deltay) # val (0,1)
         adjx = int(xprime*width)
         adjy = int(yprime*height)
         adjusted.append((adjx,adjy))

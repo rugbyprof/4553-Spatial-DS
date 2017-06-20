@@ -2,6 +2,108 @@
     {
         "geometry": {
             "coordinates": [
+                102.0433,
+                -4.2092,
+                74.84
+            ],
+            "type": "Point"
+        },
+        "mag": 5.1,
+        "magType": "mb",
+        "place": "51km SSW of Bengkulu, Indonesia",
+        "rms": 1.05,
+        "sig": 400,
+        "time": 1497982902090,
+        "types": ",geoserve,origin,phase-data,"
+    },
+    {
+        "geometry": {
+            "coordinates": [
+                128.5733,
+                2.3178,
+                35
+            ],
+            "type": "Point"
+        },
+        "mag": 5,
+        "magType": "mb",
+        "place": "90km NE of Tobelo, Indonesia",
+        "rms": 0.72,
+        "sig": 385,
+        "time": 1497970066950,
+        "types": ",geoserve,origin,phase-data,"
+    },
+    {
+        "geometry": {
+            "coordinates": [
+                132.028,
+                32.8813,
+                45.31
+            ],
+            "type": "Point"
+        },
+        "mag": 5,
+        "magType": "mww",
+        "place": "14km ESE of Saiki, Japan",
+        "rms": 0.74,
+        "sig": 393,
+        "time": 1497968861520,
+        "types": ",dyfi,geoserve,moment-tensor,origin,phase-data,"
+    },
+    {
+        "geometry": {
+            "coordinates": [
+                -27.439,
+                -56.0508,
+                84.29
+            ],
+            "type": "Point"
+        },
+        "mag": 5.2,
+        "magType": "mb",
+        "place": "73km NNW of Visokoi Island, South Georgia and the South Sandwich Islands",
+        "rms": 0.54,
+        "sig": 416,
+        "time": 1497963749310,
+        "types": ",geoserve,origin,phase-data,"
+    },
+    {
+        "geometry": {
+            "coordinates": [
+                -27.0808,
+                -56.2634,
+                60.56
+            ],
+            "type": "Point"
+        },
+        "mag": 5.3,
+        "magType": "mb",
+        "place": "49km N of Visokoi Island, South Georgia and the South Sandwich Islands",
+        "rms": 0.8,
+        "sig": 432,
+        "time": 1497963276480,
+        "types": ",geoserve,origin,phase-data,"
+    },
+    {
+        "geometry": {
+            "coordinates": [
+                130.5303,
+                -6.0636,
+                142.97
+            ],
+            "type": "Point"
+        },
+        "mag": 5,
+        "magType": "mb",
+        "place": "225km NNW of Saumlaki, Indonesia",
+        "rms": 0.98,
+        "sig": 385,
+        "time": 1497958884380,
+        "types": ",geoserve,origin,phase-data,"
+    },
+    {
+        "geometry": {
+            "coordinates": [
                 -176.4767,
                 -20.7303,
                 263.52
@@ -184,7 +286,7 @@
         "rms": 1.07,
         "sig": 449,
         "time": 1497658632960,
-        "types": ",dyfi,geoserve,losspager,origin,phase-data,shakemap,"
+        "types": ",dyfi,geoserve,losspager,moment-tensor,origin,phase-data,shakemap,"
     },
     {
         "geometry": {
@@ -420,7 +522,7 @@
         "magType": "mww",
         "place": "4km S of Plomarion, Greece",
         "rms": 0.79,
-        "sig": 893,
+        "sig": 894,
         "time": 1497270518920,
         "types": ",dyfi,general-text,geoserve,losspager,moment-tensor,origin,phase-data,shakemap,"
     },
@@ -2994,18 +3096,18 @@
     {
         "geometry": {
             "coordinates": [
-                -76.6482,
-                -8.066,
-                10.26
+                -76.659,
+                -8.087,
+                9.86
             ],
             "type": "Point"
         },
         "mag": 5.2,
         "magType": "mww",
         "place": "19km NW of Tocache Nuevo, Peru",
-        "rms": 0.99,
+        "rms": 0.97,
         "sig": 418,
-        "time": 1494230897020,
+        "time": 1494230896890,
         "types": ",dyfi,geoserve,origin,phase-data,"
     },
     {
