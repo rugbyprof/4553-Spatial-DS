@@ -1,8 +1,6 @@
 Program 2 - DBscan
 =========
 
-# Part 1
-
 ### Due: Monday Jun 19th by Classtime
 
 ### Overview
@@ -93,7 +91,3 @@ So we will plot the above crimes for each burough in NYC. This will help keep yo
   - Print out of `main.py` (comment your code based on [this](https://github.com/rugbyprof/4553-Spatial-DS/blob/master/Resources/example_commenting.md))
 
 
-# Part 2
-
-Coming soon ...
-     

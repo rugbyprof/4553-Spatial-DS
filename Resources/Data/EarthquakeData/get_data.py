@@ -33,19 +33,14 @@ def get_earth_quake_data(year,month=[1,12],minmag=None,maxmag=None,query=True):
         return r
 
 path = '/Volumes/1TBHDD/code/repos/0courses/4553-Spatial-DS/Resources/EarthquakeData'
-years = [x for x in range(1960,2017)]
-months = [x for x in range(0,12)]
 
-years = [2017]
+years = [x for x in range(1960,2018)] # If you want all data from 1960 until 2017
+
+years = [2017]  # We only want this year
 
 for y in years:
     print("Year:%s" % (y))
-    r = get_earth_quake_data(y,[1,12],5,None,True)
+    r = get_earth_quake_data(y,[1,12],5,None,True)  # the [1,12] passes in the from and to months.
     f = open('./quake-'+str(y)+'.json','w')
     f.write(json.dumps(r, sort_keys=True,indent=4, separators=(',', ': ')))
     f.close()
-    # r = get_earth_quake_data(y,[7,12],5,None,False)
-    # f = open('./quake-'+str(y)+'.json','w')
-    # f.write(json.dumps(r, sort_keys=True,indent=4, separators=(',', ': ')))
-    # f.close()
-
