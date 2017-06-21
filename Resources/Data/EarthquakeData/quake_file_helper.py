@@ -53,11 +53,11 @@ class FileHelper(object):
                     data.append(line.strip().split(','))
         return data
 
-years = [x for x in range(1960,2018)]
+years = [x for x in range(2015,2018)]
 
 if __name__=='__main__':
     fh = FileHelper()
     data = fh.get_data(years)
-    f = open('quake-1960-2017-condensed.json','w')
+    f = open('quake-2015-2017-condensed.json','w')
     f.write(json.dumps(data, sort_keys=True,indent=4, separators=(',', ': ')))
     f.close()
