@@ -1,5 +1,6 @@
 import json
 import sys
+import collections
 
 f = open('/code/repos/4553-Spatial-DS/Resources/Data/WorldData/airports.json','r')
 
@@ -7,26 +8,31 @@ data = f.read()
 
 data = json.loads(data)
 
+geo_json = collections.OrderedDict()
+
+geo_json["type"] = "FeatureCollection"
+    
 
 feature_list = []
 
 for k,dict in data.items():
     properties = {}
-    geo = {}
+    feature = collections.OrderedDict()
     for kk,ap in dict.items():
         properties[kk] = ap
     lat = properties['lat']
     lon = properties['lon']
     del properties['lat']
     del properties['lon']
-    geo["type"] = "Feature"
-    geo["properties"] = properties
-    geo["geometry"] = {"type":"Point","coordinates": [lon, lat]}
-    feature_list.append(geo)
+    feature["type"] = "Feature"
+    feature["properties"] = properties
+    feature["geometry"] = {"type":"Point","coordinates": [lon, lat]}
+    feature_list.append(feature)
 
+geo_json["features"] = feature_list
 
-f = open("/code/repos/4553-Spatial-DS/Resources/Data/WorldData/airports_geo_json.json","w")
-f.write(json.dumps(feature_list, sort_keys=True,indent=2, separators=(',', ': ')))
+f = open("/code/repos/4553-Spatial-DS/Resources/Data/WorldData/airports_geo_json.geojson","w")
+f.write(json.dumps(geo_json, sort_keys=False,indent=2, separators=(',', ': ')))
 
 
 # {
