@@ -24,10 +24,6 @@ Program 4 - MongoDB
 Use https://gist.github.com to create a viewable rendition of your geojson file.
 
 
-```mongo
-db.airports.ensureIndex( { "geometry.coordinates" : "2d" })
-```
-
 Incidentally a good tutorial: http://newcoder.io/dataviz/part-0/ (not necessary for assignment)
 
 
