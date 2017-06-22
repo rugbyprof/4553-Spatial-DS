@@ -28,7 +28,11 @@ Use https://gist.github.com to create a viewable rendition of your geojson file.
 db.airports.ensureIndex( { "geometry.coordinates" : "2d" })
 ```
 
-Good Tutorial: http://newcoder.io/dataviz/part-0/
+Incidentally a good tutorial: http://newcoder.io/dataviz/part-0/ (not necessary for assignment)
 
 
+### Requirements
+- TBD (It will be directly related to [THIS](http://tugdualgrall.blogspot.com/2014/08/introduction-to-mongodb-geospatial.html) tutorial, with the addition of a few queries and pymongo). 
 
+### Deliverables
+- TBD
