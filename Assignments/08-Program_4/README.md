@@ -43,8 +43,8 @@ Incidentally a good tutorial: http://newcoder.io/dataviz/part-0/ (not necessary 
 ### Deliverables
 - Create a folder called `program_4` in your assignments folder.
 - Create a folder called `geo_json` in your `program_4` folder.
-- Create a file(s) called `generate_xxxx.py` where `xxxx` is one of the 6 data file names above.
-- Each `generate_xxxx.py` file will read in the appropriate data file and create a correctly formatted GeoJson equivalent. 
+- Create a file(s) called `generate_xxxx_geojson.py` where `xxxx` is one of the 6 data file names above.
+- Each `generate_xxxx_geojson.py` file will read in the appropriate data file and create a correctly formatted GeoJson equivalent. 
 - Your GeoJson output will be written to the `geo_json` folder.
 - ***IMPORTANT:*** 
     - Only upload the first 1000 "objects" (volcanos, earthquakes, airports,etc) to github. 
