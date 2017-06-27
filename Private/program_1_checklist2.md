@@ -1,16 +1,16 @@
-## Program 1
+## Program 1 Checklist
 
-### Name: 
+### Student Name: 
 
 |     |                             | Pts    |
 |:---|:----------------------------|:----:|
-| [ ] | Screen printed and handed in.|     |
-| [ ] | Code printed and handed in.|     |
-| [ ] | Code on Github. |     |
-| [ ] | Code correctly structured on Github. |     |
-| [ ] | Code ran without error.|     |
-| [ ] | Bounding box tightly bound around polygon.|     |
-| [ ] | Bounding box didn't originate from mouseclick x,y.|     |
-| [ ] | Other|     |
+| [ ] | <br>Screen printed and handed in.|     |
+| [ ] | <br>Code printed and handed in.|     |
+| [ ] | <br>Code on Github. |     |
+| [ ] | <br>Code correctly structured on Github. |     |
+| [ ] | <br>Code ran without error.|     |
+| [ ] | <br>Bounding box tightly bound around polygon.|     |
+| [ ] | <br>Bounding box didn't originate from mouseclick x,y.|     |
+| [ ] | <br>Total Points: | <br><br>_______    |
 
 ## Comments:
