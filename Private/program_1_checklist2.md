@@ -11,3 +11,6 @@
 | [ ] | Code ran without error.|     |
 | [ ] | Bounding box tightly bound around polygon.|     |
 | [ ] | Bounding box didn't originate from mouseclick x,y.|     |
+| [ ] | Other|     |
+
+## Comments:
