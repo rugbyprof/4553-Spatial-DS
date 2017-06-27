@@ -13,7 +13,6 @@
 | [ ] | <br>Bounding box didn't originate from mouseclick x,y.|     |
 | [ ] | <br><br>|     |
 | [ ] | <br><br>|     |
-| [ ] | <br><br>|     |
 | [ ] | <br>Total Points: | <br><br>------------------    |
-| [ ] | <br><br> | <br><br>    |
+
 ## Comments:
