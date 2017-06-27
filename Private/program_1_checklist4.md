@@ -14,6 +14,6 @@
 | [ ] | <br><br>|     |
 | [ ] | <br><br>|     |
 | [ ] | <br><br>|     |
-| [ ] | <br>Total Points: | <br><br>>------------------    |
-| [ ] | <br><br> | <br><br    |
+| [ ] | <br>Total Points: | <br><br>------------------    |
+| [ ] | <br><br> | <br><br>    |
 ## Comments:
