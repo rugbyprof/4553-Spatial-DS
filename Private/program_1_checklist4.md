@@ -11,9 +11,9 @@
 | [ ] | <br>Code ran without error.|     |
 | [ ] | <br>Bounding box tightly bound around polygon.|     |
 | [ ] | <br>Bounding box didn't originate from mouseclick x,y.|     |
-| [ ] | <br>|     |
-| [ ] | <br>|     |
-| [ ] | <br>|     |
-| [ ] | <br>Total Points: | <br><br>_______    |
-
+| [ ] | <br><br>|     |
+| [ ] | <br><br>|     |
+| [ ] | <br><br>|     |
+| [ ] | <br>Total Points: | <br><br>    |
+| [ ] | <br><br> | <br><br>------------------    |
 ## Comments:
