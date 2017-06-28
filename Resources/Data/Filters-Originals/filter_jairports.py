@@ -59,9 +59,9 @@ for d in data:
     apdict['geometry']['coordinates'] = [float(lon),float(lat)]
     aplist.append(apdict)
 
-o = open("/code/repos/4553-Spatial-DS/Resources/Data/Filters-Originals/jair_airports.geojson","w")
-o.write(json.dumps(aplist, sort_keys=False,indent=4, separators=(',', ': ')))
-o.close()
+# o = open("/code/repos/4553-Spatial-DS/Resources/Data/Filters-Originals/jair_airports.geojson","w")
+# o.write(json.dumps(aplist, sort_keys=False,indent=4, separators=(',', ': ')))
+# o.close()
 
 print(codes)
 print(levels)
