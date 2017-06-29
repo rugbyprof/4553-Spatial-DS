@@ -53,6 +53,8 @@ def adjust_location_coords(extremes,points,width,height):
         adjusted.append((adjx,adjy))
     return adjusted
 
+
+
 if __name__=='__main__':
 
     # Open our condensed json file to extract points
