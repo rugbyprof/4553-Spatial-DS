@@ -20,13 +20,12 @@ Program 5 - PyMongo
 ## Part 2
 
 - Query 1: Find Interesting Features along some path:
-    - Select a starting point: `X` and a destination point `Y`. This can be done by mouse click, or by entering airport codes via `sys.argv` (e.g. `python query1.py DFW MNL` to run query from Dallas / Fort Worth to Manilla Philippines).
+    - Select a starting point: `X` and a destination point `Y`. This can be done by mouse click, or by entering airport codes via `sys.argv` (e.g. `python query1.py DFW MNL 500` to run query from Dallas / Fort Worth to Manilla Philippines with a 500 mile radius to look for interesting features).
     - Determine a milti-line path between `X & Y`, and draw an appropriate line connecting each point.
-    - Highlight all features with `R` radius of the entire path by showing volcanos as red dots, prior earthquakes as blue dots, and meteor locations as green dots.
-    - Assume that `X` and `Y` are NOT on the same continent.
+    - Highlight all features within `R` radius of the entire path by showing volcanos as red dots, prior earthquakes as blue dots, and meteor locations as green dots.
     - Assume that each line segment cannot be more than 500 miles long, meaning you must find an airport within a 500 mile radius of each stop. Choose the largest airport at each stop (e.g. where `ap_level` is the lowest value) and if there are more than one airport with the same `ap_level`, choose the airport at the lowest `elevation` as a tie breaker.
-    - An example `X` and `Y` might be `Dallas, U.S.` to `Manila, Philippines`
-    - Which way do you fly? East or West?
+    - An example `X` and `Y` might be `Dallas, U.S.` to `Manila, Philippines` with a 500 mile radius.
+    - Which way do you fly to start? East or West?
     
     
 - Query 2: Nearest Neighbor: 
@@ -35,7 +34,10 @@ Program 5 - PyMongo
         2. Volcanos 
         3. Earthquakes 
         4. Airports
-        
+    - Example queries may be:
+        - `python query2.py [feature] [field] [field value] [min/max] [max results] [radius]`
+        - `python query2.py volcanos altitude 3000 min 3 1000` When the map is clicked it will find the 3 volcanos within a 1000 mile radius that are at a minumum of 3000 feet (if they exist at that location).
+        - `python query2.py earthquakes magnitude 5 min 0 2000` When the map is clicked it will find ALL earthquakes (max results 0 = all) within a 2000 mile radius with a magnitude of 5 or more. 
         
 - Query 3: Clustering:
     - Use clustering to find the top 5 clusters of volcanoes and/or earthquakes. 
