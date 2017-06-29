@@ -69,4 +69,5 @@ Program 5 - PyMongo
     - query1.py
     - query2.py
     - query3.py
+- and that each of these files runs based on the "usage" described. If there are any issues whith my logic (it's currently 0248 am) then let me know. I tried to make the usage as un-ambiguous as I could .... without adding a crap ton of parameters (e.g. greater then this but less than that etc.)
 
