@@ -73,6 +73,7 @@ Program 5 - PyMongo
     - query1.py
     - query2.py
     - query3.py
-- and that each of these files runs based on the "usage" described. If there are any issues whith my logic (it's currently ~0248~ 0301 am) then let me know. I tried to make the usage as un-ambiguous as I could .... without adding a crap ton of parameters (e.g. greater then this but less than that etc.)
+- and that each of these files runs based on the "usage" described. If there are any issues whith my logic (it's currently ~0248~ 0301 am) then let me know. I tried to make the usage as un-ambiguous as I could without having a ton of parameters, but I may not have succeeded. 
+- Were also NOT trying to make the usage exremely robust. For example, I don't care about earthquakes less than magnitude of 3ish, so I'm not truly worried about the 'max' param working for earthquake as well some others. If your confused, ask in class. 
 - NO query is expected to run more than once. Meaning, one set of input params, or one mouse click. If you want to clear the screen on subsequent clicks to re-run, thats optional.
 
