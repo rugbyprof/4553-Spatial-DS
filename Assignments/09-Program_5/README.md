@@ -20,7 +20,7 @@ Program 5 - PyMongo
 ## Part 2
 
 - Query 1: Find Interesting Features along some path:
-    - Select a starting point: `X` and a destination point `Y`. This can be done as a mouse click, or by entering airport codes via `sys.argv` (e.g. `python query1.py DFW MNL` to run query from Dallas / Fort Worth to Manilla Philippines).
+    - Select a starting point: `X` and a destination point `Y`. This can be done by mouse click, or by entering airport codes via `sys.argv` (e.g. `python query1.py DFW MNL` to run query from Dallas / Fort Worth to Manilla Philippines).
     - Determine a milti-line path between `X & Y`, and draw an appropriate line connecting each point.
     - Highlight all features with `R` radius of the entire path by showing volcanos as red dots, prior earthquakes as blue dots, and meteor locations as green dots.
     - Assume that `X` and `Y` are NOT on the same continent.
