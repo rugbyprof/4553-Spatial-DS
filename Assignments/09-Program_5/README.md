@@ -66,6 +66,7 @@ Program 5 - PyMongo
     - A `README.md` that describes what someone would need to do to make your code run. For example:
         - The name of your mongo db, and collections.
         - How to run your batch file.
+        - Some example queries for each `queryX.py` and NOT my examples. Chooses params that you feel confident will run correctly.
 - Make sure that your ideas from part one are in a file called: `query_ideas.md` 
 - Make sure that your screen shot is in this folder in a file called `pymongo_proof.xxx` (where xxx is whatever format you saved your screenshot in.
 - Place each of your `Queries` in files called:
