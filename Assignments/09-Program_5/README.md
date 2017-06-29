@@ -73,4 +73,5 @@ Program 5 - PyMongo
     - query2.py
     - query3.py
 - and that each of these files runs based on the "usage" described. If there are any issues whith my logic (it's currently 0248 am) then let me know. I tried to make the usage as un-ambiguous as I could .... without adding a crap ton of parameters (e.g. greater then this but less than that etc.)
+- NO query is expected to run more than once. Meaning, one set of input params, or one mouse click. If you want to clear the screen on subsequent clicks to re-run, thats optional.
 
