@@ -35,12 +35,12 @@ Program 5 - PyMongo
         4. Meteors
     - Example queries may be:
         - `python query2.py [feature] [field] [field value] [min/max] [max results] [radius] [lon,lat]`
-            - feature = volcano, earthquake, meteor
-            - field = some field in the 'properties' to compare against
-            - field_value = the value in wich to compare with
-            - min/max = whether we want all results greater than or less than the field_value.
-            - radius (in miles) = radius to apply our query with.
-            - lon,lat (optional) = Some point coords to act as a mouse click instead of actually clicking the screen. 
+            - ***feature*** = volcano, earthquake, meteor
+            - ***field*** = some field in the 'properties' to compare against
+            - ***field_value*** = the value in wich to compare with
+            - ***min/max*** = whether we want all results greater than or less than the field_value.
+            - ***radius*** (in miles) = radius to apply our query with.
+            - ***lon,lat*** (optional) = Some point coords to act as a mouse click instead of actually clicking the screen. 
         - `python query2.py volcanos altitude 3000 min 3 1000` When the map is clicked it will find the 3 volcanos within a 1000 mile radius that are at a minumum of 3000 feet (if they exist at that location).
         - `python query2.py earthquakes magnitude 5 min 0 2000` When the map is clicked it will find ALL earthquakes (max results 0 = all) within a 2000 mile radius with a magnitude of 5 or more. 
         - `python query2.py 1000` This query if rum with a single parameter, you will assume it is a Radius and you should find ALL of the above features within that radius (Volcanos, Earthquakes, Meteors). Only display the first 500 results if there are any performance issues. 
@@ -51,7 +51,10 @@ Program 5 - PyMongo
     - If combining all of the data points is hard, get the biggest cluster from each data type seperately.
     - Draw a bounding box around each cluster.
     - Example Usage may be:
-        - `python query3.py [feature] [min_pts] [eps]` ***Feature*** = (volcano, earthquake, meteor) and ***min_pts*** = minimum points to make a cluster, and ***eps*** is the distance parameter for dbscan
+        - `python query3.py [feature] [min_pts] [eps]` 
+            - ***Feature*** = (volcano, earthquake, meteor) and 
+            - ***min_pts*** = minimum points to make a cluster, and 
+            - ***eps*** is the distance parameter for dbscan
         - `python query3.py [feature] [min_pts] [eps]`
   
     
