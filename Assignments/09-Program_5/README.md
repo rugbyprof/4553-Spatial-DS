@@ -29,10 +29,10 @@ Program 5 - PyMongo
     
     
 - ***Query 2: Nearest Neighbor:*** 
-    - Click on the world map and get the nearest `______________` within `XXX` miles, possibly with specific features further filtering the query (magnitude of earthquake, etc.) 
-        2. Volcanos 
-        3. Earthquakes 
-        4. Meteors
+    - Click on the world map and get the nearest `______________` within `XXX` miles, possibly with specific features further filtering the query (magnitude of earthquake, etc.) where the `________` are listed below:
+        - Volcanos 
+        - Earthquakes 
+        - Meteors
     - Example queries may be:
         - `python query2.py [feature] [field] [field value] [min/max] [max results] [radius] [lon,lat]`
             - ***feature*** = volcano, earthquake, meteor
