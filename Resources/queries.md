@@ -1,16 +1,28 @@
 ## Possible Queries
 
-1. Evacuation From Continent: 
-	- Shortest path from each country in a given continent to predetermined destination (Sahara desert) 
- 
-2. Plan a political campaign:
-    -  Politician covers the most area (in a single country) in the shortest amount of flights. 
-    
+5. Find Interesting Features along a path:
+    - Select a starting point: `X` and a destination point `Y`
+    - Determine a milti-line path between `X` & `Y`
+    - Highlight all features with `R` radius of the entire path
+
 3. Nearest Neighbor: Click on the world map and get the nearest `______________` within `XXX` miles, possibly with specific features further filtering the query (magnitude of earthquake, etc.)
         1. Cities
         2. Volcanos
         3. Earthquakes
         4. Airports 
+
+Use clustering to find the top 5 clusters of volcanoes and/or earthquakes. Query to find which city is most central to each cluster. 
+Route through airports from origin destination to each destination and then back home again for a World Disaster Tour. Use Indiana Jones Travel music
+
+
+1. Evacuation From Continent: 
+	- Shortest path from each country in a given continent to predetermined destination (Sahara desert)
+	- Along some predetermined escape route.
+ 
+2. Plan a political campaign:
+    -  Politician covers the most area (in a single country) in the shortest amount of flights. 
+    
+
 
 4. Identify the countries (or areas via clustering) with the most:
         1. Cities
@@ -18,10 +30,7 @@
         3. Earthquakes
         4. Airports 
 
-5. Find Interesting Features along a path:
-    - Select a starting point: `X` and a destination point `Y`
-    - Determine a milti-line path between `X` & `Y`
-    - Highlight all features with `R` radius of the entire path
+
 
 6. Calculate Danger Level:
 		-  Highlight a country (or region)
