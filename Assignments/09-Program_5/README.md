@@ -29,7 +29,7 @@ Program 5 - PyMongo
     
     
 - ***Query 2: Nearest Neighbor:*** 
-    - Click on the world map and get the nearest `feature` within `XXX` miles, possibly with specific features further filtering the query (magnitude of earthquake, etc.) where `features` are listed below:
+    - Click on the world map and get the nearest `feature` within `XXX` miles, possibly with specific feature values, further filtering the query (magnitude of earthquake, etc.) where `features` are listed below:
         - Volcanos 
         - Earthquakes 
         - Meteors
