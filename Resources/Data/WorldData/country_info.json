@@ -225,7 +225,7 @@
 },
 {
 "countryCode": "AX",
-"countryName": "Åland",
+"countryName": "Aland Islands",
 "currencyCode": "EUR",
 "population": "26711",
 "fipsCode": "",
@@ -401,7 +401,7 @@
 },
 {
 "countryCode": "BL",
-"countryName": "Saint Barthélemy",
+"countryName": "Saint-Barthelemy",
 "currencyCode": "EUR",
 "population": "8450",
 "fipsCode": "TB",
@@ -2993,7 +2993,7 @@
 },
 {
 "countryCode": "RE",
-"countryName": "Réunion",
+"countryName": "Reunion",
 "currencyCode": "EUR",
 "population": "776948",
 "fipsCode": "RE",
@@ -3329,7 +3329,7 @@
 },
 {
 "countryCode": "ST",
-"countryName": "São Tomé and Príncipe",
+"countryName": "Sao Tome and Principe",
 "currencyCode": "STD",
 "population": "175808",
 "fipsCode": "TP",
@@ -3338,7 +3338,7 @@
 "south": "0.024766",
 "east": "7.466374",
 "west": "6.47017",
-"capital": "São Tomé",
+"capital": "Sao Tome",
 "continentName": "Africa",
 "languages": "pt-ST",
 "geonameId": "2410758"

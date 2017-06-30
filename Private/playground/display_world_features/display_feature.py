@@ -191,15 +191,24 @@ def get_country_poly(id,countries):
     pointlist = []
 
     for country in countries:
-        if country['id'] == id:
-            return country
+        if country['properties']['ISO_A3'] == id:
+            return country['geometry']
 
 
-def flatten_country_polygons(points):
-    if points['geometry']['type'] == 'Polygon':
-        print(len(points['geometry']['coordinates']))
+def flatten_country_polygons(geometry):
+    adjusted_polys = []
+    if geometry['type'] == 'Polygon':
+        pass
     else:
-        print(len(points['geometry']['coordinates']))
+        for polygons in geometry['coordinates']:
+            for polygon in polygons:
+                newp = []
+                for p in polygon:
+                    newp.append([mercX(p[0]),mercY(p[1])])
+                    print(p[0],p[1])
+                adjusted_polys.append(newp)
+        return adjusted_polys
+
     # for c in coords:
     #     pointlist.extend(c)
 
@@ -212,38 +221,41 @@ def flatten_country_polygons(points):
 # poly = list(reversed([[-108.7207031,40.8491380],[-102.3925781,40.9155881],[-102.2167969,37.1625054],[-109.2480469,37.0924307],[-108.7207031,40.8491380]]))
 # print(poly)
 
-mh = mongoHelper()
+# mh = mongoHelper()
 
-res = mh.get_features_near_me('airports',(-98.5034180, 33.9382331),200)
-print(res)
+# res = mh.get_features_near_me('airports',(-98.5034180, 33.9382331),200)
+# print(res)
 
-res = mh.get_doc_by_keyword('airports','properties.tz','Europe')
-print(len(res))
+# res = mh.get_doc_by_keyword('airports','properties.tz','Europe')
+# print(len(res))
 
-res = mh.get_doc_by_keyword('airports','properties.continent','Europe',False)
-print(len(res))
+# res = mh.get_doc_by_keyword('airports','properties.continent','Europe',False)
+# print(len(res))
 
-state = mh.get_state_poly('co')
-print(state)
+# state = mh.get_state_poly('co')
+# print(state)
 
-res = mh.get_feature_in_poly('airports',state)
-print(res)
+# res = mh.get_feature_in_poly('airports',state)
+# print(res)
 
-country = mh.get_country_poly('DEU')
+# country = mh.get_country_poly('DEU')
 
-res = mh.get_feature_in_poly('airports',country['coordinates'])
-print(len(res))
+# res = mh.get_feature_in_poly('airports',country['coordinates'])
+# print(len(res))
 
-res = mh.get_poly_by_point('countries',[44.2968750,24.6669864])
-print(res)
+# res = mh.get_poly_by_point('countries',[44.2968750,24.6669864])
+# print(res)
 
 
 
-f = open("/code/repos/4553-Spatial-DS/Resources/Data/WorldData/countries.geo.json","r")
+f = open("/Volumes/1TBHDD/code/repos/0courses/4553-Spatial-DS/Private/playground/display_world_features/geojson/countries.geojson","r")
 
 countries = json.loads(f.read())
 
 country = get_country_poly("USA",countries)
+
+poly = flatten_country_polygons(country)
+
 
 
 screen_width = 1024
@@ -264,8 +276,9 @@ screen = pygame.display.set_mode((screen_width,screen_height), HWSURFACE | DOUBL
 bg = pygame.image.load(bg_image)
 pin = pygame.image.load(pin_image)
 screen.blit(pygame.transform.scale(bg, (screen_width,screen_height)), (0, 0))
-screen.blit(pin,(mercX(-98.5034180),mercY(33.9382331)))
-#pygame.draw.polygon(screen, (255,164,0), poly,1)
+screen.blit(pin,(mercX(-98.5034180)-16,mercY(33.9382331)-32))
+for p in poly:
+    pygame.draw.polygon(screen, (255,164,0), p,1)
 pygame.display.flip()
 while True:
     pygame.event.pump()
@@ -277,6 +290,7 @@ while True:
         #print(event.dict['size'])
         screen.blit(pygame.transform.scale(bg, event.dict['size']), (0, 0))
 
-        screen.blit(pin,(mercX(-98.5034180),mercY(33.9382331)))
-        #pygame.draw.polygon(screen, (255,164,0), poly,1)
+        screen.blit(pin,(mercX(-98.5034180)-16,mercY(33.9382331)-32))
+        for p in poly:
+            pygame.draw.polygon(screen, (255,164,0), p,1)
         pygame.display.flip()
