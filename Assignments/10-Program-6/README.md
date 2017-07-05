@@ -40,7 +40,7 @@ if __name__ == '__main__':
         print('{:.3f} -> ({:3d}, {:3d}, {:3d})'.format(val, r, g, b))
 ```
 
-####Function Output
+#### Function Output
 
 |Val     |  R   |   G  |  B   |
 |-------:|----:|----:|----:|
@@ -56,5 +56,7 @@ if __name__ == '__main__':
 | 2.800  | 203 |   51 |    0 | 
 | 3.000 | 255 |    0 |    0 | 
 
+#### Function Colors
 
+![](https://i.stack.imgur.com/DXgTs.png)
 
