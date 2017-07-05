@@ -1,6 +1,8 @@
 Heat Map
 ========
 
+NOT DONE!!!
+
 ### Overview
 
 Generate a heat style map showing terrorist hotspots around the world. You have a couple of choices of how to get this done:
@@ -9,8 +11,17 @@ Generate a heat style map showing terrorist hotspots around the world. You have 
 
 #### Grid Method
 
-The grid method takes xy coordinates and maps then into a 2d array and counting the occurences of each cell. After all xy coordinates have been placed in a cell, take the extreme values and assign a "heat" or color using the color function below:
+The grid method takes the geometry of each occurence and after converting the coordinates to xy values, it maps them into a 2d array (x val = row index and y val = column index). Every time a coordinate maps to a cell, simply increase the value of that cell by one, keeping a count. The number of occurences of each cell will be assigned a color value based on the function below, where the highest occuring value will get assigned the "hottest" color (red), and the least occuring values will get assigned the "coolest" color (blue).
 
+How you display your grids on the map is up to you. You could represent each grid cell as a box or rectangle thereby coloring the area of the map that it represented. Or, you could use another shape or icon and change the color and or size based on its value. As long as your visual output makes it very apparent where the "hot spots" are.  
+
+
+#### Count Cities
+
+This method simply uses the "city' name to count the number of occurences around the world. A problem with this method is that the "city" value is "unknown" for over 6000 entries. So, here .....
+
+
+After all xy coordinates have been placed in a cell, take the extreme values and assign a "heat" or color using the color function below:
 
 <sup>Source: 
 https://stackoverflow.com/questions/20792445/calculate-rgb-value-for-a-range-of-values-to-create-heat-map </sup>
