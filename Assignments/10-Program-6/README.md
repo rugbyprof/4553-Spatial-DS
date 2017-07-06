@@ -19,11 +19,7 @@ How you display your grids on the map is up to you. You could represent each gri
 - <sup>Source: https://stackoverflow.com/questions/2343681/algorithm-for-heat-map</sup>
 - This is PSEUDO code ... it does NOT run
 
->This would create your grid. Rows and columns would need to be figured out before hand
-based on screen size, and number of data points (for visual effect). Remember, with more
-cells a finer grained heat map is created. Less cells would create large blocks of 
-color.
->
+**Create Grid**
 ```
 grid = [][]
 for each (lon,lat) in list:
@@ -31,18 +27,12 @@ for each (lon,lat) in list:
   grid[x][y]++
 end
 ```
->
+>This would create your grid. Rows and columns would need to be figured out before hand
+based on screen size, and number of data points (for visual effect). Remember, with more
+cells a finer grained heat map is created. Less cells would create large blocks of 
+color.
 
-There are other algorithms to "blur" a 2D array of pixels (gaussian most popular), 
-but here is a method to let a strong (high heat) value bleed into neighboring cells.
-This technique would work best with lots of cells. 
-
-- The idea is to pass over the grid ___`N`___ number of times. 
-- Each pass adds 1 to the current cell value.
-- You could also increment "adjacent" cells with each pass. 
-    - Adjacent = 8 neighboring cells. 
-- Depending on the number of passes, your "hot" areas will expand accordingly.
-
+**Expand/Blur Colors**
 ```
 for 0 to # of passes
   for each row
@@ -55,7 +45,15 @@ for 0 to # of passes
   end
 end
 ```
-
+>There are other algorithms to "blur" a 2D array of pixels (gaussian most popular), 
+but here is a method to let a strong (high heat) value bleed into neighboring cells.
+This technique would work best with lots of cells. 
+>
+- The idea is to pass over the grid ___`N`___ number of times. 
+- Each pass adds 1 to the current cell value.
+- You could also increment "adjacent" cells with each pass. 
+    - Adjacent = 8 neighboring cells. 
+- Depending on the number of passes, your "hot" areas will expand accordingly.
 
 #### Count Cities
 
