@@ -34,6 +34,8 @@ based on screen size, and number of data points (for visual effect). Remember, w
 cells a finer grained heat map is created. Less cells would create large blocks of 
 color.
 
+--------
+
 If you want to create a grid using the lat lon values instead of adjusted x,y coordinates, it may be a good choice, especially if you know what granularity to choose. The table below tells us how precise a lat,lon coordinate is based on how many decimal places it contains. 
 
 |places|precision|qualitative scale |N/S or E/W at equator|E/W at 23N/S|E/W at 45N/S|E/W at 67N/S|
@@ -50,6 +52,19 @@ If you want to create a grid using the lat lon values instead of adjusted x,y co
 
 <sup>source: https://en.wikipedia.org/wiki/Decimal_degrees </sup>
 
+The `terrorism collection` contains the following precision where key = precision (decimal places) and value = count. So the majority of the collection (120000+) contain 6 decimals or more. 
+>- {0: 50, 1: 2980, 2: 2918, 3: 1085, 4: 2781, 5: 15027, 6: 125325, 7: 1593, 8: 494}
+>- {0: 188, 1: 3283, 2: 3271, 3: 663, 4: 4005, 5: 18176, 6: 120556, 7: 1573, 8: 513, 9: 25}
+
+So how do we "bucket" lat/lons?
+- Add 180 to lon's (gives a value from 0-360)
+- Add 90 to lat's (gives a value from 0-90)
+- Using each of those rounded values we could get a 2D grid of 360x90 
+- If we multiply each value by 10 then round (or truncate) we could get a 2D grid of 3600x900 (way too much for us).
+- If we multiply each value by 5 then round (or truncate) we could get a 2D grid of 1800x450.
+- ***Why don't we stick to the adjusted x,y coords method!***
+
+------
 
 **Expand/Blur Colors**
 ```
