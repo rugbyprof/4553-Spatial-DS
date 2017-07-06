@@ -34,11 +34,11 @@ color.
 
 **Expand/Blur Colors**
 ```
-for 0 to # of passes
-  for each row
-   for each col
-     if grid[row,col] > 0 then
-       grid[row,col] += 1
+P = N #number of passes
+for 0 to P:
+  for each row:
+   for each col:
+     if grid[row][col] > 0 then:
        increment_adjacent_cells(row, col)
      end
    end
@@ -50,14 +50,12 @@ but here is a method to let a strong (high heat) value bleed into neighboring ce
 This technique would work best with lots of cells. 
 >
 >- The idea is to pass over the grid ___`N`___ number of times. 
->- Each pass adds 1 to the current cell value.
->- You could also increment "adjacent" cells with each pass. 
->    - Adjacent = 8 neighboring cells. 
+>- Each pass you increment "adjacent" cells. Where _Adjacent_ = 8 neighboring cells. 
 >- Depending on the number of passes, your "hot" areas will expand accordingly.
 
 #### Count Cities
 
-This method simply uses the "city' name to count the number of occurences around the world. A problem with this method is that the "city" value is "unknown" for over 6000 entries. So, here .....
+After writing the previous section (Grid Method), I prefer that spatial solution using geometries over this method. Why, because every object has a geometry, compared to this method of selecting and filter on "city" which has  6000 entries labeled as "unknown". Having said that, I did create a python dictionary 
 
 
 After all xy coordinates have been placed in a cell, take the extreme values and assign a "heat" or color using the color function below:
