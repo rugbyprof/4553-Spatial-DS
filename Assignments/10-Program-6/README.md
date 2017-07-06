@@ -80,12 +80,13 @@ So how do we "bucket" lat/lons?
 
 ------
 
-If you just print out small points of color based your values in your newly created grid of values, you may not get the effect we want. Especially since most of our counts of attacks will be pretty localized. 
+If you just print out small points of color based your values in your newly created grid of values, you may not get the effect we want. Especially since most of our counts of attacks will be pretty localized. You can use the method below to expand or "blur" your color values to give more of a desired effect. The more passes you make, the larger the blur (larger != better). Some blurring I think could help depending on how you decide to display your output.
 
 | Good  |  Bad       |
 |:------:|:--------:|
 |![](https://d3vv6lp55qjaqc.cloudfront.net/items/231o1f3A1O3d0B3Z1R2G/heat_map2.png) | ![](https://d3vv6lp55qjaqc.cloudfront.net/items/1V3G0N2t1Z3E3D2o3Q1G/heat_map.png ) | |
 |         |         |
+
 
 **Expand/Blur Colors**
 ```
@@ -112,7 +113,7 @@ This technique would work best with lots of cells.
 
 #### Count Cities
 
-After writing the previous section (Grid Method), I prefer that spatial solution using geometries over this method. Why? Because every object has a geometry, compared to this method of selecting and filtering on "city" which has 6000 entries labeled as "unknown". Having said that, I did create a json object with the following structure if anyone wants to use it to help with this problem:
+No matter what, we will have to use the geometries from each record and count all occurrences. If you want to obtain the counts of attacks by city, this can be a shortcut, but there are 6000 records that have city listed as "unknown". If this were a long semester, we could "[geocode](https://en.wikipedia.org/wiki/Geocoding)" the coordinates to get closest city.  
 
 ```json
 "country_1_name": {
@@ -155,6 +156,9 @@ After writing the previous section (Grid Method), I prefer that spatial solution
 ```
 >This is a dictionary with each `country` as a key that gives access to another dictionary that uses `city` as a key. Using the same method I discussed in class, we use the dictionary to count individual instances (occurrences) of key words. So for every row in the database, I use the `country` to access the "country" dictionary, then use `city` to find the correct "city" dictionary, and then finally increment the `count` entry. Since `city` had over 6000 unknowns, by using `country` as a key, at least we know which country the attack occured in. 
 
+### Color Mapping 
+
+After your 2D grid is created, you could use the following function to obtain a color value based on the count of occurences in a given cell. Again, it's up to you how you display your heat map, however, it should be easy to see your map.
 
 ```python
 import sys
