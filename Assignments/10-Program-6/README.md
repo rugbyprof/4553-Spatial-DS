@@ -5,47 +5,52 @@ NOT DONE!!!
 
 ## Overview
 
-Generate a heat style map showing terrorist hotspots around the world. You have a couple of choices of how to get this done:
-1. Grid method 
-2. Count City method
+Generate a heat style map showing terrorist hotspots around the world. You have a couple of choices of how to process the data:
+1. Adjusting lon,lat coordinates and mapping them to a cell (bucket).
+2. Counting Cities, and then doing the above based on a cities coordinates. :)
 
-### Grid Method
+### Creating Your Grid
 
 The grid method takes the geometry of each occurence and after converting the coordinates to xy values, it maps them into a 2d array (x val = row index and y val = column index). Every time a coordinate maps to a cell, simply increase the value of that cell by one, keeping a count. The number of occurences of each cell will be assigned a color value based on the function below, where the highest occuring value will get assigned the "hottest" color (red), and the least occuring values will get assigned the "coolest" color (blue).
 
 How you display your grids on the map is up to you. You could represent each grid cell as a box or rectangle thereby coloring the area of the map that it represented. Or, you could use another shape or icon and change the color and or size based on its value. As long as your visual output makes it very apparent where the "hot spots" are.  
 
-#### Pseudo Code for Grid
+#### Steps for Create Grid
 
-1. Create some ***`MxN`*** grid.
+1. Create some ***`MxN`*** grid (most likely your screen size: 1024x512 )
 2. Process each record in data set.
 3. Map each record to some grid cell: grid[***`m`***][**`n`***] using the geometry of each record.
     - Method 1 = convert lat/lon to x/y and then map to grid[x][y] (our mercator method gives us x=[0,1024] and y=[0,512] (adjusting for our image size).
     - Method 2 = convert lat/lon to some integer range of buckets (described below).
-4. Increment the cell value by one every time a coordinate maps to it. 
+4. Increment the cell value by 1 every time a coordinate maps to it. 
 5. Highest count value gets hottest color and Lowest count value gets coolest color. (function below)
 6. Draw the grid colors on the map in the appropriate location (the row,col location IS the x,y location on the map)
 7. How you draw the colors on the map is up to you (sqaures, circles, increase size based on color, icons, etc.)
 
-
-
-**Create Grid**
+**Create Grid pseudo code**
 ```
 grid = [][]
 for each (lon,lat) in list:
   x,y = adjusted(lon,lat)
   grid[x][y]++
 end
+
+# or
+
+grid = [][]
+city_count = {} (some dictionary)
+for each (city,count) in city_count:
+  x,y = get_adjusted_city(lon,lat)
+  grid[x][y] = count
+end
 ```
 <sub>This is PSEUDO code ... it does NOT run</sub>
 >This would create your grid. Rows and columns would need to be figured out before hand
-based on screen size, and number of data points (for visual effect). Remember, with more
-cells a finer grained heat map is created. Less cells would create large blocks of 
-color.
+based on screen size, and number of data points (for visual effect). 
 
 --------
 
-If you want to create a grid using the lat lon values instead of adjusted x,y coordinates, it may be a good choice, especially if you know what granularity to choose. The table below tells us how precise a lat,lon coordinate is based on how many decimal places it contains. 
+We could place lat/lon values into buckets instead of using the adjusted x,y coordinates. The table below tells us how precise a lat,lon coordinate is based on how many decimal places it contains. We only need a bout 2 places of precision if we use a grid size representing our screen size. 
 
 |places|precision|qualitative scale |N/S or E/W at equator|E/W at 23N/S|E/W at 45N/S|E/W at 67N/S|
 |--------|--------|--------|--------|--------|--------|--------|
@@ -61,7 +66,7 @@ If you want to create a grid using the lat lon values instead of adjusted x,y co
 
 <sup>source: https://en.wikipedia.org/wiki/Decimal_degrees </sup>
 
-The `terrorism collection` contains the following precision where key = precision (decimal places) and value = count. So the majority of the collection (120000+) contain 6 decimals or more. 
+The `terrorism collection` contains the following precision where key = precision (decimal places) and value = count. So the majority of the collection (120000+) contain 6 decimals or more. This is only relevant
 >- {0: 50, 1: 2980, 2: 2918, 3: 1085, 4: 2781, 5: 15027, 6: 125325, 7: 1593, 8: 494}
 >- {0: 188, 1: 3283, 2: 3271, 3: 663, 4: 4005, 5: 18176, 6: 120556, 7: 1573, 8: 513, 9: 25}
 
@@ -74,6 +79,13 @@ So how do we "bucket" lat/lons?
 - ***Why don't we stick to the adjusted x,y coords method!***
 
 ------
+
+If you just print out small points of color based your values in your newly created grid of values, you may not get the effect we want. Especially since most of our counts of attacks will be pretty localized. 
+
+|        |          |
+|:------:|:--------:|
+|![](https://d3vv6lp55qjaqc.cloudfront.net/items/231o1f3A1O3d0B3Z1R2G/heat_map2.png) | ![](https://d3vv6lp55qjaqc.cloudfront.net/items/1V3G0N2t1Z3E3D2o3Q1G/heat_map.png ) | |
+|         |         |
 
 **Expand/Blur Colors**
 ```
