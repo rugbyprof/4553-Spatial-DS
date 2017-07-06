@@ -19,7 +19,7 @@ How you display your grids on the map is up to you. You could represent each gri
 
 1. Create some ***`MxN`*** grid (most likely your screen size: 1024x512 )
 2. Process each record in data set.
-3. Map each record to some grid cell: grid[***`m`***][**`n`***] using the geometry of each record.
+3. Map each record to some grid cell: grid[ ***`m`*** ][ ***`n`*** ] using the geometry of each record.
     - Method 1 = convert lat/lon to x/y and then map to grid[x][y] (our mercator method gives us x=[0,1024] and y=[0,512] (adjusting for our image size).
     - Method 2 = convert lat/lon to some integer range of buckets (described below).
 4. Increment the cell value by 1 every time a coordinate maps to it. 
