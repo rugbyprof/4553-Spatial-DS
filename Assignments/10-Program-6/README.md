@@ -55,8 +55,44 @@ This technique would work best with lots of cells.
 
 #### Count Cities
 
-After writing the previous section (Grid Method), I prefer that spatial solution using geometries over this method. Why, because every object has a geometry, compared to this method of selecting and filter on "city" which has  6000 entries labeled as "unknown". Having said that, I did create a python dictionary 
+After writing the previous section (Grid Method), I prefer that spatial solution using geometries over this method. Why, because every object has a geometry, compared to this method of selecting and filter on "city" which has  6000 entries labeled as "unknown". Having said that, I did create a json object with the following structure if anyone wants to use it:
 
+```json
+"country_1_name": {
+        "city_1_name": {
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    123.456,
+                    -2.3456
+                ]
+            },
+            "count": 7
+        },
+        "city_2_name": {
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    34.5678,
+                    23.4567
+                ]
+            },
+            "count": 19
+        },
+        etc ...
+    "country_2_name": {
+        "city_1_name": {
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    89.012,
+                    -123.4567
+                ]
+            },
+            "count": 11
+        },
+       etc...
+```
 
 After all xy coordinates have been placed in a cell, take the extreme values and assign a "heat" or color using the color function below:
 
