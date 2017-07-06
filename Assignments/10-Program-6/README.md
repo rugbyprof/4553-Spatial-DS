@@ -49,11 +49,11 @@ end
 but here is a method to let a strong (high heat) value bleed into neighboring cells.
 This technique would work best with lots of cells. 
 >
-- The idea is to pass over the grid ___`N`___ number of times. 
-- Each pass adds 1 to the current cell value.
-- You could also increment "adjacent" cells with each pass. 
-    - Adjacent = 8 neighboring cells. 
-- Depending on the number of passes, your "hot" areas will expand accordingly.
+>- The idea is to pass over the grid ___`N`___ number of times. 
+>- Each pass adds 1 to the current cell value.
+>- You could also increment "adjacent" cells with each pass. 
+>    - Adjacent = 8 neighboring cells. 
+>- Depending on the number of passes, your "hot" areas will expand accordingly.
 
 #### Count Cities
 
