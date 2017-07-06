@@ -36,7 +36,7 @@ color.
 
 If you want to create a grid using the lat lon values instead of adjusted x,y coordinates, it may be a good choice, especially if you know what granularity to choose. The table below tells us how precise a lat,lon coordinate is based on how many decimal places it contains. 
 
-|decimal places|decimal degrees|qualitative scale |N/S or E/W at equator|E/W at 23N/S|E/W at 45N/S|E/W at 67N/S|
+|places|precision|qualitative scale |N/S or E/W at equator|E/W at 23N/S|E/W at 45N/S|E/W at 67N/S|
 |--------|--------|--------|--------|--------|--------|--------|
 |0|1.0|country or large region|111.32 km|102.47 km|78.71 km|43.496 km|
 |1|0.1|large city or district|11.132 km|10.247 km|7.871 km|4.3496 km|
