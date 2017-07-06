@@ -23,13 +23,15 @@ How you display your grids on the map is up to you. You could represent each gri
 based on screen size, and number of data points (for visual effect). Remember, with more
 cells a finer grained heat map is created. Less cells would create large blocks of 
 color.
->```
+>
+```
 grid = [][]
 for each (lon,lat) in list:
   x,y = adjusted(lon,lat)
   grid[x][y]++
 end
 ```
+>
 
 There are other algorithms to "blur" a 2D array of pixels (gaussian most popular), 
 but here is a method to let a strong (high heat) value bleed into neighboring cells.
