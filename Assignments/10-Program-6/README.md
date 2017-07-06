@@ -45,6 +45,7 @@ If you want to create a grid using the lat lon values instead of adjusted x,y co
 |6|0.000001|individual humans|111.32 mm|102.47 mm|78.71 mm|43.496 mm|
 |7|0.0000001|practical limit of commercial surveying|11.132 mm|10.247 mm|7.871 mm|4.3496 mm|
 |8|0.00000001|specialized surveying (e.g. tectonic plate mapping)|1.1132 mm|1.0247 mm|787.1 µm|434.96 µm|
+
 <sup>source: https://en.wikipedia.org/wiki/Decimal_degrees </sup>
 
 
