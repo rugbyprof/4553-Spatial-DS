@@ -3,17 +3,56 @@ Heat Map
 
 NOT DONE!!!
 
-### Overview
+## Overview
 
 Generate a heat style map showing terrorist hotspots around the world. You have a couple of choices of how to get this done:
 1. Grid method 
 2. Count City method
 
-#### Grid Method
+### Grid Method
 
 The grid method takes the geometry of each occurence and after converting the coordinates to xy values, it maps them into a 2d array (x val = row index and y val = column index). Every time a coordinate maps to a cell, simply increase the value of that cell by one, keeping a count. The number of occurences of each cell will be assigned a color value based on the function below, where the highest occuring value will get assigned the "hottest" color (red), and the least occuring values will get assigned the "coolest" color (blue).
 
 How you display your grids on the map is up to you. You could represent each grid cell as a box or rectangle thereby coloring the area of the map that it represented. Or, you could use another shape or icon and change the color and or size based on its value. As long as your visual output makes it very apparent where the "hot spots" are.  
+
+#### Pseudo Code for Grid
+<sup>Source: https://stackoverflow.com/questions/2343681/algorithm-for-heat-map</sup>
+This is PSEUDO code ... it does NOT run
+
+This would create your grid. Rows and columns would need to be figured out before hand
+based on screen size, and number of data points (for visual effect). Remember, with more
+cells a finer grained heat map is created. Less cells would create large blocks of 
+color.
+```
+grid = [][]
+for each (lon,lat) in list:
+  x,y = adjusted(lon,lat)
+  grid[x][y]++
+end
+```
+
+There are other algorithms to "blur" a 2D array of pixels (gaussian most popular), 
+but here is a method to let a strong (high heat) value bleed into neighboring cells.
+This technique would work best with lots of cells. 
+
+- The idea is to pass over the grid ___`N`___ number of times. 
+- Each pass adds 1 to the current cell value.
+- You could also increment "adjacent" cells with each pass. 
+    - Adjacent = 8 neighboring cells. 
+- Depending on the number of passes, your "hot" areas will expand accordingly.
+
+```
+for 0 to # of passes
+  for each row
+   for each col
+     if grid[row,col] > 0 then
+       grid[row,col] += 1
+       increment_adjacent_cells(row, col)
+     end
+   end
+  end
+end
+```
 
 
 #### Count Cities
