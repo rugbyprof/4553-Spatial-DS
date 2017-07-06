@@ -16,14 +16,14 @@ The grid method takes the geometry of each occurence and after converting the co
 How you display your grids on the map is up to you. You could represent each grid cell as a box or rectangle thereby coloring the area of the map that it represented. Or, you could use another shape or icon and change the color and or size based on its value. As long as your visual output makes it very apparent where the "hot spots" are.  
 
 #### Pseudo Code for Grid
-<sup>Source: https://stackoverflow.com/questions/2343681/algorithm-for-heat-map</sup>
-This is PSEUDO code ... it does NOT run
+- <sup>Source: https://stackoverflow.com/questions/2343681/algorithm-for-heat-map</sup>
+- This is PSEUDO code ... it does NOT run
 
-This would create your grid. Rows and columns would need to be figured out before hand
+>This would create your grid. Rows and columns would need to be figured out before hand
 based on screen size, and number of data points (for visual effect). Remember, with more
 cells a finer grained heat map is created. Less cells would create large blocks of 
 color.
-```
+>```
 grid = [][]
 for each (lon,lat) in list:
   x,y = adjusted(lon,lat)
