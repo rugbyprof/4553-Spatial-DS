@@ -1,7 +1,6 @@
 Heat Map
 ========
-
-NOT DONE!!!
+### Due Friday 7 Jul by Midnight.
 
 ## Overview
 
@@ -208,3 +207,10 @@ if __name__ == '__main__':
 
 <sup>Source: 
 https://stackoverflow.com/questions/20792445/calculate-rgb-value-for-a-range-of-values-to-create-heat-map </sup>
+
+### Deliverables
+
+- Create a folder called `program_6` in your assignments folder.
+- Your heat map generating file should be called `heat_map.py`.
+- Any files you use in conjunction with `heat_map.py` should be included in this folder. 
+- I should be able to run your code after downloading your project folder with little or no changes. 
