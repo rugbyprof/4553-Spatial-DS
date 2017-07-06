@@ -79,7 +79,7 @@ After writing the previous section (Grid Method), I prefer that spatial solution
             },
             "count": 19
         },
-        etc ...
+        {"etc":"..."},
     "country_2_name": {
         "city_1_name": {
             "geometry": {
@@ -91,7 +91,8 @@ After writing the previous section (Grid Method), I prefer that spatial solution
             },
             "count": 11
         },
-       etc...
+       {"etc":"..."}
+}
 ```
 >This is a dictionary with each `country` as a key that gives access to another dictionary that uses `city` as a key. Using the same method I discussed in class, we use the dictionary to count individual instances (occurrences) of key words. So for every row in the database, I use the `country` to access the "country" dictionary, then use `city` to find the correct "city" dictionary, and then finally increment the `count` entry. Since `city` had over 6000 unknowns, by using `country` as a key, at least we know which country the attack occured in. 
 
