@@ -82,7 +82,7 @@ So how do we "bucket" lat/lons?
 
 If you just print out small points of color based your values in your newly created grid of values, you may not get the effect we want. Especially since most of our counts of attacks will be pretty localized. 
 
-|        |          |
+| Good  |  Bad       |
 |:------:|:--------:|
 |![](https://d3vv6lp55qjaqc.cloudfront.net/items/231o1f3A1O3d0B3Z1R2G/heat_map2.png) | ![](https://d3vv6lp55qjaqc.cloudfront.net/items/1V3G0N2t1Z3E3D2o3Q1G/heat_map.png ) | |
 |         |         |
