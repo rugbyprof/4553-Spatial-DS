@@ -45,8 +45,8 @@ If you want to create a grid using the lat lon values instead of adjusted x,y co
 |4|0.0001|individual street, land parcel|11.132 m|10.247 m|7.871 m|4.3496 m|
 |5|0.00001|individual trees|1.1132 m|1.0247 m|787.1 mm|434.96 mm|
 |6|0.000001|individual humans|111.32 mm|102.47 mm|78.71 mm|43.496 mm|
-|7|0.0000001|practical limit of commercial surveying|11.132 mm|10.247 mm|7.871 mm|4.3496 mm|
-|8|0.00000001|specialized surveying (e.g. tectonic plate mapping)|1.1132 mm|1.0247 mm|787.1 µm|434.96 µm|
+|7|0.0000001|commercial surveying|11.132 mm|10.247 mm|7.871 mm|4.3496 mm|
+|8|0.00000001|tectonic plate mapping|1.1132 mm|1.0247 mm|787.1 µm|434.96 µm|
 
 <sup>source: https://en.wikipedia.org/wiki/Decimal_degrees </sup>
 
