@@ -17,7 +17,8 @@ How you display your grids on the map is up to you. You could represent each gri
 
 #### Pseudo Code for Grid
 - <sup>Source: https://stackoverflow.com/questions/2343681/algorithm-for-heat-map</sup>
-- This is PSEUDO code ... it does NOT run
+
+
 
 **Create Grid**
 ```
@@ -27,6 +28,7 @@ for each (lon,lat) in list:
   grid[x][y]++
 end
 ```
+<sub>This is PSEUDO code ... it does NOT run</sub>
 >This would create your grid. Rows and columns would need to be figured out before hand
 based on screen size, and number of data points (for visual effect). Remember, with more
 cells a finer grained heat map is created. Less cells would create large blocks of 
