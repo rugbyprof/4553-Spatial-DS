@@ -55,7 +55,7 @@ This technique would work best with lots of cells.
 
 #### Count Cities
 
-After writing the previous section (Grid Method), I prefer that spatial solution using geometries over this method. Why, because every object has a geometry, compared to this method of selecting and filter on "city" which has  6000 entries labeled as "unknown". Having said that, I did create a json object with the following structure if anyone wants to use it:
+After writing the previous section (Grid Method), I prefer that spatial solution using geometries over this method. Why? Because every object has a geometry, compared to this method of selecting and filtering on "city" which has 6000 entries labeled as "unknown". Having said that, I did create a json object with the following structure if anyone wants to use it to help with this problem:
 
 ```json
 "country_1_name": {
@@ -93,8 +93,7 @@ After writing the previous section (Grid Method), I prefer that spatial solution
         },
        etc...
 ```
-
-After all xy coordinates have been placed in a cell, take the extreme values and assign a "heat" or color using the color function below:
+>It basically is a dictionary with each `country` as a key that gives access to another dictionary that uses `city` as a key. Using the same method I discussed in class, we use the dictionary to count individual instances (occurrences) of key words. Since `city` had over 6000 unknowns, by using `country` as a key, at least we know which country the attack occured in. 
 
 <sup>Source: 
 https://stackoverflow.com/questions/20792445/calculate-rgb-value-for-a-range-of-values-to-create-heat-map </sup>
