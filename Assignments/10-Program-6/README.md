@@ -42,7 +42,7 @@ If you want to create a grid using the lat lon values instead of adjusted x,y co
 |1|0.1|large city or district|11.132 km|10.247 km|7.871 km|4.3496 km|
 |2|0.01|town or village|1.1132 km|1.0247 km|787.1 m|434.96 m|
 |3|0.001|neighborhood, street|111.32 m|102.47 m|78.71 m|43.496 m|
-|4|0.0001|individual street, land parcel|11.132 m|10.247 m|7.871 m|4.3496 m|
+|4|0.0001|house |11.132 m|10.247 m|7.871 m|4.3496 m|
 |5|0.00001|individual trees|1.1132 m|1.0247 m|787.1 mm|434.96 mm|
 |6|0.000001|individual humans|111.32 mm|102.47 mm|78.71 mm|43.496 mm|
 |7|0.0000001|commercial surveying|11.132 mm|10.247 mm|7.871 mm|4.3496 mm|
