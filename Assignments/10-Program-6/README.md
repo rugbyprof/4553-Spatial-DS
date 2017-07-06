@@ -16,7 +16,16 @@ The grid method takes the geometry of each occurence and after converting the co
 How you display your grids on the map is up to you. You could represent each grid cell as a box or rectangle thereby coloring the area of the map that it represented. Or, you could use another shape or icon and change the color and or size based on its value. As long as your visual output makes it very apparent where the "hot spots" are.  
 
 #### Pseudo Code for Grid
-- <sup>Source: https://stackoverflow.com/questions/2343681/algorithm-for-heat-map</sup>
+
+1. Create some ***`MxN`*** grid.
+2. Process each record in data set.
+3. Map each record to some grid cell: grid[row][col] using the geometry of each record.
+    - Method 1 = convert lat/lon to x/y and then map to grid[x][y] (our mercator method gives us x=[0,1024] and y=[0,512] (adjusting for our image size).
+    - Method 2 = convert lat/lon to some integer range of buckets (described below).
+4. Increment the cell value by one every time a coordinate maps to it. 
+5. Highest count value gets hottest color and Lowest count value gets coolest color. (function below)
+6. Draw the grid colors on the map in the appropriate location (the row,col location IS the x,y location on the map)
+7. How you draw the colors on the map is up to you (sqaures, circles, increase size based on color, icons, etc.)
 
 
 
@@ -86,6 +95,8 @@ This technique would work best with lots of cells.
 >- The idea is to pass over the grid ___`N`___ number of times. 
 >- Each pass you increment "adjacent" cells. Where _Adjacent_ = 8 neighboring cells. 
 >- Depending on the number of passes, your "hot" areas will expand accordingly.
+
+- <sup>Source: https://stackoverflow.com/questions/2343681/algorithm-for-heat-map</sup>
 
 #### Count Cities
 
