@@ -214,3 +214,5 @@ https://stackoverflow.com/questions/20792445/calculate-rgb-value-for-a-range-of-
 - Your heat map generating file should be called `heat_map.py`.
 - Any files you use in conjunction with `heat_map.py` should be included in this folder. 
 - I should be able to run your code after downloading your project folder with little or no changes. 
+- Code should be commented based on [this](https://github.com/rugbyprof/4553-Spatial-DS/blob/master/Resources/example_commenting.md)
+
