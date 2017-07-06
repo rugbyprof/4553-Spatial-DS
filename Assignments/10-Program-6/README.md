@@ -32,8 +32,10 @@ based on screen size, and number of data points (for visual effect). Remember, w
 cells a finer grained heat map is created. Less cells would create large blocks of 
 color.
 
+If you want to create a grid using the lat lon values instead of adjusted x,y coordinates, it may be a good choice, especially if you know what granularity to choose. The table below tells us how precise a lat,lon coordinate is based on how many decimal places it contains. 
+
 |decimal places|decimal degrees|qualitative scale |N/S or E/W at equator|E/W at 23N/S|E/W at 45N/S|E/W at 67N/S|
-|--------|--------|--------|--------|--------|--------|--------|--------|
+|--------|--------|--------|--------|--------|--------|--------|
 |0|1.0|country or large region|111.32 km|102.47 km|78.71 km|43.496 km|
 |1|0.1|large city or district|11.132 km|10.247 km|7.871 km|4.3496 km|
 |2|0.01|town or village|1.1132 km|1.0247 km|787.1 m|434.96 m|
@@ -43,7 +45,7 @@ color.
 |6|0.000001|individual humans|111.32 mm|102.47 mm|78.71 mm|43.496 mm|
 |7|0.0000001|practical limit of commercial surveying|11.132 mm|10.247 mm|7.871 mm|4.3496 mm|
 |8|0.00000001|specialized surveying (e.g. tectonic plate mapping)|1.1132 mm|1.0247 mm|787.1 µm|434.96 µm|
-
+<sup>source: https://en.wikipedia.org/wiki/Decimal_degrees </sup>
 
 
 **Expand/Blur Colors**
