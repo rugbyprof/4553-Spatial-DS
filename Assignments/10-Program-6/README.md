@@ -93,7 +93,7 @@ After writing the previous section (Grid Method), I prefer that spatial solution
         },
        etc...
 ```
->It basically is a dictionary with each `country` as a key that gives access to another dictionary that uses `city` as a key. Using the same method I discussed in class, we use the dictionary to count individual instances (occurrences) of key words. Since `city` had over 6000 unknowns, by using `country` as a key, at least we know which country the attack occured in. 
+>This is a dictionary with each `country` as a key that gives access to another dictionary that uses `city` as a key. Using the same method I discussed in class, we use the dictionary to count individual instances (occurrences) of key words. So for every row in the database, I use the `country` to access the "country" dictionary, then use `city` to find the correct "city" dictionary, and then finally increment the `count` entry. Since `city` had over 6000 unknowns, by using `country` as a key, at least we know which country the attack occured in. 
 
 <sup>Source: 
 https://stackoverflow.com/questions/20792445/calculate-rgb-value-for-a-range-of-values-to-create-heat-map </sup>
