@@ -486,7 +486,7 @@ class printRtree(pantograph.PantographHandler):
 
         #r = self.Rd.randRect()
         r = self.Rd.randSquare(50,150)
-        print r
+        print(r)
 
         L = self.chooseLeaf(r)
 
@@ -495,12 +495,17 @@ class printRtree(pantograph.PantographHandler):
         if LL:
             self.N.append(LL)
 
-        print "=============="
+        print ("==============")
         for n in self.N:
-            print n
+            print (n)
 
     def showTestRects(self):
         test = [Point(39,21),Point(86,19),Point(65,5),Point(76,28),Point(3,9),Point(31,59),Point(43,99),Point(60,50),Point(42,48),Point(15,73),Point(67,98),Point(16,34),Point(27,80),Point(51,77),Point(30,67),Point(82,68),Point(85,46),Point(89,44),Point(21,30),Point(5,66),Point(75,29),Point(17,14),Point(40,90),Point(18,33),Point(52,64),Point(1,71),Point(88,10),Point(64,26),Point(96,2),Point(25,40)]
+
+
+        for i in range(25):
+            test.append(Point(random.randint(5,100),random.randint(5,100)))
+
 
         s = 0
         while len(test) > 0:
@@ -511,7 +516,7 @@ class printRtree(pantograph.PantographHandler):
             p2.x *= 5
             p2.y *= 5
             r = Rect(p1,p2)
-            print r
+            print(r)
             L = self.chooseLeaf(r)
 
             LL = L.insert(r)
@@ -540,7 +545,7 @@ class printRtree(pantograph.PantographHandler):
         if len(self.N) == 1:
             return self.N[0]
 
-        minimum = sys.maxint
+        minimum = sys.maxsize
         F = None
         for n in self.N:
             if n.Bbox.potential_area(R) < minimum:
@@ -550,7 +555,7 @@ class printRtree(pantograph.PantographHandler):
 
     def on_mouse_down(self,InputEvent):
         #self.addRectangle()
-        print InputEvent.x
+        print(InputEvent.x)
         printRTree(self.N)
 
     def randomColor(self):
@@ -586,7 +591,7 @@ class printRtree(pantograph.PantographHandler):
 def printRTree(root):
     for i in root:
         if isinstance(i, Node):
-            print i
+            print(i)
             printRTree(i.Children)
 
 

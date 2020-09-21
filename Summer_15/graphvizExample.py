@@ -8,11 +8,11 @@ class graphVizClass:
         self.graph = gv.Digraph(format='svg')
 
     def addNodeStyle(self,style):
-        for k,v in style.iteritems():
+        for k,v in style.items():
             self.graph.node_attr[k]=v
 
     def addEdgeStyle(self,style):
-        for k,v in style.iteritems():
+        for k,v in style.items():
             self.graph.edge_attr[k]=v
 
     def addNodes(self,nodes):
@@ -43,7 +43,7 @@ def GenerateBinaryTreeEdges(count):
 
 if __name__ == '__main__':
 
-    myGraph = graphVizClass();
+    myGraph = graphVizClass()
 
     nodeStyle = {"style":"filled",
                  "shape":"circle",

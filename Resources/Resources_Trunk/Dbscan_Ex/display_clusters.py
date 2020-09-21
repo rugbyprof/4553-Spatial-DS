@@ -86,7 +86,7 @@ for i in range(num_points):
 # f.write(json.dumps(mbrs))
 # f.close()
 
-f = open('F:\\4553-Spatial-DS\\Resources\\Dbscan_Ex\\mbrs.json','r')
+f = open('mbrs.json','r')
 data = json.loads(f.read())
 print(len(data))
 

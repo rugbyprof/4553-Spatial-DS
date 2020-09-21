@@ -19,7 +19,7 @@ class AStar(object):
                 while current.parent:
                     path.append(current)
                     current = current.parent
-                    print current
+                    print(current)
                 path.append(current)
                 return path[::-1]   #reverse the path
             openset.remove(current)

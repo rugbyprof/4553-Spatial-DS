@@ -239,10 +239,10 @@ class Polygon:
     def set_points(self, pts):
         """Reset the poly coordinates."""
 
-        self.minX = sys.maxint
-        self.minY = sys.maxint
-        self.maxX = sys.maxint * -1
-        self.maxY = sys.maxint * -1
+        self.minX = sys.maxsize
+        self.minY = sys.maxsize
+        self.maxX = sys.maxsize * -1
+        self.maxY = sys.maxsize * -1
 
         self.points = []
         #self.mbr = Rect()
@@ -324,6 +324,7 @@ class Driver(pantograph.PantographHandler):
 
     def changeDirection(self,direction):
         if direction == "N":
+            pass
 
     def hitWall(self,x,y):
         if x >= self.width or y >= self.width:

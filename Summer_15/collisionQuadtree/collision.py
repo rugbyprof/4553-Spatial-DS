@@ -40,7 +40,7 @@ class RectQuadTree(object):
             self.rects.append(r)
             return True
         elif self.northEast == None:
-            print "subdividing"
+            print("subdividing")
             # Otherwise we split this node into NW/NE/SE/SW quadrants
             self.subdivide()
 

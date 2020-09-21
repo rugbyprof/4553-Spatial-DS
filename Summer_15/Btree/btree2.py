@@ -36,7 +36,7 @@ class BTreeNode(object):
     def traverse(self):
         if self.leaf == True:
             for k in self.keys:
-                print k
+                print (k)
         else:
             for i in range(len(self.children)):
                 self.children[i].traverse()
@@ -79,4 +79,4 @@ if __name__ == '__main__':
         b.insert(random.randint(0,99))
     print
     b.traverse()
-    print b
+    print (b)

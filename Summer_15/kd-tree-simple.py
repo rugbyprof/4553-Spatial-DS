@@ -168,7 +168,7 @@ class kdtree:
             return
         else:
             line = '[' + ','.join(map(str, root.dimList)) + ']'
-            print line
+            print(line)
             if not root.leftChild == None:
                 queue.append(root.leftChild)
             if not root.rightChild == None:

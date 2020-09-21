@@ -19,9 +19,9 @@ class BTreeNode(object):
             # traverse the subtree rooted with child children[i].
             if self.leaf == False:
                 self.children[i].traverse()
-            print self.keys[i]
+            print (self.keys[i])
 
-        # Print the subtree rooted with last child
+        # print (the subtree rooted with last child)
         if self.leaf == False:
             self.children[-1].traverse()
 
@@ -43,7 +43,7 @@ class BTreeNode(object):
 
         else:
             # Go to the appropriate child
-            #print "go chile"
+            #print ("go chile")
             return self.children[i].search(k)
 
     # A utility function to insert a new key in this node
@@ -54,7 +54,7 @@ class BTreeNode(object):
         # Initialize index as index of rightmost element
         i = self.n-1
 
-        print i
+        print (i)
 
         # If this is a leaf node
         if self.leaf == True:
@@ -62,7 +62,7 @@ class BTreeNode(object):
             # The following loop does two things
             # a) Finds the location of new key to be inserted
             # b) Moves all greater keys to one place ahead
-            print self.keys
+            print (self.keys)
 
             self.keys.append(k)
 
@@ -201,13 +201,13 @@ if __name__ == '__main__':
     t.insert(7)
     t.insert(17)
 
-    print"Traversal of the constucted tree is ";
+    print("Traversal of the constucted tree is ")
     t.traverse()
 
-    print "================\n\n"
+    print ("================\n\n")
 
     k = 6
-    print t.search(k)
+    print (t.search(k))
 
     k = 15
-    print t.search(k)
+    print (t.search(k))
