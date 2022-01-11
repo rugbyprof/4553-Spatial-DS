@@ -10,6 +10,6 @@
 | ***<a href="https://github.com/rugbyprof/4553-Spatial-DS/tree/master/Resources/Resources_Trunk">Resources_Trunk</a>*** | ***<a href="https://github.com/rugbyprof/4553-Spatial-DS/tree/master/Resources/Resources_Trunk"> Placeholder Readme </a>*** | ***<a href="https://github.com/rugbyprof/4553-Spatial-DS/tree/master/Resources/Resources_Trunk"> No Description</a>*** | ***<a href="https://github.com/rugbyprof/4553-Spatial-DS/tree/master/Resources/Resources_Trunk">N/A</a>*** |  |
 | ***<a href="https://github.com/rugbyprof/4553-Spatial-DS/tree/master/Resources/word_count">word_count</a>*** | ***<a href="https://github.com/rugbyprof/4553-Spatial-DS/tree/master/Resources/word_count"> Placeholder Readme </a>*** | ***<a href="https://github.com/rugbyprof/4553-Spatial-DS/tree/master/Resources/word_count"> No Description</a>*** | ***<a href="https://github.com/rugbyprof/4553-Spatial-DS/tree/master/Resources/word_count">N/A</a>*** |  |
 
-<sup>Last Updated: 2022-01-10 (Mon @ 23:38)</sup> 
+<sup>Last Updated: 2022-01-11 (Tue @ 09:12)</sup> 
 
 <sup>***Days Left is only accurate if the `Last Updated` date is the same as todays date. Otherwise, use the due date!***</sup> 
