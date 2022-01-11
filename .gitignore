@@ -1,6 +1,3 @@
-local
-osm_spatialdb_project/geojson_files/tl_2013_48_prisecroads.json
-.DS_Store
-.vscode
-
-Private/
+.*
+!.gitignore
+!.clang-format
