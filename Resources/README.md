@@ -1,5 +1,15 @@
-Resources
-=========
+## Resources
 
-- https://mapzen.com/data/borders/
-- https://github.com/mledoze/countries
+| Folder | Title | Description | Due |  |
+|:------|:------|:------|:------|:-----:|
+| ***<a href="https://github.com/rugbyprof/4553-Spatial-DS/tree/master/Resources/BPlusTree">BPlusTree</a>*** | ***<a href="https://github.com/rugbyprof/4553-Spatial-DS/tree/master/Resources/BPlusTree">None</a>*** | ***<a href="https://github.com/rugbyprof/4553-Spatial-DS/tree/master/Resources/BPlusTree">None</a>*** | ***<a href="https://github.com/rugbyprof/4553-Spatial-DS/tree/master/Resources/BPlusTree">N/A</a>*** |  |
+| ***<a href="https://github.com/rugbyprof/4553-Spatial-DS/tree/master/Resources/Data">Data</a>*** | ***<a href="https://github.com/rugbyprof/4553-Spatial-DS/tree/master/Resources/Data">None</a>*** | ***<a href="https://github.com/rugbyprof/4553-Spatial-DS/tree/master/Resources/Data">None</a>*** | ***<a href="https://github.com/rugbyprof/4553-Spatial-DS/tree/master/Resources/Data">N/A</a>*** |  |
+| ***<a href="https://github.com/rugbyprof/4553-Spatial-DS/tree/master/Resources/Papers">Papers</a>*** | ***<a href="https://github.com/rugbyprof/4553-Spatial-DS/tree/master/Resources/Papers"> Placeholder Readme </a>*** | ***<a href="https://github.com/rugbyprof/4553-Spatial-DS/tree/master/Resources/Papers"> No Description</a>*** | ***<a href="https://github.com/rugbyprof/4553-Spatial-DS/tree/master/Resources/Papers">N/A</a>*** |  |
+| ***<a href="https://github.com/rugbyprof/4553-Spatial-DS/tree/master/Resources/Program_3_Starter">Program_3_Starter</a>*** | ***<a href="https://github.com/rugbyprof/4553-Spatial-DS/tree/master/Resources/Program_3_Starter">None</a>*** | ***<a href="https://github.com/rugbyprof/4553-Spatial-DS/tree/master/Resources/Program_3_Starter">None</a>*** | ***<a href="https://github.com/rugbyprof/4553-Spatial-DS/tree/master/Resources/Program_3_Starter">N/A</a>*** |  |
+| ***<a href="https://github.com/rugbyprof/4553-Spatial-DS/tree/master/Resources/RTree">RTree</a>*** | ***<a href="https://github.com/rugbyprof/4553-Spatial-DS/tree/master/Resources/RTree"> Placeholder Readme </a>*** | ***<a href="https://github.com/rugbyprof/4553-Spatial-DS/tree/master/Resources/RTree"> No Description</a>*** | ***<a href="https://github.com/rugbyprof/4553-Spatial-DS/tree/master/Resources/RTree">N/A</a>*** |  |
+| ***<a href="https://github.com/rugbyprof/4553-Spatial-DS/tree/master/Resources/Resources_Trunk">Resources_Trunk</a>*** | ***<a href="https://github.com/rugbyprof/4553-Spatial-DS/tree/master/Resources/Resources_Trunk"> Placeholder Readme </a>*** | ***<a href="https://github.com/rugbyprof/4553-Spatial-DS/tree/master/Resources/Resources_Trunk"> No Description</a>*** | ***<a href="https://github.com/rugbyprof/4553-Spatial-DS/tree/master/Resources/Resources_Trunk">N/A</a>*** |  |
+| ***<a href="https://github.com/rugbyprof/4553-Spatial-DS/tree/master/Resources/word_count">word_count</a>*** | ***<a href="https://github.com/rugbyprof/4553-Spatial-DS/tree/master/Resources/word_count"> Placeholder Readme </a>*** | ***<a href="https://github.com/rugbyprof/4553-Spatial-DS/tree/master/Resources/word_count"> No Description</a>*** | ***<a href="https://github.com/rugbyprof/4553-Spatial-DS/tree/master/Resources/word_count">N/A</a>*** |  |
+
+<sup>Last Updated: 2022-01-10 (Mon @ 23:38)</sup> 
+
+<sup>***Days Left is only accurate if the `Last Updated` date is the same as todays date. Otherwise, use the due date!***</sup> 
