@@ -4,6 +4,6 @@
 |-----|-----|-----|-----|-----|
 | None | None | None | None | None |
 
-<sup>Last Updated: 2022-01-11 (Tue @ 09:20)</sup> 
+<sup>Last Updated: 2022-01-11 (Tue @ 09:23)</sup> 
 
 <sup>***Days Left is only accurate if the `Last Updated` date is the same as todays date. Otherwise, use the due date!***</sup> 
