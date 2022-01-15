@@ -22,8 +22,10 @@ Let me cover json using examples. Json really breaks down to `key`:`value` pairs
 - onother json object
 
 ```json
-key:value
-\\ or
+"key":"value"
+```
+or
+```json
 "apples":204
 ```
 
