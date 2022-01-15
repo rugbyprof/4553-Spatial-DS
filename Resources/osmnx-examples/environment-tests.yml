@@ -1,0 +1,14 @@
+name: osmnx-examples
+channels:
+  - conda-forge
+dependencies:
+  - black
+  - descartes
+  - flake8
+  - isort
+  - jupyterlab
+  - nbqa
+  - osmnx=1.1.2
+  - pillow
+  - python=3.9.*
+  - python-igraph

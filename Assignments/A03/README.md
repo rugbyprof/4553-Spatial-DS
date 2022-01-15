@@ -1,4 +1,4 @@
-## Assignment 2 - Github Setup
+## Assignment 3 - Rtree Paper
 #### Due: 01-18-2022 (Thursday @ 12:30 p.m.)
 
 ## Rtree
