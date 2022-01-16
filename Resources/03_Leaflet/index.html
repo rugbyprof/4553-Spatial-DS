@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Leaflet Example</title>
+    <meta name="author" content="">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- <link href="css/style.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+        integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+        crossorigin="" />
+    <style>
+        #map {
+            height: 800px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="map"></div>
+
+    <!-- Make sure you put this AFTER Leaflet's CSS -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+        integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+        crossorigin=""></script>
+    <script>
+
+        function onEachFeature(feature, layer) {
+            var popupContent = '<p>I started out as a GeoJSON ' +
+                feature.geometry.type + ', but now I\'m a Leaflet vector!</p>';
+
+            if (feature.properties && feature.properties.popupContent) {
+                popupContent += feature.properties.popupContent;
+            }
+
+            layer.bindPopup(popupContent);
+        }
+
+        var map = L.map('map').setView([38.2700, -100.8603], 5);
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        L.marker([38.2700, -100.8603]).addTo(map)
+            .bindPopup('Center of the USA!!')
+            .openPopup();
+
+        let xhr = new XMLHttpRequest();
+        xhr.open('GET', 'cities.geojson');
+        xhr.setRequestHeader('Content-Type', 'application/json');
+        xhr.responseType = 'json';
+        xhr.onload = function () {
+            if (xhr.status !== 200) return
+            //L.geoJSON(xhr.response).addTo(map);
+
+            L.geoJSON(xhr.response, {
+                onEachFeature: onEachFeature,
+                pointToLayer: function (feature, latlng) {
+                    let size= Math.floor(Math.random()*20);
+                    console.log(size);
+                    return L.circleMarker(latlng, {
+                        radius: size,
+                        //fillColor: '#ff7800',
+                        fillColor: '#' + Math.floor(Math.random() * 16777215).toString(16),
+                        color: '#000',
+                        weight: 1,
+                        opacity: 1,
+                        fillOpacity: 0.8
+                    });
+                }
+            }).addTo(map);
+        };
+        xhr.send();
+
+
+    </script>
+</body>
+
+</html>
