@@ -8,6 +8,6 @@
 | ***<a href="https://github.com/rugbyprof/4553-Spatial-DS/tree/master/Resources/04_OpenLayers">04_OpenLayers</a>*** | ***<a href="https://github.com/rugbyprof/4553-Spatial-DS/tree/master/Resources/04_OpenLayers"> Placeholder Readme </a>*** | ***<a href="https://github.com/rugbyprof/4553-Spatial-DS/tree/master/Resources/04_OpenLayers"> No Description</a>*** | ***<a href="https://github.com/rugbyprof/4553-Spatial-DS/tree/master/Resources/04_OpenLayers">N/A</a>*** |  |
 | ***<a href="https://github.com/rugbyprof/4553-Spatial-DS/tree/master/Resources/05_GeoPandas">05_GeoPandas</a>*** | ***<a href="https://github.com/rugbyprof/4553-Spatial-DS/tree/master/Resources/05_GeoPandas">None</a>*** | ***<a href="https://github.com/rugbyprof/4553-Spatial-DS/tree/master/Resources/05_GeoPandas">None</a>*** | ***<a href="https://github.com/rugbyprof/4553-Spatial-DS/tree/master/Resources/05_GeoPandas"> https://docs.astraea.earth/hc/en-us/articles/360043919911-Read-a-GeoJSON-File-into-a-GeoPandas-DataFrame</a>*** |  |
 
-<sup>Last Updated: 2022-01-16 (Sun @ 12:38)</sup> 
+<sup>Last Updated: 2022-01-16 (Sun @ 12:39)</sup> 
 
 <sup>***Days Left is only accurate if the `Last Updated` date is the same as todays date. Otherwise, use the due date!***</sup> 

@@ -7,9 +7,9 @@ With points we can represent addresses and locations. With line strings we can r
 
 ### Geometry primitives
 
-|   |   |
-|:---|:---|
-| **Point** |  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/SFA_Point.svg/51px-SFA_Point.svg.png" width="75"> |
+|**Point** |
+|:---:|
+| <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/SFA_Point.svg/51px-SFA_Point.svg.png" width="75"> |
 
 **GeoJson:**
 ```json
