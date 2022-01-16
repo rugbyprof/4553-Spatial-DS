@@ -7,7 +7,7 @@ With points we can represent addresses and locations. With line strings we can r
 
 ### Geometry primitives
 
-<center><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/SFA_Point.svg/51px-SFA_Point.svg.png" width="75"></center> 
+<p align="center"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/SFA_Point.svg/51px-SFA_Point.svg.png" width="75"></p> 
 
 A point represents a single location and is a list containing an `x` and `y` coordinate or a `longitude` and `latitude`.
 
