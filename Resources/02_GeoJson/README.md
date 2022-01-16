@@ -7,11 +7,10 @@ With points we can represent addresses and locations. With line strings we can r
 
 ### Geometry primitives
 
-|**Point** |
-|:---:|
-| <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/SFA_Point.svg/51px-SFA_Point.svg.png" width="75"> |
+<center><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/SFA_Point.svg/51px-SFA_Point.svg.png" width="75"></center> 
 
-**GeoJson:**
+A point represents a single location and is a list containing an `x` and `y` coordinate or a `longitude` and `latitude`.
+
 ```json
 {
     "type": "Point", 
@@ -22,8 +21,11 @@ With points we can represent addresses and locations. With line strings we can r
 -----
 
 
-### Line 
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/SFA_LineString.svg/51px-SFA_LineString.svg.png" width="75">
+|**LineString** |
+|:---:|
+| <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/SFA_LineString.svg/51px-SFA_LineString.svg.png" width="75"> |
+
+To represent a line, you’ll need at least two places to connect but you can have more. Notice the square brackets surrounding all the points. A linestring is basically a list of points. 
 
 ```json
 {
@@ -35,19 +37,25 @@ With points we can represent addresses and locations. With line strings we can r
 ```
 -----
 
-### Polygon
+|**Polygon** |
+|:---:|
+| <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/SFA_Polygon.svg/51px-SFA_Polygon.svg.png" width="75">|
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/SFA_Polygon.svg/51px-SFA_Polygon.svg.png" width="75">
+Polygons are where GeoJSON geometries become significantly more complex. They have area, so they have *insides* & *outsides*. Notice we go one level deeper with the square brackets. You could think of a simple polygon as a `list of linestrings`. Each linestring much start and end with the same point. So a polygon is just a linestring that is a closed loop. 
 
 ```json 
 {
-    "type": "Polygon", 
-    "coordinates": [
-        [[30.0, 10.0], [40.0, 40.0], [20.0, 40.0], [10.0, 20.0], [30.0, 10.0]]
+  "type": "Polygon",
+  "coordinates": [
+    [
+      [[35.0, 10.0], [45.0, 45.0], [15.0, 40.0], [10.0, 20.0], [35.0, 10.0]]
     ]
+  ]
 }
 ```
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/SFA_Polygon_with_hole.svg/51px-SFA_Polygon_with_hole.svg.png" width="75">
+
+By adding another set of points to this polygon, we can define a "hole" if those points are inside the initial polygon. If the second set of points was not included in the same set of outer square brackets, but rather had its own, it would be simply a different polygon (see MultiPolygon below ).
 
 ```json
 {
@@ -58,6 +66,8 @@ With points we can represent addresses and locations. With line strings we can r
     ]
 }
 ```
+
+By giving a polygon insides and outsides 
 
 -----
 
