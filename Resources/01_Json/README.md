@@ -1,4 +1,4 @@
-## JSON Data
+## JSON - Javascript Object Notation Overview
 
 ### Wikipedia Definition
 

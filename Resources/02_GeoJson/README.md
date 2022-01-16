@@ -1,4 +1,4 @@
-## GeoJson
+## GeoJson - Geographic Info in JSON format
 
 GeoJson is a "superset" of the Json data standard. It uses the Json structure to hold geographic data. More specifically points, lines, and polygons. 
 
