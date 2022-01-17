@@ -7,6 +7,6 @@
 | ~<a href="https://github.com/rugbyprof/4553-Spatial-DS/tree/master/Assignments/A01">A01</a>~ | ~<a href="https://github.com/rugbyprof/4553-Spatial-DS/tree/master/Assignments/A01"> Assignment 1 </a>~ | ~<a href="https://github.com/rugbyprof/4553-Spatial-DS/tree/master/Assignments/A01"> Getting Setup</a>~ | ~<a href="https://github.com/rugbyprof/4553-Spatial-DS/tree/master/Assignments/A01"> 01-13-2022 (Thursday @ 9:30 a.m.)</a>~ | ---- |
 | ~<a href="https://github.com/rugbyprof/4553-Spatial-DS/tree/master/Assignments/A02">A02</a>~ | ~<a href="https://github.com/rugbyprof/4553-Spatial-DS/tree/master/Assignments/A02"> Assignment 2 </a>~ | ~<a href="https://github.com/rugbyprof/4553-Spatial-DS/tree/master/Assignments/A02"> Github Setup</a>~ | ~<a href="https://github.com/rugbyprof/4553-Spatial-DS/tree/master/Assignments/A02"> 01-13-2022 (Thursday @ 12:30 p.m.)</a>~ | ---- |
 
-<sup>Last Updated: 2022-01-16 (Sun @ 22:45)</sup> 
+<sup>Last Updated: 2022-01-16 (Sun @ 22:46)</sup> 
 
 <sup>***Days Left is only accurate if the `Last Updated` date is the same as todays date. Otherwise, use the due date!***</sup> 
