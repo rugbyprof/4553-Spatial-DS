@@ -20,7 +20,7 @@ Json file looks like the following:
 import json
 import csv
 
-### Used by Griffin cause vscode is dumb
+### Used by Griffin to set base directory with editing config files cause vscode is dumb
 import os
 os.chdir("/Users/griffin/Dropbox/_Courses/4553-Spatial-DS/Resources/01_Data")
 ### 
