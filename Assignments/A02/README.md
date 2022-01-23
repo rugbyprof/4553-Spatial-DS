@@ -1,5 +1,5 @@
 ## Assignment 2 - Github Setup
-#### Due: 01-13-2022 (Thursday @ 12:30 p.m.)
+#### Due: 01-13-2022 (Thursday @ 9:30 a.m.)
 
 The 1 way communication is you communicating with me and others with the descriptions and instructions you push to your Github repo. This file provides the instructions that will help you format each assignments README file so they are consistent and informative. I discuss README's below.  Remember this file as a reference for turning in all of your assignments.
 
