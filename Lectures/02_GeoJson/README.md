@@ -80,7 +80,7 @@ Each entry when defining a polygon is called a LinearRing, and is organized like
   - LinearRing (interior)
     - Positions...
 
-The first LinearRing defines the perimiter and the remaining LinearRings define holes.
+The first LinearRing defines the perimeter and the remaining LinearRings define holes.
 
 -----
 
