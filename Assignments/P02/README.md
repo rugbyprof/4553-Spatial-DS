@@ -1,4 +1,4 @@
-## Better Path - R-tree Nearest Neighbor
+## Better Path - Rtree Nearest Neighbor
 #### Due: 02-10-2022 (Thursday @ 9:30 a.m.)
 
 # NOT DONE JUST A PREVIEW
