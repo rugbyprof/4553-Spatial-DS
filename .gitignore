@@ -1,3 +1,5 @@
 .*
 !.gitignore
 !.clang-format
+
+Lectures/05_Osmnx/48-TX-cities-street_networks-graphml.zip

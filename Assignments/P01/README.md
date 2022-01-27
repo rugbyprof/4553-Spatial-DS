@@ -208,6 +208,11 @@ Now all you need to add is color and icon info by putting the proper key:values 
 FeatureCollection["features"].append(city)
 ```
 
+### Helper Code From Class
+
+- [helper.py](helper.py)
+
+
 ### Deliverables
 
 - Create a folder called `P01` in your `Assignments` folder within your repo.
