@@ -1,0 +1,936 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "city": "Portland",
+                "growth": 15,
+                "population": 609456,
+                "rank": 29,
+                "state": "Oregon",
+                "marker-color": "#879CB9",
+                "marker-size": "medium"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -122.676482,
+                    45.523062
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "city": "Seattle",
+                "growth": 15.6,
+                "population": 652405,
+                "rank": 21,
+                "state": "Washington",
+                "marker-color": "#14F334",
+                "marker-size": "medium"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -122.332071,
+                    47.606209
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "city": "Los Angeles",
+                "growth": 4.8,
+                "population": 3884307,
+                "rank": 2,
+                "state": "California",
+                "marker-color": "#5F2B67",
+                "marker-size": "medium"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -118.243685,
+                    34.052234
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "city": "Boise City",
+                "growth": 9.5,
+                "population": 214237,
+                "rank": 98,
+                "state": "Idaho",
+                "marker-color": "#94EEF1",
+                "marker-size": "medium"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -116.214607,
+                    43.61871
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "city": "Las Vegas",
+                "growth": 24.5,
+                "population": 603488,
+                "rank": 30,
+                "state": "Nevada",
+                "marker-color": "#F3E40F",
+                "marker-size": "medium"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -115.13983,
+                    36.169941
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "city": "Phoenix",
+                "growth": 14,
+                "population": 1513367,
+                "rank": 6,
+                "state": "Arizona",
+                "marker-color": "#D2E3F1",
+                "marker-size": "medium"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -112.074037,
+                    33.448377
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "city": "Salt Lake City",
+                "growth": 5.1,
+                "population": 191180,
+                "rank": 124,
+                "state": "Utah",
+                "marker-color": "#DBEDE8",
+                "marker-size": "medium"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -111.891047,
+                    40.760779
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "city": "Billings",
+                "growth": 18.6,
+                "population": 109059,
+                "rank": 256,
+                "state": "Montana",
+                "marker-color": "#EF42B6",
+                "marker-size": "medium"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -108.50069,
+                    45.783286
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "city": "Albuquerque",
+                "growth": 23.5,
+                "population": 556495,
+                "rank": 32,
+                "state": "New Mexico",
+                "marker-color": "#16E9B7",
+                "marker-size": "medium"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -106.605553,
+                    35.085334
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "city": "Denver",
+                "growth": 16.7,
+                "population": 649495,
+                "rank": 22,
+                "state": "Colorado",
+                "marker-color": "#931B46",
+                "marker-size": "medium"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -104.990251,
+                    39.739236
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "city": "Cheyenne",
+                "growth": 16.9,
+                "population": 62448,
+                "rank": 558,
+                "state": "Wyoming",
+                "marker-color": "#50DD3D",
+                "marker-size": "medium"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -104.820246,
+                    41.139981
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "city": "Oklahoma City",
+                "growth": 20.2,
+                "population": 610613,
+                "rank": 27,
+                "state": "Oklahoma",
+                "marker-color": "#B2A3FD",
+                "marker-size": "medium"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -97.516428,
+                    35.46756
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "city": "Wichita",
+                "growth": 9.7,
+                "population": 386552,
+                "rank": 49,
+                "state": "Kansas",
+                "marker-color": "#E1A781",
+                "marker-size": "medium"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -97.336111,
+                    37.688889
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "city": "Fargo",
+                "growth": 24.9,
+                "population": 113658,
+                "rank": 237,
+                "state": "North Dakota",
+                "marker-color": "#766A2C",
+                "marker-size": "medium"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -96.789803,
+                    46.877186
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "city": "Sioux Falls",
+                "growth": 31.1,
+                "population": 164676,
+                "rank": 147,
+                "state": "South Dakota",
+                "marker-color": "#A0CD89",
+                "marker-size": "medium"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -96.731103,
+                    43.544596
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "city": "Omaha",
+                "growth": 5.9,
+                "population": 434353,
+                "rank": 42,
+                "state": "Nebraska",
+                "marker-color": "#C224F6",
+                "marker-size": "medium"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -95.997988,
+                    41.252363
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "city": "Houston",
+                "growth": 11,
+                "population": 2195914,
+                "rank": 4,
+                "state": "Texas",
+                "marker-color": "#C2C694",
+                "marker-size": "medium"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -95.369803,
+                    29.760427
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "city": "Kansas City",
+                "growth": 5.5,
+                "population": 467007,
+                "rank": 37,
+                "state": "Missouri",
+                "marker-color": "#1B8AC7",
+                "marker-size": "medium"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -94.578567,
+                    39.099727
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "city": "Des Moines",
+                "growth": 3.9,
+                "population": 207510,
+                "rank": 104,
+                "state": "Iowa",
+                "marker-color": "#1D6672",
+                "marker-size": "medium"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -93.609106,
+                    41.600545
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "city": "Minneapolis",
+                "growth": 4.5,
+                "population": 400070,
+                "rank": 46,
+                "state": "Minnesota",
+                "marker-color": "#F16DD3",
+                "marker-size": "medium"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -93.265011,
+                    44.977753
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "city": "Little Rock",
+                "growth": 7.6,
+                "population": 197357,
+                "rank": 118,
+                "state": "Arkansas",
+                "marker-color": "#EA684A",
+                "marker-size": "medium"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -92.289595,
+                    34.746481
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "city": "Jackson",
+                "growth": -6.8,
+                "population": 172638,
+                "rank": 138,
+                "state": "Mississippi",
+                "marker-color": "#5548A8",
+                "marker-size": "medium"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -90.18481,
+                    32.298757
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "city": "New Orleans",
+                "growth": -21.6,
+                "population": 378715,
+                "rank": 51,
+                "state": "Louisiana",
+                "marker-color": "#5D0A76",
+                "marker-size": "medium"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -90.071532,
+                    29.951066
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "city": "Memphis",
+                "growth": -5.3,
+                "population": 653450,
+                "rank": 20,
+                "state": "Tennessee",
+                "marker-color": "#6275C9",
+                "marker-size": "medium"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -90.04898,
+                    35.149534
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "city": "Milwaukee",
+                "growth": 0.3,
+                "population": 599164,
+                "rank": 31,
+                "state": "Wisconsin",
+                "marker-color": "#2A3D4B",
+                "marker-size": "medium"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -87.906474,
+                    43.038902
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "city": "Chicago",
+                "growth": -6.1,
+                "population": 2718782,
+                "rank": 3,
+                "state": "Illinois",
+                "marker-color": "#58E72E",
+                "marker-size": "medium"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -87.629798,
+                    41.878114
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "city": "Birmingham",
+                "growth": -12.3,
+                "population": 212113,
+                "rank": 101,
+                "state": "Alabama",
+                "marker-color": "#7475A2",
+                "marker-size": "medium"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -86.80249,
+                    33.520661
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "city": "Indianapolis",
+                "growth": 7.8,
+                "population": 843393,
+                "rank": 12,
+                "state": "Indiana",
+                "marker-color": "#E7E184",
+                "marker-size": "medium"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -86.158068,
+                    39.768403
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "city": "Louisville/Jefferson County",
+                "growth": 10,
+                "population": 609893,
+                "rank": 28,
+                "state": "Kentucky",
+                "marker-color": "#745FE1",
+                "marker-size": "medium"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -85.758456,
+                    38.252665
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "city": "Atlanta",
+                "growth": 6.2,
+                "population": 447841,
+                "rank": 40,
+                "state": "Georgia",
+                "marker-color": "#4B2969",
+                "marker-size": "medium"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -84.387982,
+                    33.748995
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "city": "Detroit",
+                "growth": -27.1,
+                "population": 688701,
+                "rank": 18,
+                "state": "Michigan",
+                "marker-color": "#0E07B8",
+                "marker-size": "medium"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -83.045754,
+                    42.331427
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "city": "Columbus",
+                "growth": 14.8,
+                "population": 822553,
+                "rank": 15,
+                "state": "Ohio",
+                "marker-color": "#802710",
+                "marker-size": "medium"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -82.998794,
+                    39.961176
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "city": "Jacksonville",
+                "growth": 14.3,
+                "population": 842583,
+                "rank": 13,
+                "state": "Florida",
+                "marker-color": "#DDD824",
+                "marker-size": "medium"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -81.655651,
+                    30.332184
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "city": "Charleston",
+                "growth": -4.7,
+                "population": 50821,
+                "rank": 725,
+                "state": "West Virginia",
+                "marker-color": "#3EEF5B",
+                "marker-size": "medium"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -81.632623,
+                    38.34982
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "city": "Columbia",
+                "growth": 11.7,
+                "population": 133358,
+                "rank": 192,
+                "state": "South Carolina",
+                "marker-color": "#C00D17",
+                "marker-size": "medium"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -81.034814,
+                    34.00071
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "city": "Charlotte",
+                "growth": 39.1,
+                "population": 792862,
+                "rank": 16,
+                "state": "North Carolina",
+                "marker-color": "#3DF451",
+                "marker-size": "medium"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -80.843127,
+                    35.227087
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "city": "Washington",
+                "growth": 13,
+                "population": 646449,
+                "rank": 23,
+                "state": "District of Columbia",
+                "marker-color": "#F9BF6A",
+                "marker-size": "medium"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -77.036871,
+                    38.907192
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "city": "Baltimore",
+                "growth": -4,
+                "population": 622104,
+                "rank": 26,
+                "state": "Maryland",
+                "marker-color": "#560315",
+                "marker-size": "medium"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -76.612189,
+                    39.290385
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "city": "Virginia Beach",
+                "growth": 5.1,
+                "population": 448479,
+                "rank": 39,
+                "state": "Virginia",
+                "marker-color": "#C4330B",
+                "marker-size": "medium"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -75.977985,
+                    36.852926
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "city": "Wilmington",
+                "growth": -1.6,
+                "population": 71525,
+                "rank": 470,
+                "state": "Delaware",
+                "marker-color": "#C2C76B",
+                "marker-size": "medium"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -75.539788,
+                    39.739072
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "city": "Philadelphia",
+                "growth": 2.6,
+                "population": 1553165,
+                "rank": 5,
+                "state": "Pennsylvania",
+                "marker-color": "#1CECBC",
+                "marker-size": "medium"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -75.165222,
+                    39.952584
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "city": "Newark",
+                "growth": 2.1,
+                "population": 278427,
+                "rank": 69,
+                "state": "New Jersey",
+                "marker-color": "#316C03",
+                "marker-size": "medium"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -74.172367,
+                    40.735657
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "city": "New York",
+                "growth": 4.8,
+                "population": 8405837,
+                "rank": 1,
+                "state": "New York",
+                "marker-color": "#5481D4",
+                "marker-size": "medium"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -74.005941,
+                    40.712784
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "city": "Burlington",
+                "growth": 6.1,
+                "population": 42284,
+                "rank": 870,
+                "state": "Vermont",
+                "marker-color": "#8FB62B",
+                "marker-size": "medium"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -73.212072,
+                    44.475882
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "city": "Bridgeport",
+                "growth": 5.4,
+                "population": 147216,
+                "rank": 172,
+                "state": "Connecticut",
+                "marker-color": "#96880A",
+                "marker-size": "medium"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -73.195177,
+                    41.186548
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "city": "Manchester",
+                "growth": 2.9,
+                "population": 110378,
+                "rank": 248,
+                "state": "New Hampshire",
+                "marker-color": "#089632",
+                "marker-size": "medium"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -71.454789,
+                    42.99564
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "city": "Providence",
+                "growth": 2.3,
+                "population": 177994,
+                "rank": 134,
+                "state": "Rhode Island",
+                "marker-color": "#C87C99",
+                "marker-size": "medium"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -71.412834,
+                    41.823989
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "city": "Boston",
+                "growth": 9.4,
+                "population": 645966,
+                "rank": 24,
+                "state": "Massachusetts",
+                "marker-color": "#F39421",
+                "marker-size": "medium"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -71.05888,
+                    42.360082
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "city": "Portland",
+                "growth": 3.2,
+                "population": 66318,
+                "rank": 519,
+                "state": "Maine",
+                "marker-color": "#9F66E0",
+                "marker-size": "medium"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -70.255326,
+                    43.661471
+                ]
+            }
+        }
+    ]
+}
