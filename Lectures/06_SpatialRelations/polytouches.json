@@ -1,0 +1,1786 @@
+[
+    {
+        "type": "Feature",
+        "id": "pv932yw9333.17",
+        "geometry": {
+            "type": "MultiPolygon",
+            "coordinates": [
+                [
+                    [
+                        [
+                            28.5580815,
+                            43.70746166
+                        ],
+                        [
+                            28.03909509,
+                            43.2931717
+                        ],
+                        [
+                            27.67389774,
+                            42.57789236
+                        ],
+                        [
+                            27.99672041,
+                            42.00735871
+                        ],
+                        [
+                            27.13573937,
+                            42.14148489
+                        ],
+                        [
+                            26.11704186,
+                            41.82690461
+                        ],
+                        [
+                            26.10613814,
+                            41.32889883
+                        ],
+                        [
+                            25.19720137,
+                            41.23448599
+                        ],
+                        [
+                            24.49264489,
+                            41.58389619
+                        ],
+                        [
+                            23.6920736,
+                            41.30908092
+                        ],
+                        [
+                            22.95237715,
+                            41.33799388
+                        ],
+                        [
+                            22.88137373,
+                            41.99929719
+                        ],
+                        [
+                            22.38052575,
+                            42.32025951
+                        ],
+                        [
+                            22.54501183,
+                            42.46136201
+                        ],
+                        [
+                            22.43659468,
+                            42.58032115
+                        ],
+                        [
+                            22.60480147,
+                            42.89851879
+                        ],
+                        [
+                            22.98601851,
+                            43.2111612
+                        ],
+                        [
+                            22.50015669,
+                            43.64281444
+                        ],
+                        [
+                            22.4104464,
+                            44.00806346
+                        ],
+                        [
+                            22.65714969,
+                            44.234923
+                        ],
+                        [
+                            22.94483239,
+                            43.82378531
+                        ],
+                        [
+                            23.33230228,
+                            43.89701081
+                        ],
+                        [
+                            24.10067915,
+                            43.74105134
+                        ],
+                        [
+                            25.56927168,
+                            43.68844473
+                        ],
+                        [
+                            26.06515873,
+                            43.94349376
+                        ],
+                        [
+                            27.24239953,
+                            44.17598603
+                        ],
+                        [
+                            27.97010705,
+                            43.81246817
+                        ],
+                        [
+                            28.5580815,
+                            43.70746166
+                        ]
+                    ]
+                ]
+            ]
+        },
+        "geometry_name": "geom",
+        "properties": {
+            "scalerank": 1,
+            "featurecla": "Admin-0 country",
+            "labelrank": 4,
+            "sovereignt": "Bulgaria",
+            "sov_a3": "BGR",
+            "adm0_dif": 0,
+            "level": 2,
+            "type": "Sovereign country",
+            "admin": "Bulgaria",
+            "adm0_a3": "BGR",
+            "geou_dif": 0,
+            "geounit": "Bulgaria",
+            "gu_a3": "BGR",
+            "su_dif": 0,
+            "subunit": "Bulgaria",
+            "su_a3": "BGR",
+            "brk_diff": 0,
+            "name": "Bulgaria",
+            "name_long": "Bulgaria",
+            "brk_a3": "BGR",
+            "brk_name": "Bulgaria",
+            "brk_group": null,
+            "abbrev": "Bulg.",
+            "postal": "BG",
+            "formal_en": "Republic of Bulgaria",
+            "formal_fr": null,
+            "note_adm0": null,
+            "note_brk": null,
+            "name_sort": "Bulgaria",
+            "name_alt": null,
+            "mapcolor7": 4,
+            "mapcolor8": 5,
+            "mapcolor9": 1,
+            "mapcolor13": 8,
+            "pop_est": 7204687,
+            "gdp_md_est": 93750,
+            "pop_year": -99,
+            "lastcensus": 2011,
+            "gdp_year": -99,
+            "economy": "2. Developed region: nonG7",
+            "income_grp": "3. Upper middle income",
+            "wikipedia": -99,
+            "fips_10": null,
+            "iso_a2": "BG",
+            "iso_a3": "BGR",
+            "iso_n3": "100",
+            "un_a3": "100",
+            "wb_a2": "BG",
+            "wb_a3": "BGR",
+            "woe_id": -99,
+            "adm0_a3_is": "BGR",
+            "adm0_a3_us": "BGR",
+            "adm0_a3_un": -99,
+            "adm0_a3_wb": -99,
+            "continent": "Europe",
+            "region_un": "Europe",
+            "subregion": "Eastern Europe",
+            "region_wb": "Europe & Central Asia",
+            "name_len": 8,
+            "long_len": 8,
+            "abbrev_len": 5,
+            "tiny": -99,
+            "homepart": 1,
+            "bbox": [
+                22.38052575,
+                41.23448599,
+                28.5580815,
+                44.234923
+            ],
+            "bbox_poly": [
+                [
+                    22.38052575,
+                    44.234923
+                ],
+                [
+                    28.5580815,
+                    44.234923
+                ],
+                [
+                    28.5580815,
+                    41.23448599
+                ],
+                [
+                    22.38052575,
+                    41.23448599
+                ],
+                [
+                    22.38052575,
+                    44.234923
+                ]
+            ]
+        }
+    },
+    {
+        "type": "Feature",
+        "id": "pv932yw9333.89",
+        "geometry": {
+            "type": "MultiPolygon",
+            "coordinates": [
+                [
+                    [
+                        [
+                            21.43866,
+                            42.86255
+                        ],
+                        [
+                            21.63302,
+                            42.67717
+                        ],
+                        [
+                            21.77505,
+                            42.6827
+                        ],
+                        [
+                            21.66292,
+                            42.43922
+                        ],
+                        [
+                            21.54332,
+                            42.32025
+                        ],
+                        [
+                            21.57663599,
+                            42.2452244
+                        ],
+                        [
+                            21.3527,
+                            42.2068
+                        ],
+                        [
+                            20.76216,
+                            42.05186
+                        ],
+                        [
+                            20.71731,
+                            41.84711
+                        ],
+                        [
+                            20.59024655,
+                            41.85540892
+                        ],
+                        [
+                            20.59023,
+                            41.85541
+                        ],
+                        [
+                            20.52295,
+                            42.21787
+                        ],
+                        [
+                            20.28374,
+                            42.32025
+                        ],
+                        [
+                            20.0707,
+                            42.58863
+                        ],
+                        [
+                            20.25758,
+                            42.81275
+                        ],
+                        [
+                            20.49679,
+                            42.88469
+                        ],
+                        [
+                            20.63508,
+                            43.21671
+                        ],
+                        [
+                            20.81448,
+                            43.27205
+                        ],
+                        [
+                            20.95651,
+                            43.13094
+                        ],
+                        [
+                            21.143395,
+                            43.068685
+                        ],
+                        [
+                            21.27421,
+                            42.90959
+                        ],
+                        [
+                            21.43866,
+                            42.86255
+                        ]
+                    ]
+                ]
+            ]
+        },
+        "geometry_name": "geom",
+        "properties": {
+            "scalerank": 1,
+            "featurecla": "Admin-0 country",
+            "labelrank": 6,
+            "sovereignt": "Kosovo",
+            "sov_a3": "KOS",
+            "adm0_dif": 0,
+            "level": 2,
+            "type": "Sovereign country",
+            "admin": "Kosovo",
+            "adm0_a3": "KOS",
+            "geou_dif": 0,
+            "geounit": "Kosovo",
+            "gu_a3": "KOS",
+            "su_dif": 0,
+            "subunit": "Kosovo",
+            "su_a3": "KOS",
+            "brk_diff": 1,
+            "name": "Kosovo",
+            "name_long": "Kosovo",
+            "brk_a3": "B57",
+            "brk_name": "Kosovo",
+            "brk_group": null,
+            "abbrev": "Kos.",
+            "postal": "KO",
+            "formal_en": "Republic of Kosovo",
+            "formal_fr": null,
+            "note_adm0": null,
+            "note_brk": "Self admin.; Claimed by Serbia",
+            "name_sort": "Kosovo",
+            "name_alt": null,
+            "mapcolor7": 2,
+            "mapcolor8": 2,
+            "mapcolor9": 3,
+            "mapcolor13": 11,
+            "pop_est": 1804838,
+            "gdp_md_est": 5352,
+            "pop_year": -99,
+            "lastcensus": 1981,
+            "gdp_year": -99,
+            "economy": "6. Developing region",
+            "income_grp": "4. Lower middle income",
+            "wikipedia": -99,
+            "fips_10": null,
+            "iso_a2": "-99",
+            "iso_a3": "-99",
+            "iso_n3": "-99",
+            "un_a3": "-099",
+            "wb_a2": "KV",
+            "wb_a3": "KSV",
+            "woe_id": -99,
+            "adm0_a3_is": "SRB",
+            "adm0_a3_us": "KOS",
+            "adm0_a3_un": -99,
+            "adm0_a3_wb": -99,
+            "continent": "Europe",
+            "region_un": "Europe",
+            "subregion": "Southern Europe",
+            "region_wb": "Europe & Central Asia",
+            "name_len": 6,
+            "long_len": 6,
+            "abbrev_len": 4,
+            "tiny": -99,
+            "homepart": 1,
+            "bbox": [
+                20.0707,
+                41.84711,
+                21.77505,
+                43.27205
+            ],
+            "bbox_poly": [
+                [
+                    20.0707,
+                    43.27205
+                ],
+                [
+                    21.77505,
+                    43.27205
+                ],
+                [
+                    21.77505,
+                    41.84711
+                ],
+                [
+                    20.0707,
+                    41.84711
+                ],
+                [
+                    20.0707,
+                    43.27205
+                ]
+            ]
+        }
+    },
+    {
+        "type": "Feature",
+        "id": "pv932yw9333.104",
+        "geometry": {
+            "type": "MultiPolygon",
+            "coordinates": [
+                [
+                    [
+                        [
+                            22.88137373,
+                            41.99929719
+                        ],
+                        [
+                            22.95237715,
+                            41.33799388
+                        ],
+                        [
+                            22.76177,
+                            41.3048
+                        ],
+                        [
+                            22.59730838,
+                            41.13048717
+                        ],
+                        [
+                            22.05537764,
+                            41.14986583
+                        ],
+                        [
+                            21.6741606,
+                            40.93127452
+                        ],
+                        [
+                            21.02004032,
+                            40.84272696
+                        ],
+                        [
+                            20.60518,
+                            41.08622
+                        ],
+                        [
+                            20.46315,
+                            41.51509
+                        ],
+                        [
+                            20.59023,
+                            41.85541
+                        ],
+                        [
+                            20.59024655,
+                            41.85540892
+                        ],
+                        [
+                            20.71731,
+                            41.84711
+                        ],
+                        [
+                            20.76216,
+                            42.05186
+                        ],
+                        [
+                            21.3527,
+                            42.2068
+                        ],
+                        [
+                            21.57663599,
+                            42.2452244
+                        ],
+                        [
+                            21.91708,
+                            42.30364
+                        ],
+                        [
+                            22.38052575,
+                            42.32025951
+                        ],
+                        [
+                            22.88137373,
+                            41.99929719
+                        ]
+                    ]
+                ]
+            ]
+        },
+        "geometry_name": "geom",
+        "properties": {
+            "scalerank": 1,
+            "featurecla": "Admin-0 country",
+            "labelrank": 6,
+            "sovereignt": "Macedonia",
+            "sov_a3": "MKD",
+            "adm0_dif": 0,
+            "level": 2,
+            "type": "Sovereign country",
+            "admin": "Macedonia",
+            "adm0_a3": "MKD",
+            "geou_dif": 0,
+            "geounit": "Macedonia",
+            "gu_a3": "MKD",
+            "su_dif": 0,
+            "subunit": "Macedonia",
+            "su_a3": "MKD",
+            "brk_diff": 0,
+            "name": "Macedonia",
+            "name_long": "Macedonia",
+            "brk_a3": "MKD",
+            "brk_name": "Macedonia",
+            "brk_group": null,
+            "abbrev": "Mkd.",
+            "postal": "MK",
+            "formal_en": "Former Yugoslav Republic of Macedonia",
+            "formal_fr": null,
+            "note_adm0": null,
+            "note_brk": null,
+            "name_sort": "Macedonia, FYR",
+            "name_alt": null,
+            "mapcolor7": 5,
+            "mapcolor8": 3,
+            "mapcolor9": 7,
+            "mapcolor13": 3,
+            "pop_est": 2066718,
+            "gdp_md_est": 18780,
+            "pop_year": -99,
+            "lastcensus": 2010,
+            "gdp_year": -99,
+            "economy": "6. Developing region",
+            "income_grp": "3. Upper middle income",
+            "wikipedia": -99,
+            "fips_10": null,
+            "iso_a2": "MK",
+            "iso_a3": "MKD",
+            "iso_n3": "807",
+            "un_a3": "807",
+            "wb_a2": "MK",
+            "wb_a3": "MKD",
+            "woe_id": -99,
+            "adm0_a3_is": "MKD",
+            "adm0_a3_us": "MKD",
+            "adm0_a3_un": -99,
+            "adm0_a3_wb": -99,
+            "continent": "Europe",
+            "region_un": "Europe",
+            "subregion": "Southern Europe",
+            "region_wb": "Europe & Central Asia",
+            "name_len": 9,
+            "long_len": 9,
+            "abbrev_len": 4,
+            "tiny": -99,
+            "homepart": 1,
+            "bbox": [
+                20.46315,
+                40.84272696,
+                22.95237715,
+                42.32025951
+            ],
+            "bbox_poly": [
+                [
+                    20.46315,
+                    42.32025951
+                ],
+                [
+                    22.95237715,
+                    42.32025951
+                ],
+                [
+                    22.95237715,
+                    40.84272696
+                ],
+                [
+                    20.46315,
+                    40.84272696
+                ],
+                [
+                    20.46315,
+                    42.32025951
+                ]
+            ]
+        }
+    },
+    {
+        "type": "Feature",
+        "id": "pv932yw9333.107",
+        "geometry": {
+            "type": "MultiPolygon",
+            "coordinates": [
+                [
+                    [
+                        [
+                            20.25758,
+                            42.81275
+                        ],
+                        [
+                            20.0707,
+                            42.58863
+                        ],
+                        [
+                            19.8016134,
+                            42.50009349
+                        ],
+                        [
+                            19.73805139,
+                            42.68824738
+                        ],
+                        [
+                            19.30449,
+                            42.19574
+                        ],
+                        [
+                            19.37177,
+                            41.87755
+                        ],
+                        [
+                            19.37176816,
+                            41.87755068
+                        ],
+                        [
+                            19.16246,
+                            41.95502
+                        ],
+                        [
+                            18.88214,
+                            42.28151
+                        ],
+                        [
+                            18.45001688,
+                            42.47999225
+                        ],
+                        [
+                            18.45,
+                            42.48
+                        ],
+                        [
+                            18.56,
+                            42.65
+                        ],
+                        [
+                            18.70648,
+                            43.20011
+                        ],
+                        [
+                            19.03165,
+                            43.43253
+                        ],
+                        [
+                            19.21852,
+                            43.52384
+                        ],
+                        [
+                            19.48389,
+                            43.35229
+                        ],
+                        [
+                            19.63,
+                            43.21377997
+                        ],
+                        [
+                            19.95857,
+                            43.10604
+                        ],
+                        [
+                            20.3398,
+                            42.89852
+                        ],
+                        [
+                            20.25758,
+                            42.81275
+                        ]
+                    ]
+                ]
+            ]
+        },
+        "geometry_name": "geom",
+        "properties": {
+            "scalerank": 1,
+            "featurecla": "Admin-0 country",
+            "labelrank": 6,
+            "sovereignt": "Montenegro",
+            "sov_a3": "MNE",
+            "adm0_dif": 0,
+            "level": 2,
+            "type": "Sovereign country",
+            "admin": "Montenegro",
+            "adm0_a3": "MNE",
+            "geou_dif": 0,
+            "geounit": "Montenegro",
+            "gu_a3": "MNE",
+            "su_dif": 0,
+            "subunit": "Montenegro",
+            "su_a3": "MNE",
+            "brk_diff": 0,
+            "name": "Montenegro",
+            "name_long": "Montenegro",
+            "brk_a3": "MNE",
+            "brk_name": "Montenegro",
+            "brk_group": null,
+            "abbrev": "Mont.",
+            "postal": "ME",
+            "formal_en": "Montenegro",
+            "formal_fr": null,
+            "note_adm0": null,
+            "note_brk": null,
+            "name_sort": "Montenegro",
+            "name_alt": null,
+            "mapcolor7": 4,
+            "mapcolor8": 1,
+            "mapcolor9": 4,
+            "mapcolor13": 5,
+            "pop_est": 672180,
+            "gdp_md_est": 6816,
+            "pop_year": -99,
+            "lastcensus": 2011,
+            "gdp_year": -99,
+            "economy": "6. Developing region",
+            "income_grp": "3. Upper middle income",
+            "wikipedia": -99,
+            "fips_10": null,
+            "iso_a2": "ME",
+            "iso_a3": "MNE",
+            "iso_n3": "499",
+            "un_a3": "499",
+            "wb_a2": "ME",
+            "wb_a3": "MNE",
+            "woe_id": -99,
+            "adm0_a3_is": "MNE",
+            "adm0_a3_us": "MNE",
+            "adm0_a3_un": -99,
+            "adm0_a3_wb": -99,
+            "continent": "Europe",
+            "region_un": "Europe",
+            "subregion": "Southern Europe",
+            "region_wb": "Europe & Central Asia",
+            "name_len": 10,
+            "long_len": 10,
+            "abbrev_len": 5,
+            "tiny": -99,
+            "homepart": 1,
+            "bbox": [
+                18.45,
+                41.87755,
+                20.3398,
+                43.52384
+            ],
+            "bbox_poly": [
+                [
+                    18.45,
+                    43.52384
+                ],
+                [
+                    20.3398,
+                    43.52384
+                ],
+                [
+                    20.3398,
+                    41.87755
+                ],
+                [
+                    18.45,
+                    41.87755
+                ],
+                [
+                    18.45,
+                    43.52384
+                ]
+            ]
+        }
+    },
+    {
+        "type": "Feature",
+        "id": "pv932yw9333.135",
+        "geometry": {
+            "type": "MultiPolygon",
+            "coordinates": [
+                [
+                    [
+                        [
+                            26.61933679,
+                            48.22072622
+                        ],
+                        [
+                            26.92417606,
+                            48.12326447
+                        ],
+                        [
+                            27.23387292,
+                            47.82677094
+                        ],
+                        [
+                            27.55116621,
+                            47.40511709
+                        ],
+                        [
+                            28.12803023,
+                            46.81047639
+                        ],
+                        [
+                            28.16001794,
+                            46.37156261
+                        ],
+                        [
+                            28.05444299,
+                            45.94458609
+                        ],
+                        [
+                            28.2335535,
+                            45.48828319
+                        ],
+                        [
+                            28.67977949,
+                            45.30403087
+                        ],
+                        [
+                            29.14972497,
+                            45.46492544
+                        ],
+                        [
+                            29.60328902,
+                            45.29330801
+                        ],
+                        [
+                            29.62654341,
+                            45.03539094
+                        ],
+                        [
+                            29.14161177,
+                            44.82021027
+                        ],
+                        [
+                            28.8378577,
+                            44.91387381
+                        ],
+                        [
+                            28.5580815,
+                            43.70746166
+                        ],
+                        [
+                            27.97010705,
+                            43.81246817
+                        ],
+                        [
+                            27.24239953,
+                            44.17598603
+                        ],
+                        [
+                            26.06515873,
+                            43.94349376
+                        ],
+                        [
+                            25.56927168,
+                            43.68844473
+                        ],
+                        [
+                            24.10067915,
+                            43.74105134
+                        ],
+                        [
+                            23.33230228,
+                            43.89701081
+                        ],
+                        [
+                            22.94483239,
+                            43.82378531
+                        ],
+                        [
+                            22.65714969,
+                            44.234923
+                        ],
+                        [
+                            22.47400842,
+                            44.40922761
+                        ],
+                        [
+                            22.70572554,
+                            44.57800283
+                        ],
+                        [
+                            22.45902225,
+                            44.7025172
+                        ],
+                        [
+                            22.14508792,
+                            44.47842235
+                        ],
+                        [
+                            21.56202274,
+                            44.76894725
+                        ],
+                        [
+                            21.48352624,
+                            45.18117015
+                        ],
+                        [
+                            20.87431278,
+                            45.41637543
+                        ],
+                        [
+                            20.76217492,
+                            45.73457307
+                        ],
+                        [
+                            20.2201925,
+                            46.12746898
+                        ],
+                        [
+                            21.02195235,
+                            46.31608796
+                        ],
+                        [
+                            21.62651493,
+                            46.99423778
+                        ],
+                        [
+                            22.09976769,
+                            47.67243928
+                        ],
+                        [
+                            22.71053145,
+                            47.88219392
+                        ],
+                        [
+                            23.14223636,
+                            48.09634105
+                        ],
+                        [
+                            23.76095829,
+                            47.98559846
+                        ],
+                        [
+                            24.40205611,
+                            47.98187775
+                        ],
+                        [
+                            24.86631717,
+                            47.73752574
+                        ],
+                        [
+                            25.20774336,
+                            47.89105642
+                        ],
+                        [
+                            25.9459412,
+                            47.98714875
+                        ],
+                        [
+                            26.19745039,
+                            48.22088125
+                        ],
+                        [
+                            26.61933679,
+                            48.22072622
+                        ]
+                    ]
+                ]
+            ]
+        },
+        "geometry_name": "geom",
+        "properties": {
+            "scalerank": 1,
+            "featurecla": "Admin-0 country",
+            "labelrank": 3,
+            "sovereignt": "Romania",
+            "sov_a3": "ROU",
+            "adm0_dif": 0,
+            "level": 2,
+            "type": "Sovereign country",
+            "admin": "Romania",
+            "adm0_a3": "ROU",
+            "geou_dif": 0,
+            "geounit": "Romania",
+            "gu_a3": "ROU",
+            "su_dif": 0,
+            "subunit": "Romania",
+            "su_a3": "ROU",
+            "brk_diff": 0,
+            "name": "Romania",
+            "name_long": "Romania",
+            "brk_a3": "ROU",
+            "brk_name": "Romania",
+            "brk_group": null,
+            "abbrev": "Rom.",
+            "postal": "RO",
+            "formal_en": "Romania",
+            "formal_fr": null,
+            "note_adm0": null,
+            "note_brk": null,
+            "name_sort": "Romania",
+            "name_alt": null,
+            "mapcolor7": 1,
+            "mapcolor8": 4,
+            "mapcolor9": 3,
+            "mapcolor13": 13,
+            "pop_est": 22215421,
+            "gdp_md_est": 271400,
+            "pop_year": -99,
+            "lastcensus": 2011,
+            "gdp_year": -99,
+            "economy": "2. Developed region: nonG7",
+            "income_grp": "3. Upper middle income",
+            "wikipedia": -99,
+            "fips_10": null,
+            "iso_a2": "RO",
+            "iso_a3": "ROU",
+            "iso_n3": "642",
+            "un_a3": "642",
+            "wb_a2": "RO",
+            "wb_a3": "ROM",
+            "woe_id": -99,
+            "adm0_a3_is": "ROU",
+            "adm0_a3_us": "ROU",
+            "adm0_a3_un": -99,
+            "adm0_a3_wb": -99,
+            "continent": "Europe",
+            "region_un": "Europe",
+            "subregion": "Eastern Europe",
+            "region_wb": "Europe & Central Asia",
+            "name_len": 7,
+            "long_len": 7,
+            "abbrev_len": 4,
+            "tiny": -99,
+            "homepart": 1,
+            "bbox": [
+                20.2201925,
+                43.68844473,
+                29.62654341,
+                48.22088125
+            ],
+            "bbox_poly": [
+                [
+                    20.2201925,
+                    48.22088125
+                ],
+                [
+                    29.62654341,
+                    48.22088125
+                ],
+                [
+                    29.62654341,
+                    43.68844473
+                ],
+                [
+                    20.2201925,
+                    43.68844473
+                ],
+                [
+                    20.2201925,
+                    48.22088125
+                ]
+            ]
+        }
+    },
+    {
+        "type": "Feature",
+        "id": "pv932yw9333.19",
+        "geometry": {
+            "type": "MultiPolygon",
+            "coordinates": [
+                [
+                    [
+                        [
+                            17.00214603,
+                            45.23377676
+                        ],
+                        [
+                            17.86178348,
+                            45.06774038
+                        ],
+                        [
+                            18.55321415,
+                            45.08158967
+                        ],
+                        [
+                            19.0054846,
+                            44.86023449
+                        ],
+                        [
+                            19.00548628,
+                            44.86023367
+                        ],
+                        [
+                            19.36803,
+                            44.863
+                        ],
+                        [
+                            19.11761,
+                            44.42307
+                        ],
+                        [
+                            19.59976,
+                            44.03847
+                        ],
+                        [
+                            19.454,
+                            43.5681
+                        ],
+                        [
+                            19.21852,
+                            43.52384
+                        ],
+                        [
+                            19.03165,
+                            43.43253
+                        ],
+                        [
+                            18.70648,
+                            43.20011
+                        ],
+                        [
+                            18.56,
+                            42.65
+                        ],
+                        [
+                            17.6749215,
+                            43.02856253
+                        ],
+                        [
+                            17.29737349,
+                            43.44634064
+                        ],
+                        [
+                            16.91615645,
+                            43.66772248
+                        ],
+                        [
+                            16.45644291,
+                            44.04123973
+                        ],
+                        [
+                            16.23966027,
+                            44.3511433
+                        ],
+                        [
+                            15.75002608,
+                            44.81871166
+                        ],
+                        [
+                            15.9593673,
+                            45.23377676
+                        ],
+                        [
+                            16.31815677,
+                            45.0041267
+                        ],
+                        [
+                            16.53493941,
+                            45.21160757
+                        ],
+                        [
+                            17.00214603,
+                            45.23377676
+                        ]
+                    ]
+                ]
+            ]
+        },
+        "geometry_name": "geom",
+        "properties": {
+            "scalerank": 1,
+            "featurecla": "Admin-0 country",
+            "labelrank": 5,
+            "sovereignt": "Bosnia and Herzegovina",
+            "sov_a3": "BIH",
+            "adm0_dif": 0,
+            "level": 2,
+            "type": "Sovereign country",
+            "admin": "Bosnia and Herzegovina",
+            "adm0_a3": "BIH",
+            "geou_dif": 0,
+            "geounit": "Bosnia and Herzegovina",
+            "gu_a3": "BIH",
+            "su_dif": 0,
+            "subunit": "Bosnia and Herzegovina",
+            "su_a3": "BIH",
+            "brk_diff": 0,
+            "name": "Bosnia and Herz.",
+            "name_long": "Bosnia and Herzegovina",
+            "brk_a3": "BIH",
+            "brk_name": "Bosnia and Herz.",
+            "brk_group": null,
+            "abbrev": "B.H.",
+            "postal": "BiH",
+            "formal_en": "Bosnia and Herzegovina",
+            "formal_fr": null,
+            "note_adm0": null,
+            "note_brk": null,
+            "name_sort": "Bosnia and Herzegovina",
+            "name_alt": null,
+            "mapcolor7": 1,
+            "mapcolor8": 1,
+            "mapcolor9": 1,
+            "mapcolor13": 2,
+            "pop_est": 4613414,
+            "gdp_md_est": 29700,
+            "pop_year": -99,
+            "lastcensus": 1991,
+            "gdp_year": -99,
+            "economy": "6. Developing region",
+            "income_grp": "3. Upper middle income",
+            "wikipedia": -99,
+            "fips_10": null,
+            "iso_a2": "BA",
+            "iso_a3": "BIH",
+            "iso_n3": "070",
+            "un_a3": "070",
+            "wb_a2": "BA",
+            "wb_a3": "BIH",
+            "woe_id": -99,
+            "adm0_a3_is": "BIH",
+            "adm0_a3_us": "BIH",
+            "adm0_a3_un": -99,
+            "adm0_a3_wb": -99,
+            "continent": "Europe",
+            "region_un": "Europe",
+            "subregion": "Southern Europe",
+            "region_wb": "Europe & Central Asia",
+            "name_len": 16,
+            "long_len": 22,
+            "abbrev_len": 4,
+            "tiny": -99,
+            "homepart": 1,
+            "bbox": [
+                15.75002608,
+                42.65,
+                19.59976,
+                45.23377676
+            ],
+            "bbox_poly": [
+                [
+                    15.75002608,
+                    45.23377676
+                ],
+                [
+                    19.59976,
+                    45.23377676
+                ],
+                [
+                    19.59976,
+                    42.65
+                ],
+                [
+                    15.75002608,
+                    42.65
+                ],
+                [
+                    15.75002608,
+                    45.23377676
+                ]
+            ]
+        }
+    },
+    {
+        "type": "Feature",
+        "id": "pv932yw9333.70",
+        "geometry": {
+            "type": "MultiPolygon",
+            "coordinates": [
+                [
+                    [
+                        [
+                            17.63006636,
+                            45.95176911
+                        ],
+                        [
+                            18.45606245,
+                            45.75948111
+                        ],
+                        [
+                            18.82982479,
+                            45.90887236
+                        ],
+                        [
+                            18.82983809,
+                            45.90887767
+                        ],
+                        [
+                            19.072769,
+                            45.52151114
+                        ],
+                        [
+                            19.3904757,
+                            45.23651561
+                        ],
+                        [
+                            19.00548628,
+                            44.86023367
+                        ],
+                        [
+                            19.0054846,
+                            44.86023449
+                        ],
+                        [
+                            18.55321415,
+                            45.08158967
+                        ],
+                        [
+                            17.86178348,
+                            45.06774038
+                        ],
+                        [
+                            17.00214603,
+                            45.23377676
+                        ],
+                        [
+                            16.53493941,
+                            45.21160757
+                        ],
+                        [
+                            16.31815677,
+                            45.0041267
+                        ],
+                        [
+                            15.9593673,
+                            45.23377676
+                        ],
+                        [
+                            15.75002608,
+                            44.81871166
+                        ],
+                        [
+                            16.23966027,
+                            44.3511433
+                        ],
+                        [
+                            16.45644291,
+                            44.04123973
+                        ],
+                        [
+                            16.91615645,
+                            43.66772248
+                        ],
+                        [
+                            17.29737349,
+                            43.44634064
+                        ],
+                        [
+                            17.6749215,
+                            43.02856253
+                        ],
+                        [
+                            18.56,
+                            42.65
+                        ],
+                        [
+                            18.45001688,
+                            42.47999225
+                        ],
+                        [
+                            18.45001631,
+                            42.47999136
+                        ],
+                        [
+                            17.50997033,
+                            42.84999462
+                        ],
+                        [
+                            16.93000573,
+                            43.20999848
+                        ],
+                        [
+                            16.01538456,
+                            43.50721548
+                        ],
+                        [
+                            15.17445397,
+                            44.24319123
+                        ],
+                        [
+                            15.37625044,
+                            44.31791535
+                        ],
+                        [
+                            14.92030928,
+                            44.738484
+                        ],
+                        [
+                            14.90160241,
+                            45.07606029
+                        ],
+                        [
+                            14.25874759,
+                            45.23377676
+                        ],
+                        [
+                            13.95225467,
+                            44.80212352
+                        ],
+                        [
+                            13.65697554,
+                            45.13693513
+                        ],
+                        [
+                            13.67940311,
+                            45.48414907
+                        ],
+                        [
+                            13.71505985,
+                            45.5003238
+                        ],
+                        [
+                            14.41196821,
+                            45.46616568
+                        ],
+                        [
+                            14.59510949,
+                            45.6349409
+                        ],
+                        [
+                            14.93524377,
+                            45.47169505
+                        ],
+                        [
+                            15.32767459,
+                            45.45231639
+                        ],
+                        [
+                            15.32395389,
+                            45.73178254
+                        ],
+                        [
+                            15.67152958,
+                            45.83415355
+                        ],
+                        [
+                            15.76873294,
+                            46.23810822
+                        ],
+                        [
+                            16.56480838,
+                            46.50375092
+                        ],
+                        [
+                            16.88251509,
+                            46.38063182
+                        ],
+                        [
+                            17.63006636,
+                            45.95176911
+                        ]
+                    ]
+                ]
+            ]
+        },
+        "geometry_name": "geom",
+        "properties": {
+            "scalerank": 1,
+            "featurecla": "Admin-0 country",
+            "labelrank": 6,
+            "sovereignt": "Croatia",
+            "sov_a3": "HRV",
+            "adm0_dif": 0,
+            "level": 2,
+            "type": "Sovereign country",
+            "admin": "Croatia",
+            "adm0_a3": "HRV",
+            "geou_dif": 0,
+            "geounit": "Croatia",
+            "gu_a3": "HRV",
+            "su_dif": 0,
+            "subunit": "Croatia",
+            "su_a3": "HRV",
+            "brk_diff": 0,
+            "name": "Croatia",
+            "name_long": "Croatia",
+            "brk_a3": "HRV",
+            "brk_name": "Croatia",
+            "brk_group": null,
+            "abbrev": "Cro.",
+            "postal": "HR",
+            "formal_en": "Republic of Croatia",
+            "formal_fr": null,
+            "note_adm0": null,
+            "note_brk": null,
+            "name_sort": "Croatia",
+            "name_alt": null,
+            "mapcolor7": 5,
+            "mapcolor8": 4,
+            "mapcolor9": 5,
+            "mapcolor13": 1,
+            "pop_est": 4489409,
+            "gdp_md_est": 82390,
+            "pop_year": -99,
+            "lastcensus": 2011,
+            "gdp_year": -99,
+            "economy": "2. Developed region: nonG7",
+            "income_grp": "2. High income: nonOECD",
+            "wikipedia": -99,
+            "fips_10": null,
+            "iso_a2": "HR",
+            "iso_a3": "HRV",
+            "iso_n3": "191",
+            "un_a3": "191",
+            "wb_a2": "HR",
+            "wb_a3": "HRV",
+            "woe_id": -99,
+            "adm0_a3_is": "HRV",
+            "adm0_a3_us": "HRV",
+            "adm0_a3_un": -99,
+            "adm0_a3_wb": -99,
+            "continent": "Europe",
+            "region_un": "Europe",
+            "subregion": "Southern Europe",
+            "region_wb": "Europe & Central Asia",
+            "name_len": 7,
+            "long_len": 7,
+            "abbrev_len": 4,
+            "tiny": -99,
+            "homepart": 1,
+            "bbox": [
+                13.65697554,
+                42.47999136,
+                19.3904757,
+                46.50375092
+            ],
+            "bbox_poly": [
+                [
+                    13.65697554,
+                    46.50375092
+                ],
+                [
+                    19.3904757,
+                    46.50375092
+                ],
+                [
+                    19.3904757,
+                    42.47999136
+                ],
+                [
+                    13.65697554,
+                    42.47999136
+                ],
+                [
+                    13.65697554,
+                    46.50375092
+                ]
+            ]
+        }
+    },
+    {
+        "type": "Feature",
+        "id": "pv932yw9333.72",
+        "geometry": {
+            "type": "MultiPolygon",
+            "coordinates": [
+                [
+                    [
+                        [
+                            20.80129398,
+                            48.62385407
+                        ],
+                        [
+                            21.87223636,
+                            48.31997081
+                        ],
+                        [
+                            22.08560835,
+                            48.42226431
+                        ],
+                        [
+                            22.64081994,
+                            48.15023957
+                        ],
+                        [
+                            22.71053145,
+                            47.88219392
+                        ],
+                        [
+                            22.09976769,
+                            47.67243928
+                        ],
+                        [
+                            21.62651493,
+                            46.99423778
+                        ],
+                        [
+                            21.02195235,
+                            46.31608796
+                        ],
+                        [
+                            20.2201925,
+                            46.12746898
+                        ],
+                        [
+                            19.59604455,
+                            46.17172984
+                        ],
+                        [
+                            18.82983809,
+                            45.90887767
+                        ],
+                        [
+                            18.82982479,
+                            45.90887236
+                        ],
+                        [
+                            18.45606245,
+                            45.75948111
+                        ],
+                        [
+                            17.63006636,
+                            45.95176911
+                        ],
+                        [
+                            16.88251509,
+                            46.38063182
+                        ],
+                        [
+                            16.56480838,
+                            46.50375092
+                        ],
+                        [
+                            16.370505,
+                            46.84132722
+                        ],
+                        [
+                            16.20229821,
+                            46.85238597
+                        ],
+                        [
+                            16.53426761,
+                            47.49617097
+                        ],
+                        [
+                            16.34058434,
+                            47.71290192
+                        ],
+                        [
+                            16.9037541,
+                            47.71486563
+                        ],
+                        [
+                            16.97966678,
+                            48.12349702
+                        ],
+                        [
+                            17.48847293,
+                            47.86746613
+                        ],
+                        [
+                            17.8571326,
+                            47.75842886
+                        ],
+                        [
+                            18.69651289,
+                            47.88095368
+                        ],
+                        [
+                            18.77702477,
+                            48.0817683
+                        ],
+                        [
+                            19.17436486,
+                            48.11137889
+                        ],
+                        [
+                            19.66136356,
+                            48.2666149
+                        ],
+                        [
+                            19.76947066,
+                            48.20269115
+                        ],
+                        [
+                            20.2390544,
+                            48.32756725
+                        ],
+                        [
+                            20.47356205,
+                            48.56285004
+                        ],
+                        [
+                            20.80129398,
+                            48.62385407
+                        ]
+                    ]
+                ]
+            ]
+        },
+        "geometry_name": "geom",
+        "properties": {
+            "scalerank": 1,
+            "featurecla": "Admin-0 country",
+            "labelrank": 5,
+            "sovereignt": "Hungary",
+            "sov_a3": "HUN",
+            "adm0_dif": 0,
+            "level": 2,
+            "type": "Sovereign country",
+            "admin": "Hungary",
+            "adm0_a3": "HUN",
+            "geou_dif": 0,
+            "geounit": "Hungary",
+            "gu_a3": "HUN",
+            "su_dif": 0,
+            "subunit": "Hungary",
+            "su_a3": "HUN",
+            "brk_diff": 0,
+            "name": "Hungary",
+            "name_long": "Hungary",
+            "brk_a3": "HUN",
+            "brk_name": "Hungary",
+            "brk_group": null,
+            "abbrev": "Hun.",
+            "postal": "HU",
+            "formal_en": "Republic of Hungary",
+            "formal_fr": null,
+            "note_adm0": null,
+            "note_brk": null,
+            "name_sort": "Hungary",
+            "name_alt": null,
+            "mapcolor7": 4,
+            "mapcolor8": 6,
+            "mapcolor9": 1,
+            "mapcolor13": 5,
+            "pop_est": 9905596,
+            "gdp_md_est": 196600,
+            "pop_year": -99,
+            "lastcensus": 2001,
+            "gdp_year": -99,
+            "economy": "2. Developed region: nonG7",
+            "income_grp": "1. High income: OECD",
+            "wikipedia": -99,
+            "fips_10": null,
+            "iso_a2": "HU",
+            "iso_a3": "HUN",
+            "iso_n3": "348",
+            "un_a3": "348",
+            "wb_a2": "HU",
+            "wb_a3": "HUN",
+            "woe_id": -99,
+            "adm0_a3_is": "HUN",
+            "adm0_a3_us": "HUN",
+            "adm0_a3_un": -99,
+            "adm0_a3_wb": -99,
+            "continent": "Europe",
+            "region_un": "Europe",
+            "subregion": "Eastern Europe",
+            "region_wb": "Europe & Central Asia",
+            "name_len": 7,
+            "long_len": 7,
+            "abbrev_len": 4,
+            "tiny": -99,
+            "homepart": 1,
+            "bbox": [
+                16.20229821,
+                45.75948111,
+                22.71053145,
+                48.62385407
+            ],
+            "bbox_poly": [
+                [
+                    16.20229821,
+                    48.62385407
+                ],
+                [
+                    22.71053145,
+                    48.62385407
+                ],
+                [
+                    22.71053145,
+                    45.75948111
+                ],
+                [
+                    16.20229821,
+                    45.75948111
+                ],
+                [
+                    16.20229821,
+                    48.62385407
+                ]
+            ]
+        }
+    }
+]

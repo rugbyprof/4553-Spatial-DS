@@ -7,7 +7,8 @@ import sys
 
 class CountryPolyHelper:
     def __init__(self, filename):
-        with open(filename) as f:
+        self.filename = filename
+        with open(self.filename) as f:
             self.data = json.load(f)
 
         self.countryNames = []
@@ -72,6 +73,17 @@ class CountryPolyHelper:
                 results.append(Polygon(poly["coords"]))
         return results
 
+    def buildGeoJson(self, names, outname="outname.json"):
+        results = []
+
+        for name in names:
+            for country in self.data:
+                if country["properties"]["name"] == name:
+                    results.append(country)
+
+        with open(outname, "w") as f:
+            json.dump(results, f, indent=4)
+
 
 def pointInPolygon(spatialIndex, point):
     result = spatialIndex.sindex.query(Point(point[0], point[1]))
@@ -80,6 +92,11 @@ def pointInPolygon(spatialIndex, point):
 
 def polygonTouches(spatialIndex, polygon):
     result = spatialIndex.touches(Polygon(polygon))
+    return result
+
+
+def polygonOverlaps(spatialIndex, polygon):
+    result = spatialIndex.overlaps(Polygon(polygon))
     return result
 
 
@@ -115,28 +132,42 @@ if __name__ == "__main__":
     poland = [21.665039062499996, 50.401515322782366]
     albania = [20.123, 40.123]
     france = [2.28515625, 46.76996843356982]
+    unk = [9.184570312499998, 42.16340342422401]
 
     # find polygon that contains the point
-    result = pointInPolygon(s, france)
-    # print(result)
+    result = pointInPolygon(s, unk)
+    print(result)
 
     # find the country name(s) that are associated with the resulting polygon(s)
     for id in result:
         print(cph.getCountryByPolyId(id))
-
+    sys.exit()
     ##########################################################################
     print(
         "Polygon Touches ##########################################################################"
     )
-    rawPoly = cph.getRawPolygons("Poland")
+    rawPoly = cph.getRawPolygons("Serbia")
 
     # find polygons that touch the other polygon
     result = polygonTouches(s, rawPoly[0]["coords"])
     print(result)
     result = cph.getCountriesBySpatialResult(result)
     print(result)
+    names = []
     for id in result:
+        names.append(cph.getCountryByPolyId(id))
         print(cph.getCountryByPolyId(id))
+
+    result = polygonOverlaps(s, rawPoly[0]["coords"])
+    print(result)
+    result = cph.getCountriesBySpatialResult(result)
+    print(result)
+
+    for id in result:
+        names.append(cph.getCountryByPolyId(id))
+        print(cph.getCountryByPolyId(id))
+
+    geo = cph.buildGeoJson(names, "polytouches.json")
 
     ##########################################################################
     print(
@@ -148,9 +179,13 @@ if __name__ == "__main__":
     print(result)
     result = cph.getCountriesBySpatialResult(result)
     print(result)
+    names = []
     for id in result:
         print(cph.getCountryByPolyId(id))
+        names.append(cph.getCountryByPolyId(id))
 
+    geo = cph.buildGeoJson(names, "lineintersects.json")
+    sys.exit()
     ##########################################################################
     print(
         "Within Polygon ##########################################################################"
