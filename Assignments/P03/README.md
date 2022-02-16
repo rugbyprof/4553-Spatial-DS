@@ -1,8 +1,27 @@
-## Road Path - Actual Road Path
-#### Due: 02-22-2022 (Tuesday @ 9:30 a.m.)
+## Voronoi - Real World Use Case
+#### Due: 03-01-2022 (Tuesday @ 9:30 a.m.)
 
-# NOT DONE JUST A PREVIEW
 
 ### Overview
 
-This time we use actual road networks to create a path.
+This assignment is an extension of the previous assignment. 
+
+The [voronoi diagram](https://en.wikipedia.org/wiki/Voronoi_diagram), allows us to create polygons around each city to use as "ufo containers" for lack of a better term. Look at the image below:
+
+<p align="center">
+<img src="output.png" width="500">
+</p>
+
+We used a distance calculation from each city to the "nearest" 100 ufos in the previous assignment. However, with the crowded east coast, and the not so crowded west (California not withstanding), assigning UFO's to individual cities is not very straight-forward. Bring in the "voronoi" diagram. Voronoi diagrams create polygons around "seeds" (cities in our case) such that the lines making up each polygon are equidistant between any two given cities. Find any "side" of a polygon in the image above, and it will be halfway between two cities. 
+
+<p align="center">
+<img src="ufo_output.png" width="500">
+</p>
+
+I feel like the polygons that the voronoi diagram creates can be used to determine which Ufo's go to which cities. If the point location of a UFO is within that cities polygon, it gets assigned to that city. As I look at the ufo output above, I want to use a clustering algorithm to determine the "hot spots" of UFO sightings. Visually it's pretty easy, but actually doing so requires the use of a clustering algorithm like `k-means` or `db-scan`. If you compare the voronoi diagram above the ufo distribution image, you can see that some of the UFO sighting hotspots don't necessarily line up with cities in our voronoi diagram. Oh, well. That may be for a later assignment. 
+
+<p align="center">
+<img src="merged.png" width="500">
+</p>
+
+But as you can see in the "not so perfect" merged images, we are missing some cites around UFO sighting hotspots.

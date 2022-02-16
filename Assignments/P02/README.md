@@ -1,5 +1,5 @@
 ## No Path Still - Rtree Nearest Neighbor with UFO's
-#### Due: 02-15-2022 (Tuesday @ 9:30 a.m.)
+#### Due: 02-22-2022 (Tuesday @ 9:30 a.m.)
 
 ### Overview
 
@@ -39,3 +39,6 @@ Data
 - Create a folder calld P02 in your assignments folder on your repo.
 - Add your file holding all the distances from each city to one another.
 - Add a file that contains the average distance to the 100 closest UFO's for each city.
+- Your file can be in any format that you can read back into another program to be processed.
+- Place a copy of your output file in P02 and a small write up in a README file explaining the choices you made. 
+- Please refer to the [Readmees](../../Resources/02-Readmees/README.md) folder for help on creating a worthwhile readme.
