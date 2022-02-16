@@ -36,7 +36,7 @@ Data
 
 ### Deliverables
 
-- Create a folder calld P02 in your assignments folder on your repo.
+- Create a folder called `P02` in your assignments folder on your repo.
 - Add your file holding all the distances from each city to one another.
 - Add a file that contains the average distance to the 100 closest UFO's for each city.
 - Your file can be in any format that you can read back into another program to be processed.
