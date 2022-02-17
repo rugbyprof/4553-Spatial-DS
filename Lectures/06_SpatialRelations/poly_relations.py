@@ -86,7 +86,7 @@ class CountryPolyHelper:
 
 
 def pointInPolygon(spatialIndex, point):
-    result = spatialIndex.sindex.query(Point(point[0], point[1]))
+    result = spatialIndex.contains(Point(point[0], point[1]))
     return result
 
 
