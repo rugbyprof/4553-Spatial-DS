@@ -9,6 +9,6 @@
 | ~<a href="https://github.com/rugbyprof/4553-Spatial-DS/tree/master/Assignments/A03">A03</a>~ | ~<a href="https://github.com/rugbyprof/4553-Spatial-DS/tree/master/Assignments/A03"> Assignment 3 </a>~ | ~<a href="https://github.com/rugbyprof/4553-Spatial-DS/tree/master/Assignments/A03"> Rtree Paper</a>~ | ~<a href="https://github.com/rugbyprof/4553-Spatial-DS/tree/master/Assignments/A03"> 01-18-2022 (Tuesday @ 9:30 p.m.)</a>~ | ---- |
 | ~<a href="https://github.com/rugbyprof/4553-Spatial-DS/tree/master/Assignments/P01">P01</a>~ | ~<a href="https://github.com/rugbyprof/4553-Spatial-DS/tree/master/Assignments/P01"> File Formats </a>~ | ~<a href="https://github.com/rugbyprof/4553-Spatial-DS/tree/master/Assignments/P01"> Convert and Display City Data</a>~ | ~<a href="https://github.com/rugbyprof/4553-Spatial-DS/tree/master/Assignments/P01"> 02-01-2022 (Tuesday @ 9:30 a.m.)</a>~ | ---- |
 
-<sup>Last Updated: 2022-02-21 (Mon @ 16:49)</sup> 
+<sup>Last Updated: 2022-02-21 (Mon @ 16:50)</sup> 
 
 <sup>***Days Left is only accurate if the `Last Updated` date is the same as todays date. Otherwise, use the due date!***</sup> 
