@@ -4,7 +4,11 @@
 
 ### Overview
 
-- Using `FastApi` as a library, write a backend api that can be used to assist your game into becoming a reality.
+- Using `FastApi` as a library, write a backend api that can be used to assist your game into becoming a reality. 
+- Starter code can be found here: [Lectures/09_ApiHelp](../../Lectures/09_ApiHelp/README.md)
+
+
+### Api
 - Create routes that do the following:
   - Gets a single polygon from the countries geojson data, the polygon that best represents the countries border.
   - Get a list of country names that could be used to display to a user.
