@@ -5,7 +5,7 @@
 ### Overview
 
 - Using `FastApi` as a library, write a backend api that can be used to assist your game into becoming a reality. 
-- Starter code can be found here: [Lectures/09_ApiHelp](../../Lectures/09_ApiHelp/README.md)
+- Starter code can be found here: [Lectures/09_ApiHelp](../../Lectures/09_ApiHelp/)
 
 
 ### Api
