@@ -57,10 +57,9 @@ app = FastAPI(
 #####################################################
 
 
-class Movie(BaseModel):
-    startYear: Optional[int] = None
-    movieId: Optional[str] = None
-    movieTitle: Optional[str] = None
+# class Country(BaseModel):
+#     name: Optional[str] = None
+#     continent: Optional[str] = None
 
 
 """
@@ -100,6 +99,7 @@ async def getCountry():
     Returns:
         dict / json
     """
+    country = CountryReader
     return None
 
 

@@ -2,10 +2,12 @@ from fastapi import FastAPI
 from fastapi.responses import RedirectResponse
 from pydantic import BaseModel
 from typing import Optional
+import uvicorn
+
+# local built ins
 import json
 import sys
 import os
-import uvicorn
 
 
 from module import CountryReader
@@ -38,11 +40,6 @@ app = FastAPI(
 #####################################################
 
 
-# class Country(BaseModel):
-#     name: Optional[str] = None
-#     continent: Optional[str] = None
-
-
 """
   _      ____   _____          _        __  __ ______ _______ _    _  ____  _____   _____
  | |    / __ \ / ____|   /\   | |      |  \/  |  ____|__   __| |  | |/ __ \|  __ \ / ____|
@@ -53,7 +50,7 @@ app = FastAPI(
 """
 # FIX FOR YOUR ENVIRONMENT!
 dataPath = "/Users/griffin/Dropbox/_Courses/4553-Spatial-DS/Resources/01_Data/country_and_city_data/country_by_continent"
-europe = CountryReader(os.path.join(dataPath, "Europe.json"))
+africa = CountryReader(os.path.join(dataPath, "Africa.json"))
 
 
 def centroid(vertexes):
@@ -90,7 +87,7 @@ async def getCountryNames():
     Returns:
         list / json
     """
-    names = europe.getNames()
+    names = africa.getNames()
     return names
 
 
@@ -104,7 +101,7 @@ async def getCountry(country_name):
     Returns:
         dict / json
     """
-    polys = europe.getPolygons(country_name)
+    polys = africa.getPolygons(country_name)
     return polys
 
 
@@ -120,11 +117,12 @@ async def countryCenter(country_name):
     """
     coll = FeatureCollection()
     centers = []
-    polys = europe.getPolygons(country_name)
+    polys = africa.getPolygons(country_name)
 
     i = 0
     for poly in polys["geometry"]["coordinates"]:
         # print(poly[0])
+        # print(poly)
         center = centroid(poly[0])
         feature = {
             "type": "Feature",
@@ -134,8 +132,28 @@ async def countryCenter(country_name):
         centers.append(center)
         coll.addFeature(feature=feature)
         i += 1
-    print(coll)
-    return centers
+    # print(coll)
+    return coll
+
+
+@app.get("/country_lookup/{key}")
+async def getCountryPartialMatch(key):
+    """
+    Description:
+        Get country names
+    Params:
+
+    Returns:
+        list / json
+    """
+    key = key.lower()
+    partial = []
+    names = africa.getNames()
+    for name in names:
+        name = name.lower()
+        if name.startswith(key):
+            partial.append(name)
+    return partial
 
 
 if __name__ == "__main__":
