@@ -79,12 +79,41 @@ class CountryReader:
     def getNames(self):
         return self.countryNames
 
-    def getPolygons(self, country=None):
-        if not country:
+    def getPolygons(self, country=None, all=False):
+        """Grabs the multipolygon of a given country if it exists."""
+        if not country and all:
             return self.polygons
+
+        country = country.lower().title()
 
         if country in self.polygons:
             return self.polygons[country]
+        else:
+            print(f"{country} not in self.polygons!")
+            return None
+
+    def getProperties(self, country=None):
+        """Gets the properties from a countries feature"""
+        if country:
+            country = country.lower().title()
+
+            if country in self.polygons:
+                data = self.polygons[country]
+                return data["properties"]
+            else:
+                print(f"{country} not in self.polygons!")
+
+        return None
+
+    def getBbox(self, country=None):
+        """Just returns the bbox from a specific country."""
+        if not country:
+            print(f"Country: {country} is not a valid country name!")
+
+        props = self.getProperties(country)
+        print(props)
+
+        return list(props["bbox"])
 
 
 if __name__ == "__main__":

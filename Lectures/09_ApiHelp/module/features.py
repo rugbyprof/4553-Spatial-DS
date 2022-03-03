@@ -17,8 +17,10 @@ Functions:
     geometryType        : given a geometry, it will return what type it is
 
 """
+
 import json
 import sys
+
 from rich import print
 import gistyc
 
@@ -32,6 +34,7 @@ class ObjectEncoder(json.JSONEncoder):
 
     def default(self, obj):
         if hasattr(obj, "to_json"):
+            print("fucking 0")
             return self.default(obj.to_json())
         elif hasattr(obj, "__dict__"):
             d = dict(
@@ -47,7 +50,9 @@ class ObjectEncoder(json.JSONEncoder):
                 and not inspect.ismethoddescriptor(value)
                 and not inspect.isroutine(value)
             )
+            print("fucking A")
             return self.default(d)
+        print("fucking C")
         return obj
 
 
@@ -121,7 +126,7 @@ def isPoint(point):
         (bool) : true => it is a valid point
     """
 
-    if not isinstance(point, list):
+    if not type(point) in [list, tuple]:
         return False
 
     if len(point) != 2:
@@ -381,7 +386,9 @@ class Feature(object):
 
 class FeatureCollection(object):
     def __init__(self, **kwargs):
+
         features = kwargs.get("features", [])
+
         self.featureCollection = {"type": "FeatureCollection", "features": features}
         self.pretty = kwargs.get("pretty", True)
         self.index = 0  # index for features
@@ -408,7 +415,7 @@ class FeatureCollection(object):
         # current size of feature list
         size = len(self.featureCollection["features"])
 
-        if not isinstance(feature,Feature):
+        if not isinstance(feature, Feature):
             feature = Feature(feature=feature)
 
         if not index:
@@ -420,8 +427,6 @@ class FeatureCollection(object):
                 raise ValueError(
                     f"Your index in `addFeature()` is not valid!  Index: {index} > Size: {size} "
                 )
-
-
 
     def addFeatures(self, features):
         """Adds a list of features to the feature list
@@ -452,6 +457,14 @@ class FeatureCollection(object):
             self.index = (self.index + 1) % size
 
         return f
+
+    def to_json(self):
+        """Used by the `ObjectEncoder` class at the top to help with json dumping / printing out
+        nested objects. This allows a `FeatureCollection` that is made of up `Features` to get
+        a decent copy of the feature to be turned into a string, otherwise the encoding was
+        getting converted to string twice... ugly long story.
+        """
+        return self.featureCollection
 
 
 if __name__ == "__main__":
@@ -534,5 +547,5 @@ if __name__ == "__main__":
     f = Feature(feature=ukraine)
     print(f)
 
-    fl = FeatureCollection(features=[ukraine,poland])
+    fl = FeatureCollection(features=[ukraine, poland])
     print(fl)

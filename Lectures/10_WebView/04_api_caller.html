@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>GeoJSON viewer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+        integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+        crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+        integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+        crossorigin=""></script>
+    <style>
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        #map {
+            width: 60%;
+            height: 100%;
+            float: left;
+        }
+
+        #text {
+            height: 100%;
+            width: 40%;
+            float: right;
+        }
+
+        #geojsontext {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 20px;
+            width: 90%;
+            height: 80%;
+        }
+
+        #submit {
+            margin: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="map"></div>
+    <div id="text">
+        <textarea id="geojsontext"></textarea>
+        <input type="button" id="submit" value="Submit">
+    </div>
+    <script>
+
+        let map = L.map("map").setView([0, 0], 1);
+        L.tileLayer("https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_nolabels/{z}/{x}/{y}.png", {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attribution/">CartoDB</a>',
+            subdomains: "abcd",
+            maxZoom: 19
+        }).addTo(map);
+
+        // Add Layer Group
+        let layers = L.layerGroup().addTo(map);
+
+        // On submit - display layer from GeoJSON
+        function showGeojson() {
+            layers.clearLayers();
+            let txt = document.getElementById("geojsontext").value;
+            txt = JSON.parse(txt);
+            L.geoJSON(txt).addTo(layers);
+            showCountry();
+        }
+        document.getElementById("submit").addEventListener("click", showGeojson);
+
+        function showCountry(name) {
+            //layers.clearLayers();
+            //http://127.0.0.1:8080/country/zimbabwe?coords_only=false
+            let url = "http://127.0.0.1:8080/country/zimbabwe?coords_only=false";
+            fetch(url)
+                .then(function (response) {
+                    return response.json();
+                })
+                .then(function (data) {
+                    console.log("hello")
+                    console.log(data);
+                    geojson = {
+                        "type": "FeatureCollection",
+                        "features": []
+                    }
+
+                    L.geoJSON(data).addTo(map);
+                });
+        }
+    </script>
+</body>
+
+</html>
