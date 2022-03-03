@@ -183,15 +183,6 @@ def DistancePointLine(px, py, x1, y1, x2, y2):
     return DistancePointLine
 
 
-def fixFeatureCollection(self, feat):
-    newStuff = {"featureCollection": {"type": "FeatureCollection", "features": []}}
-
-    for foot in newStuff:
-        print(f"{k}{v}")
-    for k, v in newStuff:
-        pass
-
-
 # https://www.sitepoint.com/community/t/distance-between-long-lat-point-and-line-segment/50583/3
 
 """

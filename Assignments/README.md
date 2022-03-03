@@ -12,6 +12,6 @@
 | ~<a href="https://github.com/rugbyprof/4553-Spatial-DS/tree/master/Assignments/P02">P02</a>~ | ~<a href="https://github.com/rugbyprof/4553-Spatial-DS/tree/master/Assignments/P02"> No Path Still </a>~ | ~<a href="https://github.com/rugbyprof/4553-Spatial-DS/tree/master/Assignments/P02"> Rtree Nearest Neighbor with UFO's</a>~ | ~<a href="https://github.com/rugbyprof/4553-Spatial-DS/tree/master/Assignments/P02"> 02-22-2022 (Tuesday @ 9:30 a.m.)</a>~ | ---- |
 | ~<a href="https://github.com/rugbyprof/4553-Spatial-DS/tree/master/Assignments/P03">P03</a>~ | ~<a href="https://github.com/rugbyprof/4553-Spatial-DS/tree/master/Assignments/P03"> Voronoi </a>~ | ~<a href="https://github.com/rugbyprof/4553-Spatial-DS/tree/master/Assignments/P03"> Real World Use Case</a>~ | ~<a href="https://github.com/rugbyprof/4553-Spatial-DS/tree/master/Assignments/P03"> 03-01-2022 (Tuesday @ 9:30 a.m.)</a>~ | ---- |
 
-<sup>Last Updated: 2022-03-03 (Thu @ 08:25)</sup> 
+<sup>Last Updated: 2022-03-03 (Thu @ 08:31)</sup> 
 
 <sup>***Days Left is only accurate if the `Last Updated` date is the same as todays date. Otherwise, use the due date!***</sup> 
