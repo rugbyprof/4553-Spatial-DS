@@ -10,7 +10,6 @@ use `python filename.py` which invokes `uvicorn` from the `__main__` block insid
   
 
 
-
 ### Realpython tutorial
 
 - Realpython is usually very good.
