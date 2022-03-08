@@ -28,7 +28,15 @@
     <div id="map"></div>
 </body>
 <script>
-    let map = L.map("map", { center: [31.262218, 34.801472], zoom: 17 });
+    // define a point (this is lat/lon NOT lon/lat!!)
+    let center = [33.875293, -98.521151]    // maps center
+    let bolin = [33.873854, -98.519516]     // location of point
+
+    // create a map instance with a center point and zoom level
+    let map = L.map("map", { center: center, zoom: 17 });
+
+    // define a tile layer. this means we will grab tiles from
+    // open street maps for the map at whatever zoom level we need
     L.tileLayer(
         "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
         {
@@ -36,8 +44,10 @@
                 'www.openstreetmap.org/copyright">OpenStreetMap</a>'
         }
     ).addTo(map);
-    let pnt = L.marker([31.262218, 34.801472]).addTo(map);
-    L.marker([31.262218, 34.801472]).addTo(map);
+
+    // create a map marker to put on the map
+    let pnt = L.marker(bolin).addTo(map);
+
 </script>
 
 </html>

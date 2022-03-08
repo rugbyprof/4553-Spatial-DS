@@ -28,6 +28,25 @@
     <div id="map"></div>
 </body>
 <script>
+    function polystyle(geoStyle) {
+        return {
+            fillColor: geoStyle.fillColor,
+            weight: geoStyle.weight,
+            opacity: geoStyle.opacity,
+            color: geoStyle.color,
+            fillOpacity: geoStyle.opacity
+        };
+    }
+
+    let defaultStyle = {
+        fillColor: 'white',
+        weight: 2,
+        opacity: 1,
+        color: 'black',
+        fillOpacity: .5
+    }
+
+    // L.geoJson(polyData, {style: polystyle}).addTo(map);
     let map = L.map("map").setView([43, -105], 4);
     L.tileLayer(
         "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
@@ -70,7 +89,7 @@
             }
         ]
     }
-    L.geoJSON(states).addTo(map);
+    L.geoJSON(states, { style: defaultStyle }).addTo(map);
 </script>
 
 </html>
