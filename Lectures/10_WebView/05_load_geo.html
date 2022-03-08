@@ -53,6 +53,24 @@
     </div>
     <script>
 
+        function polystyle(geoStyle) {
+            return {
+                fillColor: geoStyle.fillColor,
+                weight: geoStyle.weight,
+                opacity: geoStyle.opacity,
+                color: geoStyle.color,
+                fillOpacity: geoStyle.opacity
+            };
+        }
+
+        let defaultStyle = {
+            fillColor: 'white',
+            weight: 2,
+            opacity: 1,
+            color: 'black',
+            fillOpacity: .5
+        }
+
         let map = L.map("map").setView([0, 0], 1);
         L.tileLayer("https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_nolabels/{z}/{x}/{y}.png", {
             attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attribution/">CartoDB</a>',
@@ -65,10 +83,14 @@
 
         // On submit - display layer from GeoJSON
         function showGeojson() {
+            countryStyle = defaultStyle;
             layers.clearLayers();
             let txt = document.getElementById("geojsontext").value;
             txt = JSON.parse(txt);
-            L.geoJSON(txt).addTo(layers);
+
+            countryStyle.fillColor = 'orange'
+            countryStyle.color = 'blue'
+            L.geoJSON(txt, { style: countryStyle }).addTo(layers);
         }
         document.getElementById("submit").addEventListener("click", showGeojson);
 

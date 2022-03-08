@@ -1,8 +1,11 @@
 from fastapi import FastAPI
 from fastapi.responses import RedirectResponse
-from fastapi.encoders import jsonable_encoder
-from fastapi.responses import JSONResponse
-from pydantic import BaseModel
+
+from fastapi.middleware.cors import CORSMiddleware
+
+# from fastapi.encoders import jsonable_encoder
+# from fastapi.responses import JSONResponse
+# from pydantic import BaseModel
 from typing import Optional
 import uvicorn
 from math import sqrt
@@ -36,6 +39,10 @@ description = """🚀
 ### With Better Distance Calculations
 """
 
+# Needed for CORS
+origins = ["*"]
+
+
 # This is the `app` instance which passes in a series of keyword arguments
 # configuring this instance of the api. The URL's are obviously fake.
 app = FastAPI(
@@ -52,6 +59,15 @@ app = FastAPI(
         "name": "Apache 2.0",
         "url": "https://www.apache.org/licenses/LICENSE-2.0.html",
     },
+)
+
+# Needed for CORS
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
 
 """

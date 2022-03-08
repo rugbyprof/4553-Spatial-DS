@@ -38,8 +38,6 @@
         };
     }
 
-    // Generic default style for polygons which will be applied to 
-    // both polygons in this case...
     let defaultStyle = {
         fillColor: 'white',
         weight: 2,
@@ -48,7 +46,7 @@
         fillOpacity: .5
     }
 
-    // Create a map centered on the USA
+    // L.geoJson(polyData, {style: polystyle}).addTo(map);
     let map = L.map("map").setView([43, -105], 4);
     L.tileLayer(
         "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
@@ -57,14 +55,15 @@
                 'www.openstreetmap.org/copyright">OpenStreetMap</a>'
         }
     ).addTo(map);
-
-    // Create a geojson object to be displayed (basic shapes over two states)
     let states = {
         "type": "FeatureCollection",
         "features": [
             {
                 "type": "Feature",
-                "properties": { "party": "Republican" },
+                "properties": {
+                    "party":
+                        "Republican"
+                },
                 "geometry": {
                     "type": "Polygon",
                     "coordinates": [
@@ -93,8 +92,13 @@
             }
         ]
     }
-    // Display those "states" with the default style we created.
-    L.geoJSON(states, { style: defaultStyle }).addTo(map);
+    defaultStyle.fillColor = 'red'
+    defaultStyle.color = 'red'
+    L.geoJSON(states.features[0], { style: defaultStyle }).addTo(map);
+
+    defaultStyle.fillColor = 'blue'
+    defaultStyle.color = 'blue'
+    L.geoJSON(states.features[1], { style: defaultStyle }).addTo(map);
 </script>
 
 </html>
