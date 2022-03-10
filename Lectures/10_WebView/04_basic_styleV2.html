@@ -28,42 +28,17 @@
     <div id="map"></div>
 </body>
 <script>
-    function polystyle(geoStyle) {
-        return {
-            fillColor: geoStyle.fillColor,
-            weight: geoStyle.weight,
-            opacity: geoStyle.opacity,
-            color: geoStyle.color,
-            fillOpacity: geoStyle.opacity
-        };
-    }
-
-    let defaultStyle = {
-        fillColor: 'white',
-        weight: 2,
-        opacity: 1,
-        color: 'black',
-        fillOpacity: .5
-    }
-
-    // L.geoJson(polyData, {style: polystyle}).addTo(map);
+    // reference to our leaflet map 
+    // centered on [43,-105] and zoom level 4
     let map = L.map("map").setView([43, -105], 4);
-    L.tileLayer(
-        "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
-        {
-            attribution: '&copy; <a href="http://' +
-                'www.openstreetmap.org/copyright">OpenStreetMap</a>'
-        }
-    ).addTo(map);
+
+    // geojson variable 
     let states = {
         "type": "FeatureCollection",
         "features": [
             {
                 "type": "Feature",
-                "properties": {
-                    "party":
-                        "Republican"
-                },
+                "properties": { "party": "Republican" },
                 "geometry": {
                     "type": "Polygon",
                     "coordinates": [
@@ -92,13 +67,36 @@
             }
         ]
     }
-    defaultStyle.fillColor = 'red'
-    defaultStyle.color = 'red'
-    L.geoJSON(states.features[0], { style: defaultStyle }).addTo(map);
 
-    defaultStyle.fillColor = 'blue'
-    defaultStyle.color = 'blue'
-    L.geoJSON(states.features[1], { style: defaultStyle }).addTo(map);
+    L.tileLayer(
+        "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+        {
+            attribution: '&copy; <a href="http://' +
+                'www.openstreetmap.org/copyright">OpenStreetMap</a>'
+        }
+    ).addTo(map);
+
+    // Generic default style for polygons which will be applied to 
+    // both polygons in this case...
+    let defaultStyle = {
+        fillColor: 'red',
+        weight: 2,
+        opacity: 1,
+        color: 'black',
+        fillOpacity: .5
+    }
+
+    var sdStyle = defaultStyle;
+    var coStyle = defaultStyle;
+
+    sdStyle.fillColor = 'red';
+    sdStyle.color = 'red';
+    L.geoJSON(states.features[0], { style: sdStyle }).addTo(map);
+
+    coStyle.fillColor = 'blue'
+    coStyle.color = 'blue'
+    L.geoJSON(states.features[1], { style: coStyle }).addTo(map);
+
 </script>
 
 </html>

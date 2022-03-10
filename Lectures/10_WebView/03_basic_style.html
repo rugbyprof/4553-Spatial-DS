@@ -28,37 +28,11 @@
     <div id="map"></div>
 </body>
 <script>
-    function polystyle(geoStyle) {
-        return {
-            fillColor: geoStyle.fillColor,
-            weight: geoStyle.weight,
-            opacity: geoStyle.opacity,
-            color: geoStyle.color,
-            fillOpacity: geoStyle.opacity
-        };
-    }
-
-    // Generic default style for polygons which will be applied to 
-    // both polygons in this case...
-    let defaultStyle = {
-        fillColor: 'white',
-        weight: 2,
-        opacity: 1,
-        color: 'black',
-        fillOpacity: .5
-    }
-
-    // Create a map centered on the USA
+    // reference to our leaflet map 
+    // centered on [43,-105] and zoom level 4
     let map = L.map("map").setView([43, -105], 4);
-    L.tileLayer(
-        "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
-        {
-            attribution: '&copy; <a href="http://' +
-                'www.openstreetmap.org/copyright">OpenStreetMap</a>'
-        }
-    ).addTo(map);
 
-    // Create a geojson object to be displayed (basic shapes over two states)
+    // geojson variable 
     let states = {
         "type": "FeatureCollection",
         "features": [
@@ -93,6 +67,25 @@
             }
         ]
     }
+
+    L.tileLayer(
+        "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+        {
+            attribution: '&copy; <a href="http://' +
+                'www.openstreetmap.org/copyright">OpenStreetMap</a>'
+        }
+    ).addTo(map);
+
+    // Generic default style for polygons which will be applied to 
+    // both polygons in this case...
+    let defaultStyle = {
+        fillColor: 'red',
+        weight: 2,
+        opacity: 1,
+        color: 'black',
+        fillOpacity: .5
+    }
+
     // Display those "states" with the default style we created.
     L.geoJSON(states, { style: defaultStyle }).addTo(map);
 </script>

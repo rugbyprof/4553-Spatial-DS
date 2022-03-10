@@ -113,7 +113,34 @@ class CountryReader:
         props = self.getProperties(country)
         print(props)
 
-        return list(props["bbox"])
+        if "bbox" in props:
+            return list(props["bbox"])
+
+        i = self.getCountryIndex(country)
+
+        if "bbox" in self.data[i]:
+            return self.data[i]["bbox"]
+        
+        return None
+
+    # def getCenterPoint(self, country=None):
+    #     """Just returns the center point from a specific country (kind of)."""
+    #     if not country:
+    #         print(f"Country: {country} is not a valid country name!")
+
+    #     props = self.getProperties(country)
+
+    #     if "bbox" in props:
+    #         center = 
+    #         return list(props["bbox"])
+
+    #     i = self.getCountryIndex(country)
+
+    #     if "bbox" in self.data[i]:
+    #         return self.data[i]["bbox"]
+        
+    #     return None
+        
 
 
 if __name__ == "__main__":

@@ -1,26 +1,17 @@
+# Libraries for FastAPI
 from fastapi import FastAPI
 from fastapi.responses import RedirectResponse
-
 from fastapi.middleware.cors import CORSMiddleware
-
-# from fastapi.encoders import jsonable_encoder
-# from fastapi.responses import JSONResponse
-# from pydantic import BaseModel
-from typing import Optional
 import uvicorn
-from math import sqrt
-from math import pow
 
-# local built in's from python
-import json
-import sys
+# Builtin libraries
+from math import radians, degrees, cos, sin, asin, sqrt, pow, atan2
 import os
 
-
+# Classes from my module
 from module import CountryReader
 from module import Feature
 from module import FeatureCollection
-
 
 """
            _____ _____   _____ _   _ ______ ____
@@ -201,6 +192,80 @@ def DistancePointLine(px, py, x1, y1, x2, y2):
 
 # https://www.sitepoint.com/community/t/distance-between-long-lat-point-and-line-segment/50583/3
 
+
+def haversineDistance(lon1, lat1, lon2, lat2, units="miles"):
+    """
+    Calculate the great circle distance in kilometers between two points
+    on the earth (specified in decimal degrees)
+    """
+    radius = {"km": 6371, "miles": 3956}
+
+    # convert decimal degrees to radians
+    lon1, lat1, lon2, lat2 = map(radians, [lon1, lat1, lon2, lat2])
+
+    # haversine formula
+    dlon = lon2 - lon1
+    dlat = lat2 - lat1
+    a = sin(dlat / 2) ** 2 + cos(lat1) * cos(lat2) * sin(dlon / 2) ** 2
+    c = 2 * asin(sqrt(a))
+    r = radius[units]  # choose miles or km for results
+    return c * r
+
+
+# https://gist.github.com/jeromer/2005586
+def compass_bearing(pointA, pointB):
+    """
+    Calculates the bearing between two points.
+    The formulae used is the following:
+        θ = atan2(sin(Δlong).cos(lat2),
+                  cos(lat1).sin(lat2) − sin(lat1).cos(lat2).cos(Δlong))
+    :Parameters:
+      - `pointA: The tuple representing the latitude/longitude for the
+        first point. Latitude and longitude must be in decimal degrees
+      - `pointB: The tuple representing the latitude/longitude for the
+        second point. Latitude and longitude must be in decimal degrees
+    :Returns:
+      The bearing in degrees
+    :Returns Type:
+      float
+    """
+    if (type(pointA) != tuple) or (type(pointB) != tuple):
+        raise TypeError("Only tuples are supported as arguments")
+
+    lat1 = radians(pointA[0])
+    lat2 = radians(pointB[0])
+
+    diffLong = radians(pointB[1] - pointA[1])
+
+    x = sin(diffLong) * cos(lat2)
+    y = cos(lat1) * sin(lat2) - (sin(lat1) * cos(lat2) * cos(diffLong))
+
+    initial_bearing = atan2(x, y)
+
+    # Now we have the initial bearing but math.atan2 return values
+    # from -180° to + 180° which is not what we want for a compass bearing
+    # The solution is to normalize the initial bearing as shown below
+    initial_bearing = degrees(initial_bearing)
+    compass_bearing = (initial_bearing + 360) % 360
+
+    return compass_bearing
+
+
+def getCountryPoly(country):
+    # lowercase the country name then capitalize to fit the existing names.
+    country = country.lower().title()
+
+    # Go get the polygons
+    polys = countryDB.getPolygons(country)
+
+    largest = largestPoly(polys["geometry"]["coordinates"])
+
+    if not polys:
+        return {"Error": f"Country: {country} didn't exist!"}
+
+    return largest
+
+
 """
   _____   ____  _    _ _______ ______  _____
  |  __ \ / __ \| |  | |__   __|  ____|/ ____|
@@ -345,16 +410,17 @@ async def getCountry(country_name, coords_only: bool = False):
 
 
 @app.get("/countryCenter/{country_name}")
-async def countryCenter(country_name):
+async def countryCenter(country_name, raw: bool = False):
     """
     ### Description:
         Get a point that represents the spaital center of a countries polygon.
     ### Params:
         country_name (str)  : A country name to search for
     ### OptionalParams
-        feature_collection (bool) : default = False
+        raw (bool)          : True = send coords only, no feature crap
     ### Returns:
         dict : json Feature collection
+        list : center point (if raw = True)
     ## Examples:
 
     [http://127.0.0.1:8080/countryCenter/united%20kingdom](http://127.0.0.1:8080/countryCenter/united%20kingdom)
@@ -382,6 +448,16 @@ async def countryCenter(country_name):
         ]
     }
     ```
+
+    [http://127.0.0.1:8080/countryCenter/united%20kingdom?raw=true](http://127.0.0.1:8080/countryCenter/united%20kingdom?raw=true)
+
+    ### Results:
+    ```json
+    [
+        -3.082751279583333,
+        54.005709779374996
+    ]
+    ```
     """
 
     # lowercase the country name then capitalize to fit the existing names.
@@ -394,6 +470,9 @@ async def countryCenter(country_name):
 
     print(largest)
     center = centroid(largest)
+
+    if raw:
+        return center
 
     feature = Feature(
         coords=center, type="Point", properties={"name": country["properties"]["name"]}
@@ -436,27 +515,55 @@ async def getCountryPartialMatch(key):
 
 
 @app.get("/line_between/")
-async def getLineBetween(countryA: str = None, countryB: str = None):
+async def getLineBetween(start: str = None, end: str = None):
     """
     ### Description:
-        Get country names that partially match the key passed in.
+        Get a line feature that connects two country centroids
     ### Params:
-        key (str)  : a substring compared with the beginning of every country name.
+        start (str) : country name
+        end (str) : country name
     ### Returns:
-        list / json
-    ### Example:
+        feature / coords
+    ## Example:
 
+    [http://localhost:8080/line_between/?start=finland&end=greenland](http://localhost:8080/line_between/?start=finland&end=greenland)
+
+    ### Results:
+    ```json
+    {
+        "type": "Feature",
+        "geometry": {
+            "type": "MultiLineString",
+            "coordinates": [
+            [
+                [
+                25.83077124897437,
+                65.34954882461537
+                ],
+                [
+                -40.8824912878788,
+                74.1543870603788
+                ]
+            ]
+            ]
+        },
+        "properties": {
+            "from": "finland",
+            "to": "greenland"
+        }
+    }
+    ```
     """
-    pointA = getCountryCentroid(countryA)
-    pointB = getCountryCentroid(countryB)
+    p1 = getCountryCentroid(start)
+    p2 = getCountryCentroid(end)
 
     feature = Feature(
-        coords=[[pointA, pointB]],
+        coords=[[p1, p2]],
         type="LineString",
-        properties={"from": countryA, "to": countryB},
+        properties={"from": start, "to": end},
     )
 
-    return feature
+    return feature.to_json()
 
 
 @app.get("/property/{country}")
@@ -595,9 +702,275 @@ async def getBbox(country, raw: bool = False):
 
     poly = [[west, south], [east, south], [east, north], [west, north], [west, south]]
 
-    feature = Feature(coords=[poly], properties={"country": country})
+    feature = Feature(coords=[poly], properties={"country": country}).to_json()
     print(feature)
     return feature
+
+
+@app.get("/bboxCenter/{country}")
+async def getbboxCenter(country, raw: bool = False):
+    """
+    ### Description:
+        Get a center point from a country's bbox.
+    ### Params:
+        country (str)  : name of the country
+        raw (bool) : return the raw point and not a feature
+    ### Returns:
+        point/Feature : either center point [x,y], or a feature with the point in it
+    ## Examples:
+    [http://127.0.0.1:8080/centerPoint/united%20kingdom?raw=false](http://127.0.0.1:8080/centerPoint/united%20kingdom?raw=false)
+    #### Response:
+    ```
+    {
+    "feature":{
+        "type":"Feature",
+        "geometry":{
+            "type":"Point",
+            "coordinates":[
+                -8.00503557,
+                53.40046174
+            ]
+        },
+        "properties":{
+            "country":"Ireland"
+        }
+    }
+    }
+    ```
+    [http://127.0.0.1:8080/centerPoint/ireland?raw=true](http://127.0.0.1:8080/centerPoint/ireland?raw=true)
+
+    ### Response:
+    ```
+    [
+        -8.00503557,
+        53.40046174
+    ]
+    ```
+    """
+    country = country.lower().title()
+    bbox = countryDB.getBbox(country)
+
+    west, south, east, north = tuple(bbox)
+
+    center = [(west + east) / 2.0, (north + south) / 2.0]
+
+    if raw:
+        return center
+
+    feature = Feature(coords=center, properties={"country": country}).to_json()
+    print(feature)
+    return feature
+
+
+@app.get("/centroidRelations/")
+async def centroidRelations(start: str, end: str):
+    """
+    ### Description:
+        Get the distance between 2 polygon centroids. This is meant for you to improve on!
+        Also get the bearing between the two centroids.
+    ### Params:
+        start (str)  : name of country
+        end (str) : name of country
+    ### Returns:
+        dict: {"distance":float, "bearing":float}
+            distance in miles
+            bearing between the two
+        Line: A line feature between the two
+
+    ## Examples:
+
+    [http://localhost:8080/centroidRelations/?start=france&end=greece](http://localhost:8080/centroidRelations/?start=france&end=greece)
+
+    ### Results
+    ```json
+    {
+    "distance": 1114.8495334378304,
+    "bearing": 109.29581652664211,
+    "line": {
+        "feature": {
+        "type": "Feature",
+        "geometry": {
+            "type": "LineString",
+            "coordinates": [
+            [
+                3.245872756458333,
+                47.023721337291676
+            ],
+            [
+                23.223037302790694,
+                39.80152575325582
+            ]
+            ]
+        },
+        "properties": {
+            "from": "france",
+            "to": "greece"
+        }
+        }
+    }
+    }
+    ```
+    """
+    lon1, lat1 = getCountryCentroid(start)
+    lon2, lat2 = getCountryCentroid(end)
+
+    feature = Feature(
+        coords=[[lon1, lat1], [lon2, lat2]],
+        type="LineString",
+        properties={"from": start, "to": end},
+    )
+
+    print(lon1, lat1)
+    print(lon2, lat2)
+
+    # lon1, lat1, lon2, lat2,
+    distance = haversineDistance(lon1, lat1, lon2, lat2)
+    bearing = compass_bearing((lat1, lon1), (lat2, lon2))
+
+    feature = feature.to_json()
+
+    return {
+        "distance": distance,
+        "bearing": bearing,
+        "line": feature,
+    }
+
+
+@app.get("/borderRelations/")
+async def borderRelations(start: str, end: str):
+    """
+    ### Description:
+        Get the distance between 2 polygons in a brute force fashion. This is meant for you to improve on!
+    ### Params:
+        start (str)  : name of country
+        end (str) : name of country
+    ### Returns:
+        dict: {"closest":dict, "touching":list}
+            closest =  the closest two points (if distance > 0)
+            OR
+            list of the points that are touching
+
+    ## Examples:
+
+    [http://127.0.0.1:8080/borderRelations/?start=germany&end=austria](http://127.0.0.1:8080/borderRelations/?start=germany&end=austria)
+
+    ### Response:
+
+    ```json
+    {
+    "closest": {
+        "points": [],
+        "distance": 0
+    },
+    "touching": [
+        [
+        13.59594567,
+        48.87717194
+        ],
+        [
+        13.24335737,
+        48.41611481
+        ],
+
+        12.14135746,
+        47.7030834
+        ],
+        [
+        11.42641402,
+        47.52376618
+        ],
+        ...
+    ]
+    }
+    ```
+    """
+    poly1 = getCountryPoly(start)
+    poly2 = getCountryPoly(end)
+
+    min = 999999
+    closest = {}
+    touching = []
+
+    for p1 in poly1:
+        lon1, lat1 = p1
+        for p2 in poly2:
+            lon2, lat2 = p2
+            d = haversineDistance(lon1, lat1, lon2, lat2)
+            if d == 0:
+                touching.append(p2)
+            if d < min:
+                min = d
+                closest = {"points": [p1, p2], "distance": d}
+
+    if len(touching) > 0:
+        closest = {"points": [], "distance": 0}
+    return {"closest": closest, "touching": touching}
+
+
+@app.get("/lengthLine/{country}")
+async def lengthLine(country):
+    """
+    ### Description:
+        Get a line between the furthest two points within one country polygon.
+    ### Params:
+        country (str)  : name of country
+    ### Returns:
+        feature: line between furthest two points in a countries polygon
+
+    ## Examples:
+
+    [http://localhost:8080/lengthLine/germany](http://localhost:8080/lengthLine/germany)
+
+    ### Response:
+
+    ```json
+    {
+    "type": "Feature",
+    "geometry": {
+        "type": "LineString",
+        "coordinates": [
+        [
+            12.93262699,
+            47.46764558
+        ],
+        [
+            8.52622928,
+            54.96274364
+        ]
+        ]
+    },
+    "properties": {
+        "country": "germany",
+        "distance": 551.2008987920657
+    }
+    }
+
+    ```
+    """
+    poly = getCountryPoly(country)
+
+    max = -999999
+
+    for p1 in poly:
+        lon1, lat1 = p1
+        for p2 in poly:
+            lon2, lat2 = p2
+            d = haversineDistance(lon1, lat1, lon2, lat2)
+            if d == 0:
+                continue
+            if d > max:
+                max = d
+                maxp1 = p1
+                maxp2 = p2
+                maxd = d
+
+    feature = Feature(
+        coords=[maxp1, maxp2],
+        type="LineString",
+        properties={"country": country, "distance": maxd},
+    )
+
+    return feature.to_json()
 
 
 """

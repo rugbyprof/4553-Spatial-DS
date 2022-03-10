@@ -1,144 +1,162 @@
 <!DOCTYPE html>
 <html>
-
-<head>
+  <head>
     <title>GeoJSON viewer</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
-        integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
-        crossorigin="" />
-    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
-        integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
-        crossorigin=""></script>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+      integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+      crossorigin=""
+    />
+    <script
+      src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+      integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+      crossorigin=""
+    ></script>
     <style>
-        html,
-        body {
-            height: 100%;
-            margin: 0;
-            padding: 0;
-        }
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
 
-        #map {
-            width: 60%;
-            height: 100%;
-            float: left;
-        }
+      #map {
+        width: 60%;
+        height: 100%;
+        float: left;
+      }
 
-        #text {
-            height: 100%;
-            width: 40%;
-            float: right;
-        }
+      #text {
+        height: 100%;
+        width: 40%;
+        float: right;
+      }
 
-        #geojsontext {
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            margin-top: 20px;
-            width: 90%;
-            height: 80%;
-        }
+      #geojsontext {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 20px;
+        width: 90%;
+        height: 80%;
+      }
 
-        #submit {
-            margin: 20px;
-        }
+      #submit {
+        margin: 20px;
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <div id="map"></div>
     <div id="text">
-        <label for="cars">Choose a Country:</label>
+      <label for="country">Choose a Country:</label>
 
-        <select name="country" id="country">
-            <option value="volvo">Volvo</option>
-            <option value="saab">Saab</option>
-            <option value="mercedes">Mercedes</option>
-            <option value="audi">Audi</option>
-        </select>
+      <select name="country" id="country">
+        <option value="volvo">Volvo</option>
+        <option value="saab">Saab</option>
+        <option value="mercedes">Mercedes</option>
+        <option value="audi">Audi</option>
+      </select>
 
-        <input type="button" id="submit" value="Submit">
+      <input type="button" id="submit" value="Submit" />
     </div>
     <script>
+      // Generic default style for polygons which will be applied to
+      // both polygons in this case...
+      let defaultStyle = {
+        fillColor: "red",
+        weight: 2,
+        opacity: 1,
+        color: "black",
+        fillOpacity: 0.5,
+      };
 
-        // load drop down with existing country names
-        // erasing the old cars :) 
-        window.onload = function () {
-            loadCountryNames();
-        };
-
-        let map = L.map("map").setView([0, 0], 1);
-        L.tileLayer("https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_nolabels/{z}/{x}/{y}.png", {
-            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attribution/">CartoDB</a>',
-            subdomains: "abcd",
-            maxZoom: 19
-        }).addTo(map);
-
-        // Add Layer Group
-        let layers = L.layerGroup().addTo(map);
-
-        // On submit - display layer from GeoJSON
-        function showGeojson(geoData) {
-            layers.clearLayers();
-            let txt = document.getElementById("geojsontext").value;
-            txt = JSON.parse(txt);
-            L.geoJSON(txt).addTo(layers);
-            showCountry();
+      let map = L.map("map").setView([0, 0], 1);
+      L.tileLayer(
+        "https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_nolabels/{z}/{x}/{y}.png",
+        {
+          attribution:
+            '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attribution/">CartoDB</a>',
+          subdomains: "abcd",
+          maxZoom: 19,
         }
+      ).addTo(map);
 
-        function loadCountryNames() {
-            let url = "http://127.0.0.1:8080/country_names/";
-            fetch(url)
-                .then(function (response) {
-                    return response.json();
-                })
-                .then(function (data) {
+      // Add Layer Group
+      let layers = L.layerGroup().addTo(map);
 
-                    var select = document.getElementById("country");
+      // On submit - display layer from GeoJSON
+      function showGeojson(geoData) {
+        layers.clearLayers();
+        let txt = document.getElementById("geojsontext").value;
+        txt = JSON.parse(txt);
+        L.geoJSON(txt).addTo(layers);
+        showCountry();
+      }
 
-                    select.innerHTML = "";
+      function loadCountryNames() {
+        let url = "http://127.0.0.1:8080/country_names/";
+        fetch(url)
+          .then(function (response) {
+            return response.json();
+          })
+          .then(function (data) {
+            var select = document.getElementById("country");
 
-                    for (var i = 0; i < data.length; i++) {
-                        var opt = data[i];
-                        var el = document.createElement("option");
-                        el.textContent = opt;
-                        el.value = opt;
-                        select.appendChild(el);
-                    }
+            select.innerHTML = "";
 
-                    console.log(data);
-                });
-        }
+            for (var i = 0; i < data.length; i++) {
+              var opt = data[i];
+              var el = document.createElement("option");
+              el.textContent = opt;
+              el.value = opt;
+              select.appendChild(el);
+            }
 
-        document.getElementById("submit").addEventListener("click", showCountry);
+            console.log(data);
+          });
+      }
 
-        function showCountry() {
-            //layers.clearLayers();
-            //http://127.0.0.1:8080/country/zimbabwe?coords_only=false
+      function showCountry() {
+        layers.clearLayers();
+        //http://127.0.0.1:8080/country/zimbabwe?coords_only=false
 
-            var e = document.getElementById("country");
-            var name = e.options[e.selectedIndex].text;
-            console.log(name);
+        var e = document.getElementById("country");
+        var name = e.options[e.selectedIndex].text;
+        console.log(name);
 
-            let url = "http://127.0.0.1:8080/country/" + name;
-            console.log(url);
-            fetch(url)
-                .then(function (response) {
-                    return response.json();
-                })
-                .then(function (data) {
-                    //console.log(data['featureCollection']['features'][0]['feature'])
-                    result = {
-                        "type": "FeatureCollection",
-                        "features": [data['featureCollection']['features'][0]['feature']]
-                    }
-                    console.log(result);
+        let url = "http://127.0.0.1:8080/country/" + name;
+        console.log(url);
+        fetch(url)
+          .then(function (response) {
+            return response.json();
+          })
+          .then(function (data) {
+            //console.log(data['featureCollection']['features'][0]['feature'])
+            result = {
+              type: "FeatureCollection",
+              features: [data["featureCollection"]["features"][0]["feature"]],
+            };
+            console.log(result);
 
-                    L.geoJSON(result).addTo(layers);
-                    console.log(L);
-                });
-        }
+            L.geoJSON(result).addTo(layers);
+            console.log(L);
+          });
+      }
+
+      document.getElementById("submit").addEventListener("click", showCountry);
+
+      // load drop down with existing country names
+      // erasing the old cars :)
+      window.onload = function () {
+        loadCountryNames();
+      };
     </script>
-</body>
-
+  </body>
 </html>
