@@ -6,5 +6,10 @@
 
 - You've seen [wordle](https://www.nytimes.com/games/wordle/index.html)
 - You've seen  [worldle](https://worldle.teuteuf.fr/)
-- We will do better! 
+- And now you've seen [globle](https://globle-game.com/)
+- We are ripping off (in some way) these games.
+
+
+
+
 

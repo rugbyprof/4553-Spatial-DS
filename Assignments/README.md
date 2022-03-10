@@ -12,6 +12,6 @@
 | ~<a href="https://github.com/rugbyprof/4553-Spatial-DS/tree/master/Assignments/P03">P03</a>~ | ~<a href="https://github.com/rugbyprof/4553-Spatial-DS/tree/master/Assignments/P03"> Voronoi </a>~ | ~<a href="https://github.com/rugbyprof/4553-Spatial-DS/tree/master/Assignments/P03"> Real World Use Case</a>~ | ~<a href="https://github.com/rugbyprof/4553-Spatial-DS/tree/master/Assignments/P03"> 03-01-2022 (Tuesday @ 9:30 a.m.)</a>~ | ---- |
 | ~<a href="https://github.com/rugbyprof/4553-Spatial-DS/tree/master/Assignments/P04">P04</a>~ | ~<a href="https://github.com/rugbyprof/4553-Spatial-DS/tree/master/Assignments/P04"> Worldle </a>~ | ~<a href="https://github.com/rugbyprof/4553-Spatial-DS/tree/master/Assignments/P04"> Spatial Game Helper Classes</a>~ | ~<a href="https://github.com/rugbyprof/4553-Spatial-DS/tree/master/Assignments/P04"> 03-03-2022 (Thursday @ 9:30 a.m.)</a>~ | ---- |
 
-<sup>Last Updated: 2022-03-10 (Thu @ 02:36)</sup> 
+<sup>Last Updated: 2022-03-10 (Thu @ 04:26)</sup> 
 
 <sup>***Days Left is only accurate if the `Last Updated` date is the same as todays date. Otherwise, use the due date!***</sup> 

@@ -85,7 +85,7 @@
 <body>
     <div id="map"></div>
     <div id="text">
-        <label for="country">Show a Countries:</label>
+        <label for="country">Show a Countries Polygon:</label>
 
         <select name="country" id="country">
             <option value="volvo">Volvo</option>
@@ -223,7 +223,6 @@
             L.geoJSON(result).addTo(layers);
 
         }
-
 
         /**
          * apiCall: Calls the api we have been working on in order to "get" data and display it.

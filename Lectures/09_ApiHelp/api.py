@@ -973,6 +973,33 @@ async def lengthLine(country):
     return feature.to_json()
 
 
+@app.get("/cardinal/{degrees}")
+async def cardinal(degrees):
+    """
+    note: this is highly approximate...
+    """
+    dirs = [
+        "N",
+        "NNE",
+        "NE",
+        "ENE",
+        "E",
+        "ESE",
+        "SE",
+        "SSE",
+        "S",
+        "SSW",
+        "SW",
+        "WSW",
+        "W",
+        "WNW",
+        "NW",
+        "NNW",
+    ]
+    ix = int((int(degrees) + 11.25) / 22.5)
+    return dirs[ix % 16]
+
+
 """
 This main block gets run when you invoke this file. How do you invoke this file?
 
