@@ -125,6 +125,8 @@ Returns:
 
 #### Method: `DistancePointLine(px, py, x1, y1, x2, y2)`
 
+_Might not need to use this unless you do the distance we discussed in class._
+
 ```
 Calculates the distance from a given point (px,py), to the line segment (x1,y1) , (x2,y2).
 Params:
@@ -166,6 +168,8 @@ Returns:
 ```
 
 #### Method: `lineMagnitude(x1, y1, x2, y2)`
+
+_Might not need to use this unless you do the distance we discussed in class._
 
 ```
 Calculate the magnitude of a line. This is a type of distance function. Not the same as `haversine` but is used
