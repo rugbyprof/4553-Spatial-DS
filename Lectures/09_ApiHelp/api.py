@@ -97,6 +97,55 @@ move it if you have other "spatial" methods that it can be packaged with in the 
 """
 
 
+def cardinalDirection(bearing):
+    """This method returns a `cardinal direction` given a bearing.
+    Params:
+        bearing (float) : value between 0-360
+    Returns:
+        cardinal direction (string) : the string value of the direction like NNE (north north east)
+    """
+    di = None  # closest cardinal direction
+    min = 999  # difference between bearing and cardinal degrees
+
+    degrees = [
+        0,
+        22.5,
+        45.0,
+        90.0,
+        112.5,
+        135.0,
+        180.0,
+        202.5,
+        225.0,
+        270.0,
+        292.5,
+        315.0,
+        337.5,
+        360.0,
+    ]
+    directions = [
+        "N",
+        "NNE",
+        "NE",
+        "E",
+        "SE",
+        "SSE",
+        "S",
+        "SSW",
+        "SW",
+        "W",
+        "NW",
+        "NNW",
+        "N",
+    ]
+
+    for i in range(len(degrees)):
+        if abs(degrees[i] - bearing) < min:
+            min = abs(degrees[i] - bearing)
+            di = directions[i]
+    return di
+
+
 def centroid(polygon):
     """Calculates the centroid point for a polygon (linear ring of points)
     Params:
@@ -112,37 +161,45 @@ def centroid(polygon):
     return (x, y)
 
 
-def largestPoly(polygons):
-    """Simple implementation to grab the "hopefully" biggest polygon
-        for a country (aside from island nations / arcapelligos) that
-        represents the "actual" country.
+def compass_bearing(pointA, pointB):
+    """Calculates the bearing between two points.
+        The formulae used is the following:
+            θ = atan2(sin(Δlong).cos(lat2),cos(lat1).sin(lat2) − sin(lat1).cos(lat2).cos(Δlong))
+    Source:
+        https://gist.github.com/jeromer/2005586
     Params:
-        polygons (list) : list of polygons
+        pointA  : The tuple representing the latitude/longitude for the first point. Latitude and longitude must be in decimal degrees
+        pointB  : The tuple representing the latitude/longitude for the second point. Latitude and longitude must be in decimal degrees
     Returns:
-        list : the biggest polygon in the list
+        (float) : The bearing in degrees
     """
-    i = 0
-    max = 0
-    index = 0
-    for poly in polygons:
-        print(len(poly[0]))
-        print(poly[0])
-        print("")
-        if len(poly[0]) > max:
-            max = len(poly[0])
-            print(max)
-            index = i
-        i += 1
-    return polygons[index][0]
+    if (type(pointA) != tuple) or (type(pointB) != tuple):
+        raise TypeError("Only tuples are supported as arguments")
+
+    lat1 = radians(pointA[0])
+    lat2 = radians(pointB[0])
+
+    diffLong = radians(pointB[1] - pointA[1])
+
+    x = sin(diffLong) * cos(lat2)
+    y = cos(lat1) * sin(lat2) - (sin(lat1) * cos(lat2) * cos(diffLong))
+
+    initial_bearing = atan2(x, y)
+
+    # Now we have the initial bearing but math.atan2 return values
+    # from -180° to + 180° which is not what we want for a compass bearing
+    # The solution is to normalize the initial bearing as shown below
+    initial_bearing = degrees(initial_bearing)
+    compass_bearing = (initial_bearing + 360) % 360
+
+    return compass_bearing
 
 
-def getCountryCentroid(name):
+def countryCentroid(name):
     """Get the centroid of a country by finding the largest polygon and
         calculating the centroid on that polygon only
-
     Params:
         name (string): name of country
-
     Returns:
         (tuple): point (x,y)
     """
@@ -154,14 +211,40 @@ def getCountryCentroid(name):
     return center
 
 
-# https://maprantala.com/2010/05/16/measuring-distance-from-a-point-to-a-line-segment-in-python/
-def lineMagnitude(x1, y1, x2, y2):
-    lineMagnitude = sqrt(pow((x2 - x1), 2) + pow((y2 - y1), 2))
-    return lineMagnitude
+def countryPoly(country):
+    """Grab the country polygon from the country "DB" (really a country reader class I wrote for you guys).
+    Params:
+        country (string)   : name of the country you want the polygon for
+    Returns:
+        polygon (feature/dict) : feature pulled from the countries feature collection.
+    """
+    # lowercase the country name then capitalize to fit the existing names.
+    country = country.lower().title()
+
+    # Go get the polygons
+    polys = countryDB.getPolygons(country)
+
+    largest = largestPoly(polys["geometry"]["coordinates"])
+
+    if not polys:
+        return {"Error": f"Country: {country} didn't exist!"}
+
+    return largest
 
 
-# Calc minimum distance from a point and a line segment (i.e. consecutive vertices in a polyline).
 def DistancePointLine(px, py, x1, y1, x2, y2):
+    """Calculates the distance from a given point (px,py), to the line segment (x1,y1) , (x2,y2).
+    Params:
+        px (float) : decimal degrees longitude of point
+        py (float) : decimal degrees latitude of point
+        x1 (float) : decimal degrees longitude of line start
+        y1 (float) : decimal degrees latitude of line start
+        x1 (float) : decimal degrees longitude of line end
+        y1 (float) : decimal degrees latitude of line end
+    Returns:
+        distanc (float) : distance from point to line segment
+
+    """
     # http://local.wasp.uwa.edu.au/~pbourke/geometry/pointline/source.vba
     LineMag = lineMagnitude(x1, y1, x2, y2)
 
@@ -190,13 +273,17 @@ def DistancePointLine(px, py, x1, y1, x2, y2):
     return DistancePointLine
 
 
-# https://www.sitepoint.com/community/t/distance-between-long-lat-point-and-line-segment/50583/3
-
-
 def haversineDistance(lon1, lat1, lon2, lat2, units="miles"):
-    """
-    Calculate the great circle distance in kilometers between two points
-    on the earth (specified in decimal degrees)
+    """Calculate the great circle distance in kilometers between two points on the earth (start and end) where each point
+        is specified in decimal degrees.
+    Params:
+        lon1  (float)  : decimel degrees longitude of start (x value)
+        lat1  (float)  : decimel degrees latitude of start (y value)
+        lon2  (float)  : decimel degrees longitude of end (x value)
+        lat3  (float)  : decimel degrees latitude of end (y value)
+        units (string) : miles or km depending on what you want the answer to be in
+    Returns:
+        distance (float) : distance in whichever units chosen
     """
     radius = {"km": 6371, "miles": 3956}
 
@@ -212,58 +299,43 @@ def haversineDistance(lon1, lat1, lon2, lat2, units="miles"):
     return c * r
 
 
-# https://gist.github.com/jeromer/2005586
-def compass_bearing(pointA, pointB):
+def largestPoly(polygons):
+    """Simple implementation to grab the "hopefully" biggest polygon for a country
+        (aside from island nations / arcapelligos) that represents the "actual" country.
+    Params:
+        polygons (list) : list of polygons
+    Returns:
+        list : the biggest polygon in the list
     """
-    Calculates the bearing between two points.
-    The formulae used is the following:
-        θ = atan2(sin(Δlong).cos(lat2),
-                  cos(lat1).sin(lat2) − sin(lat1).cos(lat2).cos(Δlong))
-    :Parameters:
-      - `pointA: The tuple representing the latitude/longitude for the
-        first point. Latitude and longitude must be in decimal degrees
-      - `pointB: The tuple representing the latitude/longitude for the
-        second point. Latitude and longitude must be in decimal degrees
-    :Returns:
-      The bearing in degrees
-    :Returns Type:
-      float
+    i = 0
+    max = 0
+    index = 0
+    for poly in polygons:
+        print(len(poly[0]))
+        print(poly[0])
+        print("")
+        if len(poly[0]) > max:
+            max = len(poly[0])
+            print(max)
+            index = i
+        i += 1
+    return polygons[index][0]
+
+
+def lineMagnitude(x1, y1, x2, y2):
+    """Calculate the magnitude of a line. This is a type of distance function. Not the same as `haversine` but is used
+        in conjunction the the `DistancePointLine` method below.
+        Source: https://maprantala.com/2010/05/16/measuring-distance-from-a-point-to-a-line-segment-in-python/
+    Params:
+        x1 (float) : decimal degrees longitude of line start
+        y1 (float) : decimal degrees latitude of line start
+        x1 (float) : decimal degrees longitude of line end
+        y1 (float) : decimal degrees latitude of line end
+    Returns:
+        Magnitude (float) of the line (aka distance).
     """
-    if (type(pointA) != tuple) or (type(pointB) != tuple):
-        raise TypeError("Only tuples are supported as arguments")
-
-    lat1 = radians(pointA[0])
-    lat2 = radians(pointB[0])
-
-    diffLong = radians(pointB[1] - pointA[1])
-
-    x = sin(diffLong) * cos(lat2)
-    y = cos(lat1) * sin(lat2) - (sin(lat1) * cos(lat2) * cos(diffLong))
-
-    initial_bearing = atan2(x, y)
-
-    # Now we have the initial bearing but math.atan2 return values
-    # from -180° to + 180° which is not what we want for a compass bearing
-    # The solution is to normalize the initial bearing as shown below
-    initial_bearing = degrees(initial_bearing)
-    compass_bearing = (initial_bearing + 360) % 360
-
-    return compass_bearing
-
-
-def getCountryPoly(country):
-    # lowercase the country name then capitalize to fit the existing names.
-    country = country.lower().title()
-
-    # Go get the polygons
-    polys = countryDB.getPolygons(country)
-
-    largest = largestPoly(polys["geometry"]["coordinates"])
-
-    if not polys:
-        return {"Error": f"Country: {country} didn't exist!"}
-
-    return largest
+    lineMagnitude = sqrt(pow((x2 - x1), 2) + pow((y2 - y1), 2))
+    return lineMagnitude
 
 
 """
@@ -554,8 +626,8 @@ async def getLineBetween(start: str = None, end: str = None):
     }
     ```
     """
-    p1 = getCountryCentroid(start)
-    p2 = getCountryCentroid(end)
+    p1 = countryCentroid(start)
+    p2 = countryCentroid(end)
 
     feature = Feature(
         coords=[[p1, p2]],
@@ -576,7 +648,7 @@ async def getProperty(country, key: str = None, allKeys: bool = False):
         key (str) : the key value in the properties dictionary
         allKeys (bool) : return all the property keys
     ### Returns:
-        various : string, object, list, etc.
+        bearingious : string, object, list, etc.
     ## Examples:
 
     [http://127.0.0.1:8080/property/france?key=bbox](http://127.0.0.1:8080/property/france?key=bbox)
@@ -811,8 +883,8 @@ async def centroidRelations(start: str, end: str):
     }
     ```
     """
-    lon1, lat1 = getCountryCentroid(start)
-    lon2, lat2 = getCountryCentroid(end)
+    lon1, lat1 = countryCentroid(start)
+    lon2, lat2 = countryCentroid(end)
 
     feature = Feature(
         coords=[[lon1, lat1], [lon2, lat2]],
@@ -884,8 +956,8 @@ async def borderRelations(start: str, end: str):
     }
     ```
     """
-    poly1 = getCountryPoly(start)
-    poly2 = getCountryPoly(end)
+    poly1 = countryPoly(start)
+    poly2 = countryPoly(end)
 
     min = 999999
     closest = {}
@@ -947,7 +1019,7 @@ async def lengthLine(country):
 
     ```
     """
-    poly = getCountryPoly(country)
+    poly = countryPoly(country)
 
     max = -999999
 
@@ -1012,7 +1084,7 @@ You should see your api's base route!
 Note:
     Notice the first param below: api:app 
     The left side (api) is the name of this file (api.py without the extension)
-    The right side (app) is the variable name of the FastApi instance declared at the top of the file.
+    The right side (app) is the bearingiable name of the FastApi instance declared at the top of the file.
 """
 if __name__ == "__main__":
     uvicorn.run("api:app", host="127.0.0.1", port=8080, log_level="debug", reload=True)
