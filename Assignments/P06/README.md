@@ -1,6 +1,6 @@
 ## Worldle - Spatial Game
 
-#### Due: 03-22-2022 (Tuesday @ 9:30 a.m.)
+#### Due: 03-24-2022 (Tuesday @ 9:30 a.m.)
 
 ### Introduction
 
