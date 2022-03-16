@@ -197,6 +197,7 @@ Each of these routes has documentation and examples so you can either use them, 
 ## Example Run
 
 -   My "splash" screen.
+
     <img src="https://cs.msutexas.edu/~griffin/zcloud/zcloud-files/example_splash.png" width="800">
 
 -   The target in this instance is "Uruguay".
