@@ -97,55 +97,6 @@ move it if you have other "spatial" methods that it can be packaged with in the 
 """
 
 
-def cardinalDirection(bearing):
-    """This method returns a `cardinal direction` given a bearing.
-    Params:
-        bearing (float) : value between 0-360
-    Returns:
-        cardinal direction (string) : the string value of the direction like NNE (north north east)
-    """
-    di = None  # closest cardinal direction
-    min = 999  # difference between bearing and cardinal degrees
-
-    degrees = [
-        0,
-        22.5,
-        45.0,
-        90.0,
-        112.5,
-        135.0,
-        180.0,
-        202.5,
-        225.0,
-        270.0,
-        292.5,
-        315.0,
-        337.5,
-        360.0,
-    ]
-    directions = [
-        "N",
-        "NNE",
-        "NE",
-        "E",
-        "SE",
-        "SSE",
-        "S",
-        "SSW",
-        "SW",
-        "W",
-        "NW",
-        "NNW",
-        "N",
-    ]
-
-    for i in range(len(degrees)):
-        if abs(degrees[i] - bearing) < min:
-            min = abs(degrees[i] - bearing)
-            di = directions[i]
-    return di
-
-
 def centroid(polygon):
     """Calculates the centroid point for a polygon (linear ring of points)
     Params:
@@ -1048,7 +999,25 @@ async def lengthLine(country):
 @app.get("/cardinal/{degrees}")
 async def cardinal(degrees):
     """
-    note: this is highly approximate...
+    This method works returns the cardinal direction given a bearing in decimal degrees.
+    Params:
+        degrees (float) : decimal degrees
+    Returns:
+        cardinal direction (string) : N, NNE ..... NW, NNW
+
+    ## Examples:
+
+    [http://localhost:8080/cardinal/76](http://localhost:8080/cardinal/76)
+
+    ### Response:
+
+        ```json
+        {
+            "direction": "ENE",
+            "image": "ENE.png",
+            "img_tag": "<img src='./images/ENE.png'>"
+        }
+        ```
     """
     dirs = [
         "N",
@@ -1068,8 +1037,15 @@ async def cardinal(degrees):
         "NW",
         "NNW",
     ]
-    ix = int((int(degrees) + 11.25) / 22.5)
-    return dirs[ix % 16]
+    degrees = int(float(degrees))
+    ix = int((degrees + 11.25) / 22.5)
+    d = dirs[ix % 16]
+
+    return {
+        "direction": d,
+        "image": str(d) + ".png",
+        "img_tag": f"<img src='./images/{d}.png'>",
+    }
 
 
 """
