@@ -196,4 +196,6 @@ Each of these routes has documentation and examples so you can either use them, 
 
 ## Example Run
 
+My run I kept bare bones, and didn't change colors on the map itself. Try and show which country was picked in relation to the table.
+
 <img src="https://cs.msutexas.edu/~griffin/zcloud/zcloud-files/example_run.png" width="800">
