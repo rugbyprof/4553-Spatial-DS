@@ -196,6 +196,13 @@ Each of these routes has documentation and examples so you can either use them, 
 
 ## Example Run
 
-My run I kept bare bones, and didn't change colors on the map itself. Try and show which country was picked in relation to the table.
+-   My "splash" screen.
+    <img src="https://cs.msutexas.edu/~griffin/zcloud/zcloud-files/example_splash.png" width="800">
+
+-   The target in this instance is "Uruguay".
+-   My run I kept bare bones, and didn't change colors on the map itself.
+-   Try and show which country was picked in relation to the table so you can see the progression.
 
 <img src="https://cs.msutexas.edu/~griffin/zcloud/zcloud-files/example_run.png" width="800">
+
+BTW: I used only methods that I provided in the api and the html examples. No spatial data structures as was the initial goal. I hope this simplifies the project some.
