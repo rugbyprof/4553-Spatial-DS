@@ -2,6 +2,8 @@
 
 #### Due: 03-24-2022 (Tuesday @ 9:30 a.m.)
 
+> NOTE: Everything you need to solve this program is literally given to you in one form or another. The routes provided by [FastAPI](../../Lectures/09_ApiHelp/README.md), the additional helper functions I wrote, and the javascript examples included [here](../../Lectures/10_WebView/README.md). The javascript component is the hardest for those that have never been exposed, but this project is as close you will get to a legitimate real world style project while your in school (unless you work on out of class projects). So, embrace the difficulty, and ask me questions. I promise I don't mind walking you through something that you might feel you should know, but don't. It's ok, just ask.
+
 ### Introduction
 
 -   You've seen [wordle](https://www.nytimes.com/games/wordle/index.html)
@@ -10,9 +12,9 @@
 -   We are going to rip off these games and create our own version.
 -   Instructions and requirements to follow.
 -   The helper code for this assignment can be found:
-    -   [09_ApiHelp](../Lectures/../../Lectures/09_ApiHelp/README.md)
-    -   [10_WebView](../Lectures/../../Lectures/10_WebView/README.md)
--   Remember that ~~[08_GemeHelp](../Lectures/../../Lectures/08_GemeHelp/README.md)~~ is not your friend!! It has some nuggets, but it is a collection of classes and functions that solve a problem going off in a much different direction. The same goes with the ~~[07_Folium](../Lectures/../../Lectures/07_Folium/README.md)~~ folder.
+    -   [09_ApiHelp](../../Lectures/09_ApiHelp/README.md)
+    -   [10_WebView](../../Lectures/10_WebView/README.md)
+-   Remember that ~~[08_GemeHelp](../../Lectures/08_GemeHelp/README.md)~~ is not your friend!! It has some nuggets, but it is a collection of classes and functions that solve a problem going off in a much different direction. The same goes with the ~~[07_Folium](../../Lectures/07_Folium/README.md)~~ folder.
 
 ## Overview
 
