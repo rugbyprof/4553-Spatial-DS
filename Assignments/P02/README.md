@@ -25,14 +25,40 @@ Data
 
 ### Requirements
 
-- Load both data files into a geopandas geoseries spatial index. 
-- Calculate the distance from each city to every other city and store those values in either a csv or json file for use at a later time.
-- Determine a metric or threshold to "assign" a UFO sighting to a particular city. Maybe average the distance to the 100 closest UFO's as a start.
-- More in class Thursday.
+- Load at least on of the data files into a geopandas geoseries spatial index. Most likely, the UFO data will work the best using the spatial-index. 
+- Calculate the distance from each city to every other city and store those values in either a csv or json file for use at a later time. This does not need a geospatial index, just a little brute force and a distance function.
+- Determine a metric or threshold to "assign" a UFO sighting to a particular city. Maybe average the distance to the 100 closest UFO's as a start. 
 - Your files should be in json format.
 
 
 > Note: We could use a clustering algorithm to determine the spatial proximity to each of our 49 cities, but I think we could use a bounding box for now to keep it simple and keep it within the realm of our example code. I'm not sure what size the box should be, but it also brings another spatial structure to mind: [voronoi diagram](https://en.wikipedia.org/wiki/Voronoi_diagram), which we could use to create polygons around each city (but we won't), but could be used to query UFO sightings with each "cell".  
+
+```python
+def haversineDistance(lon1, lat1, lon2, lat2, units="miles"):
+    """Calculate the great circle distance in kilometers between two points on the earth (start and end) where each point
+        is specified in decimal degrees.
+    Params:
+        lon1  (float)  : decimel degrees longitude of start (x value)
+        lat1  (float)  : decimel degrees latitude of start (y value)
+        lon2  (float)  : decimel degrees longitude of end (x value)
+        lat3  (float)  : decimel degrees latitude of end (y value)
+        units (string) : miles or km depending on what you want the answer to be in
+    Returns:
+        distance (float) : distance in whichever units chosen
+    """
+    radius = {"km": 6371, "miles": 3956}
+
+    # convert decimal degrees to radians
+    lon1, lat1, lon2, lat2 = map(radians, [lon1, lat1, lon2, lat2])
+
+    # haversine formula
+    dlon = lon2 - lon1
+    dlat = lat2 - lat1
+    a = sin(dlat / 2) ** 2 + cos(lat1) * cos(lat2) * sin(dlon / 2) ** 2
+    c = 2 * asin(sqrt(a))
+    r = radius[units]  # choose miles or km for results
+    return c * r
+```
 
 ### Deliverables
 
