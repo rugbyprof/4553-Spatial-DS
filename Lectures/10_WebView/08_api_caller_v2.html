@@ -168,7 +168,7 @@
                     L.geoJSON(result).addTo(layers);
 
                     console.log(L.latLng(centerPoint[1], centerPoint[0]));
-                    map.flyTo(L.latLng(centerPoint[1], centerPoint[0]), 5);
+                    map.flyTo(L.latLng(centerPoint[1], centerPoint[0]), 3);
                 }).catch((error) => {
                     let message = "<h1>Error: Connecting to: " + url + "</h1>"
                     message += "<h1>Is your API running?</h1>"

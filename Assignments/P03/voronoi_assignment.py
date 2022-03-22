@@ -14,8 +14,7 @@ from shapely.ops import unary_union
 # from shapely.geometry import box, Polygon, LineString, Point
 from shapely.ops import transform
 
-
-debug = False
+debug = True
 spatIndex = None
 
 
@@ -229,6 +228,11 @@ if __name__ == "__main__":
     cityCoords, boundaryShape, regionPolys, regionPoints = createVoronoi(
         usBorder, cities
     )
+
+    # print(type(cityCoords))
+    # print(type(boundaryShape))
+    # print(type(regionPolys))
+    # print(type(regionPoints))
 
     # This function creates the spatial index by inserting the ufo
     # geoDataFrame into the spatIndex (keeping with the projection epsg:3395)

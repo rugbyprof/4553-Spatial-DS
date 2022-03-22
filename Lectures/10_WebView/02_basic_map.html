@@ -6,68 +6,27 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
         integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
         crossorigin="" />
+    <link rel="stylesheet" href="style.css" />
+    <!-- Like a #include -->
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
         integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
         crossorigin=""></script>
-    <style>
-        body {
-            padding: 0;
-            margin: 0;
-        }
 
-        html,
-        body,
-        #map {
-            height: 100%;
-            width: 100%;
-        }
-    </style>
 </head>
 
 <body>
     <div id="map"></div>
 </body>
 <script>
-    // reference to our leaflet map 
-    // centered on [43,-105] and zoom level 4
-    let map = L.map("map").setView([43, -105], 4);
+    // define a point (this is lat/lon NOT lon/lat!!)
+    let center = [33.875293, -98.521151]   // maps center
+    let bolin = [33.873854, -98.519516]     // location of point
 
-    // geojson variable 
-    let states = {
-        "type": "FeatureCollection",
-        "features": [
-            {
-                "type": "Feature",
-                "properties": { "party": "Republican" },
-                "geometry": {
-                    "type": "Polygon",
-                    "coordinates": [
-                        [[-104.05, 48.99], [-97.22, 48.98],
-                        [-96.58, 45.94], [-104.03, 45.94],
-                        [-104.05, 48.99]]
-                    ]
-                }
-            },
-            {
-                "type": "Feature",
-                "properties": {
-                    "party": "Democrat",
-                    "fill": "red",
-                    "stroke-width": "3",
-                    "fill-opacity": 0.6
-                },
-                "geometry": {
-                    "type": "Polygon",
-                    "coordinates": [
-                        [[-109.05, 41.00], [-102.06, 40.99],
-                        [-102.03, 36.99], [-109.04, 36.99],
-                        [-109.05, 41.00]]
-                    ]
-                }
-            }
-        ]
-    }
+    // create a map instance with a center point and zoom level
+    let map = L.map("map", { center: center, zoom: 17 });
 
+    // define a tile layer. this means we will grab tiles from
+    // open street maps for the map at whatever zoom level we need
     L.tileLayer(
         "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
         {
@@ -76,7 +35,9 @@
         }
     ).addTo(map);
 
-    L.geoJSON(states).addTo(map);
+    // create a map marker to put on the map
+    let pnt = L.marker(bolin).addTo(map);
+
 </script>
 
 </html>
