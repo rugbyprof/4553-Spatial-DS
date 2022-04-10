@@ -98,6 +98,7 @@
                 <row>
                     <th>Country</th>
                     <th>Center Point</th>
+                    <th>Distance to Target</th>
                 </row>
 
             </table>
@@ -121,7 +122,20 @@
         // Add Layer Group
         let layers = L.layerGroup().addTo(map);
 
-        function appendTableRow(name, location) {
+
+
+        function chooseRandomTarget(data) {
+            url = "http://127.0.0.1:8080/randomCountry/"
+            apiCall(url, saveTargetLocation)
+        }
+
+        function saveTargetLocation(data) {
+            console.log(data);
+            localStorage.setItem('target', JSON.stringify(data));
+            console.log(JSON.parse(localStorage.getItem('target')));
+        }
+
+        function appendTableRow(name, location, distance) {
 
             var table = document.getElementById("history");
 
@@ -133,10 +147,12 @@
             // Insert new cells (<td> elements) at the 1st and 2nd position of the "new" <tr> element:
             var cell1 = row.insertCell(0);
             var cell2 = row.insertCell(1);
+            var cell3 = row.insertCell(2);
 
             // Add some text to the new cells:
             cell1.innerHTML = name;
             cell2.innerHTML = location;
+            cell3.innerHTML = distance;
 
         }
 
@@ -188,12 +204,13 @@
             console.log("updatePolygonCenter");
             console.log(data);
 
-
             // add center point of polygon to local storage
             localStorage.setItem('polygonCenterPoint', data);
 
+            let distance = localStorage.getItem('distance');
+            console.log("distance: " + distance)
 
-            appendTableRow(localStorage.getItem('lastCountry'), localStorage.getItem('polygonCenterPoint'))
+            appendTableRow(localStorage.getItem('lastCountry'), localStorage.getItem('polygonCenterPoint'), distance)
 
             map.flyTo(L.latLng(data[1], data[0]), 5);
         }
@@ -263,6 +280,11 @@
             apiCall(url, populateDropDown)
         }
 
+        function storeDistanceBearing(data) {
+            localStorage.setItem('distance', data['distance']);
+            localStorage.setItem('bearing', data['bearing']);
+        }
+
         /**
          * apiGetpolygonCenterPoint: Returns the "center point" of a given country. I'm using it so 
          *     I can pan and zoom to that location
@@ -276,6 +298,15 @@
 
             // call the api with the appropriate url and callback function to run on success
             apiCall(url, updatePolygonCenter)
+
+            let target = localStorage.getItem('target')
+            target = JSON.parse(target)
+
+
+            let url2 = "http://127.0.0.1:8080/centroidRelations/?start=" + name + "&end=" + target['name'];
+
+            // call the api with the appropriate url and callback function to run on success
+            apiCall(url2, storeDistanceBearing)
         }
 
         /**
@@ -306,6 +337,7 @@
         // erasing the old cars :) 
         window.onload = function () {
             apiGetCountryNames();
+            chooseRandomTarget();
         };
     </script>
 </body>

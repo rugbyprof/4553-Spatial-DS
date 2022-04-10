@@ -8,6 +8,8 @@ import uvicorn
 from math import radians, degrees, cos, sin, asin, sqrt, pow, atan2
 import os
 
+from random import shuffle
+
 # Classes from my module
 from module import CountryReader
 from module import Feature
@@ -436,7 +438,7 @@ async def getCountry(country_name, coords_only: bool = False):
 async def countryCenter(country_name, raw: bool = False):
     """
     ### Description:
-        Get a point that represents the spaital center of a countries polygon.
+        Get a point that represents the spatial center of a countries polygon.
     ### Params:
         country_name (str)  : A country name to search for
     ### OptionalParams
@@ -482,7 +484,8 @@ async def countryCenter(country_name, raw: bool = False):
     ]
     ```
     """
-
+    # print("hello yall")
+    # print(country_name)
     # lowercase the country name then capitalize to fit the existing names.
     country_name = country_name.lower().title()
 
@@ -651,6 +654,24 @@ async def getProperty(country, key: str = None, allKeys: bool = False):
         return list(data.keys())
 
     return data
+
+
+@app.get("/randomCountry/")
+async def getRandomCountry():
+    """ """
+    names = countryDB.getNames()
+    shuffle(names)
+    target = names[0]
+    poly = countryPoly(target)
+    print(target)
+
+    country = countryDB.getPolygons(target)
+    largest = largestPoly(country["geometry"]["coordinates"])
+
+    print(largest)
+    center = centroid(largest)
+
+    return {"name": target, "poly": poly, "center": center}
 
 
 @app.get("/bbox/{country}")
