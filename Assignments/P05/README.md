@@ -1,5 +1,5 @@
 ## Worldle - Spatial Game Api
-#### Due: 03-10-2022 (Thursday @ 9:30 a.m.)
+#### Due: 04-26-2022 (Tuesday @ 9:30 a.m.)
 
 
 ### Overview
