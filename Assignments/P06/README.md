@@ -209,3 +209,12 @@ Each of these routes has documentation and examples so you can either use them, 
 <img src="https://cs.msutexas.edu/~griffin/zcloud/zcloud-files/example_run.png" width="800">
 
 BTW: I used only methods that I provided in the api and the html examples. No spatial data structures as was the initial goal. I hope this simplifies the project some.
+
+
+## Deliverables
+
+- Create a folder called `P06` in your `assignments` folder on your repo.
+- Add your files that contain everything from P04,P05,P06. Don't let this scare you, as they are all really the same program. 
+- Create a readme in `P06` with a small write up describing your module. 
+- Please refer to the [Readmees](../../Resources/02-Readmees/README.md) folder for help on creating a worthwhile readme.
+- Be prepared to demonstrate your program last week in April.
