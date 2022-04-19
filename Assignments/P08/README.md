@@ -1,4 +1,4 @@
-## Quadtree - More GeoJson
+## HeatMap - Coloring Polygons
 #### Due: 04-26-2022 (Tuesday @ 9:30 a.m.)
 
 ### Overview
