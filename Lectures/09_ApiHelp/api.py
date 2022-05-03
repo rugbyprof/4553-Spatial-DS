@@ -1069,6 +1069,18 @@ async def cardinal(degrees):
     }
 
 
+@app.get("/pt2poly/")
+async def pt2poly(x: float, y: float, scale: int = 1):
+    scale = sum([0.05] * scale)
+    poly = []
+    poly.append([x, y])
+    poly.append([x - scale, y])
+    poly.append([x - scale, y - scale])
+    poly.append([x, y - scale])
+    poly.append([x, y])
+    return poly
+
+
 """
 This main block gets run when you invoke this file. How do you invoke this file?
 
