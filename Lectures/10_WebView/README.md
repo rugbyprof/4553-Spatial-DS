@@ -22,18 +22,18 @@ The examples are based on the tutorial linked to above. I tried to add functiona
 
 - [04_basic_style.html](https://github.com/rugbyprof/4553-Spatial-DS/blob/master/Lectures/10_WebView/04_basic_style.html) 
   - Shows two states with same default styling defined by dev. 
-- [04_basic_styleV2.html](https://github.com/rugbyprof/4553-Spatial-DS/blob/master/Lectures/10_WebView/04_basic_styleV2.html) 
+- [05_basic_styleV2.html](https://github.com/rugbyprof/4553-Spatial-DS/blob/master/Lectures/10_WebView/05_basic_styleV2.html) 
   - Shows two states with different styles using a style function.
-- [05_load_geo.html](https://github.com/rugbyprof/4553-Spatial-DS/blob/master/Lectures/10_WebView/05_load_geo.html) 
+- [06_load_geo.html](https://github.com/rugbyprof/4553-Spatial-DS/blob/master/Lectures/10_WebView/06_load_geo.html) 
   - Shows a geoJson object on the map after pasted and submitted.
-- [06_api_caller.html](https://github.com/rugbyprof/4553-Spatial-DS/blob/master/Lectures/10_WebView/06_api_caller.html)  
+- [07_api_caller.html](https://github.com/rugbyprof/4553-Spatial-DS/blob/master/Lectures/10_WebView/07_api_caller.html)  
   - Calls api to get country names, then displays country on map after chosen on web page.
-- [07_api_caller_V2.html](https://github.com/rugbyprof/4553-Spatial-DS/blob/master/Lectures/10_WebView/07_api_caller_V2.html)  
-  - Same as 06 but when country selected, it pans to the new country and zooms in.
-- [08_cleaner_api_caller.html](https://github.com/rugbyprof/4553-Spatial-DS/blob/master/Lectures/10_WebView/08_cleaner_api_caller.html)  
-  - Same as 07 but cleaned up syntax with duplicate code combined into functions.  
+- [08_api_caller_V2.html](https://github.com/rugbyprof/4553-Spatial-DS/blob/master/Lectures/10_WebView/08_api_caller_V2.html)  
+  - Same as 07 but when country selected, it pans to the new country and zooms in.
+- [09_cleaner_api_caller.html](https://github.com/rugbyprof/4553-Spatial-DS/blob/master/Lectures/10_WebView/09_cleaner_api_caller.html)  
+  - Same as 08 but cleaned up syntax with duplicate code combined into functions.  
   - Added a "table" to show a "history" of countries chosen.
   - Necessary css added to make table look decent.
-
+- [10_direction.html](https://github.com/rugbyprof/4553-Spatial-DS/blob/master/Lectures/10_WebView/10_direction.html)  
 
 https://blog.logrocket.com/localstorage-javascript-complete-guide/
