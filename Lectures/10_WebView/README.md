@@ -14,9 +14,9 @@
 
 The examples are based on the tutorial linked to above. I tried to add functionality in a somewhat logical manner. As more javascript is added (the code in the script tags), like in 06 and 07, there is definitely room for improvement. For example the functions I added that make api requests, definitely have a lot of repeat code and could be combined. Which, as I'm writing this I decided to add an 08 to fix those issues
 
-- [01-basic_js.html]([01_basic_js.html](https://github.com/rugbyprof/4553-Spatial-DS/blob/master/Lectures/10_WebView/01_basic_js.html)) 
+- [01-basic_js.html](https://github.com/rugbyprof/4553-Spatial-DS/blob/master/Lectures/10_WebView/01_basic_js.html)
   - Shows a simple point added to an open street maps "tile layer". 
-- [02-basic_map.html]([02_basic_map.html](https://github.com/rugbyprof/4553-Spatial-DS/blob/master/Lectures/10_WebView/02_basic_map.html)) 
+- [02-basic_map.html](https://github.com/rugbyprof/4553-Spatial-DS/blob/master/Lectures/10_WebView/02_basic_map.html)
   - Shows two states with generic styling. 
 - [03_basic_style.html](https://github.com/rugbyprof/4553-Spatial-DS/blob/master/Lectures/10_WebView/03_basic_style.html) 
   - Shows two states with same default styling defined by dev. 
