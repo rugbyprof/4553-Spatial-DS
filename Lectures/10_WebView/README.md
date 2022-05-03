@@ -18,7 +18,9 @@ The examples are based on the tutorial linked to above. I tried to add functiona
   - Shows a simple point added to an open street maps "tile layer". 
 - [02-basic_map.html](https://github.com/rugbyprof/4553-Spatial-DS/blob/master/Lectures/10_WebView/02_basic_map.html)
   - Shows two states with generic styling. 
-- [03_basic_style.html](https://github.com/rugbyprof/4553-Spatial-DS/blob/master/Lectures/10_WebView/03_basic_style.html) 
+- [03-basic_map.html](https://github.com/rugbyprof/4553-Spatial-DS/blob/master/Lectures/10_WebView/03_basic_map.html)
+
+- [04_basic_style.html](https://github.com/rugbyprof/4553-Spatial-DS/blob/master/Lectures/10_WebView/04_basic_style.html) 
   - Shows two states with same default styling defined by dev. 
 - [04_basic_styleV2.html](https://github.com/rugbyprof/4553-Spatial-DS/blob/master/Lectures/10_WebView/04_basic_styleV2.html) 
   - Shows two states with different styles using a style function.
