@@ -28,7 +28,7 @@ The examples are based on the tutorial linked to above. I tried to add functiona
   - Shows a geoJson object on the map after pasted and submitted.
 - [07_api_caller.html](https://github.com/rugbyprof/4553-Spatial-DS/blob/master/Lectures/10_WebView/07_api_caller.html)  
   - Calls api to get country names, then displays country on map after chosen on web page.
-- [08_api_caller_V2.html](https://github.com/rugbyprof/4553-Spatial-DS/blob/master/Lectures/10_WebView/08_api_caller_V2.html)  
+- [08_api_caller_V2.html](https://github.com/rugbyprof/4553-Spatial-DS/blob/master/Lectures/10_WebView/08_api_caller_v2.html)  
   - Same as 07 but when country selected, it pans to the new country and zooms in.
 - [09_cleaner_api_caller.html](https://github.com/rugbyprof/4553-Spatial-DS/blob/master/Lectures/10_WebView/09_cleaner_api_caller.html)  
   - Same as 08 but cleaned up syntax with duplicate code combined into functions.  
